@@ -17,7 +17,7 @@
 \newcommand{\tikznode}[3][inner sep=0pt]{\tikz[remember
 picture,baseline=(#2.base)]{\node(#2)[#1]{$#3$};}}
 \usepackage{ytableau}
-
+\usepackage{TooYoung}
 
 \setCJKmainfont{SimSun} % 设置中文字体，例如宋体
 \setCJKsansfont{Microsoft YaHei} % 设置无衬线字体，例如微软雅黑
@@ -473,47 +473,6 @@ Some facts about split connected reductive algebraic groups over arbitrary field
 \newpage
 
 
-\section{2023.12.26}\label{3}
-
-\begin{thm}[Harish-Chandra's parameter of discrete series repn]
-  $G$ be a connected semisimple Lie group (maybe there is an analogy for real reductive group), $K$ a maximal torus of $G$, suppose that
-  $\mathrm{rank}(K) = \mathrm{rank}(G)$, fix a compact maximal torus $T \in K$ and positive system $\Delta^+$. Then for any analytically integral weight $\lambda + \rho$, there exist a discrete series representation $\pi_{\lambda}$, such that:
-  \begin{enumerate}
-    \item The infinitesimal character of $\pi_\lambda$ is $\lambda$;
-    \item $\nu = \lambda + \rho - 2\rho_c$ is the highest weight of a minimal  $K$ type of $\pi_\lambda$;
-    \item If $\mu$ is any highest weight of irreducible $K$ representation exist in $\pi_\lambda$, then $$\mu = \nu + \sum\limits_{\alpha \in \Delta^+} n_{\alpha}\alpha$$.
-  \end{enumerate}
-  Moreover, $\pi_{\lambda} \simeq \pi_{\lambda'}$ if and only if $\lambda$ and $\lambda'$ lies in the same $W_c$ orbit.
-\end{thm}
-
-In the above theorem, $\rho - 2\rho_c$ is canonically realized as a continuous character of double cover of $T$, called $\tilde{T} $, which can be realized as a pull-back diagram:
-\begin{tikzcd}
-  \tilde{T} \arrow[r] \arrow[d] & \BC^\times \arrow[d,"z \mapsto z^2"] \\
-  T \arrow[r,"2\rho - 4\rho_c"] & \BC^\times
-\end{tikzcd}
-
-
-Similarly, $\lambda$ is also a character of a double cover of $T$, with respect to $-2\lambda$, but the difference of $-2\lambda$ and $2\rho - 4\rho_c$ is a square of a character of $T$, the two double covers are canonically isomorphic.
-
-\textcolor{red}{In fact, there is a one to one correspondence! Which I finally get it}:
-
-$$\{ \textrm{genuie characters of} \ \tilde{T}_{\rho_{im}}    \} \simeq \set{(\Gamma,\nu) \in X^*(T) \times \ft^*}{d\Gamma = \nu + \rho_{im}-2\rho_{im,c}}. $$
-The correspondence is given by
-
-\begin{align*}
-  \chi         & \mapsto (\chi  \otimes (\rho_{im}-2\rho_{im,c}),d\chi) \\
-  (\Gamma,\nu) & \mapsto \Gamma \otimes (2\rho_{im,c} - \rho_{im})
-\end{align*}
-
-\begin{defn}[Langlands parameter]
-  Let $G$ be a linear real reductive group, the Langlands parameters for $G$ is a triple $(H,\gamma,R_{i\BR}^+)$. Such that
-  \begin{enumerate}
-    \item $\mathrm{Hladk\acute{y}}$ \'{a}
-  \end{enumerate}
-\end{defn}
-
-\newpage
-
 \section{2024.2.27}\label{4}
 Today, I learned how to draw the Young tableau.
 
@@ -696,7 +655,7 @@ Classification of split reductive group is the same over arbitrary non-empty sch
 
 \section{2024.12.17}
 
-Geometric Pre-quantization
+\subsection{Geometric Pre-quantization}
 
 Let $X$ be a smooth manifold. There are natural maps
 \[
@@ -715,7 +674,7 @@ And we can see that $\theta_\alpha - \theta_\beta = \frac{\mathrm{d}g_{\alpha,\b
 Construction of the second map (classical de-Rham isomorphism), choose a 2-form $\omega \in \mathrm{H}^{2}_{dR}(X;\BR)$
 \begin{itemize}
   \item choose a cover $\{U_{\alpha}\}$ of $\BL$, such that all $U_{\alpha}$ and $U_{\alpha} \cap U_{\beta}$ are contractible;
-  \item on each $U_\alpha$, choose a 1-form $\theta_\alpha$ such that $\mathrm{d}\theta_\alpha = \omega|_{U_\alpha}$;
+  \item on each $U_\alpha, choose a 1-form \theta_\alpha$ such that $\mathrm{d}\theta_\alpha = \omega|_{U_\alpha}$;
   \item since $\mathrm{d}\theta_\alpha = \mathrm{d}\theta_\beta$ on $U_\alpha \cap U_\beta$, we can choose smooth function $c_{\alpha,\beta}$ such that $\mathrm{d}c_{\alpha,\beta} = \theta_\alpha - \theta_\beta$;
   \item let $c_{\alpha,\beta,\gamma} = c_{\alpha,\beta} + c_{\beta,\gamma} + c_{\gamma,\alpha}$, which is a constant, and we get the corresponding 2-cocycle $(c_{\alpha,\beta,\gamma}) \in \mathrm{H}^{2}_{Cech}(X;\BR)$.
 \end{itemize}
@@ -727,13 +686,13 @@ If $\omega$ come from the first map, we can choose $c_{\alpha,\beta} = \frac{1}{
 \]
 
 In fact the first map is also an isomorphism. (cf. \href{http://staff.ustc.edu.cn/~wangzuoq/Courses/15S-Symp/SympGeom.html}{prequantization})
-For a 2-form $\omega$, choose $\theta_\alpha$ and $c_{\alpha,\beta}$ as above, let $g_{\alpha,\beta} = \exp(2\pi i c_{\alpha,\beta})$, these are translation functions of a complex line bundle $\BL$.
+For a 2-form $\omega$, choose $\theta_\alpha$ and $c_{\alpha,\beta}$ as above, let $g_{\alpha,\beta} = \exp(2\pi i c_{\alpha,\beta})$, these are transition functions of a complex line bundle $\BL$.
 
 \begin{cor}
   Assume that $G$ is a connected Lie group. The following are equivalent:
   \begin{itemize}
     \item $\Omega \subseteq \fg^*$ is integral ($[\sigma_{\Omega}] \in \mathrm{H}^2(X;\BZ)$);
-    \item there exist a $G$-equivariant complex line bundle over $\Omega$ with a $G$-invariant Hermitian connection $\nabla$ such that $$\frac{1}{2\pi i}\mathrm{curv}(\nabla) = \sigma_{\Omega}.$$
+    \item there exists a $G$-equivariant complex line bundle over $\Omega$ with a $G$-invariant Hermitian connection $\nabla$ such that $$\frac{1}{2\pi i}\mathrm{curv}(\nabla) = \sigma_{\Omega}.$$
   \end{itemize}
 \end{cor}
 
@@ -743,32 +702,33 @@ For a 2-form $\omega$, choose $\theta_\alpha$ and $c_{\alpha,\beta}$ as above, l
   \caption{Proof}
 \end{figure}
 
+\newpage
 
+\section{2025.4.7}
 
+TooYoung package from xiongrui.
+
+\begin{center}
+    \Young{&\\} \ \Young{\\&}
+\end{center}
+
+\Young[2.5pc]{ 1 & i+1 \\2*(yellow) \\3 \\ \cdots \\i \\ i+2 \\ \cdots \\n}
 
 
 \begin{thebibliography}{99}
 
-
     \bibitem[Jos]{Jos}
       A. Joseph. \textit{On the associated variety of a primitive ideal}, J. Algebra. \textbf{93} (1985), no. 2, 509-523.
-
 
     \bibitem[BB]{BB}
       W. Borho, J. Brylinski. \textit{Differential operators on homogeneous spaces I: irreducibility of the associated variety}, Inv. Math. \textbf{69} (1982), 437-476.
 
     \bibitem[KV]{KV} 
-      W. Knapp and D. Vogan, \textit{Cohomological Induction and Unitary Representations}, Princeton Mathematical Series, vol. 45, Princeton University Press, Princeton, NJ, 1995.
-    \bibitem[SGA3]{SGA3}
-      M. Demazure, A. Grothendieck: Schémas en Groupes (SGA3) I, II, III, Lecture Notes in Mathematics 151, 152, 153, Springer, New York (1970). 
+      W. Knapp and D. Vogan. \textit{Cohomological Induction and Unitary Representations}, Princeton Mathematical Series, vol. 45, Princeton University Press, Princeton, NJ, 1995.
 
+    \bibitem[SGA3]{SGA3}
+      M. Demazure, A. Grothendieck. \textit{Schémas en Groupes (SGA3) I, II, III}, Lecture Notes in Mathematics 151, 152, 153, Springer, New York (1970).
 
 \end{thebibliography}
 
-
-
-
 \end{document}
-
-
-

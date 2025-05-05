@@ -260,37 +260,36 @@ For as the heavens are higher than the earth, so are my ways higher than your wa
 \section{2023.12.22}\label{1}
 
 \subsection{Identification of co-character groups with Lie algebras}
-Settings: $G$ complex connected reductive algebraic group, fix a splitting datum
-$(B,H,\{X_\alpha\})$.
+Settings: $G$ complex connected reductive algebraic group. $Q \subseteq P \subseteq \fh^*$ are root lattice and weight group, respectively. $\check{Q} \subseteq \check{P} \subseteq \fh$ are coroot lattice and coweight group, respectively. $H$ is a maximal torus of $G$, $\fh$ is its Lie algebra.
 
 
-There is an identification \defmap{I}{X_*(H)\otimes \BC}{\fh}{\phi}{d\phi(1)}
+There are identifications 
+\defmap{I}{X_*(H)\otimes \BC}{\fh}{\phi}{d\phi(1)}
 
-
-The weight lattice for $G$ is $P = \set{\lambda \in X^*(H)\otimes \BC}{\langle \lambda, \check{\alpha} \rangle \in \BZ \ \textrm{for all} \ \alpha \in \Delta }$
-
-
-The co-weight lattice is $\check{P} = \set{\check{\lambda} \in X_*(H)\otimes \BC}{\langle\alpha , \check{\lambda} \rangle \in \BZ \ \textrm{for all } \ \check{\alpha} \in \check{\Delta}}$
-
-
-
-Under this identification we have
-
-\begin{align*}
-  \set{\check{\lambda} & \in \fh}{exp(\check{\lambda})=0}                                                                                                        \\
-                       & = \set{\check{\lambda} \in X_*(H)\otimes \BC}{\phi(exp(d \check{\lambda}(1))) = 1 \ \textrm{for all} \ \phi \in X^*(H)}                 \\
-                       & = \set{\check{\lambda} \in X_*(H)\otimes \BC}{exp(\langle\phi,\check{\lambda} \rangle) = 1 \ \textrm{for all } \ \phi \in X^*(H)}       \\
-                       & = \set{\check{\lambda} \in X_*(H)\otimes \BC}{\langle\phi,\check{\lambda} \rangle \in 2 \pi i \BZ \ \textrm{for all} \ \phi \in X^*(H)} \\
-                       & = 2 \pi i X_*(H).
-\end{align*}
-And similarly
-$$\check{P} = \set{\check{\lambda} \in \fh}{exp(2 \pi i \check{\lambda}) \in Z(G)} $$
-
-
-There is also an identification
 \defmap{J}{X^*(H)\otimes \BC}{\fh ^*}{\varphi}{d \varphi}
 
-Under this identification ...  I forget what I want to say.
+
+
+Under these identifications we have
+
+\begin{align*}
+  \check{P} &= \set{\check{\lambda} \in \fh}{<\alpha, \check{\lambda}> \in \BZ, \textrm{for all $\alpha \in Q$}}\\
+  & = \set{\check{\lambda} \in \fh}{\exp(2\pi\sqrt{-1}<\alpha, \check{\lambda}>) = 1, \textrm{for all $\alpha \in Q$}}\\
+  & = \set{\check{\lambda} \in \fh}{\alpha(\exp(2\pi\sqrt{-1}\check{\lambda})) = 1, \textrm{for all $\alpha \in Q$}}\\
+  & = \set{\check{\lambda} \in \fh}{\exp(2\pi\sqrt{-1}\check{\lambda}) \in Z(G)}.
+\end{align*}
+And
+\begin{align*}
+  X_{*}(H) & = \set{\check{\lambda} \in \fh}{d\phi(\check{\lambda}) \in \BZ, \textrm{for all $\phi \in X^*(H)$}}\\
+  & = \set{\check{\lambda} \in \fh}{\exp(2\pi\sqrt{-1}d\phi(\check{\lambda})) = 1, \textrm{for all $\phi \in X^*(H)$}}\\
+  & = \set{\check{\lambda} \in \fh}{\phi(\exp(2\pi\sqrt{-1}\check{\lambda})) = 1, \textrm{for all $\phi \in X^*(H)$}}\\
+  & = \set{\check{\check{\lambda}} \in \fh}{\exp(2\pi\sqrt{-1}\check{\lambda}) = 1}.
+\end{align*} 
+
+Similarly
+$$P = \set{\lambda \in \fh^*}{\exp(2 \pi \sqrt{-1} \lambda) \in Z(\check{G})}. $$
+
+$$X^*(H) = \set{\lambda \in \fh^*}{\exp(2 \pi \sqrt{-1} \lambda ) = 1}.$$
 
 \subsection{Pinnings of algebraic groups}
 

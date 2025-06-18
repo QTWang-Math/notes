@@ -1,5 +1,4 @@
 \documentclass[12pt]{amsart}
-\usepackage{xeCJK} % 支持中文
 \usepackage[margin=1in]{geometry}  % set the margins to 1in on all sides
 \usepackage{amscd,latexsym,amsthm,amsfonts,amssymb,amsmath,amsxtra}
 \usepackage{mathrsfs}
@@ -19,9 +18,7 @@ picture,baseline=(#2.base)]{\node(#2)[#1]{$#3$};}}
 \usepackage{ytableau}
 \usepackage{TooYoung}
 
-\setCJKmainfont{SimSun} % 设置中文字体，例如宋体
-\setCJKsansfont{Microsoft YaHei} % 设置无衬线字体，例如微软雅黑
-\setCJKmonofont{FangSong} % 设置等宽字体，例如仿宋
+
 \numberwithin{equation}{section}
 \pagestyle{plain}
 \setcounter{secnumdepth}{5}
@@ -552,12 +549,12 @@ Today, I learned how to draw the Young tableau.
 \]
 
 % 基线对齐
-这是中文
+ce est chinois
 $\vcenter{\hbox{\begin{ytableau}
 ~ & ~ \\ 
 ~
 \end{ytableau}}}$
-这是英文
+english
 
 \[
 a = \vcenter{\hbox{\begin{ytableau}
@@ -569,12 +566,12 @@ a = \vcenter{\hbox{\begin{ytableau}
 % 综合示例
 \[
 \begin{array}{cc}
-\text{杨图1: } & \vcenter{\hbox{\begin{ytableau}
+\text{youngdiagram1: } & \vcenter{\hbox{\begin{ytableau}
 ~ & ~ & ~ \\ 
 ~ & ~ \\
 ~
 \end{ytableau}}} \\[3em]
-\text{杨图2: } & \vcenter{\hbox{\begin{ytableau}
+\text{young2: } & \vcenter{\hbox{\begin{ytableau}
 ~ & ~ \\
 ~
 \end{ytableau}}}

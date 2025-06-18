@@ -1,11 +1,11 @@
 # Fdb version 4
-["xdvipdfmx"] 1750241740.25855 "temp/notes.xdv" "temp/notes.pdf" "temp/notes" 1750241740.7496 0
-  "temp/notes.xdv" 1750241740.21913 149084 478df0cc804faa01b8a2137a79513919 "xelatex"
+["xdvipdfmx"] 1750242600.01321 "temp/notes.xdv" "temp/notes.pdf" "temp/notes" 1750242600.50319 0
+  "temp/notes.xdv" 1750242599.97558 149092 9c737ea36b47e7db5d62dbbf87c6ca55 "xelatex"
   (generated)
   "temp/notes.pdf"
   (rewritten before read)
-["xelatex"] 1750241739.66365 "/Users/quentinwang/Documents/notes/notes.tex" "temp/notes.xdv" "notes" 1750241740.74817 0
-  "/Users/quentinwang/Documents/notes/notes.tex" 1750241738.96191 28560 d48899af9fd4bde380211953988a10f5 ""
+["xelatex"] 1750242599.35138 "/Users/quentinwang/Documents/notes/notes.tex" "temp/notes.xdv" "notes" 1750242600.50187 0
+  "/Users/quentinwang/Documents/notes/notes.tex" 1750242599.224 28561 43da6bb5fc51f0c5d25c091f46077509 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/tfm/adobe/zapfding/pzdr.tfm" 1136768653 1528 f853c4d1b4e0550255e02831fdc8496f ""
   "/usr/local/texlive/2025/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
@@ -206,10 +206,10 @@
   "3.png" 1750241432.05125 178136 5e7177306695cb73828fb5d954bfa2df ""
   "Claude_Monet-NC.jpg" 1750241432.05307 511666 cda2211b81f06723c5b6da1d45369676 ""
   "TooYoung.sty" 1750241467.12333 15053 e0b64b26ed380a262d201647ce491d39 ""
-  "notes.tex" 1750241738.96191 28560 d48899af9fd4bde380211953988a10f5 ""
-  "temp/notes.aux" 1750241740.21832 2918 aabfb61b8c62a33be2d0e7ce1fe4fdff "xelatex"
-  "temp/notes.out" 1750241740.21894 2590 81d9d7e6adad0b431371a511e7bdf20e "xelatex"
-  "temp/notes.toc" 1750241740.21911 1283 1e03be5a890ba1856f3502529877f6d9 "xelatex"
+  "notes.tex" 1750242599.224 28561 43da6bb5fc51f0c5d25c091f46077509 ""
+  "temp/notes.aux" 1750242599.97495 2918 aabfb61b8c62a33be2d0e7ce1fe4fdff "xelatex"
+  "temp/notes.out" 1750242599.9754 2590 81d9d7e6adad0b431371a511e7bdf20e "xelatex"
+  "temp/notes.toc" 1750242599.97556 1283 1e03be5a890ba1856f3502529877f6d9 "xelatex"
   "屏幕截图 2024-12-17 180658.png" 1750241467.13353 104902 d8f1e4c151f59272f59ed173897cadd6 ""
   (generated)
   "temp/notes.aux"

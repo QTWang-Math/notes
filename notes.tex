@@ -711,6 +711,87 @@ TooYoung package from xiongrui.
 \Young[2.5pc]{ 1 & i+1 \\2*(yellow) \\3 \\ \cdots \\i \\ i+2 \\ \cdots \\n}
 
 
+\newpage
+
+\section{2025.8.14 \protect\footnote{This section is organized by Ryan Ang and Qiutong Wang at Tianyuan Mathematics Research Centre}}
+
+
+Let $G$ be a finite central extension of an open subgroup of $\mathbb{R}$-points of a connected reductive algebraic group (reductive Nash group \cite{S}) with Lie algebra $\mathfrak{g}$. Fix an invariant nondegenerate bilinear form $B(-,-)$ on $\mathfrak{g}$. 
+
+
+For an irreducible Casselman-Wallach representation $\pi$ of $G$, let $\mathrm{Wh}_\mathcal{O}(\pi)$ be the space of generalized Whittaker models of $\pi$ associated to the nilpotent orbit $\mathcal{O}$. Let 
+\[\mathrm{WO}(\pi):= \set{\mathcal{O}}{\textrm{$\mathcal{O}$ is a nilpotent orbit such that $\mathrm{Wh_{\mathcal{O}}(\pi) \neq 0}$}},\]
+and the \textit{Whittaker support} $\mathrm{WS}(\pi)$ of $\pi$ be the set of all maximal orbits in $\mathrm{WO}(\pi)$ with respect to closure inclusion:
+\[\mathrm{WS}(\pi) := \set{\mathcal{O}}{\textrm{$\mathcal{O}$ is a maximal orbit in $\mathrm{WO}(\pi)$} }.\]
+
+
+
+
+Another nilpotent invariant is the wavefront cycle:
+\[\mathcal{WF}(\pi) = \sum_{i}m_i [\mathcal{O}_i].\]
+With the corresponding wavefront set :
+\[\mathrm{WF}(\pi) = \bigcup\limits_{m_i \neq 0} \bar{\mathcal{O}_i}. \]
+
+
+
+M{\oe}glin-Waldspurger \cite{MW87} proved that $\mathrm{WF}(\pi)=\mathrm{WS}(\pi)$ when $F$ is a $p$-adic field. We want to test this conjecture for arbitrary reductive almost linear Nash groups.
+\begin{conj}[Main conjecture] For any reductive almost linear Nash group $G$ and any irreducible Casselman-Wallach representation $\pi$: 
+      \[\mathrm{WF}(\pi)=\mathrm{WS}(\pi).\]  
+\end{conj}
+
+Take a nilpotent orbit $\mathcal{O} \subseteq \mathfrak{g}$ (or $\mathfrak{sl_2}$-triple $\gamma = \{Y,H,X\}$ in $\mathfrak{g}$). $\mathfrak{g}/\mathfrak{g}^{Y}$ is a symplectic space with symplectic form $\left \langle -,- \right \rangle := B(Y,[-,-])$. Set $G^{Y} := \mathrm{Stab}_{G}(Y)$, there is a natural homomorphism $G^{Y} \to \mathrm{Sp}(\mathfrak{g}/\mathfrak{g}^{Y},\left\langle -,- \right\rangle)$. Let $\widetilde{G^{Y}}$ be the double cover of $G^{Y}$ induced by the metaplectic double cover of $\mathrm{Sp}(\mathfrak{g}/\mathfrak{g}^{Y},\left\langle -,- \right\rangle)$.
+\begin{defn}
+   The nilpotent $\mathcal{O}$ is called admissible if the double cover $\widetilde{G^Y}$ is split over the identity component of $(G^Y)_0$. It is called quasi-admissible if $\widetilde{G^Y}$ has a finite-dimensional genuine representation.
+\end{defn} 
+
+Result of \cite{GGS21} says that $\mathrm{WS}(\pi)$ consists of quasi-admissible orbits. But they do not know whether the non-admissible quasi-admissible orbits appear in Whittaker supports of representations. We may ask the same question for the wavefront set:
+
+\textbf{Problem 1}: Are all the nilpotent orbits in the wavefront cycle admissible?
+
+\medskip
+
+For the case when $G$ is general linear, it is well known that the wavefront set $\mathrm{WF}(\pi)$ of an irreducible Casselman-Wallach representation $\pi$ of $G$ consists of a single nilpotent adjoint orbit. Together with some counting results, it maybe possible to construct all irreducible representations of general linear group via theta correspondence and coherent continuation.
+
+\textbf{Problem 2}: Can we construct all irreducible representations via theta correspondence, coherent continuation, and twist of characters?
+
+Assuming the construction steps above are done, it then remains to study the Whittaker support $\mathrm{WS}(\pi)$ of $\pi$. We focus on two types of interactions with Whittaker models - theta correspondence and coherent continuation.
+
+
+
+On one hand, Gomez-Zhu \cite{GZ14} proved for type I reductive (symplectic-orthogonal) dual pairs in the stable range that the big theta lift preserves the structure of Whittaker models:
+\[\mathrm{Wh}_{\Theta(\mathcal{O})}\left(\Theta(\pi)\right)=\mathrm{Wh}_\mathcal{O}(\pi^\vee).\]
+Noting that $(G,G')=(\GL_n(F),\GL_m(F))$ is a (reductive) dual pair for any $n,m\in\mathbb{N}$, one observes that if one can prove an analogue of Gomez-Zhu's result for type II dual pairs, one can use it to infer properties of the structure of the Whittaker support $\mathrm{WS}(\pi)$. Hence we propose the following subconjecture:
+\begin{conj}
+    If $(G,G')=(\GL_n(F),\GL_m(F))$ is a type II reductive dual pair over $F$ in the stable range (with $n\leq m$), and $\pi$ is a genuine Casselman-Wallach representation of $G$, then
+    \[\mathrm{Wh}_{\Theta(\mathcal{O})}\left(\Theta(\pi)\right)=\mathrm{Wh}_\mathcal{O}(\pi^\vee),\]
+    where $\pi^\vee$ denotes the smooth contragredient of $\pi$. Furthermore, the above will imply that
+    \[\mathrm{WS}\left(\Theta(\pi)\right)=\mathrm{WS}(\pi^\vee).\]
+\end{conj}
+
+On the other hand, Barbash-Vogan \cite{BV} proved that under coherent continuation, the multiplicity of wavefront cycle changes in the form of a Goldie rank polynomial, i.e. 
+\[
+    \mathcal{WF}(\pi(\lambda)) = p(\lambda) \cdot (\sum\limits_{i} c_i [\mathcal{O}_i]),
+\]
+where $p(\lambda)$ is the goldie rank polynomial, $\lambda$ is dominant. We expect some similar result for the multiplicity of the generalized Whittaker model.
+
+\textbf{Problem 3}: For a fixed nilpotent orbit $\mathcal{O}$, does there exist a constant $c_{\mathcal{O}}$ such that $\mathrm{dim} \mathrm{Wh}_{\mathcal{O}}(\pi(\lambda)) = c_{\mathcal{O}} \cdot p(\lambda)$?
+
+
+
+\newpage
+
+\section{2025.8.15}
+
+\textbf{Generically reduced}:
+
+
+
+
+\newpage
+
+
+
+
 \begin{thebibliography}{99}
 
     \bibitem[Jos]{Jos}
@@ -724,6 +805,32 @@ TooYoung package from xiongrui.
 
     \bibitem[SGA3]{SGA3}
       M. Demazure, A. Grothendieck. \textit{Schémas en Groupes (SGA3) I, II, III}, Lecture Notes in Mathematics 151, 152, 153, Springer, New York (1970).
+
+
+
+    \bibitem[S]{S}
+      Binyong Sun. \textit{Almost linear Nash groups}, In: Chinese Ann. Math. Ser. B 36.3(2015), pp. 355-400.
+
+
+
+
+    \bibitem[GGS21]{GGS21}
+      Raul Gomez, Dmitry Gourevitch, and Siddhartha Sahi. \textit{Whittaker supports for representations of reductive groups}, en. In: Annales de l’Institut Fourier 71.1 (2021), pp. 239-286.
+
+
+    \bibitem[GZ14]{GZ14}
+      Raul Gomez and Chen-Bo Zhu. \textit{Local theta lifting of generalized Whittaker models associated to nilpotent orbits}, In: Geometric and Functional Analysis 24 (3 2014), pp. 796-853.
+
+
+    \bibitem[MW87]{MW87}
+      M. M{\oe}glin and J.-L. Waldspurger. \textit{Modèles de Whittaker des groupes p-adiques}, In: Mathematische Zeitschrift 196 (3 1987), pp. 427-452.
+
+
+    \bibitem[BV]{BV}
+      D. Barbash and D. Vogan. \textit{The local structure of characters}, In: J.
+      Functional Analysis 37.1 (1980), pp. 27-55.
+
+
 
 \end{thebibliography}
 

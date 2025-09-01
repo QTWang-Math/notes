@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.3.8)  18 JUN 2025 18:50
+This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.3.8)  15 AUG 2025 23:21
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -778,21 +778,34 @@ Underfull \vbox (badness 5908) has occurred while \output is active []
 
 [16]
 
-[17] (temp/notes.aux)
+[17]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\@ifnextchar' on input line 716.
+
+
+
+[18]
+
+[19]
+
+[20]
+
+[21] (temp/notes.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
  ***********
 Package rerunfilecheck Info: File `notes.out' has not changed.
-(rerunfilecheck)             Checksum: 81D9D7E6ADAD0B431371A511E7BDF20E;2590.
+(rerunfilecheck)             Checksum: 024A3EFA77BF57F1B52F5B8B61BD7A45;3330.
  ) 
 Here is how much of TeX's memory you used:
- 25181 strings out of 473832
- 467826 string characters out of 5729482
- 904458 words of memory out of 5000000
- 47595 multiletter control sequences out of 15000+600000
- 569655 words of font info for 100 fonts, out of 8000000 for 9000
+ 25192 strings out of 473832
+ 468003 string characters out of 5729482
+ 905376 words of memory out of 5000000
+ 47604 multiletter control sequences out of 15000+600000
+ 569663 words of font info for 101 fonts, out of 8000000 for 9000
  1509 hyphenation exceptions out of 8191
- 88i,62n,196p,629b,879s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 88i,62n,196p,693b,879s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on temp/notes.xdv (17 pages, 149092 bytes).
+Output written on temp/notes.xdv (21 pages, 199224 bytes).

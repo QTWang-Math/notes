@@ -780,16 +780,259 @@ where $p(\lambda)$ is the goldie rank polynomial, $\lambda$ is dominant. We expe
 
 \newpage
 
-\section{2025.8.15}
+\section{2025.10.1}
 
-\textbf{Generically reduced}:
+Orbit method for nilpotent Lie groups.
 
+Let $G$ be a connected, simply connected nilpotent Lie group with Lie algebra $\fg$. Let $\fg^*$ be the dual space of $\fg$.
 
+We have fourier transform:
+\[
+    \mathcal{F} : \mathcal{S}(\fg)\mathrm{dX} \to \mathcal{S}(\sqrt{-1}\fg^*), \quad f\mathrm{dX} \mapsto \widehat{f\mathrm{dX}}, \quad \widehat{f\mathrm{dx}}(l) = \int_{\fg} f(X) e^{\langle l,X\rangle} dX.
+\]
 
+Take its dual:
+\[
+    \mathcal{S}'(\sqrt{-1}\fg^*) \to (\mathcal{S}(\fg)\mathrm{dX})', \quad T \mapsto \check{T}, \quad \langle \check{T}, f\mathrm{dX} \rangle = \langle T, \widehat{f\mathrm{dX}} \rangle.
+\]
+
+For any irreducible unitary representation $\pi$ of $G$, we have its character $\Theta_\pi \in C^{-\infty}(G)$ defined by
+\[\Theta_\pi(f) = \mathrm{Tr}(\pi(f\mathrm{dg})), \quad f\mathrm{dg} \in C_c^\infty(G)\mathrm{dg}.\]
+Using the exponential map $\exp : \fg \to G$ (isomorphism in this case), we can view $\Theta_\pi$ as a distribution on $\fg$:
+\[\theta_\pi(f\mathrm{dX}) = \Theta_\pi(f \circ \exp), \quad f\mathrm{dX} \in C_{c}^{\infty}(\fg)\mathrm{dX}.\]
+In fact, $\theta_{\pi}$ is a tempered generalized function on $\fg$ (it can continuously extends to $\mathcal{S}(\fg)\mathrm{dX}$).
+By the work of Howe, Kirillov, and others, we have the following theorem:
+\begin{thm}
+    There exists a unique coadjoint orbit $\mathcal{O} \subseteq \sqrt{-1}\fg^*$ such that $\check{\theta}_\pi = \mu_{\mathcal{O}}$, where $\mu_{\mathcal{O}}$ is the canonical measure on $\mathcal{O}$.
+\end{thm}
+
+This defines a bijection between $\widehat{G}$ (the unitary dual of $G$) and the set of coadjoint orbits in $\sqrt{-1}\fg^*$.
+
+Conversely, for any coadjoint orbit $\mathcal{O} \subseteq \sqrt{-1}\fg^*$, we can construct an irreducible unitary representation $\pi_{\mathcal{O}}$ of $G$ such that $\check{\theta}_{\pi_{\mathcal{O}}} = \mu_{\mathcal{O}}$. This is the more interesting part, use the method of geometric quantization.
+
+Take any element $\lambda \in \mathcal{O}$, we have an identification $\mathcal{O} = G/G_{\lambda}$, $lambda: \fg_{\lambda} \to \BC$ is a Lie algebra homomorphism, and hence $\chi_{\lambda} : G_{\lambda} \to \BC^\times$ defined by $\chi_{\lambda}(\exp X) = e^{\langle \lambda,X \rangle}$ is a unitary character of $G_{\lambda}$. Then we can defined a Hermitian line bundle $\mathcal{L}_{\lambda} = G \times^{G_{\lambda}} \BC$ over $\mathcal{O}$, with a natural $G$-invariant connection $\nabla$ such that $\mathrm{curv}(\nabla) = \omega_{\mathcal{O}}$, where $\omega_{\mathcal{O}}$ is the Kirillov-Kostant-Souriau symplectic form on $\mathcal{O}$.
+
+Then we can define the Hilbert space of square integrable sections of $\mathcal{L}_{\lambda}$, but this space is too large. We need to choose a polarization $\mathfrak{h} \subseteq \fg_{\BC}$ (maximal isotropic subalgebra with respect to the bilinear form $(X,Y) \mapsto \langle \lambda, [X,Y] \rangle$) and consider the space of square integrable holomorphic sections of $\mathcal{L}_{\lambda}$ which are covariant constant along $\mathfrak{h}$.
+
+In fact the polarization $\mathfrak{h}$ corresponds to a $G$-invariant integrable distribution on $\mathcal{O}$, its a subbundle $P$ of $T\mathcal{O}$ each fiber is a lagrangian subspace. 
+Then we can define the space of polarized sections:
+\[\Gamma_P(\mathcal{O},\mathcal{L}_{\lambda}) = \set{s \in \Gamma^{\infty}(\mathcal{O},\mathcal{L}_{\lambda} \otimes |\omega_{\mathcal{O/P}}|^{\frac{1}{2}})}{\nabla_X s = 0, \forall X \in P}.\]
+
+On this space, we have a unitary $G$ action and get a unitary representation $\pi_{\mathcal{O}}$ of $G$, it turns out that $\pi_{\mathcal{O}}$ is irreducible and independent of the choice of the polarization $\mathfrak{h}$.
+
+Kirillov's philosophy works well for nilpotent Lie groups, but for more general Lie groups, it is not true anymore.
+\newpage
+
+Now assume $G$ is a real reductive group, with Lie algebra $\fg_0$. For any irreducible Casselman-Wallach representation $\pi$ of $G$, we still have its generalized function character $\Theta_\pi \in C^{-\infty}(G)$, and hence a tempered generalized function $\theta_\pi$ on $\fg$. Here $\theta_{\pi} \in C^{-\infty}(\fg_0)$ is defined as follows:
+\[\theta_\pi(f\mathrm{dX}) = \Theta_\pi(\mathrm{exp}_{*}(\sqrt{\mathrm{det(exp)}}f\mathrm{dX})), \quad f\mathrm{dX} \in C_{c}^{\infty}(\fg_0)\mathrm{dX}.\]
+
+The generalized function $\Theta_{\pi}$ has the following properties:
+\begin{itemize}
+    \item $\Theta_{\pi}$ is invariant under conjugation of $G$;
+    \item $\Theta_{\pi}$ is an eigendistribution of $\CU(\fg)^{G}$;
+    \item $\Theta_{\pi}$ is locally integrable, and real analytic on the regular semisimple locus $G^{\mathrm{rs}}$.
+\end{itemize}
+
+By the work of Rossmann, we have the following theorem:
+\begin{thm}
+    If $\pi$ is tempered, then
+    \[
+        \theta_{\pi}|_{\textrm{nbhd of 0}} = \sum_{i} c_i \widehat{\mu_{\mathcal{O}_i}}|_{\textrm{nbhd of 0}}.
+    \]
+    Here $\mu_{\CO_i} \in \mathcal{S}(\sqrt{-1}\fg_0^*)$, is the orbital integral along $\CO_i$.
+\end{thm}
+
+For an arbitrary generalized function $\Theta \in C^{-\infty}(M)$, we can define its wavefront set $\mathrm{WF}(\Theta) \subseteq \sqrt{-1}\RT^*M$ as follows:
+\begin{defn}
+    For any $(x,\xi) \in \sqrt{-1}\RT^*M$, $(x,\xi) \notin \mathrm{WF}(\Theta)$ if there exists a compactly supported smooth function $\varphi$ on $M$ such that $\varphi(x) \neq 0$, and an open conic neighborhood $\Gamma$ of $\xi$ such that for any $N \in \BN$, there exists a constant $C_N > 0$ such that
+    \[|\widehat{\varphi \Theta}(t\eta)| \leq C_N t^{-N}, \quad \forall t > 0, \eta \in \Gamma.\]
+\end{defn}
+$\mathrm{WF}(\Theta)$ is a closed conic subset of $\sqrt{-1}\RT^*M$ (singular direction of $\Theta$).
+
+In particular, we can define the wavefront set $\mathrm{WF}(\pi)$ of an irreducible Casselman-Wallach representation $\pi$ of $G$ as $\mathrm{WF}(\Theta_{\pi}) \cap (\sqrt{-1}\RT^*_1(G))$, it is a closed conic $G$-invariant subset of $\sqrt{-1}\fg_0^*$. The GK-dimension of $\pi$ is defined as
+\[\mathrm{Dim}(\pi) = \frac{1}{2}\mathrm{dim}(\mathrm{WF}(\pi)).\] 
+
+$\theta_{\pi}$ is a real analytical function on $\fg_0^{\mathrm{rs}}$, and
+\[ \theta^{*}_{\pi}(X) :=  \lim_{t \to 0}t^{\mathrm{Dim}(\pi)}\theta_{\pi}(tX)\]
+is still a real analytical function on $\fg_0^{\mathrm{rs}}$, where $\mathcal{B}$ is the flag variety of $G$. We can consider it as in $C^{-\infty}(\fg_0)$.
+
+\begin{thm}(Barbasch-Vogan)
+     The asymptotic of $\theta_{\pi}$ defined above is a non-negative linear combination of Fourier transforms of nilpotent orbital integrals:
+      \[
+          \theta^*_{\pi} = \sum_{i} c_i \widehat{\mu_{\mathcal{O}_i}}.
+      \]
+      Here $\mu_{\CO_i} \in \mathcal{S}(\sqrt{-1}\fg_0^*)$, is the orbital integral along $\CO_i$.
+\end{thm}
+
+$\mathrm{WF}(\pi) = \bigcup_{c_i \neq 0} \bar{\CO_i}$.
 
 \newpage
 
+\section{2025.10.2}
 
+
+\subsection{Conormal bundle of singular subvariety}
+
+Let $\mathcal{B}$ be the flag variety of $G$. $\bar{\CB_y} \subsetneq \bar{\CB_w}$ two schubert varieties, what is the relation between their conormal bundles $T^*_{\CB_y}\CB$ and $T^*_{\CB_w}\CB$?
+
+Let $X$ be a smooth algebraic variety over $\BC$, $Z \subseteq X$ be a closed subvariety, define the conormal bundle $T^*_Z X$ of $Z$ in $X$ as follows:
+\[T^*_Z X = \bar{T^*_{Z^{\mathrm{reg}}}X} .\]
+For a singular point $z \in Z$ what is the fiber of $T^*_Z X$ at $z$?
+
+Here is a simple example:
+\begin{examp}Let \(X = \mathbb{C}^2\) and 
+\[
+Z = \{ xy = 0 \} \subset X
+\] 
+be the union of the coordinate axes. 
+
+\begin{itemize}
+    \item The regular locus is
+    \[
+    Z^{\mathrm{reg}} = (x\text{-axis} \setminus \{0\}) \cup (y\text{-axis} \setminus \{0\}).
+    \]
+    \item The singular locus is
+    \[
+    S := Z \setminus Z^{\mathrm{reg}} = \{0\}.
+    \]
+\end{itemize}
+
+Now, the fibre of the conormal bundle at the origin is
+\[
+(T^*_Z X)_0 = \operatorname{Ann}(T_{x\text{-axis}}) \cup \operatorname{Ann}(T_{y\text{-axis}}) = \langle dy \rangle \cup \langle dx \rangle,
+\]
+which is a union of two lines in \(T^*_0 \mathbb{C}^2\). 
+
+On the other hand,
+\[
+(T^*_{S} X)_0 = (T^*_{\{0\}} X)_0 = T^*_0 X,
+\]
+the entire cotangent plane. 
+
+Thus,
+\[
+(T^*_Z X)_0 \subsetneq (T^*_{Z - Z^{\mathrm{reg}}} X)_0,
+\]
+
+\end{examp}
+
+
+\subsection{Summary of paper \cite[The characteristic cycles of holonomic systems on a flag manifold]{KT}}
+
+
+Let $G$ be a semisimple simply connected complex algebraic group. Define Steinberg variety:
+\[
+    Z = \set{(x,B',B'') \in \mathcal{N} \times \mathcal{B} \times \mathcal{B}}{x \in \mathrm{Lie}(B') \cap \mathrm{Lie}(B'')} (= \set{(x,B',B'') \in \mathcal{N} \times \mathcal{B} \times \mathcal{B}}{}).
+\]
+($= \set{(x,B',B'') \in \mathcal{N} \times \mathcal{B} \times \mathcal{B}}{x \in \fn'^{\perp} \cap \fn''^{\perp}}$ more canonically.)
+
+Here $\mathcal{N} \subseteq \fg$ is the nilpotent cone of $\fg$, $\mathcal{B}$ is the flag variety of $G$.
+It can be identify with the union of conormal bundles of all $G$-orbits in $\mathcal{B} \times \mathcal{B}$:
+\[Z = \bigcup_{w \in W} T^*_{\mathcal{Y}_w}(\mathcal{B} \times \mathcal{B}),\]
+which is a closed conic lagrangian subvariety of $T^*(\mathcal{B} \times \mathcal{B})$.
+
+We also have the moment map:
+\[\mu : Z \to \CN, \quad (x,B',B'') \mapsto x.\]
+
+By taking characteristic cycles, we get a map from the (complex) Grothendieck group of $G$-equivariant holonomic $D$-modules on $\mathcal{B} \times \mathcal{B}$ to the top Borel-Moore homology of $Z$:
+\[\mathrm{CC} : K_0(\mathrm{Mod}^{\mathrm{Coh}}_{\Delta G}(\mathcal{D}_{\mathcal{B} \times \mathcal{B}})) \to H_{\mathrm{top}}^{\mathrm{BM}}(Z,\BC).\]
+We also have isomorphisms:
+\[ 
+  h: K_0(\mathrm{Mod}^{\mathrm{Coh}}_{\Delta G}(\mathcal{D}_{\mathcal{B} \times \mathcal{B}})) \to \BC[W], \quad \CM_w \mapsto w, \quad \CL_w \mapsto a(w)
+\]
+
+By Kazhdan-Lusztig, we have: 
+\[
+  a(w) = \sum_{y \leq w} (-1)^{l(y)+l(w)}P_{y,w}(1) y.
+\]
+
+There is a convolution product on $K_0(\mathrm{Mod}^{\mathrm{Coh}}_{\Delta G}(\mathcal{D}_{\mathcal{B} \times \mathcal{B}}))$ which makes $h$ an isomorphism of algebras.
+
+On $$H_{\mathrm{top}}^{\mathrm{BM}}(Z,\BC) \simeq \bigoplus_{w \in W} H_{\mathrm{top}}^{\mathrm{BM}}(\bar{T^*_{\mathcal{Y}_w}(\mathcal{B} \times \mathcal{B})},\BC) \simeq \bigoplus_{w \in W} \BC[\bar{T^*_{\mathcal{Y}_w}(\mathcal{B} \times \mathcal{B})}],$$
+In the paper of Kazhdan-Lusztig \cite{KL}, they use topological method to construct a $W \times W$ action on $H_{\mathrm{top}}^{\mathrm{BM}}(Z,\BC)$.
+
+Moreover there is a $W \times W$ module decomposition:
+\[H_{\mathrm{top}}^{\mathrm{BM}}(Z,\BC) \simeq \bigoplus_{\CO} H^{\mathrm{BM}}_{\mathrm{top}}(Z_{\CO},\BC),\]
+where $\CO$ runs over all nilpotent orbits in $\fg^*$, $Z_{\CO} = \mu^{-1}(\CO)$.
+There is also an isomorphism of $W \times W$-modules:
+\[
+H^{\mathrm{BM}}_{\mathrm{top}}(Z_{\CO},\BC) \simeq (H^{\mathrm{BM}}_{\mathrm{top}}(\mathcal{B}_x,\BC) \otimes H^{\mathrm{BM}}_{\mathrm{top}}(\mathcal{B}_x,\BC))_{A_G(x)},\]
+($A_G(x)$ coinvariants) where $x \in \CO$, $\mathcal{B}_x = \set{B' \in \mathcal{B}}{x \in \mathrm{Lie}(B')}$ (the Springer fiber), $A_G(x) = \mathrm{Stab}_G(x)/\mathrm{Stab}_G(x)^0$.
+
+By classical Springer theory, $H^{\mathrm{BM}}_{\mathrm{top}}(\mathcal{B}_x,\BC)$ is a representation of $W \times A_G(x)$, and we have the following decomposition:
+\[H^{\mathrm{BM}}_{\mathrm{top}}(\mathcal{B}_x,\BC) \simeq \bigoplus_{\rho \in \widehat{A_G(x)}} \tau(x,\rho) \otimes \rho.\]
+Here $\tau(x,\rho)$ is an irreducible representation of $W$ or zero.
+
+So we have a decomposition of $W \times W$-modules:
+\[H^{\mathrm{BM}}_{\mathrm{top}}(Z_{\CO},\BC) \simeq \bigoplus_{\rho \in \widehat{A_G(x)}} \tau(x,\rho) \otimes \tau(x,\rho).\]
+
+Combine the above together, we finally have the following decomposition:
+\[
+  H^{\mathrm{BM}}_{\mathrm{top}}(Z_{\CO},\BC) \simeq \bigoplus_{\rho \in \widehat{A_G(x)}} \tau(x,\rho) \otimes \tau(x,\rho), \quad H_{\mathrm{top}}^{\mathrm{BM}}(Z,\BC) \simeq \bigoplus_{\CO} H^{\mathrm{BM}}_{\mathrm{top}}(Z_{\CO},\BC).
+\]
+
+For any $w \in W$, there is a unique nilpotent orbit $\mathrm{St}(w)$ such that $\mu(\bar{T^*_{\mathcal{Y}_w}(\mathcal{B} \times \mathcal{B})}) = \bar{\mathrm{St}(w)}$. The map $w \mapsto \mathrm{St}(w)$ defines a \textcolor{red}{surjective(?)} map from $W$ to the set of nilpotent orbits in $\fg^*$ (this map can be computed via Robinson-Schensted algorithm).
+
+\begin{cor}
+  For any nilpotent orbit $\CO$, there is an isomorphism of $W \times W$-modules:
+  \[
+    \bigoplus\limits_{w \in W, \mathrm{St}(w) = \CO} \BC[\bar{T^*_{\mathcal{Y}_w}(\mathcal{B} \times \mathcal{B})}] \simeq \bigoplus\limits_{\rho \in \widehat{A_G(\CO)}} \tau(\CO,\rho) \otimes \tau(\CO,\rho).
+  \]
+\end{cor}
+
+\begin{thm}(Main theorem of \cite{KT}) The map
+\[
+\mathrm{CC} : K_0(\mathrm{Mod}^{\mathrm{Coh}}_{\Delta G}(\mathcal{D}_{\mathcal{B} \times \mathcal{B}})) \to H_{\mathrm{top}}^{\mathrm{BM}}(Z,\BC),
+\]
+is an isomorphism and $W \times W$-equivariant.
+\end{thm}
+
+
+
+
+Define $b(w) = h \circ \mathrm{CC}^{-1}([\bar{T^*_{\CY_w}\CB \times \CB}])$.
+Now we have three basis of $\BC[W]$:
+\[\{w\}_{w \in W}, \quad \{a(w)\}_{w \in W}, \quad \{b(w)\}_{w \in W}.\]  
+It was conjectured by Kashiwara and Tanisaki that: $a(w) = b(w)$ when $G = \SL_n(\BC)$ which means the characteristic cycle of $\CL_w$ is irreducible, but unfortunately it is not true. Conterexample exist when $G = \SL_8(\BC)$, where Kashwara-Saito singularities appears at some Schubert varieties.
+
+
+
+\section{2025.10.5}
+
+\textbf{The Springer representation}
+
+Let $G$ be a connected complex reductive group, $K$ a symmetric subgroup of $G$. We can define the Springer representation of $W$ on $H^{\bullet}_c(T^*_{K}\CB,\BQ)$.
+
+Recall that we have the following diagram:
+
+\[
+\begin{tikzcd}
+  \tilde{\CN} \arrow[d,two heads,"p_{\CN}"] \arrow[r,hook] & \tilde{\fg} \arrow[d,two heads,"p"] & \tilde{\fg^{\mathrm{rs}}} \arrow[l,hook'] \arrow[d,two heads,"p_{\mathrm{rs}}"] \\
+  \CN \arrow[r,hook] & \fg & \fg^{\mathrm{rs}} \arrow[l,hook']
+\end{tikzcd}
+\]
+
+In this diagram $p_{\mathrm{rs}}$ is a $W$-torsor. So we have a natural $W$-action on $p_{\mathrm{rs},*}\underline{\BQ}_{\tilde{\fg^{\mathrm{rs}}}}$ and hence on $\mathrm{IC}(\fg^{\mathrm{rs}},\CL)$, where $\CL = (p_{\mathrm{rs}})_*\underline{\BQ}_{\tilde{\fg^{\mathrm{rs}}}}$. There is a canonical isomorphism of perverse sheaves $\mathrm{IC}(\fg^{\mathrm{rs}},\CL) \simeq \BR p_{*}\underline{\BQ}_{\tilde{\fg}}[\dim(\fg)]$, so there is a natural $W$-action on $\BR p_{*}\underline{\BQ}_{\tilde{\fg}}$. By proper base change, we have
+\[
+  \BR p_{\CN,*}\underline{\BQ}_{\tilde{\CN}} \simeq (\BR p_{*}\underline{\BQ}_{\tilde{\fg}})|_{\CN}. \qquad \textcolor{red}{(Springer \ sheaf)}
+\]
+So there is a natural $W$-action on $\BR p_{\CN,*}\underline{\BQ}_{\tilde{\CN}}$ and hence on $H^{\bullet}_c(T^*\CB,\BQ) \simeq \BR \Gamma_c(\CN,\BR p_{\CN,*}\underline{\BQ}_{\tilde{\CN}})$ and $H^{\bullet}_c(\CB_x,\BQ) \simeq \BR \Gamma_c(\{ x \}, \BR p_{\CN,*}\underline{\BQ}_{\tilde{\CN}})$. (action on Springer fiber)
+
+Since $T^*_{K}\CB = p_{\CN}^{-1}(\fp)$, we also have a natural $W$-action on 
+\[
+H^{\bullet}_c(T^*_{K}\CB,\BQ) \simeq \BR \Gamma_c(\fp \cap \CN,(\BR p_{\CN,*}\underline{\BQ}_{\tilde{\CN}})|_{\fp \cap \CN}).
+\]
+
+Finally, there is a $W$-action on $(H^{2d}_c(T^*_{K}\CB,\BQ))^* = \bigoplus_{\CO \in K \backslash \CB} \BQ[\bar{T^*_{\CO}\CB}]$.
+
+
+\begin{thm}[Tanisaki]
+  The map:
+  \[
+    \mathrm{CC}: K_0(\mathrm{Mod}^{\mathrm{Coh}}_{K}(\mathcal{D}_{\mathcal{B}})) \to (H^{2d}_c(T^*_{K}\CB,\BQ))^* = H^{\mathrm{BM}}_{2d}(T^*_{K}\CB,\BQ),
+  \]
+  is surjective and $W$-equivariant.
+\end{thm}
 
 
 \begin{thebibliography}{99}
@@ -830,7 +1073,11 @@ where $p(\lambda)$ is the goldie rank polynomial, $\lambda$ is dominant. We expe
       D. Barbash and D. Vogan. \textit{The local structure of characters}, In: J.
       Functional Analysis 37.1 (1980), pp. 27-55.
 
+    \bibitem[KT]{KT}
+    Kashiwara, M., and Tanisaki, T. \textit{The characteristic cycles of holonomic systems on a flag manifold}, Inventiones mathematicae 77 (1984): 185-198.
 
+    \bibitem[KL]{KL}
+      D. Kazhdan and G. Lusztig. \textit{A topological approach to Springer's representations}, Adv. in Math. 38 (1980), pp. 222-228.
 
 \end{thebibliography}
 

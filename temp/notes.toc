@@ -13,5 +13,9 @@
 \contentsline {subsection}{\tocsubsection {}{7.1}{Geometric Pre-quantization}}{15}{subsection.7.1}%
 \contentsline {section}{\tocsection {}{8}{2025.4.7}}{17}{section.8}%
 \contentsline {section}{\tocsection {}{9}{2025.8.14 \footnote {This section is organized by Ryan Ang and Qiutong Wang at Tianyuan Mathematics Research Centre}}}{18}{section.9}%
-\contentsline {section}{\tocsection {}{10}{2025.8.15}}{20}{section.10}%
-\contentsline {section}{\tocsection {}{}{References}}{21}{section*.2}%
+\contentsline {section}{\tocsection {}{10}{2025.10.1}}{20}{section.10}%
+\contentsline {section}{\tocsection {}{11}{2025.10.2}}{22}{section.11}%
+\contentsline {subsection}{\tocsubsection {}{11.1}{Conormal bundle of singular subvariety}}{22}{subsection.11.1}%
+\contentsline {subsection}{\tocsubsection {}{11.2}{Summary of paper \cite [The characteristic cycles of holonomic systems on a flag manifold]{KT}}}{22}{subsection.11.2}%
+\contentsline {section}{\tocsection {}{12}{2025.10.5}}{24}{section.12}%
+\contentsline {section}{\tocsection {}{}{References}}{24}{section*.2}%

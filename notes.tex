@@ -197,7 +197,7 @@ picture,baseline=(#2.base)]{\node(#2)[#1]{$#3$};}}
 \newcommand{\Sym}{{\mathrm{Sym}}}
 \newcommand{\diag}{\mathrm{diag}}
 
-
+\newcommand{\MRR}[1]{\href{https://mathscinet.ams.org/mathscinet-getitem?mr=#1}{MR#1}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%   Math formula
 
 \newcommand{\sbst}{\subseteq}
@@ -244,9 +244,17 @@ This note is mainly used to record some trivial
 but interesting problems that I encounter
 in daily life.
 
+\bigskip
 
+\begin{quote}
+\emph{
+For as the heavens are higher than the earth,\\
+so are my ways higher than your ways,\\
+and my thoughts than your thoughts.
+}
 
-For as the heavens are higher than the earth, so are my ways higher than your ways and my thoughts than your thoughts.---Isaiah 55:9
+\hfill --- Isaiah 55:9
+\end{quote}
 
 \newpage
 
@@ -281,7 +289,7 @@ And
   X_{*}(H) & = \set{\check{\lambda} \in \fh}{d\phi(\check{\lambda}) \in \BZ, \textrm{for all $\phi \in X^*(H)$}}\\
   & = \set{\check{\lambda} \in \fh}{\exp(2\pi\sqrt{-1}d\phi(\check{\lambda})) = 1, \textrm{for all $\phi \in X^*(H)$}}\\
   & = \set{\check{\lambda} \in \fh}{\phi(\exp(2\pi\sqrt{-1}\check{\lambda})) = 1, \textrm{for all $\phi \in X^*(H)$}}\\
-  & = \set{\check{\check{\lambda}} \in \fh}{\exp(2\pi\sqrt{-1}\check{\lambda}) = 1}.
+  & = \set{\check{\lambda} \in \fh}{\exp(2\pi\sqrt{-1}\check{\lambda}) = 1}.
 \end{align*} 
 
 Similarly
@@ -626,7 +634,7 @@ Some facts about continuous complex characters of some common abelian topologica
 \end{lem}
 
 \begin{proof}
-  By the work of Borho, Brylinski \cite{BB}, and Joseph \cite{Jos}, the associated variety of any primitive ideal (annihilator of an irreducible $\fg$-module) is the closure of a single nilpotent orbit. So we only need to prove that $\mathrm{gr}(\mathrm{Ann_{\CU(\fg)}(V)})$ is a primitive ideal.
+  By the work of Borho, Brylinski \cite{BB82}, and Joseph \cite{Jos85}, the associated variety of any primitive ideal (annihilator of an irreducible $\fg$-module) is the closure of a single nilpotent orbit. So we only need to prove that $\mathrm{gr}(\mathrm{Ann_{\CU(\fg)}(V)})$ is a primitive ideal.
 
   Since the $K$-finite part $V_K$ is dense in $V$, $\Ann_{\CU(\fg)}(V) = \Ann_{\CU(\fg)}(V_K)$, we only need to consider the annihilator of the irreducible $(\fg,K)$-module $V_K$.
 
@@ -717,7 +725,7 @@ TooYoung package from xiongrui.
 \section{2025.8.14 \protect\footnote{This section is organized by Ryan Ang and Qiutong Wang at Tianyuan Mathematics Research Centre}}
 
 
-Let $G$ be a finite central extension of an open subgroup of $\mathbb{R}$-points of a connected reductive algebraic group (reductive Nash group \cite{S}) with Lie algebra $\mathfrak{g}$. Fix an invariant nondegenerate bilinear form $B(-,-)$ on $\mathfrak{g}$. 
+Let $G$ be a finite central extension of an open subgroup of $\mathbb{R}$-points of a connected reductive algebraic group (reductive Nash group \cite{Sun15}) with Lie algebra $\mathfrak{g}$. Fix an invariant nondegenerate bilinear form $B(-,-)$ on $\mathfrak{g}$. 
 
 
 For an irreducible Casselman-Wallach representation $\pi$ of $G$, let $\mathrm{Wh}_\mathcal{O}(\pi)$ be the space of generalized Whittaker models of $\pi$ associated to the nilpotent orbit $\mathcal{O}$. Let 
@@ -769,7 +777,7 @@ Noting that $(G,G')=(\GL_n(F),\GL_m(F))$ is a (reductive) dual pair for any $n,m
     \[\mathrm{WS}\left(\Theta(\pi)\right)=\mathrm{WS}(\pi^\vee).\]
 \end{conj}
 
-On the other hand, Barbash-Vogan \cite{BV} proved that under coherent continuation, the multiplicity of wavefront cycle changes in the form of a Goldie rank polynomial, i.e. 
+On the other hand, Barbash-Vogan \cite{BV80} proved that under coherent continuation, the multiplicity of wavefront cycle changes in the form of a Goldie rank polynomial, i.e. 
 \[
     \mathcal{WF}(\pi(\lambda)) = p(\lambda) \cdot (\sum\limits_{i} c_i [\mathcal{O}_i]),
 \]
@@ -918,7 +926,7 @@ Thus,
 \end{examp}
 
 
-\subsection{Summary of paper \cite[The characteristic cycles of holonomic systems on a flag manifold]{KT}}
+\subsection{Summary of paper \cite[The characteristic cycles of holonomic systems on a flag manifold]{KT84}}
 
 
 Let $G$ be a semisimple simply connected complex algebraic group. Define Steinberg variety:
@@ -950,7 +958,7 @@ By Kazhdan-Lusztig, we have:
 There is a convolution product on $K_0(\mathrm{Mod}^{\mathrm{Coh}}_{\Delta G}(\mathcal{D}_{\mathcal{B} \times \mathcal{B}}))$ which makes $h$ an isomorphism of algebras.
 
 On $$H_{\mathrm{top}}^{\mathrm{BM}}(Z,\BC) \simeq \bigoplus_{w \in W} H_{\mathrm{top}}^{\mathrm{BM}}(\bar{T^*_{\mathcal{Y}_w}(\mathcal{B} \times \mathcal{B})},\BC) \simeq \bigoplus_{w \in W} \BC[\bar{T^*_{\mathcal{Y}_w}(\mathcal{B} \times \mathcal{B})}],$$
-In the paper of Kazhdan-Lusztig \cite{KL}, they use topological method to construct a $W \times W$ action on $H_{\mathrm{top}}^{\mathrm{BM}}(Z,\BC)$.
+In the paper of Kazhdan-Lusztig \cite{KL80}, they use topological method to construct a $W \times W$ action on $H_{\mathrm{top}}^{\mathrm{BM}}(Z,\BC)$.
 
 Moreover there is a $W \times W$ module decomposition:
 \[H_{\mathrm{top}}^{\mathrm{BM}}(Z,\BC) \simeq \bigoplus_{\CO} H^{\mathrm{BM}}_{\mathrm{top}}(Z_{\CO},\BC),\]
@@ -981,7 +989,7 @@ For any $w \in W$, there is a unique nilpotent orbit $\mathrm{St}(w)$ such that 
   \]
 \end{cor}
 
-\begin{thm}(Main theorem of \cite{KT}) The map
+\begin{thm}(Main theorem of \cite{KT84}) The map
 \[
 \mathrm{CC} : K_0(\mathrm{Mod}^{\mathrm{Coh}}_{\Delta G}(\mathcal{D}_{\mathcal{B} \times \mathcal{B}})) \to H_{\mathrm{top}}^{\mathrm{BM}}(Z,\BC),
 \]
@@ -1253,7 +1261,7 @@ $Y$ smooth affine $/ \BC$  with coordinate $x_1,\cdots,x_n,y_1,\cdots,y_l$, $X =
 \end{thm}
 
 \begin{proof}
-  There is a proof in \cite{HTT}, I don't want to repeat it here.  
+  There is a proof in \cite{HTT08}, I don't want to repeat it here.  
 \end{proof}
 
 \begin{rk}
@@ -1321,7 +1329,7 @@ Its Lie algebra is $\fp_2(\BR) = \BR \times \BR$ with bracket:
 \textbf{Spectral Sequences of Filtrated Complexes}
 
 $(F^{\bullet},d)$ be a filtered complex, i.e. a complex $F^{\bullet}$ with an increasing filtration of subcomplexes:
-\[\cdots \subseteq F^{i}_j{\bullet} \subseteq F^i_{j+1}K^{\bullet} \subseteq \cdots \subseteq F^i.\]
+\[\cdots \subseteq F_j^{\bullet} \subseteq F^{\bullet}_{j+1} \subseteq \cdots \subseteq F^{\bullet}.\]
 Such that $d(F^i_j) \subseteq F^{i+1}_j$, and the filtration is exhaustive and separated:
 \[\bigcup_{j \in \BZ} F^i_j = F^i, \quad \bigcap_{j \in \BZ} F^i_j = 0.\]
 
@@ -1371,6 +1379,9 @@ We also define $E^{p,q}_k := E_{-p}^{p+q}(k).$
 \begin{examp}
   $K^{\bullet}$ is a chain complex, $F$ a left exact functor, then there is a natural spectral sequence:
   \[E^{p,q}_2 =\BR^{p+q} F(K^{q}) \Rightarrow \BR^{p+q} F(K^{\bullet}).\]
+  (maybe:
+  \[E^{p,q}_1 = \BR^{p} F(K^{q}) \Rightarrow \BR^{p+q} F(K^{\bullet})?\])
+  
   Because we can use the Cartan-Eilenberg resolution to resolve $K^{\bullet}$, which is given by:
   \[
   \begin{tikzcd}
@@ -1586,6 +1597,9 @@ $E_{\psi} \in \mathcal{N}_{\CP(\Lambda)} \cap \fs(y)$ is a regular element (belo
   \]
 \end{cor}
 
+\begin{rk}
+  \[\mathrm{Unip}_{\check{\CO}}(G/\BR) = \{ \text{irreducible representations in $\mathrm{Irr}_{\check{\CO}_{ss}}( G/\BR)$ with minimal GK-dim} \}\]
+\end{rk}
 
 \begin{examp}
   $G = G_1 \times G_1$ where $G_1$ is a complex connected reductive algebraic group viewed as a real group. Then $\check{G}^{\Gamma} = (\check{G_1} \times \check{G_1}) \rtimes \{1,\delta\}$. A homomorphism $\psi : \SL_2(\BC) \to \check{G}$ is determined by two homomorphisms $\psi_1, \psi_2 : \SL_2(\BC) \to \check{G_1}$, we can check that $\psi$ comes from a unipotent Arthur parameter if and only if $\psi_1$ and $\psi_2$ are conjugate to each other. So unipotent Arthur parameters of $G$ are in bijection with homomorphisms $\psi_1 : \SL_2(\BC) \to \check{G_1}$. Therefore, equivalence classes of unipotent Arthur parameters of $G_1$ are in bijection with nilpotent orbits in $\check{\fg_1}$.
@@ -1648,7 +1662,7 @@ In the case of $(\fg,K)$-modules, the method is the same:
 \]
 
 \begin{rk}
-  The key point is the result of Joseph \cite{Jos} the Springer correspondence of cell representation gives the annihilator variety. However, I'm not fully understand the details.
+  The key point is the result of Joseph \cite{Jos85} the Springer correspondence of cell representation gives the annihilator variety. However, I'm not fully understand the details.
 \end{rk}
 
 
@@ -1702,63 +1716,61 @@ For each element $w \in W$, there are two processes to get a nilpotent orbit $\C
 
 The question is: are these two nilpotent orbits the same? i.e. $\CO(\sigma_{\mathcal{C}^{LR}_w}) = \CO_{P(w),s}$?
 
+\textcolor{red}{answer: Yes!} \cite{BV82}
+
+
+
 
 
 \newpage
 
 \begin{thebibliography}{99}
 
-    \bibitem[Jos]{Jos}
-      A. Joseph. \textit{On the associated variety of a primitive ideal}, J. Algebra. \textbf{93} (1985), no. 2, 509-523.
+\bibitem[BB82]{BB82}
+W. Borho and J.-L. Brylinski, Differential operators on homogeneous spaces. I. Irreducibility of the associated variety for annihilators of induced modules, Invent. Math. {\bf 69} (1982), no.~3, 437--476; \MRR{0679767}
 
-    \bibitem[BB]{BB}
-      W. Borho, J. Brylinski. \textit{Differential operators on homogeneous spaces I: irreducibility of the associated variety}, Inv. Math. \textbf{69} (1982), 437-476.
+\bibitem[BV80]{BV80}
+D.~M. Barbasch and D.~A. Vogan Jr, The local structure of characters, J. Functional Analysis {\bf 37} (1980), no.~1, 27--55; \MRR{0576644}
 
-    \bibitem[KV]{KV} 
-      W. Knapp and D. Vogan. \textit{Cohomological Induction and Unitary Representations}, Princeton Mathematical Series, vol. 45, Princeton University Press, Princeton, NJ, 1995.
+\bibitem[BV82]{BV82}
+D.~M. Barbasch and D.~A. Vogan Jr, Primitive ideals and orbital integrals in complex classical groups, Math. Ann. {\bf 259} (1982), no.~2, 153--199; \MRR{0656661}
 
-    \bibitem[SGA3]{SGA3}
-      M. Demazure, A. Grothendieck. \textit{Schémas en Groupes (SGA3) I, II, III}, Lecture Notes in Mathematics 151, 152, 153, Springer, New York (1970).
+\bibitem[GGS21]{GGS21}
+R. Gomez~Mu\~noz, D. Gourevitch and S. Sahi, Whittaker supports for representations of reductive groups, Ann. Inst. Fourier (Grenoble) {\bf 71} (2021), no.~1, 239--286; \MRR{4275869}
 
+\bibitem[GZ14]{GZ14}
+R. Gomez~Mu\~noz and C.-B. Zhu, Local theta lifting of generalized Whittaker models associated to nilpotent orbits, Geom. Funct. Anal. {\bf 24} (2014), no.~3, 796--853; \MRR{3213830}
 
+\bibitem[HTT08]{HTT08}
+R. Hotta, K. Takeuchi and T. Tanisaki, {\it $D$-modules, perverse sheaves, and representation theory}, translated from the 1995 Japanese edition by Takeuchi,
+Progress in Mathematics, 236, Birkh\"auser Boston, Boston, MA, 2008; \MRR{2357361}
 
-    \bibitem[S]{S}
-      Binyong Sun. \textit{Almost linear Nash groups}, In: Chinese Ann. Math. Ser. B 36.3(2015), pp. 355-400.
+\bibitem[Jos85]{Jos85}
+A. Joseph, On the associated variety of a primitive ideal, J. Algebra {\bf 93} (1985), no.~2, 509--523; \MRR{0786766}
 
+\bibitem[KL80]{KL80}
+D.~A. Kazhdan and G. Lusztig, A topological approach to Springer's representations, Adv. in Math. {\bf 38} (1980), no.~2, 222--228; \MRR{0597198}
 
+\bibitem[KT84]{KT84}
+M. Kashiwara and T. Tanisaki, The characteristic cycles of holonomic systems on a flag manifold related to the Weyl group algebra, Invent. Math. {\bf 77} (1984), no.~1, 185--198; \MRR{0751138}
 
+\bibitem[KV95]{KV95}
+A.~W. Knapp and D.~A. Vogan Jr, {\it Cohomological induction and unitary representations}, Princeton Mathematical Series, 45, Princeton Univ. Press, Princeton, NJ, 1995; \MRR{1330919}
 
-    \bibitem[GGS21]{GGS21}
-      Raul Gomez, Dmitry Gourevitch, and Siddhartha Sahi. \textit{Whittaker supports for representations of reductive groups}, en. In: Annales de l’Institut Fourier 71.1 (2021), pp. 239-286.
+\bibitem[MW87]{MW87}
+C. M\oe glin and J.-L. Waldspurger, Mod\`eles de Whittaker d\'eg\'en\'er\'es pour des groupes $p$-adiques, Math. Z. {\bf 196} (1987), no.~3, 427--452; \MRR{0913667}
 
+\bibitem[Nev99]{Nev99}
+M. Nevins, Admissible nilpotent coadjoint orbits of $p$-adic reductive Lie groups, Represent. Theory {\bf 3} (1999), 105--126; \MRR{1698202}
 
-    \bibitem[GZ14]{GZ14}
-      Raul Gomez and Chen-Bo Zhu. \textit{Local theta lifting of generalized Whittaker models associated to nilpotent orbits}, In: Geometric and Functional Analysis 24 (3 2014), pp. 796-853.
+\bibitem[Sch87]{Sch87}
+J.~O. Schwartz, {\it THE DETERMINATION OF THE ADMISSIBLE NILPOTENT ORBITS IN REAL CLASSICAL GROUPS}, ProQuest LLC, Ann Arbor, MI, 1987; \MRR{2941135}
 
+\bibitem[SGA3]{SGA3}
+M. Demazure, A. Grothendieck. \textit{Schémas en Groupes (SGA3) I, II, III}, Lecture Notes in Mathematics 151, 152, 153, Springer, New York (1970).
 
-    \bibitem[MW87]{MW87}
-      M. M{\oe}glin and J.-L. Waldspurger. \textit{Modèles de Whittaker des groupes p-adiques}, In: Mathematische Zeitschrift 196 (3 1987), pp. 427-452.
-
-
-    \bibitem[BV]{BV}
-      D. Barbash and D. Vogan. \textit{The local structure of characters}, In: J.
-      Functional Analysis 37.1 (1980), pp. 27-55.
-
-    \bibitem[KT]{KT}
-    Kashiwara, M., and Tanisaki, T. \textit{The characteristic cycles of holonomic systems on a flag manifold}, Inventiones mathematicae 77 (1984): 185-198.
-
-    \bibitem[KL]{KL}
-      D. Kazhdan and G. Lusztig. \textit{A topological approach to Springer's representations}, Adv. in Math. 38 (1980), pp. 222-228.
-
-
-    \bibitem[Nev]{Nev}
-    M. Nevins, Admissible nilpotent coadjoint orbits of $p$-adic reductive Lie groups, Represent. Theory {\bf 3} (1999), 105--126; MR1698202
-
-    \bibitem[Sch]{Sch}
-    J.~O. Schwartz, {\it THE DETERMINATION OF THE ADMISSIBLE NILPOTENT ORBITS IN REAL CLASSICAL GROUPS}, ProQuest LLC, Ann Arbor, MI, 1987; MR2941135
-
-    \bibitem[HTT]{HTT}
-    R. Hotta, K. Takeuchi, and T. Tanisaki. \textit{D-Modules, Perverse Sheaves, and Representation Theory}, Progress in Mathematics, vol. 236, Birkhäuser Boston, Inc., Boston, MA, 2008.
+\bibitem[Sun15]{Sun15}
+B. Sun, Almost linear Nash groups, Chinese Ann. Math. Ser. B {\bf 36} (2015), no.~3, 355--400; \MRR{3341164}
 
 \end{thebibliography}
 

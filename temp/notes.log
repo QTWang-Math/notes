@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.3.8)  15 DEC 2025 11:17
+This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.3.8)  22 MAR 2026 21:51
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -722,7 +722,7 @@ File: Claude_Monet-NC.jpg Graphic file (type bmp)
 
 
 [2]
-LaTeX Font Info:    Trying to load font information for U+euf on input line 261.
+LaTeX Font Info:    Trying to load font information for U+euf on input line 269.
  (/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/ueuf.fd
 File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
 )
@@ -748,7 +748,7 @@ File: 3.png Graphic file (type bmp)
 [6]
 
 [7]
-Underfull \hbox (badness 10000) in paragraph at lines 417--419
+Underfull \hbox (badness 10000) in paragraph at lines 425--427
 
  []
 
@@ -763,6 +763,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 417--419
 [11]
 
 [12]
+
+LaTeX Warning: Citation `KV' on page 13 undefined on input line 643.
+
+
 
 [13]
 
@@ -781,7 +785,7 @@ Underfull \vbox (badness 4441) has occurred while \output is active []
 [17]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\@ifnextchar' on input line 717.
+(hyperref)                removing `\@ifnextchar' on input line 725.
 
 
 
@@ -790,7 +794,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 [19]
 
 [20]
-Overfull \hbox (2.7539pt too wide) in paragraph at lines 827--828
+Overfull \hbox (2.7539pt too wide) in paragraph at lines 835--836
 [][][]\TU/lmr/m/n/12 Now assume $[][]\OML/cmm/m/it/12 G$ \TU/lmr/m/n/12 is a real reductive group, with Lie algebra $[][]\U/euf/m/n/12 g[]$\TU/lmr/m/n/12 . For any irreducible Casselman-
  []
 
@@ -799,7 +803,7 @@ Overfull \hbox (2.7539pt too wide) in paragraph at lines 827--828
 [21]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\@ifnextchar' on input line 924.
+(hyperref)                removing `\@ifnextchar' on input line 932.
 
 
 
@@ -815,6 +819,13 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 
 [27]
 
+LaTeX Warning: Citation `Nev' on page 28 undefined on input line 1165.
+
+
+LaTeX Warning: Citation `Sch' on page 28 undefined on input line 1187.
+
+
+
 [28]
 
 [29]
@@ -822,16 +833,13 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 [30]
 
 [31]
-Underfull \vbox (badness 2376) has occurred while \output is active []
-
-
 
 [32]
 
 [33]
 
 [34]
-Overfull \hbox (24.8535pt too wide) detected at line 1477
+Overfull \hbox (24.8535pt too wide) detected at line 1488
 \OML/cmm/m/it/12 y \OT1/cmr/m/n/12 = [](\OML/cmm/m/it/12 ^^Yi^^U\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 ^^^[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 j\OT1/cmr/m/n/12 ) = [](\OML/cmm/m/it/12 ^^Yi^^U[]\OT1/cmr/m/n/12 ) [](\OML/cmm/m/it/12 ^^Yid [] []\OT1/cmr/m/n/12 )\OML/cmm/m/it/12  []\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 j\OT1/cmr/m/n/12 ) = [](\OML/cmm/m/it/12 ^^Yi^^U[]\OT1/cmr/m/n/12 )\OML/cmm/m/it/12  [] []  []\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 j\OT1/cmr/m/n/12 ) = \OML/cmm/m/it/12 y[]y[]:
  []
 
@@ -840,12 +848,12 @@ Overfull \hbox (24.8535pt too wide) detected at line 1477
 [35]
 
 [36]
-Overfull \hbox (21.74294pt too wide) detected at line 1564
+Overfull \hbox (21.74294pt too wide) detected at line 1575
 []
  []
 
 
-Overfull \hbox (10.85902pt too wide) in paragraph at lines 1574--1575
+Overfull \hbox (10.85902pt too wide) in paragraph at lines 1585--1586
 [][][]\TU/lmr/m/it/12 irreducible $[][]\OML/cmm/m/it/12 K\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 y\OT1/cmr/m/n/12 )[]$\TU/lmr/m/it/12 -equivariant $[][]\OMS/cmsy/m/n/12 D$\TU/lmr/m/it/12 -modules $[][]\OMS/cmsy/m/n/12 M$ \TU/lmr/m/it/12 on $[][][]\OT1/cmr/m/n/12 (^^C)[]\OML/cmm/m/it/12 =P\OT1/cmr/m/n/12 (^^C)$ \TU/lmr/m/it/12 with $[][]\OML/cmm/m/it/12 T[]\OT1/cmr/m/n/12 ([](^^C)[]\OML/cmm/m/it/12 =P\OT1/cmr/m/n/12 (^^C)) \OMS/cmsy/m/n/12 ^^R
  []
 
@@ -863,21 +871,31 @@ Overfull \hbox (10.85902pt too wide) in paragraph at lines 1574--1575
 
 [42]
 
-[43] (temp/notes.aux)
+[43]
+
+[44]
+
+[45]
+
+[46] (temp/notes.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
  ***********
+
+
+LaTeX Warning: There were undefined references.
+
 Package rerunfilecheck Info: File `notes.out' has not changed.
-(rerunfilecheck)             Checksum: 95A1C7CDEF87E7D54440305F2C28D72D;6098.
+(rerunfilecheck)             Checksum: C046F315D2BA29FB9730BEE15B57B9CE;6442.
  ) 
 Here is how much of TeX's memory you used:
- 26176 strings out of 473832
- 493953 string characters out of 5729482
- 916125 words of memory out of 5000000
- 48578 multiletter control sequences out of 15000+600000
+ 26236 strings out of 473832
+ 495498 string characters out of 5729482
+ 916314 words of memory out of 5000000
+ 48638 multiletter control sequences out of 15000+600000
  570151 words of font info for 105 fonts, out of 8000000 for 9000
  1509 hyphenation exceptions out of 8191
  88i,62n,196p,792b,1367s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on temp/notes.xdv (43 pages, 561620 bytes).
+Output written on temp/notes.xdv (46 pages, 614012 bytes).

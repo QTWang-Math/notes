@@ -15,7 +15,7 @@
 \contentsline {section}{\tocsection {}{10}{2025.10.1}}{20}{section.10}%
 \contentsline {section}{\tocsection {}{11}{2025.10.2}}{22}{section.11}%
 \contentsline {subsection}{\tocsubsection {}{11.1}{Conormal bundle of singular subvariety}}{22}{subsection.11.1}%
-\contentsline {subsection}{\tocsubsection {}{11.2}{Summary of paper \cite [The characteristic cycles of holonomic systems on a flag manifold]{KT}}}{22}{subsection.11.2}%
+\contentsline {subsection}{\tocsubsection {}{11.2}{Summary of paper \cite [The characteristic cycles of holonomic systems on a flag manifold]{KT84}}}{22}{subsection.11.2}%
 \contentsline {section}{\tocsection {}{12}{2025.10.5}}{25}{section.12}%
 \contentsline {section}{\tocsection {}{13}{2025.10.9}}{26}{section.13}%
 \contentsline {section}{\tocsection {}{14}{2025.10.13}}{28}{section.14}%
@@ -31,4 +31,7 @@
 \contentsline {subsection}{\tocsubsection {}{22.2}{annihilator varieties are special}}{40}{subsection.22.2}%
 \contentsline {section}{\tocsection {}{23}{2025.11.21}}{41}{section.23}%
 \contentsline {section}{\tocsection {}{24}{2025.11.24}}{42}{section.24}%
-\contentsline {section}{\tocsection {}{}{References}}{43}{section*.2}%
+\contentsline {section}{\tocsection {}{25}{2026.3.3}}{43}{section.25}%
+\contentsline {section}{\tocsection {}{26}{2026.3.21}}{44}{section.26}%
+\contentsline {section}{\tocsection {}{27}{2026.3.22}}{45}{section.27}%
+\contentsline {section}{\tocsection {}{}{References}}{46}{section*.2}%

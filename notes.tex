@@ -1002,7 +1002,7 @@ is an isomorphism and $W \times W$-equivariant.
 Define $b(w) = h \circ \mathrm{CC}^{-1}([\bar{T^*_{\CY_w}\CB \times \CB}])$.
 Now we have three basis of $\BC[W]$:
 \[\{w\}_{w \in W}, \quad \{a(w)\}_{w \in W}, \quad \{b(w)\}_{w \in W}.\]  
-It was conjectured by Kashiwara and Tanisaki that: $a(w) = b(w)$ when $G = \SL_n(\BC)$ which means the characteristic cycle of $\CL_w$ is irreducible, but unfortunately it is not true. Conterexample exist when $G = \SL_8(\BC)$, where Kashwara-Saito singularities appears at some Schubert varieties.
+It was conjectured by Kashiwara and Tanisaki that: $a(w) = b(w)$ when $G = \SL_n(\BC)$ which means the characteristic cycle of $\CL_w$ is irreducible, but unfortunately it is not true. Conterexample exists when $G = \SL_8(\BC)$, where Kashwara-Saito singularities appears in some Schubert varieties.
 
 \newpage
 
@@ -1719,10 +1719,175 @@ The question is: are these two nilpotent orbits the same? i.e. $\CO(\sigma_{\mat
 \textcolor{red}{answer: Yes!} \cite{BV82}
 
 
+\newpage
+
+
+\section{2026.3.3}
+
+$G$ is a linear real reductive group, $\tilde{G}$ is a double cover of $G$.
+
+\begin{thm}
+  $\tilde{G}_{0}$ is a linear group (i.e. there is an injective homomorphism $\tilde{G}_0 \to \GL_n(\BR)$ for some $n$) equivalent to the existence of a finite-dimensional genuine representation of $\tilde{G}$.
+\end{thm}
+
+
+\begin{proof}
+
+
+  If $\tilde{G}_0$ is a linear group, there are two possibilities:
+
+  \begin{itemize}
+    \item $ \varepsilon  \notin \tilde{G}_0$: then $\{ 1, \varepsilon\} \times \tilde{G}_0$ is a subgroup of $\tilde{G}$ with finite index, and it has a finite-dimensional representation such that $\varepsilon$ acts by $-1$, so we get a finite-dimensional genuine representation of $\tilde{G}$ by induction.
+    \item $\varepsilon \in \tilde{G}_0$: denote $\tilde{G}_0$ by $H$, then $H = A \times {^{0}H}$ as a Nash group, and $^0H$ is also a linear group. So there is a closed embedding of Nash groups $^0H \hookrightarrow \GL_n(\BR)$ for some $n$ ($^0H$ has compact center), take Zariski closure of $^0H$ in $\GL_n(\BC)$ we get the complexification $^0H_{\BC}$ of $^0H$, there is an algebraic matrix coefficient of $^0H_{\BC}$ such that $\varepsilon$ acts on it by $-1$, and it generates a finite-dimensional genuine representation of $\tilde{G}$ by induction.
+  \end{itemize}
+  
+  
+  Conversely, if there is a finite-dimensional genuine representation of $\tilde{G}$, we also have two possibilities:
+  \begin{itemize}
+    \item $\varepsilon \notin \tilde{G}_0$: then $\tilde{G}_0 \to G$ is injective, since $G$ is a linear group, $\tilde{G}_0$ is also a linear group.
+    \item $\varepsilon \in \tilde{G}_0$: then we can find a finite-dimensional representation $E_1$ of $\tilde{G}_0$ such that $\varepsilon$ acts by $-1$. We also have a finite-dimensional faithful representation $E_2$ of $G$, we can regard it as a representation of $\tilde{G}_0$ by pullback, and $\varepsilon$ acts trivially on $E_2$. So $E_1 \oplus E_2$ is a finite-dimensional faithful representation of $\tilde{G}_0$.
+  \end{itemize}
+\end{proof}
+
+
+\begin{rk}
+  After I have a sleep, I find that $\tilde{G}_0$ can be repleced by $\tilde{G}$ in this theorem, and the proof is even easier.
+\end{rk}
+
+
+\newpage
+
+
+\section{2026.3.21}
+
+In this section, we illustrate the geometry of the flag variety of $\mathrm{SL}_2(\BC)$, which serve as a simple example for understanding more general phenomena.
+
+
+$K = \BC^*$ action has three orbits on $\BP^1(\BC)$: two closed orbits $\{0\}$ and $\{\infty\}$, and one open orbit $\BC^*$. The conormal bundle of the open orbit is the zero section, while the conormal bundle of the closed orbits are the cotangent fiber at $0$ and $\infty$ respectively. So we have three conormal bundles, which are all Lagrangian subvarieties in $T^*\BP^1(\BC)$.
+
+
+
+\begin{center}
+\begin{tikzpicture}[scale=2]
+
+% Shade the open orbit C^*
+\fill[blue!10] (0,0) circle (1);
+
+% Draw sphere outline
+\draw (0,0) circle (1);
+
+% Draw equator
+\draw[dashed] (-1,0) arc (180:360:1 and 0.4);
+\draw (-1,0) arc (180:0:1 and 0.4);
+
+% North pole (infinity)
+\fill (0,1) circle (0.04);
+\node[above] at (0,1) {$\infty$};
+
+% South pole (0)
+\fill (0,-1) circle (0.04);
+\node[below] at (0,-1) {$0$};
+
+% Label open orbit
+\node at (0,0) {$\mathbb{C}^*$};
+
+\end{tikzpicture}
+\end{center}
+
+For a $K$-equivariant perverse sheaf $\CF^{\bullet}$ on it, we calculate its characteristic cycle $\mathrm{CC}(\CF^{\bullet})$ use the formula
+
+\[
+\chi^{mic}_{S} = \sum_{S' > S} c(S,S') \chi^{loc}_{S'},
+\]
+
+
+only need to determine the coefficients $c(S,S') (= \sum_i (-1)^i H^i_c(J \cap S', K \cap S'; \BC))$ for $S' > S$, where $(J,K)$ is the normal Morse datum of S, which is well-defined up to homeomorphism.
+
+
+\begin{itemize}
+  \item For the open orbit $\BC^*$, we have $S' = \BC^*$ and $c(\BC^*,\BC^*) = -1$.
+  \item For the closed orbit $\{0\}$, we have $S' = \{0\}, \BC^*$, and $c(\{0\},\{0\}) = 1$, for $c(\{0\},\BC^*)$, the pair $(J \cap S', K \cap S')$ is the following picture
+
+\begin{center}
+\begin{tikzpicture}[scale=2]
+
+% Draw punctured disc (light fill)
+\fill[blue!10] (0,0) circle (1);
+\fill[white] (0,0) circle (0.05); % puncture at the origin
+
+% Draw the boundary circle
+\draw (0,0) circle (1);
+
+% Draw the puncture as a hollow point
+\draw (0,0) circle (0.05);
+\node[below right] at (0,0) {$0$};
+
+% Draw the lower half-cycle (closed subset K)
+\draw[red, thick] (1,0) arc (0:-180:1); % lower semicircle
+\node[red, below] at (0,-1) {$K$};
+
+% Label the punctured disc
+\node at (0,0.7) {$J$};
+
+\end{tikzpicture}
+\end{center}
+therefore $c(\{0\},\BC^*) = \sum_i (-1)^i H^i_c(J \cap \BC^*, K \cap \BC^*; \BC) =^{?} -1$.
+\end{itemize}
+
+
+So we have
+
+\begin{align*}
+  \chi^{mic}_{0} &= \chi^{loc}_{0} - \chi^{loc}_{\BC^*}, \\ 
+  \chi^{mic}_{\infty} &= \chi^{loc}_{\infty} - \chi^{loc}_{\BC^*}, \\
+  \chi^{mic}_{\BC^*} &= -\chi^{loc}_{\BC^*}.
+\end{align*}
+ 
+\newpage
+
+\section{2026.3.22}
+
+Construuctible sheaves on $\BC = \BC^* \sqcup \{0\}$.
+
+Denote $j: \BC^* \hookrightarrow \BC$ the open inclusion, $i: \{0\} \hookrightarrow \BC$ the closed inclusion. Then we have the following six functors:
+\[
+\begin{tikzcd}[column sep=huge]
+  D^b(\mathbb{C}^*) 
+  \arrow[r, shift left=2.5ex, "j_!"]  
+  \arrow[r, shift right=2.5ex, "j_*"'] 
+  & D^b_c(\mathbb{C}) 
+  \arrow[r, shift left=2.5ex, "i^*"] 
+  \arrow[r, shift right=2.5ex, "i^!"']
+  \arrow[l, "j^{*} = j^!" description] 
+  & D^b(\{0\})
+  \arrow[l, "i_* = i^!" description]
+\end{tikzcd}
+\]
+
+$\CL$ is a local system on $\BC^*$. 
+
+$j_!\CL$ has no quotient supported on $\{0\}$, $j_*$ has no subobject supported on $\{0\}$. $j_!\CL[1]$ and $j_*\CL[1]$ are perverse sheaves on $\BC$.
+
+By easy calculation of group cohomology, we have:
+
+\begin{align*}
+  H^i(j_*\CL[1]_0) = \left\{
+  \begin{array}{ll}
+    0 & i \neq 0,-1 \\
+    V_{\mu} & i = 0 \\
+    V^{\mu} & i = -1
+  \end{array}
+  \right. 
+\end{align*}
+
+
 
 
 
 \newpage
+
+
+
 
 \begin{thebibliography}{99}
 

@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.3.8)  14 APR 2026 15:13
+This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.3.8)  14 APR 2026 15:28
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -946,24 +946,27 @@ File: Claude_Monet-NC.jpg Graphic file (type bmp)
 \tf@toc=\write6
 \openout6 = `notes.toc'.
 
-
-
-[2] (/usr/local/texlive/2025/texmf-dist/tex/latex/microtype/mt-cmr.cfg
+ (/usr/local/texlive/2025/texmf-dist/tex/latex/microtype/mt-cmr.cfg
 File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman (RS)
 ) (/usr/local/texlive/2025/texmf-dist/tex/latex/microtype/mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 ) (/usr/local/texlive/2025/texmf-dist/tex/latex/microtype/mt-msb.cfg
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
-LaTeX Font Info:    Trying to load font information for U+euf on input line 296.
+LaTeX Font Info:    Trying to load font information for U+euf on input line 297.
  (/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/ueuf.fd
 File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
 ) (/usr/local/texlive/2025/texmf-dist/tex/latex/microtype/mt-euf.cfg
 File: mt-euf.cfg 2006/07/03 v1.1 microtype config. file: AMS Euler Fraktur (RS)
 )
-Package hyperref Info: bookmark level for unknown thm defaults to 0 on input line 329.
+
+[2]
+Package hyperref Info: bookmark level for unknown thm defaults to 0 on input line 330.
 File: 1.png Graphic file (type bmp)
 <1.png>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
 
 
 [3]
@@ -975,52 +978,54 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 [4]
-
-[5]
-Package hyperref Info: bookmark level for unknown rk defaults to 0 on input line 361.
+Package hyperref Info: bookmark level for unknown rk defaults to 0 on input line 362.
 File: 3.png Graphic file (type bmp)
 <3.png>
 
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[5]
+Package hyperref Info: bookmark level for unknown defn defaults to 0 on input line 404.
+
 
 [6]
-Package hyperref Info: bookmark level for unknown defn defaults to 0 on input line 403.
-
-
-[7]
-Underfull \hbox (badness 10000) in paragraph at lines 452--454
+Underfull \hbox (badness 10000) in paragraph at lines 453--455
 
  []
 
 
 
-[8]
-Package hyperref Info: bookmark level for unknown lem defaults to 0 on input line 477.
+[7]
+Package hyperref Info: bookmark level for unknown lem defaults to 0 on input line 478.
 
+
+[8]
 
 [9]
 
 [10]
+Package hyperref Info: bookmark level for unknown cor defaults to 0 on input line 725.
+
 
 [11]
+File: 屏幕截图 2024-12-17 180658.png Graphic file (type bmp)
+<屏幕截图 2024-12-17 180658.png>
+Package hyperref Info: bookmark level for unknown conj defaults to 0 on input line 762.
+
 
 [12]
 
 [13]
 
 [14]
-Package hyperref Info: bookmark level for unknown cor defaults to 0 on input line 724.
-File: 屏幕截图 2024-12-17 180658.png Graphic file (type bmp)
-<屏幕截图 2024-12-17 180658.png>
-
-Underfull \vbox (badness 4846) has occurred while \output is active []
-
-
 
 [15]
+Package hyperref Info: bookmark level for unknown examp defaults to 0 on input line 907.
+
 
 [16]
-Package hyperref Info: bookmark level for unknown conj defaults to 0 on input line 761.
-
 
 [17]
 
@@ -1029,8 +1034,6 @@ Package hyperref Info: bookmark level for unknown conj defaults to 0 on input li
 [19]
 
 [20]
-Package hyperref Info: bookmark level for unknown examp defaults to 0 on input line 906.
-
 
 [21]
 
@@ -1041,10 +1044,28 @@ Package hyperref Info: bookmark level for unknown examp defaults to 0 on input l
 [24]
 
 [25]
+Overfull \hbox (24.8535pt too wide) detected at line 1500
+\OML/cmm/m/it/12 y \OT1/cmr/m/n/12 = [](\OML/cmm/m/it/12 ^^Yi^^U\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 ^^^[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 j\OT1/cmr/m/n/12 ) = [](\OML/cmm/m/it/12 ^^Yi^^U[]\OT1/cmr/m/n/12 ) [](\OML/cmm/m/it/12 ^^Yid [] []\OT1/cmr/m/n/12 )\OML/cmm/m/it/12  []\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 j\OT1/cmr/m/n/12 ) = [](\OML/cmm/m/it/12 ^^Yi^^U[]\OT1/cmr/m/n/12 )\OML/cmm/m/it/12  [] []  []\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 j\OT1/cmr/m/n/12 ) = \OML/cmm/m/it/12 y[]y[]:
+ []
+
+
 
 [26]
+Overfull \hbox (26.66295pt too wide) detected at line 1590
+[]
+ []
+
+
+Underfull \vbox (badness 1024) has occurred while \output is active []
+
+
 
 [27]
+Overfull \hbox (10.10303pt too wide) in paragraph at lines 1600--1601
+[]\TU/lmr/m/it/12 irreducible $\OML/cmm/m/it/12 K\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 y\OT1/cmr/m/n/12 )[]$\TU/lmr/m/it/12 -equivariant $\OMS/cmsy/m/n/12 D$\TU/lmr/m/it/12 -modules $\OMS/cmsy/m/n/12 M$ \TU/lmr/m/it/12 on $[]\OT1/cmr/m/n/12 (^^C)[]\OML/cmm/m/it/12 =P\OT1/cmr/m/n/12 (^^C)$ \TU/lmr/m/it/12 with $\OML/cmm/m/it/12 T[]\OT1/cmr/m/n/12 ([](^^C)[]\OML/cmm/m/it/12 =P\OT1/cmr/m/n/12 (^^C)) \OMS/cmsy/m/n/12 ^^R
+ []
+
+
 
 [28]
 
@@ -1057,71 +1078,30 @@ Package hyperref Info: bookmark level for unknown examp defaults to 0 on input l
 [32]
 
 [33]
-Overfull \hbox (24.8535pt too wide) detected at line 1499
-\OML/cmm/m/it/12 y \OT1/cmr/m/n/12 = [](\OML/cmm/m/it/12 ^^Yi^^U\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 ^^^[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 j\OT1/cmr/m/n/12 ) = [](\OML/cmm/m/it/12 ^^Yi^^U[]\OT1/cmr/m/n/12 ) [](\OML/cmm/m/it/12 ^^Yid [] []\OT1/cmr/m/n/12 )\OML/cmm/m/it/12  []\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 j\OT1/cmr/m/n/12 ) = [](\OML/cmm/m/it/12 ^^Yi^^U[]\OT1/cmr/m/n/12 )\OML/cmm/m/it/12  [] []  []\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 j\OT1/cmr/m/n/12 ) = \OML/cmm/m/it/12 y[]y[]:
- []
-
-
-
-[34]
-
-[35]
-Overfull \hbox (26.66295pt too wide) detected at line 1589
-[]
- []
-
-
-Overfull \hbox (10.10303pt too wide) in paragraph at lines 1599--1600
-[]\TU/lmr/m/it/12 irreducible $\OML/cmm/m/it/12 K\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 y\OT1/cmr/m/n/12 )[]$\TU/lmr/m/it/12 -equivariant $\OMS/cmsy/m/n/12 D$\TU/lmr/m/it/12 -modules $\OMS/cmsy/m/n/12 M$ \TU/lmr/m/it/12 on $[]\OT1/cmr/m/n/12 (^^C)[]\OML/cmm/m/it/12 =P\OT1/cmr/m/n/12 (^^C)$ \TU/lmr/m/it/12 with $\OML/cmm/m/it/12 T[]\OT1/cmr/m/n/12 ([](^^C)[]\OML/cmm/m/it/12 =P\OT1/cmr/m/n/12 (^^C)) \OMS/cmsy/m/n/12 ^^R
- []
-
-
-
-[36]
-
-[37]
-
-[38]
-
-[39]
-
-[40]
-
-[41]
-
-[42]
-
-[43]
-
-[44]
-
-[45]
-
-[46]
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `lmtt' (encoding: TU).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 
-Overfull \hbox (7.9812pt too wide) in paragraph at lines 2017--2017
+
+[34]
+Overfull \hbox (7.9812pt too wide) in paragraph at lines 2018--2018
 \TU/lmr/m/n/12 Press, Princeton, NJ, 1995, pp. xx+948. MR[][]1330919[][]. \TU/lmr/m/sc/12 doi\TU/lmr/m/n/12 : [][]$[][] [] [][][][] [] [][][][][][][][][][][][][]$[][]
  []
 
 
-
-[47]
-Overfull \hbox (3.70079pt too wide) in paragraph at lines 2017--2017
+Overfull \hbox (3.70079pt too wide) in paragraph at lines 2018--2018
 []\TU/lmr/m/n/12 James Oliver Schwartz. \TU/lmr/m/it/12 THE DETERMINATION OF THE ADMISSIBLE NILPO-
  []
 
 
-Overfull \hbox (22.02422pt too wide) in paragraph at lines 2017--2017
+Overfull \hbox (22.02422pt too wide) in paragraph at lines 2018--2018
 \TU/lmr/m/n/12 Institute of Technology. ProQuest LLC, Ann Arbor, MI, 1987, (no paging). MR[][]2941135[][]
  []
 
 
 
-[48] (temp/notes.aux)
+[35] (temp/notes.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
@@ -1135,10 +1115,10 @@ Package logreq Info: Writing requests to 'notes.run.xml'.
 Here is how much of TeX's memory you used:
  35965 strings out of 473832
  719277 string characters out of 5729482
- 1540951 words of memory out of 5000000
+ 1539950 words of memory out of 5000000
  58308 multiletter control sequences out of 15000+600000
  570012 words of font info for 98 fonts, out of 8000000 for 9000
  1509 hyphenation exceptions out of 8191
- 95i,21n,101p,1037b,4937s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 95i,21n,101p,1037b,4944s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on temp/notes.xdv (48 pages, 662776 bytes).
+Output written on temp/notes.xdv (35 pages, 657148 bytes).

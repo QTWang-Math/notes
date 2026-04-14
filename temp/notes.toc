@@ -14,7 +14,7 @@
 \contentsline {section}{\tocsection {}{9}{2025.10.1}}{19}{section.9}%
 \contentsline {section}{\tocsection {}{10}{2025.10.2}}{21}{section.10}%
 \contentsline {subsection}{\tocsubsection {}{10.1}{Conormal bundle of singular subvariety}}{21}{subsection.10.1}%
-\contentsline {subsection}{\tocsubsection {}{10.2}{Summary of paper \cite [The characteristic cycles of holonomic systems on a flag manifold]{KT84}}}{21}{subsection.10.2}%
+\contentsline {subsection}{\tocsubsection {}{10.2}{Summary of paper \blx@tocontentsinit {0}\cite [The characteristic cycles of holonomic systems on a flag manifold]{KT84}}}{21}{subsection.10.2}%
 \contentsline {section}{\tocsection {}{11}{2025.10.5}}{24}{section.11}%
 \contentsline {section}{\tocsection {}{12}{2025.10.9}}{25}{section.12}%
 \contentsline {section}{\tocsection {}{13}{2025.10.13}}{27}{section.13}%

@@ -1,51 +1,106 @@
 \documentclass[12pt]{amsart}
-\usepackage[margin=1in]{geometry}  % set the margins to 1in on all sides
-\usepackage{amscd,amsthm,amsfonts,amssymb,amsmath,amsxtra}
+
+% ==========================================
+% 1. Basic & Typographical Packages
+% ==========================================
+\usepackage[margin=1in]{geometry}  % Page margins
+\usepackage{amscd, amsthm, amsfonts, amssymb, amsmath, amsxtra} % Core math packages
 \usepackage{mathrsfs}
 \usepackage[mathscr]{eucal}
-\usepackage[pagebackref]{hyperref}
-\usepackage{graphicx}
-\usepackage{float}
+\usepackage{microtype}             % Micro-typography optimization (highly recommended)
+\usepackage{subdepth}              % Unifies subscript depth
+\usepackage{float}                 % Float control for figures/tables
+\usepackage{graphicx}              % Graphics support
+\usepackage{ytableau}              % Young tableaux
+\usepackage[dvipsnames]{xcolor}    % Color support (load early to prevent conflicts)
+\usepackage{tcolorbox}             % Colored text boxes
+\usepackage{textcomp}              % Text companion fonts (required for \textquotesingle)
+
+% ==========================================
+% 2. Graphics & TikZ
+% ==========================================
 \usepackage{tikz}
 \usepackage{tikz-cd}
-\usetikzlibrary{decorations.pathreplacing}
-\newcommand{\tikznode}[3][inner sep=0pt]{\tikz[remember
-picture,baseline=(#2.base)]{\node(#2)[#1]{$#3$};}}
-\usepackage{ytableau}
-
-\usepackage{tcolorbox}
-\usepackage[dvipsnames]{xcolor}
-\usepackage{microtype}
-\usepackage{thmtools}
-\usepackage{subdepth}
-
-
 \usetikzlibrary{decorations.pathmorphing}
 
+% TikZ node memory command (Note: keep on a single line to prevent compilation errors)
+\newcommand{\tikznode}[3][inner sep=0pt]{\tikz[remember picture,baseline=(#2.base)]{\node(#2)[#1]{$#3$};}}
 
-
-\allowdisplaybreaks
+% ==========================================
+% 3. Document Setup & Counters
+% ==========================================
+\usepackage{hyperref}
+\usepackage{thmtools}
 
 \hypersetup{
     pdftitle={Notes},
-    pdfauthor={IDLE},
-    colorlinks=true,       % 关键：开启文字颜色
-    linkcolor=BrickRed, % 对应图中红框部分（回引页码）的文字颜色
-    citecolor=RoyalBlue, % 对应图中蓝框部分（MR编号）的文字颜色
-    urlcolor=ForestGreen,  % 网页链接颜色
-    pdfborder={0 0 0}       % 彻底消除所有方框
+    pdfauthor={Qiutong Wang},
+    colorlinks=true,       
+    linkcolor=BrickRed,    % Internal link color (e.g., page backrefs)
+    citecolor=RoyalBlue,   % Citation color (e.g., MR numbers)
+    urlcolor=ForestGreen,  % URL color
+    pdfborder={0 0 0}      % Remove all borders around links
 }
 
-\numberwithin{equation}{section}
-\pagestyle{plain}
-\setcounter{secnumdepth}{5}
-
+\allowdisplaybreaks        % Allow long equations to break across pages
 \pagestyle{headings}
+
+\numberwithin{equation}{section}
 \renewcommand\theequation{\thesection.\arabic{equation}}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Theorem style
+% TOC and Section Depths
+\setcounter{secnumdepth}{5}
+\setcounter{tocdepth}{1}   % 0=Chapter, 1=Section (hides subsections), 2=Subsection
 
-% 风格 1：定理、引理、命题 (标题加粗，正文斜体)
+% ==========================================
+% 4. Bibliography (BibLaTeX)
+% ==========================================
+\usepackage[
+    backend=biber,
+    style=alphabetic,
+    sorting=anyt,
+    maxalphanames=4,
+    maxnames=99,
+    doi=true,
+    url=false,
+    isbn=false,
+    backref=true
+]{biblatex}
+
+\addbibresource{references.bib}
+
+% --- Map MRNUMBER field to eprint ---
+\DeclareSourcemap{
+  \maps[datatype=bibtex]{
+    \map{
+      \step[fieldsource=mrnumber, fieldtarget=eprint]
+      \step[fieldset=eprinttype, fieldvalue=mr]
+    }
+  }
+}
+
+% --- Format MR number as a clickable link ---
+\DeclareFieldFormat{eprint:mr}{%
+  MR\href{https://mathscinet.ams.org/mathscinet-getitem?mr=#1}{#1}%
+}
+
+% --- Inject eprint (MR) and DOI into the printing macro ---
+\renewbibmacro*{doi+eprint+url}{%
+  \usebibmacro{eprint}%
+  \newunit\newblock
+  \printfield{doi}%
+}
+
+% --- Simplify back-references to clickable up-arrows ---
+\DefineBibliographyStrings{english}{
+  backrefpage  = {$\uparrow$},
+  backrefpages = {$\uparrow$}
+}
+
+% ==========================================
+% 5. Theorem Styles
+% ==========================================
+% Style 1: Theorems, Lemmas, Propositions (Bold header, Italic body)
 \declaretheoremstyle[
     headfont=\bfseries, 
     bodyfont=\itshape,
@@ -55,7 +110,7 @@ picture,baseline=(#2.base)]{\node(#2)[#1]{$#3$};}}
     spacebelow=8pt
 ]{thmstyle}
 
-% 风格 2：定义、备注、例子 (标题加粗，正文正体)
+% Style 2: Definitions, Remarks, Examples (Bold header, Upright body)
 \declaretheoremstyle[
     headfont=\bfseries,
     bodyfont=\normalfont,
@@ -65,9 +120,7 @@ picture,baseline=(#2.base)]{\node(#2)[#1]{$#3$};}}
     spacebelow=8pt
 ]{defstyle}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 环境声明
-
-% 使用 thmstyle (斜体正文)
+% Environment Declarations (sharing the 'thm' counter)
 \declaretheorem[style=thmstyle, name=Theorem, numberwithin=section]{thm}
 \declaretheorem[style=thmstyle, name=Corollary, sibling=thm]{cor}
 \declaretheorem[style=thmstyle, name=Proposition, sibling=thm]{prop}
@@ -75,7 +128,6 @@ picture,baseline=(#2.base)]{\node(#2)[#1]{$#3$};}}
 \declaretheorem[style=thmstyle, name=Conjecture, sibling=thm]{conj}
 \declaretheorem[style=thmstyle, name=Assumption, sibling=thm]{assump}
 
-% 使用 defstyle (正体正文)
 \declaretheorem[style=defstyle, name=Definition, sibling=thm]{defn}
 \declaretheorem[style=defstyle, name=Remark, sibling=thm]{rk}
 \declaretheorem[style=defstyle, name=Question, sibling=thm]{question}
@@ -84,192 +136,121 @@ picture,baseline=(#2.base)]{\node(#2)[#1]{$#3$};}}
 \declaretheorem[style=defstyle, name=Notation, sibling=thm]{notn}
 \declaretheorem[style=defstyle, name=Exercise, sibling=thm]{exer}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Bold Fonts
+% ==========================================
+% 6. Custom Font Commands
+% ==========================================
+% --- Blackboard Bold (\BA - \BZ) ---
+\newcommand{\BA}{{\mathbb {A}}} \newcommand{\BB}{{\mathbb {B}}} \newcommand{\BC}{{\mathbb {C}}} 
+\newcommand{\BD}{{\mathbb {D}}} \newcommand{\BE}{{\mathbb {E}}} \newcommand{\BF}{{\mathbb {F}}} 
+\newcommand{\BG}{{\mathbb {G}}} \newcommand{\BH}{{\mathbb {H}}} \newcommand{\BI}{{\mathbb {I}}} 
+\newcommand{\BJ}{{\mathbb {J}}} \newcommand{\BK}{{\mathbb {U}}} \newcommand{\BL}{{\mathbb {L}}} 
+\newcommand{\BM}{{\mathbb {M}}} \newcommand{\BN}{{\mathbb {N}}} \newcommand{\BO}{{\mathbb {O}}} 
+\newcommand{\BP}{{\mathbb {P}}} \newcommand{\BQ}{{\mathbb {Q}}} \newcommand{\BR}{{\mathbb {R}}} 
+\newcommand{\BS}{{\mathbb {S}}} \newcommand{\BT}{{\mathbb {T}}} \newcommand{\BU}{{\mathbb {U}}} 
+\newcommand{\BV}{{\mathbb {V}}} \newcommand{\BW}{{\mathbb {W}}} \newcommand{\BX}{{\mathbb {X}}} 
+\newcommand{\BY}{{\mathbb {Y}}} \newcommand{\BZ}{{\mathbb {Z}}} \newcommand{\bi}{{\mathbf {i}}}
 
-\newcommand{\BA}{{\mathbb {A}}}
-\newcommand{\BB}{{\mathbb {B}}}
-\newcommand{\BC}{{\mathbb {C}}}
-\newcommand{\BD}{{\mathbb {D}}}
-\newcommand{\BE}{{\mathbb {E}}}
-\newcommand{\BF}{{\mathbb {F}}}
-\newcommand{\BG}{{\mathbb {G}}}
-\newcommand{\BH}{{\mathbb {H}}}
-\newcommand{\BI}{{\mathbb {I}}}
-\newcommand{\BJ}{{\mathbb {J}}}
-\newcommand{\BK}{{\mathbb {U}}}
-\newcommand{\BL}{{\mathbb {L}}}
-\newcommand{\BM}{{\mathbb {M}}}
-\newcommand{\BN}{{\mathbb {N}}}
-\newcommand{\BO}{{\mathbb {O}}}
-\newcommand{\BP}{{\mathbb {P}}}
-\newcommand{\BQ}{{\mathbb {Q}}}
-\newcommand{\BR}{{\mathbb {R}}}
-\newcommand{\BS}{{\mathbb {S}}}
-\newcommand{\BT}{{\mathbb {T}}}
-\newcommand{\BU}{{\mathbb {U}}}
-\newcommand{\BV}{{\mathbb {V}}}
-\newcommand{\BW}{{\mathbb {W}}}
-\newcommand{\BX}{{\mathbb {X}}}
-\newcommand{\BY}{{\mathbb {Y}}}
-\newcommand{\BZ}{{\mathbb {Z}}}
-\newcommand{\bi}{{\mathbf {i}}}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Curly Fonts
-
-\newcommand{\CA}{{\mathcal {A}}}
-\newcommand{\CB}{{\mathcal {B}}}
-\newcommand{\CC}{{\mathcal {C}}}
-%\newcommand{\CD}{{\mathcal {D}}}
-\newcommand{\CE}{{\mathcal {E}}}
-\newcommand{\CF}{{\mathcal {F}}}
-\newcommand{\CG}{{\mathcal {G}}}
-\newcommand{\CH}{{\mathcal {H}}}
-\newcommand{\CI}{{\mathcal {I}}}
-\newcommand{\CJ}{{\mathcal {J}}}
-\newcommand{\CK}{{\mathcal {K}}}
-\newcommand{\CL}{{\mathcal {L}}}
-\newcommand{\CM}{{\mathcal {M}}}
-\newcommand{\CN}{{\mathcal {N}}}
-\newcommand{\CO}{{\mathcal {O}}}
-\newcommand{\CP}{{\mathcal {P}}}
-\newcommand{\CQ}{{\mathcal {Q}}}
-\newcommand{\CR}{{\mathcal {R}}}
-\newcommand{\CS}{{\mathcal {S}}}
-\newcommand{\CT}{{\mathcal {T}}}
-\newcommand{\CU}{{\mathcal {U}}}
-\newcommand{\CV}{{\mathcal {V}}}
-\newcommand{\CW}{{\mathcal {W}}}
-\newcommand{\CX}{{\mathcal {X}}}
-\newcommand{\CY}{{\mathcal {Y}}}
+% --- Calligraphic Fonts (\CA - \CZ) ---
+\newcommand{\CA}{{\mathcal {A}}} \newcommand{\CB}{{\mathcal {B}}} \newcommand{\CC}{{\mathcal {C}}} 
+\newcommand{\CE}{{\mathcal {E}}} \newcommand{\CF}{{\mathcal {F}}} \newcommand{\CG}{{\mathcal {G}}} 
+\newcommand{\CH}{{\mathcal {H}}} \newcommand{\CI}{{\mathcal {I}}} \newcommand{\CJ}{{\mathcal {J}}} 
+\newcommand{\CK}{{\mathcal {K}}} \newcommand{\CL}{{\mathcal {L}}} \newcommand{\CM}{{\mathcal {M}}} 
+\newcommand{\CN}{{\mathcal {N}}} \newcommand{\CO}{{\mathcal {O}}} \newcommand{\CP}{{\mathcal {P}}} 
+\newcommand{\CQ}{{\mathcal {Q}}} \newcommand{\CR}{{\mathcal {R}}} \newcommand{\CS}{{\mathcal {S}}} 
+\newcommand{\CT}{{\mathcal {T}}} \newcommand{\CU}{{\mathcal {U}}} \newcommand{\CV}{{\mathcal {V}}} 
+\newcommand{\CW}{{\mathcal {W}}} \newcommand{\CX}{{\mathcal {X}}} \newcommand{\CY}{{\mathcal {Y}}} 
 \newcommand{\CZ}{{\mathcal {Z}}}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Roman Fonts
+% --- Roman Fonts (\RA - \RZ) ---
+\newcommand{\RA}{{\mathrm {A}}} \newcommand{\RB}{{\mathrm {B}}} \newcommand{\RC}{{\mathrm {C}}} 
+\newcommand{\RD}{{\mathrm {D}}} \newcommand{\RE}{{\mathrm {E}}} \newcommand{\RF}{{\mathrm {F}}} 
+\newcommand{\RG}{{\mathrm {G}}} \newcommand{\RH}{{\mathrm {H}}} \newcommand{\RI}{{\mathrm {I}}} 
+\newcommand{\RJ}{{\mathrm {J}}} \newcommand{\RK}{{\mathrm {K}}} \newcommand{\RL}{{\mathrm {L}}} 
+\newcommand{\RM}{{\mathrm {M}}} \renewcommand{\RN}{{\mathrm {N}}} \newcommand{\RO}{{\mathrm {O}}} 
+\newcommand{\RP}{{\mathrm {P}}} \newcommand{\RQ}{{\mathrm {Q}}} \newcommand{\RR}{{\mathrm {R}}} 
+\newcommand{\RS}{{\mathrm {S}}} \newcommand{\RT}{{\mathrm {T}}} \newcommand{\RU}{{\mathrm {U}}} 
+\newcommand{\RV}{{\mathrm {V}}} \newcommand{\RW}{{\mathrm {W}}} \newcommand{\RX}{{\mathrm {X}}} 
+\newcommand{\RY}{{\mathrm {Y}}} \newcommand{\RZ}{{\mathrm {Z}}}
+\renewcommand{\Re}{{\mathrm {Re}}} \newcommand{\Ri}{{\mathrm {i}}} \newcommand{\Ann}{{\mathrm{Ann}}}
 
-\newcommand{\RA}{{\mathrm {A}}}
-\newcommand{\RB}{{\mathrm {B}}}
-\newcommand{\RC}{{\mathrm {C}}}
-\newcommand{\RD}{{\mathrm {D}}}
-\newcommand{\RE}{{\mathrm {E}}}
-\newcommand{\RF}{{\mathrm {F}}}
-\newcommand{\RG}{{\mathrm {G}}}
-\newcommand{\RH}{{\mathrm {H}}}
-\newcommand{\RI}{{\mathrm {I}}}
-\newcommand{\RJ}{{\mathrm {J}}}
-\newcommand{\RK}{{\mathrm {K}}}
-\newcommand{\RL}{{\mathrm {L}}}
-\newcommand{\RM}{{\mathrm {M}}}
-\newcommand{\RN}{{\mathrm {N}}}
-\newcommand{\RO}{{\mathrm {O}}}
-\newcommand{\RP}{{\mathrm {P}}}
-\newcommand{\RQ}{{\mathrm {Q}}}
-\newcommand{\RR}{{\mathrm {R}}}
-\newcommand{\RS}{{\mathrm {S}}}
-\newcommand{\RT}{{\mathrm {T}}}
-\newcommand{\RU}{{\mathrm {U}}}
-\newcommand{\RV}{{\mathrm {V}}}
-\newcommand{\RW}{{\mathrm {W}}}
-\newcommand{\RX}{{\mathrm {X}}}
-\newcommand{\RY}{{\mathrm {Y}}}
-\newcommand{\RZ}{{\mathrm {Z}}}
-\renewcommand{\Re}{{\mathrm {Re}}}
-\newcommand{\Ri}{{\mathrm {i}}}
-\newcommand{\Ann}{{\mathrm{Ann}}}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  Gothic Fonts, Lie algebras
-
-\newcommand{\fa}{\mathfrak{a}}
-\newcommand{\fb}{\mathfrak{b}}
-\newcommand{\fc}{\mathfrak{c}}
-\newcommand{\fg}{\mathfrak{g}}
-\newcommand{\fh}{\mathfrak{h}}
-\newcommand{\fk}{\mathfrak{k}}
-\newcommand{\fl}{\mathfrak{l}}
-\newcommand{\fm}{\mathfrak{m}}
-\newcommand{\fn}{\mathfrak{n}}
-\newcommand{\fo}{\mathfrak{o}}
-\newcommand{\fp}{\mathfrak{p}}
-\newcommand{\fq}{\mathfrak{q}}
-\newcommand{\fr}{\mathfrak{r}}
-\newcommand{\fs}{\mathfrak{s}}
-\newcommand{\ft}{\mathfrak{t}}
-\newcommand{\fu}{\mathfrak{u}}
-\newcommand{\fv}{\mathfrak{v}}
-\newcommand{\fy}{\mathfrak{y}}
+% --- Gothic Fonts (Lie Algebras) ---
+\newcommand{\fa}{\mathfrak{a}} \newcommand{\fb}{\mathfrak{b}} \newcommand{\fc}{\mathfrak{c}} 
+\newcommand{\fg}{\mathfrak{g}} \newcommand{\fh}{\mathfrak{h}} \newcommand{\fk}{\mathfrak{k}} 
+\newcommand{\fl}{\mathfrak{l}} \newcommand{\fm}{\mathfrak{m}} \newcommand{\fn}{\mathfrak{n}} 
+\newcommand{\fo}{\mathfrak{o}} \newcommand{\fp}{\mathfrak{p}} \newcommand{\fq}{\mathfrak{q}} 
+\newcommand{\fr}{\mathfrak{r}} \newcommand{\fs}{\mathfrak{s}} \newcommand{\ft}{\mathfrak{t}} 
+\newcommand{\fu}{\mathfrak{u}} \newcommand{\fv}{\mathfrak{v}} \newcommand{\fy}{\mathfrak{y}} 
 \newcommand{\fz}{\mathfrak{z}}
-\newcommand{\fgl}{{\mathfrak{gl}}}
-\newcommand{\fsl}{{\mathfrak{sl}}}
-\newcommand{\fso}{{\mathfrak{so}}}
-\newcommand{\fsp}{{\mathfrak{sp}}}
-\newcommand{\fsu}{{\mathfrak{su}}}
+\newcommand{\fgl}{{\mathfrak{gl}}} \newcommand{\fsl}{{\mathfrak{sl}}} \newcommand{\fso}{{\mathfrak{so}}} 
+\newcommand{\fsp}{{\mathfrak{sp}}} \newcommand{\fsu}{{\mathfrak{su}}}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Algebraic Groups and Representation
+% ==========================================
+% 7. Math Symbols & Algebraic Groups
+% ==========================================
+\newcommand{\GL}{{\mathrm{GL}}} \newcommand{\SL}{{\mathrm{SL}}} \newcommand{\SU}{{\mathrm{SU}}} 
+\newcommand{\GU}{{\mathrm{GU}}} \newcommand{\SO}{{\mathrm{SO}}} \newcommand{\GO}{{\mathrm{GO}}} 
+\newcommand{\Sp}{{\mathrm{Sp}}} \newcommand{\GSp}{{\mathrm{GSp}}}
 
-\newcommand{\GL}{{\mathrm{GL}}}
-\newcommand{\SL}{{\mathrm{SL}}}
-\newcommand{\SU}{{\mathrm{SU}}}
-\newcommand{\GU}{{\mathrm{GU}}}
-\newcommand{\SO}{{\mathrm{SO}}}
-\newcommand{\GO}{{\mathrm{GO}}}
-\newcommand{\Sp}{{\mathrm{Sp}}}
-\newcommand{\GSp}{{\mathrm{GSp}}}
 \newcommand{\quo}{\backslash}
-\newcommand{\adequo}[1]{#1(\F)\quo #1(\mathds{A})}
+\newcommand{\adequo}[1]{#1(\BF)\quo #1(\mathds{A})}
 \newcommand{\ade}[1]{#1(\mathds{A})}
-\newcommand{\Hom}{{\mathrm{Hom}}}
-\newcommand{\Bil}{{\mathrm{Bil}}}
-\newcommand{\Id}{{\mathrm{Id}}}\newcommand{\id}{{\mathrm{id}}}
-\newcommand{\Ind}{{\mathrm{Ind}}}
-\newcommand{\Irr}{{\mathrm{Irr}}}
-\newcommand{\End}{{\mathrm{End}}}
-\newcommand{\Aut}{{\mathrm{Aut}}}
-\newcommand{\Inn}{{\mathrm{Inn}}}
-\newcommand{\Out}{{\mathrm{Out}}}
-\newcommand{\Ad}{{\mathrm{Ad}}}
-\newcommand{\ad}{{\mathrm{ad}}}
-\newcommand{\Der}{{\mathrm{Der}}}
-\newcommand{\Lie}{{\mathrm{Lie}}}
-\newcommand{\Mat}{{\mathrm{Mat}}}
-\newcommand{\sgn}{{\mathrm{sgn}}}
-\newcommand{\Rep}{{\mathrm{Rep}}}
+
+\newcommand{\Hom}{{\mathrm{Hom}}} \newcommand{\Bil}{{\mathrm{Bil}}} 
+\newcommand{\Id}{{\mathrm{Id}}}   \newcommand{\id}{{\mathrm{id}}}
+\newcommand{\Ind}{{\mathrm{Ind}}} \newcommand{\Irr}{{\mathrm{Irr}}} 
+\newcommand{\End}{{\mathrm{End}}} \newcommand{\Aut}{{\mathrm{Aut}}} 
+\newcommand{\Inn}{{\mathrm{Inn}}} \newcommand{\Out}{{\mathrm{Out}}} 
+\newcommand{\Ad}{{\mathrm{Ad}}}   \newcommand{\ad}{{\mathrm{ad}}} 
+\newcommand{\Der}{{\mathrm{Der}}} \newcommand{\Lie}{{\mathrm{Lie}}} 
+\newcommand{\Mat}{{\mathrm{Mat}}} \newcommand{\sgn}{{\mathrm{sgn}}} 
+\newcommand{\Rep}{{\mathrm{Rep}}} \newcommand{\Tr}{{\mathrm{Tr}}} 
+\newcommand{\gr}{{\mathrm{gr}}}   \newcommand{\Sym}{{\mathrm{Sym}}} 
+\newcommand{\diag}{\mathrm{diag}} \newcommand{\dd}{\mathrm{d}}
+
 \newcommand{\ten}{\otimes}
 \newcommand{\proten}{\hat{\otimes}}
 \newcommand{\Mell}[1]{\mathcal{M}#1}
 \newcommand{\Gal}[1]{\Gamma_{#1}}
-\newcommand{\Tr}{{\mathrm{Tr}}}
-\newcommand{\gr}{{\mathrm{gr}}}
-\newcommand{\Sym}{{\mathrm{Sym}}}
-\newcommand{\diag}{\mathrm{diag}}
-\newcommand{\dd}{\mathrm{d}}
-\newcommand{\MRR}[1]{\href{https://mathscinet.ams.org/mathscinet-getitem?mr=#1}{MR#1}}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%   Math formula
 
+% Auxiliary Links
+\newcommand{\MRR}[1]{\href{https://mathscinet.ams.org/mathscinet-getitem?mr=#1}{MR#1}}
+\providecommand{\cprime}{\textquotesingle} % Handles Russian transliteration characters in BibTeX
+
+% ==========================================
+% 8. Common Typographical Structures
+% ==========================================
 \newcommand{\sbst}{\subseteq}
 \newcommand{\norm}[1]{\lVert#1\rVert}
 \newcommand{\abs}[1]{\lvert#1\rvert}
-\newcommand{\set}[2]{\{#1\,|\,#2\}}
-\newcommand{\bigset}[2]{\Biggl\{#1\,\bigg\lvert\,#2\Biggr\}}
-\newcommand{\defmap}[5]{
-           \begin{equation*}
-              \begin{aligned}
-                   #1 \colon \quad  & #2 &\longrightarrow &\quad #3 \\
-                      \quad  & #4    &\longmapsto  &\quad #5
-              \end{aligned}
-           \end{equation*}
-          }
-\newcommand{\mtrtwo}[4]{\begin{pmatrix} #1 &#2 \\#3 &#4 \end{pmatrix}}
-\newcommand{\mtrthr}[9]{\begin{pmatrix} #1 &#2 &#3 \\#4 &#5 &#6\\ #7 &#8 &#9 \end{pmatrix}}
-\newcommand{\defmtrtwo}[6]{
-           \begin{equation*}
-               #1 = \bigset{\mtrtwo{#2}{#3}{#4}{#5}}{#6},
-           \end{equation*}
-           }
-\newcommand{\shortexact}[5]{#1\rightarrow #2 \rightarrow #3 \rightarrow #4\rightarrow #5}
+\newcommand{\eps}{\epsilon}
 \renewcommand{\bar}{\overline}
 \renewcommand{\tilde}{\widetilde}
-\newcommand{\eps}{\epsilon}
 
-% 0 = 只显示章 (Chapters)
-% 1 = 显示到节 (Sections) —— 这通常是隐藏子节最常用的设置
-% 2 = 显示到子节 (Subsections)
-\setcounter{tocdepth}{1}
+\newcommand{\set}[2]{\{#1\,|\,#2\}}
+\newcommand{\bigset}[2]{\Biggl\{#1\,\bigg\lvert\,#2\Biggr\}}
+
+\newcommand{\shortexact}[5]{#1\rightarrow #2 \rightarrow #3 \rightarrow #4\rightarrow #5}
+
+\newcommand{\mtrtwo}[4]{\begin{pmatrix} #1 &#2 \\#3 &#4 \end{pmatrix}}
+\newcommand{\mtrthr}[9]{\begin{pmatrix} #1 &#2 &#3 \\#4 &#5 &#6\\ #7 &#8 &#9 \end{pmatrix}}
+
+\newcommand{\defmap}[5]{
+    \begin{equation*}
+        \begin{aligned}
+            #1 \colon \quad  & #2 &\longrightarrow &\quad #3 \\
+            \quad  & #4    &\longmapsto  &\quad #5
+        \end{aligned}
+    \end{equation*}
+}
+
+\newcommand{\defmtrtwo}[6]{
+    \begin{equation*}
+        #1 = \bigset{\mtrtwo{#2}{#3}{#4}{#5}}{#6},
+    \end{equation*}
+}
+
+
+
 
 \author{Idle}
 \begin{document}
@@ -286,7 +267,7 @@ picture,baseline=(#2.base)]{\node(#2)[#1]{$#3$};}}
 Hello!!!
 
 
-This note is mainly used to record some trivial
+This note is mainly used to record some simple
 but interesting problems that I encounter
 in daily life.
 
@@ -2032,62 +2013,6 @@ The above calculation is instrumental in extending the pullback of the Kostant-K
 \newpage
 
 
-
-
-
-\begin{thebibliography}{99}
-
-
-\bibitem[BB82]{BB82}
-W. Borho and J.-L. Brylinski, Differential operators on homogeneous spaces. I. Irreducibility of the associated variety for annihilators of induced modules, Invent. Math. {\bf 69} (1982), no.~3, 437--476; \MRR{0679767}
-
-\bibitem[BB93]{BB93}
-A.~A. Beilinson and J.~N. Bernstein, A proof of Jantzen conjectures, in {\it I. M. Gelfand Seminar}, 1--50, Adv. Soviet Math., 16, Part 1, Amer. Math. Soc., Providence, RI, ; \MRR{1237825}
-
-
-\bibitem[BV80]{BV80}
-D.~M. Barbasch and D.~A. Vogan Jr, The local structure of characters, J. Functional Analysis {\bf 37} (1980), no.~1, 27--55; \MRR{0576644}
-
-\bibitem[BV82]{BV82}
-D.~M. Barbasch and D.~A. Vogan Jr, Primitive ideals and orbital integrals in complex classical groups, Math. Ann. {\bf 259} (1982), no.~2, 153--199; \MRR{0656661}
-
-\bibitem[GGS21]{GGS21}
-R. Gomez~Mu\~noz, D. Gourevitch and S. Sahi, Whittaker supports for representations of reductive groups, Ann. Inst. Fourier (Grenoble) {\bf 71} (2021), no.~1, 239--286; \MRR{4275869}
-
-\bibitem[GZ14]{GZ14}
-R. Gomez~Mu\~noz and C.-B. Zhu, Local theta lifting of generalized Whittaker models associated to nilpotent orbits, Geom. Funct. Anal. {\bf 24} (2014), no.~3, 796--853; \MRR{3213830}
-
-\bibitem[HTT08]{HTT08}
-R. Hotta, K. Takeuchi and T. Tanisaki, {\it $D$-modules, perverse sheaves, and representation theory}, translated from the 1995 Japanese edition by Takeuchi,
-Progress in Mathematics, 236, Birkh\"auser Boston, Boston, MA, 2008; \MRR{2357361}
-
-\bibitem[Jos85]{Jos85}
-A. Joseph, On the associated variety of a primitive ideal, J. Algebra {\bf 93} (1985), no.~2, 509--523; \MRR{0786766}
-
-\bibitem[KL80]{KL80}
-D.~A. Kazhdan and G. Lusztig, A topological approach to Springer's representations, Adv. in Math. {\bf 38} (1980), no.~2, 222--228; \MRR{0597198}
-
-\bibitem[KT84]{KT84}
-M. Kashiwara and T. Tanisaki, The characteristic cycles of holonomic systems on a flag manifold related to the Weyl group algebra, Invent. Math. {\bf 77} (1984), no.~1, 185--198; \MRR{0751138}
-
-\bibitem[KV95]{KV95}
-A.~W. Knapp and D.~A. Vogan Jr, {\it Cohomological induction and unitary representations}, Princeton Mathematical Series, 45, Princeton Univ. Press, Princeton, NJ, 1995; \MRR{1330919}
-
-\bibitem[MW87]{MW87}
-C. M\oe glin and J.-L. Waldspurger, Mod\`eles de Whittaker d\'eg\'en\'er\'es pour des groupes $p$-adiques, Math. Z. {\bf 196} (1987), no.~3, 427--452; \MRR{0913667}
-
-\bibitem[Nev99]{Nev99}
-M. Nevins, Admissible nilpotent coadjoint orbits of $p$-adic reductive Lie groups, Represent. Theory {\bf 3} (1999), 105--126; \MRR{1698202}
-
-\bibitem[Sch87]{Sch87}
-J.~O. Schwartz, {\it THE DETERMINATION OF THE ADMISSIBLE NILPOTENT ORBITS IN REAL CLASSICAL GROUPS}, ProQuest LLC, Ann Arbor, MI, 1987; \MRR{2941135}
-
-\bibitem[SGA3]{SGA3}
-M. Demazure, A. Grothendieck. \textit{Schémas en Groupes (SGA3) I, II, III}, Lecture Notes in Mathematics 151, 152, 153, Springer, New York (1970).
-
-\bibitem[Sun15]{Sun15}
-B. Sun, Almost linear Nash groups, Chinese Ann. Math. Ser. B {\bf 36} (2015), no.~3, 355--400; \MRR{3341164}
-
-\end{thebibliography}
+\printbibliography
 
 \end{document}

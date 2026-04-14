@@ -1,0 +1,780 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.3 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{anyt/global//global/global/global}
+    \entry{BB82}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=d2516cd7c6e198121ec1ab2ededfa593}{%
+           family={Borho},
+           familyi={B\bibinitperiod},
+           given={Walter},
+           giveni={W\bibinitperiod}}}%
+        {{hash=d996ba29c45216274a4bf22c22f017fc}{%
+           family={Brylinski},
+           familyi={B\bibinitperiod},
+           given={Jean-Luc},
+           giveni={J\bibinithyphendelim L\bibinitperiod}}}%
+      }
+      \strng{namehash}{dd15e42c5fdda5c2a8a902fa3ee84037}
+      \strng{fullhash}{dd15e42c5fdda5c2a8a902fa3ee84037}
+      \strng{fullhashraw}{dd15e42c5fdda5c2a8a902fa3ee84037}
+      \strng{bibnamehash}{dd15e42c5fdda5c2a8a902fa3ee84037}
+      \strng{authorbibnamehash}{dd15e42c5fdda5c2a8a902fa3ee84037}
+      \strng{authornamehash}{dd15e42c5fdda5c2a8a902fa3ee84037}
+      \strng{authorfullhash}{dd15e42c5fdda5c2a8a902fa3ee84037}
+      \strng{authorfullhashraw}{dd15e42c5fdda5c2a8a902fa3ee84037}
+      \field{labelalpha}{BB82}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprinttype}{mr}
+      \field{issn}{0020-9910,1432-1297}
+      \field{journaltitle}{Invent. Math.}
+      \field{number}{3}
+      \field{title}{Differential operators on homogeneous spaces. {I}. {I}rreducibility of the associated variety for annihilators of induced modules}
+      \field{volume}{69}
+      \field{year}{1982}
+      \field{pages}{437\bibrangedash 476}
+      \range{pages}{40}
+      \verb{doi}
+      \verb 10.1007/BF01389364
+      \endverb
+      \verb{eprint}
+      \verb 679767
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1007/BF01389364
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1007/BF01389364
+      \endverb
+    \endentry
+    \entry{BB93}{incollection}{}{}
+      \name{author}{2}{}{%
+        {{hash=853aef6a5f0847ac598a9c2afed827c0}{%
+           family={Beĭlinson},
+           familyi={B\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod}}}%
+        {{hash=40f5f91c106b669e744d73616fb10472}{%
+           family={Bernstein},
+           familyi={B\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Amer. Math. Soc., Providence, RI}%
+      }
+      \strng{namehash}{e5f49addaef077cc39344cc0a612d07e}
+      \strng{fullhash}{e5f49addaef077cc39344cc0a612d07e}
+      \strng{fullhashraw}{e5f49addaef077cc39344cc0a612d07e}
+      \strng{bibnamehash}{e5f49addaef077cc39344cc0a612d07e}
+      \strng{authorbibnamehash}{e5f49addaef077cc39344cc0a612d07e}
+      \strng{authornamehash}{e5f49addaef077cc39344cc0a612d07e}
+      \strng{authorfullhash}{e5f49addaef077cc39344cc0a612d07e}
+      \strng{authorfullhashraw}{e5f49addaef077cc39344cc0a612d07e}
+      \field{labelalpha}{BB93}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{I. {M}. {G}el\cprime fand {S}eminar}
+      \field{eprinttype}{mr}
+      \field{isbn}{0-8218-4118-1}
+      \field{series}{Adv. Soviet Math.}
+      \field{title}{A proof of {J}antzen conjectures}
+      \field{volume}{16, Part 1}
+      \field{year}{1993}
+      \field{pages}{1\bibrangedash 50}
+      \range{pages}{50}
+      \verb{eprint}
+      \verb 1237825
+      \endverb
+    \endentry
+    \entry{BV80}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=896f38c2fb8f63ac2eacdc44e14854e2}{%
+           family={Barbasch},
+           familyi={B\bibinitperiod},
+           given={Dan},
+           giveni={D\bibinitperiod}}}%
+        {{hash=061448e4ffc38a99ee029cb7c615af3a}{%
+           family={Vogan},
+           familyi={V\bibinitperiod},
+           given={David\bibnamedelima A.},
+           giveni={D\bibinitperiod\bibinitdelim A\bibinitperiod},
+           suffix={Jr.},
+           suffixi={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{8f4d7d62b37f1e1dbcb6967ab2c39a17}
+      \strng{fullhash}{8f4d7d62b37f1e1dbcb6967ab2c39a17}
+      \strng{fullhashraw}{8f4d7d62b37f1e1dbcb6967ab2c39a17}
+      \strng{bibnamehash}{8f4d7d62b37f1e1dbcb6967ab2c39a17}
+      \strng{authorbibnamehash}{8f4d7d62b37f1e1dbcb6967ab2c39a17}
+      \strng{authornamehash}{8f4d7d62b37f1e1dbcb6967ab2c39a17}
+      \strng{authorfullhash}{8f4d7d62b37f1e1dbcb6967ab2c39a17}
+      \strng{authorfullhashraw}{8f4d7d62b37f1e1dbcb6967ab2c39a17}
+      \field{extraname}{1}
+      \field{labelalpha}{BV80}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprinttype}{mr}
+      \field{issn}{0022-1236}
+      \field{journaltitle}{J. Functional Analysis}
+      \field{number}{1}
+      \field{title}{The local structure of characters}
+      \field{volume}{37}
+      \field{year}{1980}
+      \field{pages}{27\bibrangedash 55}
+      \range{pages}{29}
+      \verb{doi}
+      \verb 10.1016/0022-1236(80)90026-9
+      \endverb
+      \verb{eprint}
+      \verb 576644
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1016/0022-1236(80)90026-9
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1016/0022-1236(80)90026-9
+      \endverb
+    \endentry
+    \entry{BV82}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=896f38c2fb8f63ac2eacdc44e14854e2}{%
+           family={Barbasch},
+           familyi={B\bibinitperiod},
+           given={Dan},
+           giveni={D\bibinitperiod}}}%
+        {{hash=773bb89a614bc50a8bd727aeeea67187}{%
+           family={Vogan},
+           familyi={V\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{46da6f4f0acdbe64c8266c779a61495f}
+      \strng{fullhash}{46da6f4f0acdbe64c8266c779a61495f}
+      \strng{fullhashraw}{46da6f4f0acdbe64c8266c779a61495f}
+      \strng{bibnamehash}{46da6f4f0acdbe64c8266c779a61495f}
+      \strng{authorbibnamehash}{46da6f4f0acdbe64c8266c779a61495f}
+      \strng{authornamehash}{46da6f4f0acdbe64c8266c779a61495f}
+      \strng{authorfullhash}{46da6f4f0acdbe64c8266c779a61495f}
+      \strng{authorfullhashraw}{46da6f4f0acdbe64c8266c779a61495f}
+      \field{extraname}{2}
+      \field{labelalpha}{BV82}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprinttype}{mr}
+      \field{issn}{0025-5831,1432-1807}
+      \field{journaltitle}{Math. Ann.}
+      \field{number}{2}
+      \field{title}{Primitive ideals and orbital integrals in complex classical groups}
+      \field{volume}{259}
+      \field{year}{1982}
+      \field{pages}{153\bibrangedash 199}
+      \range{pages}{47}
+      \verb{doi}
+      \verb 10.1007/BF01457308
+      \endverb
+      \verb{eprint}
+      \verb 656661
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1007/BF01457308
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1007/BF01457308
+      \endverb
+    \endentry
+    \entry{GGS21}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=6f0a65d578f56329da2f29efcb55d27f}{%
+           family={Gomez},
+           familyi={G\bibinitperiod},
+           given={Raul},
+           giveni={R\bibinitperiod}}}%
+        {{hash=2ad3ac6795bb49e23c750249cccb30b6}{%
+           family={Gourevitch},
+           familyi={G\bibinitperiod},
+           given={Dmitry},
+           giveni={D\bibinitperiod}}}%
+        {{hash=8050cbe44c097ad6ab99d1eac85bd3a9}{%
+           family={Sahi},
+           familyi={S\bibinitperiod},
+           given={Siddhartha},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{f4c149657600fcf641d8b53234522d7a}
+      \strng{fullhash}{f4c149657600fcf641d8b53234522d7a}
+      \strng{fullhashraw}{f4c149657600fcf641d8b53234522d7a}
+      \strng{bibnamehash}{f4c149657600fcf641d8b53234522d7a}
+      \strng{authorbibnamehash}{f4c149657600fcf641d8b53234522d7a}
+      \strng{authornamehash}{f4c149657600fcf641d8b53234522d7a}
+      \strng{authorfullhash}{f4c149657600fcf641d8b53234522d7a}
+      \strng{authorfullhashraw}{f4c149657600fcf641d8b53234522d7a}
+      \field{labelalpha}{GGS21}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprinttype}{mr}
+      \field{issn}{0373-0956,1777-5310}
+      \field{journaltitle}{Ann. Inst. Fourier (Grenoble)}
+      \field{number}{1}
+      \field{title}{Whittaker supports for representations of reductive groups}
+      \field{volume}{71}
+      \field{year}{2021}
+      \field{pages}{239\bibrangedash 286}
+      \range{pages}{48}
+      \verb{doi}
+      \verb 10.5802/aif.3372
+      \endverb
+      \verb{eprint}
+      \verb 4275869
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.5802/aif.3372
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.5802/aif.3372
+      \endverb
+    \endentry
+    \entry{GZ14}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=6f0a65d578f56329da2f29efcb55d27f}{%
+           family={Gomez},
+           familyi={G\bibinitperiod},
+           given={Raul},
+           giveni={R\bibinitperiod}}}%
+        {{hash=8acec87b04834bd4691b65b057e2a10a}{%
+           family={Zhu},
+           familyi={Z\bibinitperiod},
+           given={Chen-Bo},
+           giveni={C\bibinithyphendelim B\bibinitperiod}}}%
+      }
+      \strng{namehash}{2e32a33afa0447da7c83709bef63ab8f}
+      \strng{fullhash}{2e32a33afa0447da7c83709bef63ab8f}
+      \strng{fullhashraw}{2e32a33afa0447da7c83709bef63ab8f}
+      \strng{bibnamehash}{2e32a33afa0447da7c83709bef63ab8f}
+      \strng{authorbibnamehash}{2e32a33afa0447da7c83709bef63ab8f}
+      \strng{authornamehash}{2e32a33afa0447da7c83709bef63ab8f}
+      \strng{authorfullhash}{2e32a33afa0447da7c83709bef63ab8f}
+      \strng{authorfullhashraw}{2e32a33afa0447da7c83709bef63ab8f}
+      \field{labelalpha}{GZ14}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprinttype}{mr}
+      \field{issn}{1016-443X,1420-8970}
+      \field{journaltitle}{Geom. Funct. Anal.}
+      \field{number}{3}
+      \field{title}{Local theta lifting of generalized {W}hittaker models associated to nilpotent orbits}
+      \field{volume}{24}
+      \field{year}{2014}
+      \field{pages}{796\bibrangedash 853}
+      \range{pages}{58}
+      \verb{doi}
+      \verb 10.1007/s00039-014-0276-5
+      \endverb
+      \verb{eprint}
+      \verb 3213830
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1007/s00039-014-0276-5
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1007/s00039-014-0276-5
+      \endverb
+    \endentry
+    \entry{HTT08}{book}{}{}
+      \name{author}{3}{}{%
+        {{hash=34da163046465e6a62ceb34ba3384f42}{%
+           family={Hotta},
+           familyi={H\bibinitperiod},
+           given={Ryoshi},
+           giveni={R\bibinitperiod}}}%
+        {{hash=aa6eade6441993ee7e01fdd35496598a}{%
+           family={Takeuchi},
+           familyi={T\bibinitperiod},
+           given={Kiyoshi},
+           giveni={K\bibinitperiod}}}%
+        {{hash=486d52cfce814e735994df407bc54c96}{%
+           family={Tanisaki},
+           familyi={T\bibinitperiod},
+           given={Toshiyuki},
+           giveni={T\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Birkhäuser Boston, Inc., Boston, MA}%
+      }
+      \strng{namehash}{2a131e0a06f9f3fb3155ab8e63ee5dac}
+      \strng{fullhash}{2a131e0a06f9f3fb3155ab8e63ee5dac}
+      \strng{fullhashraw}{2a131e0a06f9f3fb3155ab8e63ee5dac}
+      \strng{bibnamehash}{2a131e0a06f9f3fb3155ab8e63ee5dac}
+      \strng{authorbibnamehash}{2a131e0a06f9f3fb3155ab8e63ee5dac}
+      \strng{authornamehash}{2a131e0a06f9f3fb3155ab8e63ee5dac}
+      \strng{authorfullhash}{2a131e0a06f9f3fb3155ab8e63ee5dac}
+      \strng{authorfullhashraw}{2a131e0a06f9f3fb3155ab8e63ee5dac}
+      \field{labelalpha}{HTT08}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{Japanese}
+      \field{eprinttype}{mr}
+      \field{isbn}{978-0-8176-4363-8}
+      \field{series}{Progress in Mathematics}
+      \field{title}{{$D$}-modules, perverse sheaves, and representation theory}
+      \field{volume}{236}
+      \field{year}{2008}
+      \field{pages}{xii+407}
+      \range{pages}{-1}
+      \verb{doi}
+      \verb 10.1007/978-0-8176-4523-6
+      \endverb
+      \verb{eprint}
+      \verb 2357361
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1007/978-0-8176-4523-6
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1007/978-0-8176-4523-6
+      \endverb
+    \endentry
+    \entry{Jos85}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=517b081b25cbe596de51a3cc6cb57a92}{%
+           family={Joseph},
+           familyi={J\bibinitperiod},
+           given={Anthony},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{517b081b25cbe596de51a3cc6cb57a92}
+      \strng{fullhash}{517b081b25cbe596de51a3cc6cb57a92}
+      \strng{fullhashraw}{517b081b25cbe596de51a3cc6cb57a92}
+      \strng{bibnamehash}{517b081b25cbe596de51a3cc6cb57a92}
+      \strng{authorbibnamehash}{517b081b25cbe596de51a3cc6cb57a92}
+      \strng{authornamehash}{517b081b25cbe596de51a3cc6cb57a92}
+      \strng{authorfullhash}{517b081b25cbe596de51a3cc6cb57a92}
+      \strng{authorfullhashraw}{517b081b25cbe596de51a3cc6cb57a92}
+      \field{labelalpha}{Jos85}
+      \field{sortinit}{J}
+      \field{sortinithash}{b2f54a9081ace9966a7cb9413811edb4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprinttype}{mr}
+      \field{issn}{0021-8693}
+      \field{journaltitle}{J. Algebra}
+      \field{number}{2}
+      \field{title}{On the associated variety of a primitive ideal}
+      \field{volume}{93}
+      \field{year}{1985}
+      \field{pages}{509\bibrangedash 523}
+      \range{pages}{15}
+      \verb{doi}
+      \verb 10.1016/0021-8693(85)90172-3
+      \endverb
+      \verb{eprint}
+      \verb 786766
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1016/0021-8693(85)90172-3
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1016/0021-8693(85)90172-3
+      \endverb
+    \endentry
+    \entry{KL80}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=baf453c51d52c87ae66e4630ec09866a}{%
+           family={Kazhdan},
+           familyi={K\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod}}}%
+        {{hash=93b97abadc9c789d5b31630417674176}{%
+           family={Lusztig},
+           familyi={L\bibinitperiod},
+           given={George},
+           giveni={G\bibinitperiod}}}%
+      }
+      \strng{namehash}{3232a2b653c38cf882b38172290c3b7b}
+      \strng{fullhash}{3232a2b653c38cf882b38172290c3b7b}
+      \strng{fullhashraw}{3232a2b653c38cf882b38172290c3b7b}
+      \strng{bibnamehash}{3232a2b653c38cf882b38172290c3b7b}
+      \strng{authorbibnamehash}{3232a2b653c38cf882b38172290c3b7b}
+      \strng{authornamehash}{3232a2b653c38cf882b38172290c3b7b}
+      \strng{authorfullhash}{3232a2b653c38cf882b38172290c3b7b}
+      \strng{authorfullhashraw}{3232a2b653c38cf882b38172290c3b7b}
+      \field{labelalpha}{KL80}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprinttype}{mr}
+      \field{issn}{0001-8708}
+      \field{journaltitle}{Adv. in Math.}
+      \field{number}{2}
+      \field{title}{A topological approach to {S}pringer's representations}
+      \field{volume}{38}
+      \field{year}{1980}
+      \field{pages}{222\bibrangedash 228}
+      \range{pages}{7}
+      \verb{doi}
+      \verb 10.1016/0001-8708(80)90005-5
+      \endverb
+      \verb{eprint}
+      \verb 597198
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1016/0001-8708(80)90005-5
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1016/0001-8708(80)90005-5
+      \endverb
+    \endentry
+    \entry{KT84}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=7728566dd6f1cf6ad017febed2559c69}{%
+           family={Kashiwara},
+           familyi={K\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod}}}%
+        {{hash=914c51e3a3f84994f9a751d1649f213b}{%
+           family={Tanisaki},
+           familyi={T\bibinitperiod},
+           given={T.},
+           giveni={T\bibinitperiod}}}%
+      }
+      \strng{namehash}{e1eb0b3e92178c9ffffaafeb6a7108b9}
+      \strng{fullhash}{e1eb0b3e92178c9ffffaafeb6a7108b9}
+      \strng{fullhashraw}{e1eb0b3e92178c9ffffaafeb6a7108b9}
+      \strng{bibnamehash}{e1eb0b3e92178c9ffffaafeb6a7108b9}
+      \strng{authorbibnamehash}{e1eb0b3e92178c9ffffaafeb6a7108b9}
+      \strng{authornamehash}{e1eb0b3e92178c9ffffaafeb6a7108b9}
+      \strng{authorfullhash}{e1eb0b3e92178c9ffffaafeb6a7108b9}
+      \strng{authorfullhashraw}{e1eb0b3e92178c9ffffaafeb6a7108b9}
+      \field{labelalpha}{KT84}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprinttype}{mr}
+      \field{issn}{0020-9910,1432-1297}
+      \field{journaltitle}{Invent. Math.}
+      \field{number}{1}
+      \field{title}{The characteristic cycles of holonomic systems on a flag manifold related to the {W}eyl group algebra}
+      \field{volume}{77}
+      \field{year}{1984}
+      \field{pages}{185\bibrangedash 198}
+      \range{pages}{14}
+      \verb{doi}
+      \verb 10.1007/BF01389142
+      \endverb
+      \verb{eprint}
+      \verb 751138
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1007/BF01389142
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1007/BF01389142
+      \endverb
+    \endentry
+    \entry{KV95}{book}{}{}
+      \name{author}{2}{}{%
+        {{hash=c579640723007d8b4bf4222c9f25b26a}{%
+           family={Knapp},
+           familyi={K\bibinitperiod},
+           given={Anthony\bibnamedelima W.},
+           giveni={A\bibinitperiod\bibinitdelim W\bibinitperiod}}}%
+        {{hash=061448e4ffc38a99ee029cb7c615af3a}{%
+           family={Vogan},
+           familyi={V\bibinitperiod},
+           given={David\bibnamedelima A.},
+           giveni={D\bibinitperiod\bibinitdelim A\bibinitperiod},
+           suffix={Jr.},
+           suffixi={J\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Princeton University Press, Princeton, NJ}%
+      }
+      \strng{namehash}{0f4fad431cd3fb54ca9b9416993af63c}
+      \strng{fullhash}{0f4fad431cd3fb54ca9b9416993af63c}
+      \strng{fullhashraw}{0f4fad431cd3fb54ca9b9416993af63c}
+      \strng{bibnamehash}{0f4fad431cd3fb54ca9b9416993af63c}
+      \strng{authorbibnamehash}{0f4fad431cd3fb54ca9b9416993af63c}
+      \strng{authornamehash}{0f4fad431cd3fb54ca9b9416993af63c}
+      \strng{authorfullhash}{0f4fad431cd3fb54ca9b9416993af63c}
+      \strng{authorfullhashraw}{0f4fad431cd3fb54ca9b9416993af63c}
+      \field{labelalpha}{KV95}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprinttype}{mr}
+      \field{isbn}{0-691-03756-6}
+      \field{series}{Princeton Mathematical Series}
+      \field{title}{Cohomological induction and unitary representations}
+      \field{volume}{45}
+      \field{year}{1995}
+      \field{pages}{xx+948}
+      \range{pages}{-1}
+      \verb{doi}
+      \verb 10.1515/9781400883936
+      \endverb
+      \verb{eprint}
+      \verb 1330919
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1515/9781400883936
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1515/9781400883936
+      \endverb
+    \endentry
+    \entry{MW87}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=6375889397d6ff00647df27453252afa}{%
+           family={Mœglin},
+           familyi={M\bibinitperiod},
+           given={C.},
+           giveni={C\bibinitperiod}}}%
+        {{hash=1039393d3e5f9046814ef9a83bdb25fa}{%
+           family={Waldspurger},
+           familyi={W\bibinitperiod},
+           given={J.-L.},
+           giveni={J\bibinithyphendelim L\bibinitperiod}}}%
+      }
+      \strng{namehash}{dbb0f6ff0fea3e90dd0db3f5cbb6bccf}
+      \strng{fullhash}{dbb0f6ff0fea3e90dd0db3f5cbb6bccf}
+      \strng{fullhashraw}{dbb0f6ff0fea3e90dd0db3f5cbb6bccf}
+      \strng{bibnamehash}{dbb0f6ff0fea3e90dd0db3f5cbb6bccf}
+      \strng{authorbibnamehash}{dbb0f6ff0fea3e90dd0db3f5cbb6bccf}
+      \strng{authornamehash}{dbb0f6ff0fea3e90dd0db3f5cbb6bccf}
+      \strng{authorfullhash}{dbb0f6ff0fea3e90dd0db3f5cbb6bccf}
+      \strng{authorfullhashraw}{dbb0f6ff0fea3e90dd0db3f5cbb6bccf}
+      \field{labelalpha}{MW87}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprinttype}{mr}
+      \field{issn}{0025-5874,1432-1823}
+      \field{journaltitle}{Math. Z.}
+      \field{number}{3}
+      \field{title}{Modèles de {W}hittaker dégénérés pour des groupes {$p$}-adiques}
+      \field{volume}{196}
+      \field{year}{1987}
+      \field{pages}{427\bibrangedash 452}
+      \range{pages}{26}
+      \verb{doi}
+      \verb 10.1007/BF01200363
+      \endverb
+      \verb{eprint}
+      \verb 913667
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1007/BF01200363
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1007/BF01200363
+      \endverb
+    \endentry
+    \entry{Nev99}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=47973983f9cc4a1285657c2c6c80747b}{%
+           family={Nevins},
+           familyi={N\bibinitperiod},
+           given={Monica},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{47973983f9cc4a1285657c2c6c80747b}
+      \strng{fullhash}{47973983f9cc4a1285657c2c6c80747b}
+      \strng{fullhashraw}{47973983f9cc4a1285657c2c6c80747b}
+      \strng{bibnamehash}{47973983f9cc4a1285657c2c6c80747b}
+      \strng{authorbibnamehash}{47973983f9cc4a1285657c2c6c80747b}
+      \strng{authornamehash}{47973983f9cc4a1285657c2c6c80747b}
+      \strng{authorfullhash}{47973983f9cc4a1285657c2c6c80747b}
+      \strng{authorfullhashraw}{47973983f9cc4a1285657c2c6c80747b}
+      \field{labelalpha}{Nev99}
+      \field{sortinit}{N}
+      \field{sortinithash}{22369a73d5f88983a108b63f07f37084}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprinttype}{mr}
+      \field{issn}{1088-4165}
+      \field{journaltitle}{Represent. Theory}
+      \field{title}{Admissible nilpotent coadjoint orbits of {$p$}-adic reductive {L}ie groups}
+      \field{volume}{3}
+      \field{year}{1999}
+      \field{pages}{105\bibrangedash 126}
+      \range{pages}{22}
+      \verb{doi}
+      \verb 10.1090/S1088-4165-99-00072-2
+      \endverb
+      \verb{eprint}
+      \verb 1698202
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1090/S1088-4165-99-00072-2
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1090/S1088-4165-99-00072-2
+      \endverb
+    \endentry
+    \entry{Sch87}{book}{}{}
+      \name{author}{1}{}{%
+        {{hash=76341636f3794aedbe3a7d9c1ddb69f1}{%
+           family={Schwartz},
+           familyi={S\bibinitperiod},
+           given={James\bibnamedelima Oliver},
+           giveni={J\bibinitperiod\bibinitdelim O\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {ProQuest LLC, Ann Arbor, MI}%
+      }
+      \strng{namehash}{76341636f3794aedbe3a7d9c1ddb69f1}
+      \strng{fullhash}{76341636f3794aedbe3a7d9c1ddb69f1}
+      \strng{fullhashraw}{76341636f3794aedbe3a7d9c1ddb69f1}
+      \strng{bibnamehash}{76341636f3794aedbe3a7d9c1ddb69f1}
+      \strng{authorbibnamehash}{76341636f3794aedbe3a7d9c1ddb69f1}
+      \strng{authornamehash}{76341636f3794aedbe3a7d9c1ddb69f1}
+      \strng{authorfullhash}{76341636f3794aedbe3a7d9c1ddb69f1}
+      \strng{authorfullhashraw}{76341636f3794aedbe3a7d9c1ddb69f1}
+      \field{labelalpha}{Sch87}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprinttype}{mr}
+      \field{note}{Thesis (Ph.D.)--Massachusetts Institute of Technology}
+      \field{title}{T{HE} {DETERMINATION} {OF} {THE} {ADMISSIBLE} {NILPOTENT} {ORBITS} {IN} {REAL} {CLASSICAL} {GROUPS}}
+      \field{year}{1987}
+      \field{pages}{(no paging)}
+      \range{pages}{-1}
+      \verb{eprint}
+      \verb 2941135
+      \endverb
+      \verb{urlraw}
+      \verb http://gateway.proquest.com/openurl?url_ver=Z39.88-2004&rft_val_fmt=info:ofi/fmt:kev:mtx:dissertation&res_dat=xri:pqdiss&rft_dat=xri:pqdiss:0376526
+      \endverb
+      \verb{url}
+      \verb http://gateway.proquest.com/openurl?url_ver=Z39.88-2004&rft_val_fmt=info:ofi/fmt:kev:mtx:dissertation&res_dat=xri:pqdiss&rft_dat=xri:pqdiss:0376526
+      \endverb
+    \endentry
+    \entry{SGA3}{book}{}{}
+      \name{author}{2}{}{%
+        {{hash=4558d70507b16a9ad75411f1f682efcb}{%
+           family={Demazure},
+           familyi={D\bibinitperiod},
+           given={Michel},
+           giveni={M\bibinitperiod}}}%
+        {{hash=fb0e3184fdd2fcd28fa74ca67d7cdcc1}{%
+           family={Grothendieck},
+           familyi={G\bibinitperiod},
+           given={Alexander},
+           giveni={A\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {french}%
+      }
+      \list{location}{1}{%
+        {Berlin-New York}%
+      }
+      \list{publisher}{1}{%
+        {Springer-Verlag}%
+      }
+      \strng{namehash}{0deff2b5def41604a890a9eaf08d1b5c}
+      \strng{fullhash}{0deff2b5def41604a890a9eaf08d1b5c}
+      \strng{fullhashraw}{0deff2b5def41604a890a9eaf08d1b5c}
+      \strng{bibnamehash}{0deff2b5def41604a890a9eaf08d1b5c}
+      \strng{authorbibnamehash}{0deff2b5def41604a890a9eaf08d1b5c}
+      \strng{authornamehash}{0deff2b5def41604a890a9eaf08d1b5c}
+      \strng{authorfullhash}{0deff2b5def41604a890a9eaf08d1b5c}
+      \strng{authorfullhashraw}{0deff2b5def41604a890a9eaf08d1b5c}
+      \field{labelalpha}{SGA3}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprinttype}{mr}
+      \field{note}{Tomes I, II, III}
+      \field{number}{151, 152, 153}
+      \field{series}{Lecture Notes in Mathematics}
+      \field{shorthand}{SGA3}
+      \field{subtitle}{Séminaire de Géométrie Algébrique du Bois Marie 1962/64}
+      \field{title}{Schémas en Groupes ({SGA} 3)}
+      \field{year}{1970}
+    \endentry
+    \entry{Sun15}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=f5b44498030f11a86bc421ef38fccc4e}{%
+           family={Sun},
+           familyi={S\bibinitperiod},
+           given={Binyong},
+           giveni={B\bibinitperiod}}}%
+      }
+      \strng{namehash}{f5b44498030f11a86bc421ef38fccc4e}
+      \strng{fullhash}{f5b44498030f11a86bc421ef38fccc4e}
+      \strng{fullhashraw}{f5b44498030f11a86bc421ef38fccc4e}
+      \strng{bibnamehash}{f5b44498030f11a86bc421ef38fccc4e}
+      \strng{authorbibnamehash}{f5b44498030f11a86bc421ef38fccc4e}
+      \strng{authornamehash}{f5b44498030f11a86bc421ef38fccc4e}
+      \strng{authorfullhash}{f5b44498030f11a86bc421ef38fccc4e}
+      \strng{authorfullhashraw}{f5b44498030f11a86bc421ef38fccc4e}
+      \field{labelalpha}{Sun15}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprinttype}{mr}
+      \field{issn}{0252-9599,1860-6261}
+      \field{journaltitle}{Chinese Ann. Math. Ser. B}
+      \field{number}{3}
+      \field{title}{Almost linear {N}ash groups}
+      \field{volume}{36}
+      \field{year}{2015}
+      \field{pages}{355\bibrangedash 400}
+      \range{pages}{46}
+      \verb{doi}
+      \verb 10.1007/s11401-015-0915-7
+      \endverb
+      \verb{eprint}
+      \verb 3341164
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1007/s11401-015-0915-7
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1007/s11401-015-0915-7
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

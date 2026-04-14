@@ -45,6 +45,7 @@
       \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
+      \field{eprinttype}{mr}
       \field{issn}{0020-9910,1432-1297}
       \field{journaltitle}{Invent. Math.}
       \field{number}{3}
@@ -55,6 +56,9 @@
       \range{pages}{40}
       \verb{doi}
       \verb 10.1007/BF01389364
+      \endverb
+      \verb{eprint}
+      \verb 679767
       \endverb
       \verb{urlraw}
       \verb https://doi.org/10.1007/BF01389364
@@ -93,14 +97,17 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{I. {M}. {G}el\cprime fand {S}eminar}
+      \field{eprinttype}{mr}
       \field{isbn}{0-8218-4118-1}
       \field{series}{Adv. Soviet Math.}
-      \field{shorthand}{BB93}
       \field{title}{A proof of {J}antzen conjectures}
       \field{volume}{16, Part 1}
       \field{year}{1993}
       \field{pages}{1\bibrangedash 50}
       \range{pages}{50}
+      \verb{eprint}
+      \verb 1237825
+      \endverb
     \endentry
     \entry{BV80}{article}{}{}
       \name{author}{2}{}{%
@@ -131,6 +138,7 @@
       \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
+      \field{eprinttype}{mr}
       \field{issn}{0022-1236}
       \field{journaltitle}{J. Functional Analysis}
       \field{number}{1}
@@ -141,6 +149,9 @@
       \range{pages}{29}
       \verb{doi}
       \verb 10.1016/0022-1236(80)90026-9
+      \endverb
+      \verb{eprint}
+      \verb 576644
       \endverb
       \verb{urlraw}
       \verb https://doi.org/10.1016/0022-1236(80)90026-9
@@ -176,6 +187,7 @@
       \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
+      \field{eprinttype}{mr}
       \field{issn}{0025-5831,1432-1807}
       \field{journaltitle}{Math. Ann.}
       \field{number}{2}
@@ -186,6 +198,9 @@
       \range{pages}{47}
       \verb{doi}
       \verb 10.1007/BF01457308
+      \endverb
+      \verb{eprint}
+      \verb 656661
       \endverb
       \verb{urlraw}
       \verb https://doi.org/10.1007/BF01457308
@@ -225,6 +240,7 @@
       \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
+      \field{eprinttype}{mr}
       \field{issn}{0373-0956,1777-5310}
       \field{journaltitle}{Ann. Inst. Fourier (Grenoble)}
       \field{number}{1}
@@ -235,6 +251,9 @@
       \range{pages}{48}
       \verb{doi}
       \verb 10.5802/aif.3372
+      \endverb
+      \verb{eprint}
+      \verb 4275869
       \endverb
       \verb{urlraw}
       \verb https://doi.org/10.5802/aif.3372
@@ -269,6 +288,7 @@
       \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
+      \field{eprinttype}{mr}
       \field{issn}{1016-443X,1420-8970}
       \field{journaltitle}{Geom. Funct. Anal.}
       \field{number}{3}
@@ -279,6 +299,9 @@
       \range{pages}{58}
       \verb{doi}
       \verb 10.1007/s00039-014-0276-5
+      \endverb
+      \verb{eprint}
+      \verb 3213830
       \endverb
       \verb{urlraw}
       \verb https://doi.org/10.1007/s00039-014-0276-5
@@ -322,6 +345,7 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{edition}{Japanese}
+      \field{eprinttype}{mr}
       \field{isbn}{978-0-8176-4363-8}
       \field{series}{Progress in Mathematics}
       \field{title}{{$D$}-modules, perverse sheaves, and representation theory}
@@ -331,6 +355,9 @@
       \range{pages}{-1}
       \verb{doi}
       \verb 10.1007/978-0-8176-4523-6
+      \endverb
+      \verb{eprint}
+      \verb 2357361
       \endverb
       \verb{urlraw}
       \verb https://doi.org/10.1007/978-0-8176-4523-6
@@ -360,6 +387,7 @@
       \field{sortinithash}{b2f54a9081ace9966a7cb9413811edb4}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
+      \field{eprinttype}{mr}
       \field{issn}{0021-8693}
       \field{journaltitle}{J. Algebra}
       \field{number}{2}
@@ -370,6 +398,9 @@
       \range{pages}{15}
       \verb{doi}
       \verb 10.1016/0021-8693(85)90172-3
+      \endverb
+      \verb{eprint}
+      \verb 786766
       \endverb
       \verb{urlraw}
       \verb https://doi.org/10.1016/0021-8693(85)90172-3
@@ -404,6 +435,7 @@
       \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
+      \field{eprinttype}{mr}
       \field{issn}{0001-8708}
       \field{journaltitle}{Adv. in Math.}
       \field{number}{2}
@@ -414,6 +446,9 @@
       \range{pages}{7}
       \verb{doi}
       \verb 10.1016/0001-8708(80)90005-5
+      \endverb
+      \verb{eprint}
+      \verb 597198
       \endverb
       \verb{urlraw}
       \verb https://doi.org/10.1016/0001-8708(80)90005-5
@@ -448,6 +483,7 @@
       \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
+      \field{eprinttype}{mr}
       \field{issn}{0020-9910,1432-1297}
       \field{journaltitle}{Invent. Math.}
       \field{number}{1}
@@ -458,6 +494,9 @@
       \range{pages}{14}
       \verb{doi}
       \verb 10.1007/BF01389142
+      \endverb
+      \verb{eprint}
+      \verb 751138
       \endverb
       \verb{urlraw}
       \verb https://doi.org/10.1007/BF01389142
@@ -497,6 +536,7 @@
       \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
+      \field{eprinttype}{mr}
       \field{isbn}{0-691-03756-6}
       \field{series}{Princeton Mathematical Series}
       \field{title}{Cohomological induction and unitary representations}
@@ -506,6 +546,9 @@
       \range{pages}{-1}
       \verb{doi}
       \verb 10.1515/9781400883936
+      \endverb
+      \verb{eprint}
+      \verb 1330919
       \endverb
       \verb{urlraw}
       \verb https://doi.org/10.1515/9781400883936
@@ -540,6 +583,7 @@
       \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
+      \field{eprinttype}{mr}
       \field{issn}{0025-5874,1432-1823}
       \field{journaltitle}{Math. Z.}
       \field{number}{3}
@@ -550,6 +594,9 @@
       \range{pages}{26}
       \verb{doi}
       \verb 10.1007/BF01200363
+      \endverb
+      \verb{eprint}
+      \verb 913667
       \endverb
       \verb{urlraw}
       \verb https://doi.org/10.1007/BF01200363
@@ -579,6 +626,7 @@
       \field{sortinithash}{22369a73d5f88983a108b63f07f37084}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
+      \field{eprinttype}{mr}
       \field{issn}{1088-4165}
       \field{journaltitle}{Represent. Theory}
       \field{title}{Admissible nilpotent coadjoint orbits of {$p$}-adic reductive {L}ie groups}
@@ -588,6 +636,9 @@
       \range{pages}{22}
       \verb{doi}
       \verb 10.1090/S1088-4165-99-00072-2
+      \endverb
+      \verb{eprint}
+      \verb 1698202
       \endverb
       \verb{urlraw}
       \verb https://doi.org/10.1090/S1088-4165-99-00072-2
@@ -620,11 +671,15 @@
       \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
+      \field{eprinttype}{mr}
       \field{note}{Thesis (Ph.D.)--Massachusetts Institute of Technology}
       \field{title}{T{HE} {DETERMINATION} {OF} {THE} {ADMISSIBLE} {NILPOTENT} {ORBITS} {IN} {REAL} {CLASSICAL} {GROUPS}}
       \field{year}{1987}
       \field{pages}{(no paging)}
       \range{pages}{-1}
+      \verb{eprint}
+      \verb 2941135
+      \endverb
       \verb{urlraw}
       \verb http://gateway.proquest.com/openurl?url_ver=Z39.88-2004&rft_val_fmt=info:ofi/fmt:kev:mtx:dissertation&res_dat=xri:pqdiss&rft_dat=xri:pqdiss:0376526
       \endverb
@@ -667,6 +722,7 @@
       \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
+      \field{eprinttype}{mr}
       \field{note}{Tomes I, II, III}
       \field{number}{151, 152, 153}
       \field{series}{Lecture Notes in Mathematics}
@@ -696,6 +752,7 @@
       \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
+      \field{eprinttype}{mr}
       \field{issn}{0252-9599,1860-6261}
       \field{journaltitle}{Chinese Ann. Math. Ser. B}
       \field{number}{3}
@@ -706,6 +763,9 @@
       \range{pages}{46}
       \verb{doi}
       \verb 10.1007/s11401-015-0915-7
+      \endverb
+      \verb{eprint}
+      \verb 3341164
       \endverb
       \verb{urlraw}
       \verb https://doi.org/10.1007/s11401-015-0915-7

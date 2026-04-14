@@ -19,6 +19,63 @@
 
 \refsection{0}
   \datalist[entry]{anyt/global//global/global/global}
+    \entry{ABV92}{book}{}{}
+      \name{author}{3}{}{%
+        {{hash=76cc746068885f92407796cafed8bfc1}{%
+           family={Adams},
+           familyi={A\bibinitperiod},
+           given={Jeffrey},
+           giveni={J\bibinitperiod}}}%
+        {{hash=896f38c2fb8f63ac2eacdc44e14854e2}{%
+           family={Barbasch},
+           familyi={B\bibinitperiod},
+           given={Dan},
+           giveni={D\bibinitperiod}}}%
+        {{hash=061448e4ffc38a99ee029cb7c615af3a}{%
+           family={Vogan},
+           familyi={V\bibinitperiod},
+           given={David\bibnamedelima A.},
+           giveni={D\bibinitperiod\bibinitdelim A\bibinitperiod},
+           suffix={Jr.},
+           suffixi={J\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Birkhäuser Boston, Inc., Boston, MA}%
+      }
+      \strng{namehash}{8de1e26a3c6527b826e5441b0892917d}
+      \strng{fullhash}{8de1e26a3c6527b826e5441b0892917d}
+      \strng{fullhashraw}{8de1e26a3c6527b826e5441b0892917d}
+      \strng{bibnamehash}{8de1e26a3c6527b826e5441b0892917d}
+      \strng{authorbibnamehash}{8de1e26a3c6527b826e5441b0892917d}
+      \strng{authornamehash}{8de1e26a3c6527b826e5441b0892917d}
+      \strng{authorfullhash}{8de1e26a3c6527b826e5441b0892917d}
+      \strng{authorfullhashraw}{8de1e26a3c6527b826e5441b0892917d}
+      \field{labelalpha}{ABV92}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprinttype}{mr}
+      \field{isbn}{0-8176-3634-X}
+      \field{series}{Progress in Mathematics}
+      \field{title}{The {L}anglands classification and irreducible characters for real reductive groups}
+      \field{volume}{104}
+      \field{year}{1992}
+      \field{pages}{xii+318}
+      \range{pages}{-1}
+      \verb{doi}
+      \verb 10.1007/978-1-4612-0383-4
+      \endverb
+      \verb{eprint}
+      \verb 1162533
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1007/978-1-4612-0383-4
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1007/978-1-4612-0383-4
+      \endverb
+    \endentry
     \entry{BB82}{article}{}{}
       \name{author}{2}{}{%
         {{hash=d2516cd7c6e198121ec1ab2ededfa593}{%

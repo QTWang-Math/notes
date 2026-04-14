@@ -1,18 +1,18 @@
 # Fdb version 4
-["biber temp/notes"] 1776149347.8675 "temp/notes.bcf" "temp/notes.bbl" "temp/notes" 1776150102.4672 0
-  "references.bib" 1776149079.96063 8987 f29a9ff25b0552aedd83ace1005c89b3 ""
-  "temp/notes.bcf" 1776150101.92089 109920 acd6a8fee8520882c129e42b65e8f725 "xelatex"
+["biber temp/notes"] 1776150804.25594 "temp/notes.bcf" "temp/notes.bbl" "temp/notes" 1776150810.01833 0
+  "references.bib" 1776150782.89963 9594 9fadbce9cba5671b238b06a45f9e24ce ""
+  "temp/notes.bcf" 1776150809.45308 109981 a07c98cfbc825de94fed879eeb7c73c4 "xelatex"
   (generated)
   "temp/notes.bbl"
   "temp/notes.blg"
   (rewritten before read)
-["xdvipdfmx"] 1776150101.9647 "temp/notes.xdv" "temp/notes.pdf" "temp/notes" 1776150102.46863 0
-  "temp/notes.xdv" 1776150101.92151 658864 8142c4906a6af728066a9f35eed03e67 "xelatex"
+["xdvipdfmx"] 1776150809.49537 "temp/notes.xdv" "temp/notes.pdf" "temp/notes" 1776150810.01973 0
+  "temp/notes.xdv" 1776150809.45363 662776 cc1ef86fa82879889a8a557c84c9eb34 "xelatex"
   (generated)
   "temp/notes.pdf"
   (rewritten before read)
-["xelatex"] 1776150100.38646 "/Users/quentinwang/Documents/notes/notes.tex" "temp/notes.xdv" "notes" 1776150102.46725 0
-  "/Users/quentinwang/Documents/notes/notes.tex" 1776150100.19694 98189 ce6e51697de4f0ae0f46f92a13a86cbe ""
+["xelatex"] 1776150807.95935 "/Users/quentinwang/Documents/notes/notes.tex" "temp/notes.xdv" "notes" 1776150810.01837 0
+  "/Users/quentinwang/Documents/notes/notes.tex" 1776150801.58903 98202 aba1f3744a02425fba0e130e323567cf ""
   "/usr/local/texlive/2025/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/tfm/adobe/zapfding/pzdr.tfm" 1136768653 1528 f853c4d1b4e0550255e02831fdc8496f ""
   "/usr/local/texlive/2025/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
@@ -220,12 +220,12 @@
   "2.png" 1750241432.05042 148561 994d27fe0e2fcfe3e0a2e1312d4e2253 ""
   "3.png" 1750241432.05125 178136 5e7177306695cb73828fb5d954bfa2df ""
   "Claude_Monet-NC.jpg" 1750241432.05307 511666 cda2211b81f06723c5b6da1d45369676 ""
-  "notes.tex" 1776150100.19694 98189 ce6e51697de4f0ae0f46f92a13a86cbe ""
-  "temp/notes.aux" 1776150101.91913 17769 648d17753ebae879ff4118cc11569f05 "xelatex"
-  "temp/notes.bbl" 1776149348.73991 28873 1217176dddf68e031aa366722757661b "biber temp/notes"
-  "temp/notes.out" 1776150101.92018 3261 3904dc1dd0cee8ef20e9904c4607acc2 "xelatex"
-  "temp/notes.run.xml" 1776150101.92142 2353 b91752504450f361fbc5f4bdb4980327 "xelatex"
-  "temp/notes.toc" 1776150101.92147 3272 8740975b268fe932cdd49d74fb784596 "xelatex"
+  "notes.tex" 1776150801.58903 98202 aba1f3744a02425fba0e130e323567cf ""
+  "temp/notes.aux" 1776150809.45151 17931 5cea5cbdf1349c6c6e0e902c2553dd41 "xelatex"
+  "temp/notes.bbl" 1776150804.88035 30994 fe042eba8147902aa851f191ad8668a7 "biber temp/notes"
+  "temp/notes.out" 1776150809.45243 3261 3904dc1dd0cee8ef20e9904c4607acc2 "xelatex"
+  "temp/notes.run.xml" 1776150809.45355 2353 b91752504450f361fbc5f4bdb4980327 "xelatex"
+  "temp/notes.toc" 1776150809.4536 3272 8740975b268fe932cdd49d74fb784596 "xelatex"
   "屏幕截图 2024-12-17 180658.png" 1750241467.13353 104902 d8f1e4c151f59272f59ed173897cadd6 ""
   (generated)
   "temp/notes.aux"

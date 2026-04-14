@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.3.8)  14 APR 2026 15:01
+This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.3.8)  14 APR 2026 15:13
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1103,23 +1103,23 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 
-Overfull \hbox (7.8252pt too wide) in paragraph at lines 2017--2017
+Overfull \hbox (7.9812pt too wide) in paragraph at lines 2017--2017
 \TU/lmr/m/n/12 Press, Princeton, NJ, 1995, pp. xx+948. MR[][]1330919[][]. \TU/lmr/m/sc/12 doi\TU/lmr/m/n/12 : [][]$[][] [] [][][][] [] [][][][][][][][][][][][][]$[][]
- []
-
-
-Overfull \hbox (3.54478pt too wide) in paragraph at lines 2017--2017
-[]\TU/lmr/m/n/12 James Oliver Schwartz. \TU/lmr/m/it/12 THE DETERMINATION OF THE ADMISSIBLE NILPO-
- []
-
-
-Overfull \hbox (21.86821pt too wide) in paragraph at lines 2017--2017
-\TU/lmr/m/n/12 Institute of Technology. ProQuest LLC, Ann Arbor, MI, 1987, (no paging). MR[][]2941135[][]
  []
 
 
 
 [47]
+Overfull \hbox (3.70079pt too wide) in paragraph at lines 2017--2017
+[]\TU/lmr/m/n/12 James Oliver Schwartz. \TU/lmr/m/it/12 THE DETERMINATION OF THE ADMISSIBLE NILPO-
+ []
+
+
+Overfull \hbox (22.02422pt too wide) in paragraph at lines 2017--2017
+\TU/lmr/m/n/12 Institute of Technology. ProQuest LLC, Ann Arbor, MI, 1987, (no paging). MR[][]2941135[][]
+ []
+
+
 
 [48] (temp/notes.aux)
  ***********
@@ -1133,12 +1133,12 @@ Package logreq Info: Writing requests to 'notes.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 35961 strings out of 473832
- 719141 string characters out of 5729482
- 1540896 words of memory out of 5000000
- 58304 multiletter control sequences out of 15000+600000
+ 35965 strings out of 473832
+ 719277 string characters out of 5729482
+ 1540951 words of memory out of 5000000
+ 58308 multiletter control sequences out of 15000+600000
  570012 words of font info for 98 fonts, out of 8000000 for 9000
  1509 hyphenation exceptions out of 8191
- 95i,21n,101p,1037b,4940s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 95i,21n,101p,1037b,4937s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on temp/notes.xdv (48 pages, 658864 bytes).
+Output written on temp/notes.xdv (48 pages, 662776 bytes).

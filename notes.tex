@@ -1,24 +1,40 @@
 \documentclass[12pt]{amsart}
 \usepackage[margin=1in]{geometry}  % set the margins to 1in on all sides
-\usepackage{amscd,latexsym,amsthm,amsfonts,amssymb,amsmath,amsxtra}
+\usepackage{amscd,amsthm,amsfonts,amssymb,amsmath,amsxtra}
 \usepackage{mathrsfs}
 \usepackage[mathscr]{eucal}
-\usepackage{hyperref}
-\usepackage{pdfsync}
-\usepackage[all,cmtip]{xy}
+\usepackage[pagebackref]{hyperref}
 \usepackage{graphicx}
 \usepackage{float}
-\usepackage{color}
-\usepackage{hyperref}[colorlinks,linkcolor=blue]
 \usepackage{tikz}
 \usepackage{tikz-cd}
 \usetikzlibrary{decorations.pathreplacing}
 \newcommand{\tikznode}[3][inner sep=0pt]{\tikz[remember
 picture,baseline=(#2.base)]{\node(#2)[#1]{$#3$};}}
 \usepackage{ytableau}
-\usepackage{TooYoung}
+
+\usepackage{tcolorbox}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{microtype}
+\usepackage{thmtools}
+\usepackage{subdepth}
+
+
 \usetikzlibrary{decorations.pathmorphing}
 
+
+
+\allowdisplaybreaks
+
+\hypersetup{
+    pdftitle={Notes},
+    pdfauthor={IDLE},
+    colorlinks=true,       % 关键：开启文字颜色
+    linkcolor=BrickRed, % 对应图中红框部分（回引页码）的文字颜色
+    citecolor=RoyalBlue, % 对应图中蓝框部分（MR编号）的文字颜色
+    urlcolor=ForestGreen,  % 网页链接颜色
+    pdfborder={0 0 0}       % 彻底消除所有方框
+}
 
 \numberwithin{equation}{section}
 \pagestyle{plain}
@@ -29,19 +45,44 @@ picture,baseline=(#2.base)]{\node(#2)[#1]{$#3$};}}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Theorem style
 
-\newtheorem{thm}{Theorem}[section]
-\newtheorem{cor}[thm]{Corollary}
-\newtheorem{prop}[thm]{Proposition}
-\newtheorem{lem}[thm]{Lemma}
-\newtheorem{assump}[thm]{Assumption}
-\newtheorem{conj}[thm]{Conjecture}
-\newtheorem{rk}[thm]{Remark}
-\newtheorem{question}[thm]{Question}
-\newtheorem{defn}[thm]{Definition}
-\newtheorem{con}[thm]{Construction}
-\newtheorem{examp}[thm]{Example}
-\newtheorem{notn}[thm]{Notation}
-\newtheorem{exer}[thm]{Exercise}
+% 风格 1：定理、引理、命题 (标题加粗，正文斜体)
+\declaretheoremstyle[
+    headfont=\bfseries, 
+    bodyfont=\itshape,
+    headpunct={.},
+    postheadspace={0.5em},
+    spaceabove=8pt, 
+    spacebelow=8pt
+]{thmstyle}
+
+% 风格 2：定义、备注、例子 (标题加粗，正文正体)
+\declaretheoremstyle[
+    headfont=\bfseries,
+    bodyfont=\normalfont,
+    headpunct={.},
+    postheadspace={0.5em},
+    spaceabove=8pt,
+    spacebelow=8pt
+]{defstyle}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 环境声明
+
+% 使用 thmstyle (斜体正文)
+\declaretheorem[style=thmstyle, name=Theorem, numberwithin=section]{thm}
+\declaretheorem[style=thmstyle, name=Corollary, sibling=thm]{cor}
+\declaretheorem[style=thmstyle, name=Proposition, sibling=thm]{prop}
+\declaretheorem[style=thmstyle, name=Lemma, sibling=thm]{lem}
+\declaretheorem[style=thmstyle, name=Conjecture, sibling=thm]{conj}
+\declaretheorem[style=thmstyle, name=Assumption, sibling=thm]{assump}
+
+% 使用 defstyle (正体正文)
+\declaretheorem[style=defstyle, name=Definition, sibling=thm]{defn}
+\declaretheorem[style=defstyle, name=Remark, sibling=thm]{rk}
+\declaretheorem[style=defstyle, name=Question, sibling=thm]{question}
+\declaretheorem[style=defstyle, name=Construction, sibling=thm]{con}
+\declaretheorem[style=defstyle, name=Example, sibling=thm]{examp}
+\declaretheorem[style=defstyle, name=Notation, sibling=thm]{notn}
+\declaretheorem[style=defstyle, name=Exercise, sibling=thm]{exer}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%% Bold Fonts
 
@@ -196,7 +237,7 @@ picture,baseline=(#2.base)]{\node(#2)[#1]{$#3$};}}
 \newcommand{\gr}{{\mathrm{gr}}}
 \newcommand{\Sym}{{\mathrm{Sym}}}
 \newcommand{\diag}{\mathrm{diag}}
-
+\newcommand{\dd}{\mathrm{d}}
 \newcommand{\MRR}[1]{\href{https://mathscinet.ams.org/mathscinet-getitem?mr=#1}{MR#1}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%   Math formula
 
@@ -208,7 +249,7 @@ picture,baseline=(#2.base)]{\node(#2)[#1]{$#3$};}}
 \newcommand{\defmap}[5]{
            \begin{equation*}
               \begin{aligned}
-                   #1:\quad  & #2 &\longrightarrow &\quad #3 \\
+                   #1 \colon \quad  & #2 &\longrightarrow &\quad #3 \\
                       \quad  & #4    &\longmapsto  &\quad #5
               \end{aligned}
            \end{equation*}
@@ -224,6 +265,11 @@ picture,baseline=(#2.base)]{\node(#2)[#1]{$#3$};}}
 \renewcommand{\bar}{\overline}
 \renewcommand{\tilde}{\widetilde}
 \newcommand{\eps}{\epsilon}
+
+% 0 = 只显示章 (Chapters)
+% 1 = 显示到节 (Sections) —— 这通常是隐藏子节最常用的设置
+% 2 = 显示到子节 (Subsections)
+\setcounter{tocdepth}{1}
 
 \author{Idle}
 \begin{document}
@@ -437,7 +483,7 @@ Write $$W(^{a}\fh^*,\fh^*) :=  \set{\xi_{\fb}: \ ^{a}\fh^* \to \fh^*}{\fb \ \tex
   is a map with the following properties:
   \begin{enumerate}
     \item $\Gamma_{\nu+\beta} = \Gamma_{\nu} \otimes \xi(\beta)$ for all $\beta \in Q_{\iota}$ and $\nu \in \Lambda$;
-    \item $\mathrm{d\Gamma_{\nu}} = \xi(\nu) + \delta(\xi)$ for all $\nu \in \Lambda$.\textcolor{red}{(note that Cartan subgroups not always have irr repn with this differential!)}
+    \item $\mathrm{d\Gamma_{\nu}} = \xi(\nu) + \delta(\xi)$ for all $\nu \in \Lambda$.\textcolor{Mahogany}{(note that Cartan subgroups not always have irr repn with this differential!)}
   \end{enumerate}
   Here $\xi(\beta)$ is naturally viewed as a character of $H$ by using the homomorphism
   $\iota : H \to H_{\BC}$, and $H_{\BC}$ is a Cartan subgroup of $G_{\BC}$ containing $\iota(H)$.
@@ -640,7 +686,7 @@ Some facts about continuous complex characters of some common abelian topologica
 
   If $G$ is connected, then $K$ is also connected, so $V_K$ is irreducible as $\CU(\fg)$-module, in this case, $\Ann_{\CU(\fg)}(V)$ is a primitive ideal.
 
-  If $G$ is not connected, let $G_0$ be the identity component of $G$, $K_0 = G_0 \cap K$ is a maximal compact subgroup of $G_0$, then $V_K|_{G_0}$ is a finite length $(\fg,K_0)$-module, it has an irreducible quotient $V_K \to V_0$, then according to the theory of induction of $(\fg,K)$-modules \cite[Chapter 2]{KV} we have an injective morphism of $(\fg,K_0)$-modules:
+  If $G$ is not connected, let $G_0$ be the identity component of $G$, $K_0 = G_0 \cap K$ is a maximal compact subgroup of $G_0$, then $V_K|_{G_0}$ is a finite length $(\fg,K_0)$-module, it has an irreducible quotient $V_K \to V_0$, then according to the theory of induction of $(\fg,K)$-modules \cite[Chapter 2]{KV95} we have an injective morphism of $(\fg,K_0)$-modules:
   \begin{equation}
      V_K|_{K_0} \hookrightarrow  (\mathrm{induced}_{K_0}^{K}(V_0))|_{K_0} \cong \bigoplus_{\textrm{double cosets} \ K_0 k K_0} kV_0,
   \end{equation}
@@ -679,7 +725,7 @@ And we can see that $\theta_\alpha - \theta_\beta = \frac{\mathrm{d}g_{\alpha,\b
 Construction of the second map (classical de-Rham isomorphism), choose a 2-form $\omega \in \mathrm{H}^{2}_{dR}(X;\BR)$
 \begin{itemize}
   \item choose a cover $\{U_{\alpha}\}$ of $\BL$, such that all $U_{\alpha}$ and $U_{\alpha} \cap U_{\beta}$ are contractible;
-  \item on each $U_\alpha, choose a 1-form \theta_\alpha$ such that $\mathrm{d}\theta_\alpha = \omega|_{U_\alpha}$;
+  \item on each $U_\alpha$, choose a 1-form $\theta_\alpha$ such that $\mathrm{d}\theta_\alpha = \omega|_{U_\alpha}$;
   \item since $\mathrm{d}\theta_\alpha = \mathrm{d}\theta_\beta$ on $U_\alpha \cap U_\beta$, we can choose smooth function $c_{\alpha,\beta}$ such that $\mathrm{d}c_{\alpha,\beta} = \theta_\alpha - \theta_\beta$;
   \item let $c_{\alpha,\beta,\gamma} = c_{\alpha,\beta} + c_{\beta,\gamma} + c_{\gamma,\alpha}$, which is a constant, and we get the corresponding 2-cocycle $(c_{\alpha,\beta,\gamma}) \in \mathrm{H}^{2}_{Cech}(X;\BR)$.
 \end{itemize}
@@ -709,20 +755,7 @@ For a 2-form $\omega$, choose $\theta_\alpha$ and $c_{\alpha,\beta}$ as above, l
 
 \newpage
 
-\section{2025.4.7}
-
-TooYoung package from xiongrui.
-
-\begin{center}
-    \Young{&\\} \ \Young{\\&}
-\end{center}
-
-\Young[2.5pc]{ 1 & i+1 \\2*(yellow) \\3 \\ \cdots \\i \\ i+2 \\ \cdots \\n}
-
-
-\newpage
-
-\section{2025.8.14 \protect\footnote{This section is organized by Ryan Ang and Qiutong Wang at Tianyuan Mathematics Research Centre}}
+\section{\texorpdfstring{2025.8.14\protect\footnote{This section is organized by Ryan Ang and Qiutong Wang at Tianyuan Mathematics Research Centre.}}{2025.8.14}}
 
 
 Let $G$ be a finite central extension of an open subgroup of $\mathbb{R}$-points of a connected reductive algebraic group (reductive Nash group \cite{Sun15}) with Lie algebra $\mathfrak{g}$. Fix an invariant nondegenerate bilinear form $B(-,-)$ on $\mathfrak{g}$. 
@@ -930,6 +963,7 @@ Thus,
 
 
 Let $G$ be a semisimple simply connected complex algebraic group. Define Steinberg variety:
+
 \[
     Z = \set{(x,B',B'') \in \mathcal{N} \times \mathcal{B} \times \mathcal{B}}{x \in \mathrm{Lie}(B') \cap \mathrm{Lie}(B'')} (= \set{(x,B',B'') \in \mathcal{N} \times \mathcal{B} \times \mathcal{B}}{}).
 \]
@@ -1056,7 +1090,7 @@ $X = \mathrm{Spec}(R)$ smooth affine with coordinate $x_1,\ldots,x_n$, $M$ a fin
 \end{defn}
 
 \begin{cor}
-  If $M$ is holonomic, then $\mathrm{Ch}(M)$ is lagrangian in $T^*X$, and $\mathrm{CC}(M) = \sum_{E_i \subseteq X  \textrm{irr}} n_i [\bar{T^*_{E_i}X}]$.
+  If $M$ is holonomic, then $\mathrm{Ch}(M)$ is lagrangian in $T^*X$, and $\mathrm{CC}(M) = \sum_{E_i \subseteq X,  \textrm{irr}} n_i [\bar{T^*_{E_i}X}]$.
 \end{cor}
 
 The de-Rham complex and  analytification:
@@ -1134,11 +1168,7 @@ It is exact, this is bad. To fix this, we need to analytify $M_{\alpha}$:
 
 
 \begin{examp}
-  $N = \BC[\delta]$ where $\delta$ is the delta function at $0$, $\partial_x \delta = 0$. Then $N = \mathcal{D}_X/\mathcal{D}_X x$.
-  The characteristic cycle is $\operatorname{CC}(N) = [T^*_0 X]$.
-  The de-Rham complex $\mathrm{DR}(N) = [N \xrightarrow{\partial_x} N]$ is not exact, and $H^0(\mathrm{DR}(N)) = \BC \delta$.
-  The analytification $N^{\mathrm{an}} = \BC\{x\} \cdot \delta$.
-  The de-Rham complex $\mathrm{DR}(N^{\mathrm{an}}) = [N^{\mathrm{an}} \xrightarrow{\partial_x} N^{\mathrm{an}}]$ is still not exact, and $H^0(\mathrm{DR}(N^{\mathrm{an}})) = \BC \delta$.
+  $N = \BC[\delta]$ where $\delta$ is the delta function at $0$, $x \cdot \delta = 0$. Then $N = \mathcal{D}_X/\mathcal{D}_X x$. Characteristic cycle is $[T^*_0 X]$ with multiplicity $1$.
 \end{examp}
 
 \begin{rk}
@@ -1162,7 +1192,7 @@ It is exact, this is bad. To fix this, we need to analytify $M_{\alpha}$:
   Only need to notice that $\tilde{G}_{0} \to G$ is a covering map of degree $1$ or $2$.
 \end{proof}
 
-There is a same statement for p-adic groups in \cite{Nev}.
+There is a same statement for p-adic groups in \cite{Nev99}.
 
 
 \begin{lem}
@@ -1184,7 +1214,7 @@ There is a same statement for p-adic groups in \cite{Nev}.
 \end{lem}
 
 \begin{proof}
-  Only need to notice that $(\pi^{-1}(G_0))_0 = \tilde{G}_0$, together with results in \cite{Sch}.
+  Only need to notice that $(\pi^{-1}(G_0))_0 = \tilde{G}_0$, together with results in \cite{Sch87}.
 \end{proof}
 
  
@@ -1510,8 +1540,18 @@ Conormal space at the base point of the $K(y)$-orbit:
 \[T^*_{K(y),eP(\Lambda)}(\check{G}(\Lambda)_0/P(\Lambda)) \simeq \fs(y) \cap \fn(\lambda) .\]
 So we can view $E_{\psi}$ as an element in the conormal space $T^*_{K(y),eP(\Lambda)}(\check{G}(\Lambda)_0/P(\Lambda))$ also in $T^*_{\check{G},\phi_\psi}(X(\check{G}^{\Gamma}))$.
 
+
+
+\begin{defn}
+  An Arthur parameter $\psi$ is called \emph{unipotent} if the restriction to $\BC^* \subseteq W_{\BR}$ is trivial. 
+\end{defn}
+
+\begin{rk}
+  In this case, $\psi: \SL_2(\BC) \times \Gamma \to \check{G}^{\Gamma}$. So $\lambda = \lambda_1$
+\end{rk}
+
 \begin{lem}
-  Consider the partial Springer resolution
+  Suppose $\psi$ is unipotent. Consider the partial Springer resolution
 \[
 \mu : T^* (\check{G}(\Lambda)_0/P(\Lambda)) \simeq \check{G}(\Lambda)_0 \times^{P(\Lambda)} \fn(\lambda) \to \mathcal{N}_{\CP(\Lambda)},
 \]
@@ -1533,17 +1573,10 @@ $E_{\psi} \in \mathcal{N}_{\CP(\Lambda)} \cap \fs(y)$ is a regular element (belo
   is surjective at the identity coset, so the orbit $\check{G}(\Lambda) \cdot E_{\psi}$ is dense in $\fn(\lambda)$, which means that $E_{\psi}$ is a regular element in $\mathcal{N}_{\CP(\Lambda)}$.
 \end{proof}
 
-\begin{defn}
-  An Arthur parameter $\psi$ is called \emph{unipotent} if the restriction to $\BC^* \subseteq W_{\BR}$ is trivial. 
-\end{defn}
-
-\begin{rk}
-  In this case, $\psi: \SL_2(\BC) \times \Gamma \to \check{G}^{\Gamma}$. So $\lambda = \lambda_1$
-\end{rk}
 
 \begin{thm}
-  Fix an Arthur paramter $\psi : \Gamma \times \SL_2(\BC) \to \check{G}^{\Gamma}$, let $\lambda = d\psi \begin{pmatrix} \frac{1}{2} & 0 \\ 0 & -\frac{1}{2} \end{pmatrix}$, $\CO = \check{G} \cdot \lambda \subseteq \check{\fg}$ the corresponding semisimple orbits. 
-  Suppose that $\phi_{\psi} = (y,\lambda)$, then we have an open and closed subvariety of the geometric parameter space $X_y(\CO,\check{G}^{\Gamma}) \simeq \check{G} \times^{K(y)} (\check{G}(\Lambda)_0/P(\Lambda))$. 
+  Fix an algebraic morphism $\psi : \SL_2(\BC) \to \check{G}^{\Gamma}$, let $\lambda = d\psi \begin{pmatrix} \frac{1}{2} & 0 \\ 0 & -\frac{1}{2} \end{pmatrix}$, $\CO = \check{G} \cdot \lambda \subseteq \check{\fg}$ the corresponding semisimple orbits. 
+  Consider the open and closed subvariety of the geometric parameter space $X_y(\CO,\check{G}^{\Gamma}) \simeq \check{G} \times^{K(y)} (\check{G}(\Lambda)_0/P(\Lambda))$. 
   
   Then there are bijections between:
   \begin{itemize}
@@ -1860,13 +1893,25 @@ Denote $j: \BC^* \hookrightarrow \BC$ the open inclusion, $i: \{0\} \hookrightar
   \arrow[r, shift right=2.5ex, "i^!"']
   \arrow[l, "j^{*} = j^!" description] 
   & D^b(\{0\})
-  \arrow[l, "i_* = i^!" description]
+  \arrow[l, "i_* = i_!" description]
 \end{tikzcd}
 \]
 
 $\CL$ is a local system on $\BC^*$. 
 
 $j_!\CL$ has no quotient supported on $\{0\}$, $j_*$ has no subobject supported on $\{0\}$. $j_!\CL[1]$ and $j_*\CL[1]$ are perverse sheaves on $\BC$.
+
+
+\begin{rk}
+  Actually when $j: S \hookrightarrow  X$ is \colorbox{yellow!50}{affine locally closed embedding} , $j_!$ and $j_*$ are $t$-exact for the perverse $t$-structure, so $j_!\CL[\dim S]$ and $j_*\CL[\dim S]$ are perverse sheaves on $X$.
+\end{rk}
+  
+
+
+
+  
+
+
 
 By easy calculation of group cohomology, we have:
 
@@ -1880,19 +1925,125 @@ By easy calculation of group cohomology, we have:
   \right. 
 \end{align*}
 
+There is an exact sequence of perverse sheaves on $\BC$:
+\[0 \to i_*V^{\mu} \to j_!\CL[1] \to j_*\CL[1] \to i_*V_{\mu} \to 0.\]
 
 
 
 
 \newpage
 
+\section{2026.3.31}
+\noindent\textbf{\large I. The Enhanced Flag Variety and $G_0/N$ Isomorphism \cite{BB93}} 
+\vspace{2mm}
+\hrule 
+\vspace{3mm}
+
+$\fg$ be a complex semisimple Lie algebra, ${^{a}\fh} = \fb/[\fb,\fb]$ be the universal Cartan subalgebra, $G$ be the automorphism group of $\fg$, $G_0$ be the connected component of $G$, it is the adjoint group of $\fg$.
+
+Attached to ${^{a}\fh}$ is a root system $\Delta$, and the Weyl group $W$. Although there isn't a well defined action of ${^{a}\fh} = \fb/[\fb,\fb]$ on $\fg/\fb = \fn^*$, the action of ${^{a}\fh}$ on $(\fn/[\fn,\fn])^*$ is well defined, and there is a canonical decomposition:
+\[
+  (\fn/[\fn,\fn])^* = \bigoplus_{\alpha \in \Sigma} (\fn/[\fn,\fn])^*_{\alpha},
+\]
+
+Where $\Sigma$ is the set of simple roots. Note that this choice of positive root system is opposite to the one usually used in representation theory, but it is more natural in geometry since dominant implies positive line bundle in this way.
+
+The enhanced flag variety $\tilde{\CB}$ is defined as the variety of pairs $(\fb, \{x_{\alpha}\}_{\alpha \in \Sigma})$ where $\fb$ is a Borel subalgebra of $\fg$, and $\xi$ is a nonzero element in $(\fn/[\fn,\fn])^*_{\alpha}$. There is a natural projection map $\pi : \tilde{\CB} \to \CB$ which forgets the second component, and is an $H$ principle bundle.
+
+There is a $G$ action on $\tilde{\CB}$ defined by $g \cdot (\fb, \{x_{\alpha}\}_{\alpha \in \Sigma}) = (\Ad(g)\fb, \{\Ad^*(g)x_{\alpha}\}_{\alpha \in \Sigma})$. There is also an $H$ action on $\tilde{\CB}$ defined by $h \cdot (\fb, \{x_{\alpha}\}_{\alpha \in \Sigma}) = (\fb, \{\alpha(h)x_{\alpha}\}_{\alpha \in \Sigma})$. These two actions is compatible in the following way:
+\[
+  g \cdot h \cdot (\fb, \{x_{\alpha}\}_{\alpha \in \Sigma}) = \kappa_{g}(h) \cdot g \cdot (\fb, \{x_{\alpha}\}_{\alpha \in \Sigma}),
+\]  
+
+where $\kappa: G \to \mathrm{Aut}(H)$ is the action as outer automorphisms of $H$.
+
+The adjoint group $G_0$ acts transitively on $\tilde{\CB}$, and the stabilizer of a base point $(\fb, \{x_{\alpha}\}_{\alpha \in \Sigma})$ is $N$. So we have an isomorphism $\tilde{\CB} \simeq G_0/N$. Under this identification, the $G$ action on $\tilde{\CB}$ is given by $g \cdot (g_0N) = gg_0(N)$, and the $H$ action on $\tilde{\CB}$ is given by $h \cdot (g_0N) = g_0 hN$.
+
+\vspace{5mm}
+
+
+
+\noindent\textbf{\large II. Line Bundles on $\CB$ and Very Ampleness}
+\vspace{2mm}
+\hrule 
+\vspace{3mm}
+
+
+Now $G$ is a connected reductive group.
+
+\begin{lem}
+  Let $G \to \GL(V)$ be a finite-dimensional representation of $G$, $k \cdot v \subseteq V$ be a one-dimensional subspace, $P = \mathrm{Stab}_G(k \cdot v)$. Suppose that $k_{\lambda}$ be the one-dimensional representation of $P$ defined by the action of $P$ on $k \cdot v$, then $i^*(\CO_{\BP(V)}(1)) = \CO_{G/P}(\lambda)$.
+\end{lem}
+
+\begin{proof}
+  Note that $\CO_{\BP(V)}(-1)$ is the tautological line bundle, $P$ action on the fiber of $\CO_{\BP(V)}(-1)$ at $k \cdot v$ is given by $k_{\lambda}$. So $k_{-\lambda}$ for $\CO(1)$, also note that $\CO_{G/P}(\lambda) = G \times^{P} k_{-\lambda}$.
+\end{proof}
+
+\begin{lem}
+  $\CO_{\CB}(\lambda)$ is very ample if and only if $\lambda$ is regular dominant ($\lambda \in X^+(H)$).
+\end{lem}
+
+\begin{proof}
+  Consider the Verma module $V^{\lambda} = \CU(\fg) \otimes_{\CU(\fh)} k_{\lambda}$. By the transitive group action of $G$ on $\CB$, $\CO(\lambda)$ is generated by global sections $\Gamma(\CB,\CO(\lambda)) = V^{\lambda}$. Hence there is a surjection $\Gamma(\CB,\CO(\lambda)) \twoheadrightarrow \CO(\lambda) \otimes_k k_{eB} = k_{\lambda}$. Taking dual, we have $k_{-\lambda} \hookrightarrow (V^{\lambda})^*$.
+  
+  Since $\lambda$ is regular dominant, the stablizer of $k_{-\lambda}$ in $(V^{\lambda})^*$ is the Borel $B$, by the previous lemma, we have a $G$-equivariant morphism $\CB \hookrightarrow \BP((V^{\lambda})^*)$ such that $\CO(\lambda)$ is the pullback of $\CO(1)$, hence $\CO(\lambda)$ is very ample.
+\end{proof}
+
+\newpage
+
+
+
+\section{2026.4.5}
+$G$ is a compex algebraic group, $P$ is a closed subgroup of $G$ with a finite dimensional rational representation $V$. suppose that $\fg = \fu \oplus \fp$.
+
+\[
+  \begin{tikzcd}
+    Y = G \times^P V \arrow[r, "\pi"] \arrow[d] & V \\
+    G/P & 
+  \end{tikzcd}
+\]
+
+There is an isomorphism:
+
+\[
+  \fu \oplus V \xrightarrow{\sim} T_{\bar{(1,\alpha)}}(G \times^P V)  ,
+\]
+which sends $(u,v)$ to $u_{Y} + v$, where $v \in V$ is regarded as a tangent vector of the fiber $V$ at $\alpha$, and $u_{Y}$ is the vector field on $Y$ generated by the action of $u \in \fu \subset \fg$.
+ 
+The tangent map of $\pi$ at $\bar{(1,\alpha)}$ is:
+\begin{align*}
+  d \pi_{\bar{(1,\alpha)}} &: \fu \oplus V \to T_{\bar{(1,\alpha)}}(G \times^P V) \to V, \\
+  d\pi_{\bar{(1,\alpha)}}(u,v) &= u \cdot \alpha + v,
+\end{align*}
+since $\pi(g,\alpha) = g \cdot \alpha$.
+
+The above calculation is instrumental in extending the pullback of the Kostant-Kirillov symplectic form to the Jacobson-Morozov resolution of a nilpotent orbit:
+\[
+\begin{tikzcd}
+  G \times^P \fg_{\geq 2} \arrow[r, "\pi"] & \bar{\BO} \\
+  G \times^{P}  P \cdot e = G/Z_P(e) \arrow[r] \arrow[u,hookrightarrow ] & \BO \arrow[u,hookrightarrow ] 
+\end{tikzcd}
+\]
+
+\[
+  \pi^* \omega_{KK,\alpha}((u,v),(x,y)) = \kappa(\alpha, [u,x]) + \kappa(u,y) - \kappa(v,x).
+\]
+
+\newpage
+
+
 
 
 
 \begin{thebibliography}{99}
 
+
 \bibitem[BB82]{BB82}
 W. Borho and J.-L. Brylinski, Differential operators on homogeneous spaces. I. Irreducibility of the associated variety for annihilators of induced modules, Invent. Math. {\bf 69} (1982), no.~3, 437--476; \MRR{0679767}
+
+\bibitem[BB93]{BB93}
+A.~A. Beilinson and J.~N. Bernstein, A proof of Jantzen conjectures, in {\it I. M. Gelfand Seminar}, 1--50, Adv. Soviet Math., 16, Part 1, Amer. Math. Soc., Providence, RI, ; \MRR{1237825}
+
 
 \bibitem[BV80]{BV80}
 D.~M. Barbasch and D.~A. Vogan Jr, The local structure of characters, J. Functional Analysis {\bf 37} (1980), no.~1, 27--55; \MRR{0576644}

@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.3.8)  14 APR 2026 15:28
+This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.3.8)  29 APR 2026 14:29
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -441,8 +441,6 @@ Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
 \tcb@temp=\box78
 \tcb@temp=\box79
 \tcb@temp=\box80
-) (/usr/local/texlive/2025/texmf-dist/tex/latex/base/textcomp.sty
-Package: textcomp 2024/04/24 v2.1b Standard LaTeX package
 ) (/usr/local/texlive/2025/texmf-dist/tex/latex/tikz-cd/tikz-cd.sty
 Package: tikz-cd 2021/05/04 v1.0 Commutative diagrams with TikZ
  (/usr/local/texlive/2025/texmf-dist/tex/generic/tikz-cd/tikzlibrarycd.code.tex (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarymatrix.code.tex
@@ -519,14 +517,14 @@ Package hyperref Info: Backreferencing OFF on input line 4177.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4424.
 \c@Hy@tempcnt=\count316
-
-(/usr/local/texlive/2025/texmf-dist/tex/latex/url/url.sty
+ (/usr/local/texlive/2025/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip18
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
 LaTeX Info: Redefining \url on input line 4763.
 \XeTeXLinkMargin=\dimen288
- (/usr/local/texlive/2025/texmf-dist/tex/generic/bitset/bitset.sty
+
+(/usr/local/texlive/2025/texmf-dist/tex/generic/bitset/bitset.sty
 Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
  (/usr/local/texlive/2025/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty
 Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO)
@@ -836,35 +834,35 @@ Package: blx-case-expl3 2024/03/21 v3.20 expl3 case changing code for biblatex
  (temp/notes.aux)
 \openout1 = `notes.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 256.
-LaTeX Font Info:    ... okay on input line 256.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 256.
-LaTeX Font Info:    ... okay on input line 256.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 256.
-LaTeX Font Info:    ... okay on input line 256.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 256.
-LaTeX Font Info:    ... okay on input line 256.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 256.
-LaTeX Font Info:    ... okay on input line 256.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 256.
-LaTeX Font Info:    ... okay on input line 256.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 256.
-LaTeX Font Info:    ... okay on input line 256.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 256.
-LaTeX Font Info:    ... okay on input line 256.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 256.
-LaTeX Font Info:    ... okay on input line 256.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 256.
-LaTeX Font Info:    ... okay on input line 256.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 256.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 262.
+LaTeX Font Info:    ... okay on input line 262.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 262.
+LaTeX Font Info:    ... okay on input line 262.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 262.
+LaTeX Font Info:    ... okay on input line 262.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 262.
+LaTeX Font Info:    ... okay on input line 262.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 262.
+LaTeX Font Info:    ... okay on input line 262.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 262.
+LaTeX Font Info:    ... okay on input line 262.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 262.
+LaTeX Font Info:    ... okay on input line 262.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 262.
+LaTeX Font Info:    ... okay on input line 262.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 262.
+LaTeX Font Info:    ... okay on input line 262.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 262.
+LaTeX Font Info:    ... okay on input line 262.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 262.
  (/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 256.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 262.
  (/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Trying to load font information for U+rsfs on input line 256.
+LaTeX Font Info:    Trying to load font information for U+rsfs on input line 262.
  (/usr/local/texlive/2025/texmf-dist/tex/latex/jknapltx/ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
@@ -902,13 +900,13 @@ File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-LaTeX Info: Redefining \microtypecontext on input line 256.
-Package microtype Info: Applying patch `item' on input line 256.
-Package microtype Info: Applying patch `toc' on input line 256.
-Package microtype Info: Applying patch `eqnum' on input line 256.
-Package microtype Info: Applying patch `footnote' on input line 256.
-Package microtype Info: Applying patch `verbatim' on input line 256.
-LaTeX Info: Redefining \microtypesetup on input line 256.
+LaTeX Info: Redefining \microtypecontext on input line 262.
+Package microtype Info: Applying patch `item' on input line 262.
+Package microtype Info: Applying patch `toc' on input line 262.
+Package microtype Info: Applying patch `eqnum' on input line 262.
+Package microtype Info: Applying patch `footnote' on input line 262.
+Package microtype Info: Applying patch `verbatim' on input line 262.
+LaTeX Info: Redefining \microtypesetup on input line 262.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
 Package microtype Info: No adjustment of tracking.
@@ -917,7 +915,7 @@ Package microtype Info: No adjustment of kerning.
 (/usr/local/texlive/2025/texmf-dist/tex/latex/microtype/mt-LatinModernRoman.cfg
 File: mt-LatinModernRoman.cfg 2021/02/21 v1.1 microtype config. file: Latin Modern Roman (RS)
 )
-Package hyperref Info: Link coloring ON on input line 256.
+Package hyperref Info: Link coloring ON on input line 262.
  (temp/notes.out) (temp/notes.out)
 \@outlinefile=\write5
 \openout5 = `notes.out'.
@@ -936,40 +934,39 @@ Package biblatex Info: Automatic encoding selection.
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'notes.bbl' found.
  (temp/notes.bbl)
-Package biblatex Info: Reference section=0 on input line 256.
-Package biblatex Info: Reference segment=0 on input line 256.
+Package biblatex Info: Reference section=0 on input line 262.
+Package biblatex Info: Reference segment=0 on input line 262.
 File: Claude_Monet-NC.jpg Graphic file (type bmp)
 <Claude_Monet-NC.jpg>
 
 
-[1] (temp/notes.toc)
-\tf@toc=\write6
-\openout6 = `notes.toc'.
-
- (/usr/local/texlive/2025/texmf-dist/tex/latex/microtype/mt-cmr.cfg
+[1] (temp/notes.toc (/usr/local/texlive/2025/texmf-dist/tex/latex/microtype/mt-cmr.cfg
 File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman (RS)
 ) (/usr/local/texlive/2025/texmf-dist/tex/latex/microtype/mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 ) (/usr/local/texlive/2025/texmf-dist/tex/latex/microtype/mt-msb.cfg
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
-)
-LaTeX Font Info:    Trying to load font information for U+euf on input line 297.
+))
+\tf@toc=\write6
+\openout6 = `notes.toc'.
+
+LaTeX Font Info:    Trying to load font information for U+euf on input line 303.
  (/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/ueuf.fd
 File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
 ) (/usr/local/texlive/2025/texmf-dist/tex/latex/microtype/mt-euf.cfg
 File: mt-euf.cfg 2006/07/03 v1.1 microtype config. file: AMS Euler Fraktur (RS)
 )
-
-[2]
-Package hyperref Info: bookmark level for unknown thm defaults to 0 on input line 330.
-File: 1.png Graphic file (type bmp)
-<1.png>
-
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
+[2]
+Package hyperref Info: bookmark level for unknown thm defaults to 0 on input line 336.
+
+
 [3]
+File: 1.png Graphic file (type bmp)
+<1.png>
 File: 2.png Graphic file (type bmp)
 <2.png>
 
@@ -978,7 +975,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 [4]
-Package hyperref Info: bookmark level for unknown rk defaults to 0 on input line 362.
+Package hyperref Info: bookmark level for unknown rk defaults to 0 on input line 368.
 File: 3.png Graphic file (type bmp)
 <3.png>
 
@@ -987,18 +984,18 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 [5]
-Package hyperref Info: bookmark level for unknown defn defaults to 0 on input line 404.
+Package hyperref Info: bookmark level for unknown defn defaults to 0 on input line 410.
 
 
 [6]
-Underfull \hbox (badness 10000) in paragraph at lines 453--455
+Underfull \hbox (badness 10000) in paragraph at lines 459--461
 
  []
 
 
 
 [7]
-Package hyperref Info: bookmark level for unknown lem defaults to 0 on input line 478.
+Package hyperref Info: bookmark level for unknown lem defaults to 0 on input line 484.
 
 
 [8]
@@ -1006,13 +1003,13 @@ Package hyperref Info: bookmark level for unknown lem defaults to 0 on input lin
 [9]
 
 [10]
-Package hyperref Info: bookmark level for unknown cor defaults to 0 on input line 725.
+Package hyperref Info: bookmark level for unknown cor defaults to 0 on input line 731.
 
 
 [11]
-File: 屏幕截图 2024-12-17 180658.png Graphic file (type bmp)
-<屏幕截图 2024-12-17 180658.png>
-Package hyperref Info: bookmark level for unknown conj defaults to 0 on input line 762.
+File: 4.png Graphic file (type bmp)
+<4.png>
+Package hyperref Info: bookmark level for unknown conj defaults to 0 on input line 768.
 
 
 [12]
@@ -1022,7 +1019,7 @@ Package hyperref Info: bookmark level for unknown conj defaults to 0 on input li
 [14]
 
 [15]
-Package hyperref Info: bookmark level for unknown examp defaults to 0 on input line 907.
+Package hyperref Info: bookmark level for unknown examp defaults to 0 on input line 913.
 
 
 [16]
@@ -1040,28 +1037,33 @@ Package hyperref Info: bookmark level for unknown examp defaults to 0 on input l
 [22]
 
 [23]
+Underfull \vbox (badness 1178) has occurred while \output is active []
+
+
 
 [24]
 
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\cite' on input line 1455.
+
+
+
 [25]
-Overfull \hbox (24.8535pt too wide) detected at line 1500
+Overfull \hbox (24.8535pt too wide) detected at line 1505
 \OML/cmm/m/it/12 y \OT1/cmr/m/n/12 = [](\OML/cmm/m/it/12 ^^Yi^^U\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 ^^^[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 j\OT1/cmr/m/n/12 ) = [](\OML/cmm/m/it/12 ^^Yi^^U[]\OT1/cmr/m/n/12 ) [](\OML/cmm/m/it/12 ^^Yid [] []\OT1/cmr/m/n/12 )\OML/cmm/m/it/12  []\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 j\OT1/cmr/m/n/12 ) = [](\OML/cmm/m/it/12 ^^Yi^^U[]\OT1/cmr/m/n/12 )\OML/cmm/m/it/12  [] []  []\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 j\OT1/cmr/m/n/12 ) = \OML/cmm/m/it/12 y[]y[]:
  []
 
 
 
 [26]
-Overfull \hbox (26.66295pt too wide) detected at line 1590
+
+[27]
+Overfull \hbox (26.66295pt too wide) detected at line 1595
 []
  []
 
 
-Underfull \vbox (badness 1024) has occurred while \output is active []
-
-
-
-[27]
-Overfull \hbox (10.10303pt too wide) in paragraph at lines 1600--1601
+Overfull \hbox (10.10303pt too wide) in paragraph at lines 1605--1606
 []\TU/lmr/m/it/12 irreducible $\OML/cmm/m/it/12 K\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 y\OT1/cmr/m/n/12 )[]$\TU/lmr/m/it/12 -equivariant $\OMS/cmsy/m/n/12 D$\TU/lmr/m/it/12 -modules $\OMS/cmsy/m/n/12 M$ \TU/lmr/m/it/12 on $[]\OT1/cmr/m/n/12 (^^C)[]\OML/cmm/m/it/12 =P\OT1/cmr/m/n/12 (^^C)$ \TU/lmr/m/it/12 with $\OML/cmm/m/it/12 T[]\OT1/cmr/m/n/12 ([](^^C)[]\OML/cmm/m/it/12 =P\OT1/cmr/m/n/12 (^^C)) \OMS/cmsy/m/n/12 ^^R
  []
 
@@ -1073,52 +1075,142 @@ Overfull \hbox (10.10303pt too wide) in paragraph at lines 1600--1601
 
 [30]
 
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 1781.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `subscript' on input line 1781.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 1781.
+
+
+
 [31]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 1868.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 1868.
+
+
 
 [32]
 
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 1923.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 1923.
+
+
+
 [33]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 1983.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\times' on input line 1983.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `superscript' on input line 1983.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\to' on input line 1983.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 1983.
+
+
+
+[34]
+Package hyperref Info: bookmark level for unknown prop defaults to 0 on input line 2030.
+
+
+[35]
+
+[36]
+Overfull \hbox (7.65605pt too wide) in paragraph at lines 2147--2148
+\U/msb/m/n/12 ~[]\OML/cmm/m/it/12 R[]$ \TU/lmr/m/n/12 for some $\OML/cmm/m/it/12 R[] \OMS/cmsy/m/n/12 2 A[]$\TU/lmr/m/n/12 , we want to find $\OML/cmm/m/it/12 ^^N[] \OMS/cmsy/m/n/12 2 \U/msb/m/n/12 ~[]\OMS/cmsy/m/n/12 A[]$ \TU/lmr/m/n/12 such that $[] [] \OT1/cmr/m/n/12 =
+ []
+
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `lmss' (encoding: TU).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+
+
+[37]
+
+[38]
+
+[39]
+
+[40]
+
+[41]
+
+[42]
+
+[43]
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `lmtt' (encoding: TU).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 
-
-[34]
-Overfull \hbox (7.9812pt too wide) in paragraph at lines 2018--2018
-\TU/lmr/m/n/12 Press, Princeton, NJ, 1995, pp. xx+948. MR[][]1330919[][]. \TU/lmr/m/sc/12 doi\TU/lmr/m/n/12 : [][]$[][] [] [][][][] [] [][][][][][][][][][][][][]$[][]
+Overfull \hbox (11.06673pt too wide) in paragraph at lines 2511--2511
+\TU/lmr/m/n/12 Mathematics. Birkhäuser Boston, Inc., Boston, MA, 1992, pp. xii+318. MR[][]1162533[][].
  []
 
 
-Overfull \hbox (3.70079pt too wide) in paragraph at lines 2018--2018
+
+[44]
+Overfull \hbox (6.04117pt too wide) in paragraph at lines 2511--2511
+\TU/lmr/m/n/12 models associated to nilpotent orbits”. In: \TU/lmr/m/it/12 Geom. Funct. Anal. \TU/lmr/m/n/12 24.3 (2014), pp. 796–
+ []
+
+
+
+[45]
+Overfull \hbox (10.5528pt too wide) in paragraph at lines 2511--2511
 []\TU/lmr/m/n/12 James Oliver Schwartz. \TU/lmr/m/it/12 THE DETERMINATION OF THE ADMISSIBLE NILPO-
  []
 
 
-Overfull \hbox (22.02422pt too wide) in paragraph at lines 2018--2018
-\TU/lmr/m/n/12 Institute of Technology. ProQuest LLC, Ann Arbor, MI, 1987, (no paging). MR[][]2941135[][]
+Overfull \hbox (3.76878pt too wide) in paragraph at lines 2511--2511
+\TU/lmr/m/it/12 TENT ORBITS IN REAL CLASSICAL GROUPS\TU/lmr/m/n/12 . Thesis (Ph.D.)–Massachusetts
  []
 
 
 
-[35] (temp/notes.aux)
+[46] (temp/notes.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
  ***********
 Package rerunfilecheck Info: File `notes.out' has not changed.
-(rerunfilecheck)             Checksum: 3904DC1DD0CEE8EF20E9904C4607ACC2;3261.
+(rerunfilecheck)             Checksum: 745175440E933D2D6B0E470065EBF20A;12488.
 Package logreq Info: Writing requests to 'notes.run.xml'.
 \openout1 = `notes.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 35965 strings out of 473832
- 719277 string characters out of 5729482
- 1539950 words of memory out of 5000000
- 58308 multiletter control sequences out of 15000+600000
- 570012 words of font info for 98 fonts, out of 8000000 for 9000
+ 36250 strings out of 473832
+ 726681 string characters out of 5729482
+ 1549636 words of memory out of 5000000
+ 58586 multiletter control sequences out of 15000+600000
+ 572009 words of font info for 112 fonts, out of 8000000 for 9000
  1509 hyphenation exceptions out of 8191
  95i,21n,101p,1037b,4944s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on temp/notes.xdv (35 pages, 657148 bytes).
+Output written on temp/notes.xdv (46 pages, 912132 bytes).

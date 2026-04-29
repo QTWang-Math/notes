@@ -76,6 +76,101 @@
       \verb https://doi.org/10.1007/978-1-4612-0383-4
       \endverb
     \endentry
+    \entry{AdC09}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=76cc746068885f92407796cafed8bfc1}{%
+           family={Adams},
+           familyi={A\bibinitperiod},
+           given={Jeffrey},
+           giveni={J\bibinitperiod}}}%
+        {{hash=74f2509483922c2d800350e9dce89fb3}{%
+           family={Cloux},
+           familyi={C\bibinitperiod},
+           given={Fokko},
+           giveni={F\bibinitperiod},
+           prefix={du},
+           prefixi={d\bibinitperiod}}}%
+      }
+      \strng{namehash}{aece3aac7b7f8f70b597af1b7559424b}
+      \strng{fullhash}{aece3aac7b7f8f70b597af1b7559424b}
+      \strng{fullhashraw}{aece3aac7b7f8f70b597af1b7559424b}
+      \strng{bibnamehash}{aece3aac7b7f8f70b597af1b7559424b}
+      \strng{authorbibnamehash}{aece3aac7b7f8f70b597af1b7559424b}
+      \strng{authornamehash}{aece3aac7b7f8f70b597af1b7559424b}
+      \strng{authorfullhash}{aece3aac7b7f8f70b597af1b7559424b}
+      \strng{authorfullhashraw}{aece3aac7b7f8f70b597af1b7559424b}
+      \field{labelalpha}{AC09}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprinttype}{mr}
+      \field{issn}{1474-7480,1475-3030}
+      \field{journaltitle}{J. Inst. Math. Jussieu}
+      \field{number}{2}
+      \field{title}{Algorithms for representation theory of real reductive groups}
+      \field{volume}{8}
+      \field{year}{2009}
+      \field{pages}{209\bibrangedash 259}
+      \range{pages}{51}
+      \verb{doi}
+      \verb 10.1017/S1474748008000352
+      \endverb
+      \verb{eprint}
+      \verb 2485793
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1017/S1474748008000352
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1017/S1474748008000352
+      \endverb
+    \endentry
+    \entry{Achar21}{book}{}{}
+      \name{author}{1}{}{%
+        {{hash=1a67ed9a4ad2863ad15297d3ebff4a1b}{%
+           family={Achar},
+           familyi={A\bibinitperiod},
+           given={Pramod\bibnamedelima N.},
+           giveni={P\bibinitperiod\bibinitdelim N\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {American Mathematical Society, Providence, RI}%
+      }
+      \strng{namehash}{1a67ed9a4ad2863ad15297d3ebff4a1b}
+      \strng{fullhash}{1a67ed9a4ad2863ad15297d3ebff4a1b}
+      \strng{fullhashraw}{1a67ed9a4ad2863ad15297d3ebff4a1b}
+      \strng{bibnamehash}{1a67ed9a4ad2863ad15297d3ebff4a1b}
+      \strng{authorbibnamehash}{1a67ed9a4ad2863ad15297d3ebff4a1b}
+      \strng{authornamehash}{1a67ed9a4ad2863ad15297d3ebff4a1b}
+      \strng{authorfullhash}{1a67ed9a4ad2863ad15297d3ebff4a1b}
+      \strng{authorfullhashraw}{1a67ed9a4ad2863ad15297d3ebff4a1b}
+      \field{labelalpha}{Ach21}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprinttype}{mr}
+      \field{isbn}{978-1-4704-5597-2}
+      \field{series}{Mathematical Surveys and Monographs}
+      \field{title}{Perverse sheaves and applications to representation theory}
+      \field{volume}{258}
+      \field{year}{[2021] ©2021}
+      \field{pages}{xii+562}
+      \range{pages}{-1}
+      \verb{doi}
+      \verb 10.1090/surv/258
+      \endverb
+      \verb{eprint}
+      \verb 4337423
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1090/surv/258
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1090/surv/258
+      \endverb
+    \endentry
     \entry{BB82}{article}{}{}
       \name{author}{2}{}{%
         {{hash=d2516cd7c6e198121ec1ab2ededfa593}{%
@@ -164,6 +259,52 @@
       \range{pages}{50}
       \verb{eprint}
       \verb 1237825
+      \endverb
+    \endentry
+    \entry{BMSZ22}{online}{}{}
+      \name{author}{4}{}{%
+        {{hash=896f38c2fb8f63ac2eacdc44e14854e2}{%
+           family={Barbasch},
+           familyi={B\bibinitperiod},
+           given={Dan},
+           giveni={D\bibinitperiod}}}%
+        {{hash=83c24a8bdd7eed52600f56777b81f8d1}{%
+           family={Ma},
+           familyi={M\bibinitperiod},
+           given={Jia-Jun},
+           giveni={J\bibinithyphendelim J\bibinitperiod}}}%
+        {{hash=f5b44498030f11a86bc421ef38fccc4e}{%
+           family={Sun},
+           familyi={S\bibinitperiod},
+           given={Binyong},
+           giveni={B\bibinitperiod}}}%
+        {{hash=8acec87b04834bd4691b65b057e2a10a}{%
+           family={Zhu},
+           familyi={Z\bibinitperiod},
+           given={Chen-Bo},
+           giveni={C\bibinithyphendelim B\bibinitperiod}}}%
+      }
+      \strng{namehash}{9d584bcbd9a78758b4e991b65aa4e943}
+      \strng{fullhash}{9d584bcbd9a78758b4e991b65aa4e943}
+      \strng{fullhashraw}{9d584bcbd9a78758b4e991b65aa4e943}
+      \strng{bibnamehash}{9d584bcbd9a78758b4e991b65aa4e943}
+      \strng{authorbibnamehash}{9d584bcbd9a78758b4e991b65aa4e943}
+      \strng{authornamehash}{9d584bcbd9a78758b4e991b65aa4e943}
+      \strng{authorfullhash}{9d584bcbd9a78758b4e991b65aa4e943}
+      \strng{authorfullhashraw}{9d584bcbd9a78758b4e991b65aa4e943}
+      \field{labelalpha}{BMSZ22}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{math.RT}
+      \field{eprinttype}{arXiv}
+      \field{note}{Last revised 2 Jan 2025}
+      \field{title}{Special unipotent representations of real classical groups: counting and reduction}
+      \field{version}{v4}
+      \field{year}{2022}
+      \verb{eprint}
+      \verb 2205.05266
       \endverb
     \endentry
     \entry{BV80}{article}{}{}
@@ -365,6 +506,42 @@
       \endverb
       \verb{url}
       \verb https://doi.org/10.1007/s00039-014-0276-5
+      \endverb
+    \endentry
+    \entry{Har77}{book}{}{}
+      \name{author}{1}{}{%
+        {{hash=ee65baaab88f9233fbad3d51c399ee25}{%
+           family={Hartshorne},
+           familyi={H\bibinitperiod},
+           given={Robin},
+           giveni={R\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer-Verlag, New York-Heidelberg}%
+      }
+      \strng{namehash}{ee65baaab88f9233fbad3d51c399ee25}
+      \strng{fullhash}{ee65baaab88f9233fbad3d51c399ee25}
+      \strng{fullhashraw}{ee65baaab88f9233fbad3d51c399ee25}
+      \strng{bibnamehash}{ee65baaab88f9233fbad3d51c399ee25}
+      \strng{authorbibnamehash}{ee65baaab88f9233fbad3d51c399ee25}
+      \strng{authornamehash}{ee65baaab88f9233fbad3d51c399ee25}
+      \strng{authorfullhash}{ee65baaab88f9233fbad3d51c399ee25}
+      \strng{authorfullhashraw}{ee65baaab88f9233fbad3d51c399ee25}
+      \field{labelalpha}{Har77}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprinttype}{mr}
+      \field{isbn}{0-387-90244-9}
+      \field{series}{Graduate Texts in Mathematics}
+      \field{title}{Algebraic geometry}
+      \field{volume}{No. 52}
+      \field{year}{1977}
+      \field{pages}{xvi+496}
+      \range{pages}{-1}
+      \verb{eprint}
+      \verb 463157
       \endverb
     \endentry
     \entry{HTT08}{book}{}{}
@@ -614,6 +791,34 @@
       \verb https://doi.org/10.1515/9781400883936
       \endverb
     \endentry
+    \entry{Losev2022Topics}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=9f9daf7f21b76a2efaedc071ff4b9e02}{%
+           family={Loseu},
+           familyi={L\bibinitperiod},
+           given={Ivan},
+           giveni={I\bibinitperiod}}}%
+      }
+      \strng{namehash}{9f9daf7f21b76a2efaedc071ff4b9e02}
+      \strng{fullhash}{9f9daf7f21b76a2efaedc071ff4b9e02}
+      \strng{fullhashraw}{9f9daf7f21b76a2efaedc071ff4b9e02}
+      \strng{bibnamehash}{9f9daf7f21b76a2efaedc071ff4b9e02}
+      \strng{authorbibnamehash}{9f9daf7f21b76a2efaedc071ff4b9e02}
+      \strng{authornamehash}{9f9daf7f21b76a2efaedc071ff4b9e02}
+      \strng{authorfullhash}{9f9daf7f21b76a2efaedc071ff4b9e02}
+      \strng{authorfullhashraw}{9f9daf7f21b76a2efaedc071ff4b9e02}
+      \field{labelalpha}{Los22}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{The course discusses the geometry and representation theory associated to singular symplectic varieties as well as applications to Lie representation theory, including nilpotent orbits, Hamiltonian reduction, and deformation quantization.}
+      \field{eprinttype}{mr}
+      \field{howpublished}{Lecture Notes, Yale University}
+      \field{note}{Spring Semester. Available at \url{https://ivanloseu.github.io/MATH720_F22.html}}
+      \field{title}{{MATH720}: Topics in Representation Theory -- {G}eometry and Representation Theory of Singular Symplectic Varieties}
+      \field{year}{2022}
+    \endentry
     \entry{MW87}{article}{}{}
       \name{author}{2}{}{%
         {{hash=6375889397d6ff00647df27453252afa}{%
@@ -757,14 +962,23 @@
            given={Alexander},
            giveni={A\bibinitperiod}}}%
       }
+      \name{editor}{2}{}{%
+        {{hash=6c94f98ba7967a84541ff6708213e065}{%
+           family={Gille},
+           familyi={G\bibinitperiod},
+           given={Philippe},
+           giveni={P\bibinitperiod}}}%
+        {{hash=9bfab1c25b4a6146483b5ce680f0c07d}{%
+           family={Polo},
+           familyi={P\bibinitperiod},
+           given={Patrick},
+           giveni={P\bibinitperiod}}}%
+      }
       \list{language}{1}{%
         {french}%
       }
-      \list{location}{1}{%
-        {Berlin-New York}%
-      }
       \list{publisher}{1}{%
-        {Springer-Verlag}%
+        {Société Mathématique de France}%
       }
       \strng{namehash}{0deff2b5def41604a890a9eaf08d1b5c}
       \strng{fullhash}{0deff2b5def41604a890a9eaf08d1b5c}
@@ -774,19 +988,22 @@
       \strng{authornamehash}{0deff2b5def41604a890a9eaf08d1b5c}
       \strng{authorfullhash}{0deff2b5def41604a890a9eaf08d1b5c}
       \strng{authorfullhashraw}{0deff2b5def41604a890a9eaf08d1b5c}
+      \strng{editorbibnamehash}{2f9690fd0fe604b07248b1d9b3c8dc27}
+      \strng{editornamehash}{2f9690fd0fe604b07248b1d9b3c8dc27}
+      \strng{editorfullhash}{2f9690fd0fe604b07248b1d9b3c8dc27}
+      \strng{editorfullhashraw}{2f9690fd0fe604b07248b1d9b3c8dc27}
       \field{labelalpha}{SGA3}
       \field{sortinit}{S}
       \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{eprinttype}{mr}
-      \field{note}{Tomes I, II, III}
-      \field{number}{151, 152, 153}
-      \field{series}{Lecture Notes in Mathematics}
+      \field{note}{Réédition de 1962/64. Available at \url{https://webusers.imj-prg.fr/~patrick.polo/SGA3/}}
+      \field{number}{7, 8, 28}
+      \field{series}{Documents Mathématiques}
       \field{shorthand}{SGA3}
-      \field{subtitle}{Séminaire de Géométrie Algébrique du Bois Marie 1962/64}
       \field{title}{Schémas en Groupes ({SGA} 3)}
-      \field{year}{1970}
+      \field{year}{2011}
     \endentry
     \entry{Sun15}{article}{}{}
       \name{author}{1}{}{%
@@ -829,6 +1046,47 @@
       \endverb
       \verb{url}
       \verb https://doi.org/10.1007/s11401-015-0915-7
+      \endverb
+    \endentry
+    \entry{Wil15}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=5db188a620e18347f3db125d9e4e1497}{%
+           family={Williamson},
+           familyi={W\bibinitperiod},
+           given={Geordie},
+           giveni={G\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {University of Sydney}%
+      }
+      \strng{namehash}{5db188a620e18347f3db125d9e4e1497}
+      \strng{fullhash}{5db188a620e18347f3db125d9e4e1497}
+      \strng{fullhashraw}{5db188a620e18347f3db125d9e4e1497}
+      \strng{bibnamehash}{5db188a620e18347f3db125d9e4e1497}
+      \strng{authorbibnamehash}{5db188a620e18347f3db125d9e4e1497}
+      \strng{authornamehash}{5db188a620e18347f3db125d9e4e1497}
+      \strng{authorfullhash}{5db188a620e18347f3db125d9e4e1497}
+      \strng{authorfullhashraw}{5db188a620e18347f3db125d9e4e1497}
+      \field{labelalpha}{Wil15}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprinttype}{mr}
+      \field{month}{1}
+      \field{note}{Course given in Pisa, 19--30 January 2015, available at \url{https://www.maths.usyd.edu.au/u/geordie/perverse_course/}}
+      \field{title}{Illustrated guide to perverse sheaves}
+      \field{urlday}{16}
+      \field{urlmonth}{4}
+      \field{urlyear}{2026}
+      \field{year}{2015}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.maths.usyd.edu.au/u/geordie/perverse_course/
+      \endverb
+      \verb{url}
+      \verb https://www.maths.usyd.edu.au/u/geordie/perverse_course/
       \endverb
     \endentry
   \enddatalist

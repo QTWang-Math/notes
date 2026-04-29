@@ -185,8 +185,6 @@ INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/environ/environ.sty
 INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/environ/environ.sty
 INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/trimspaces/trimspaces.sty
 INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/trimspaces/trimspaces.sty
-INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/base/textcomp.sty
-INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/base/textcomp.sty
 INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/tikz-cd/tikz-cd.sty
 INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/tikz-cd/tikz-cd.sty
 INPUT /usr/local/texlive/2025/texmf-dist/tex/generic/tikz-cd/tikzlibrarycd.code.tex
@@ -371,7 +369,6 @@ OUTPUT temp/notes.xdv
 INPUT temp/notes.toc
 INPUT temp/notes.toc
 INPUT temp/notes.toc
-OUTPUT temp/notes.toc
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmr12.tfm
 INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/microtype/mt-cmr.cfg
 INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/microtype/mt-cmr.cfg
@@ -402,6 +399,7 @@ INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm7
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/rsfs/rsfs10.tfm
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/rsfs/rsfs10.tfm
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/rsfs/rsfs5.tfm
+OUTPUT temp/notes.toc
 INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/ueuf.fd
 INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/ueuf.fd
 INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/ueuf.fd
@@ -421,9 +419,9 @@ INPUT ./2.png
 INPUT ./3.png
 INPUT ./3.png
 INPUT ./3.png
-INPUT ./屏幕截图 2024-12-17 180658.png
-INPUT ./屏幕截图 2024-12-17 180658.png
-INPUT ./屏幕截图 2024-12-17 180658.png
+INPUT ./4.png
+INPUT ./4.png
+INPUT ./4.png
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmr12.tfm
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmmi12.tfm
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmsy10.tfm
@@ -433,6 +431,14 @@ INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm1
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/amsfonts/euler/eufm10.tfm
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/amsfonts/euler/eufm10.tfm
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/amsfonts/euler/eufm7.tfm
+INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/rsfs/rsfs10.tfm
+INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmr10.tfm
+INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmmi10.tfm
+INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmsy10.tfm
+INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmex10.tfm
+INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm
+INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
+INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/amsfonts/euler/eufm10.tfm
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/rsfs/rsfs10.tfm
 INPUT temp/notes.aux
 INPUT temp/notes.out

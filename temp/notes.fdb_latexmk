@@ -1,18 +1,18 @@
 # Fdb version 4
-["biber temp/notes"] 1776150804.25594 "temp/notes.bcf" "temp/notes.bbl" "temp/notes" 1776151718.68435 0
-  "references.bib" 1776150782.89963 9594 9fadbce9cba5671b238b06a45f9e24ce ""
-  "temp/notes.bcf" 1776151718.13584 109981 a07c98cfbc825de94fed879eeb7c73c4 "xelatex"
+["biber temp/notes"] 1777444190.70903 "temp/notes.bcf" "temp/notes.bbl" "temp/notes" 1777444197.33998 0
+  "references.bib" 1777441526.8365 12677 f2c58ab2f9049a569f25599c090a5037 ""
+  "temp/notes.bcf" 1777444196.75625 110503 758d0211c2e543e6ca04722ff277ba8f "xelatex"
   (generated)
   "temp/notes.bbl"
   "temp/notes.blg"
   (rewritten before read)
-["xdvipdfmx"] 1776151718.17735 "temp/notes.xdv" "temp/notes.pdf" "temp/notes" 1776151718.68576 0
-  "temp/notes.xdv" 1776151718.13636 657148 30efa6088309acfb3488f4d6b0273468 "xelatex"
+["xdvipdfmx"] 1777444196.8023 "temp/notes.xdv" "temp/notes.pdf" "temp/notes" 1777444197.34132 0
+  "temp/notes.xdv" 1777444196.75686 912132 12e67a0d547f68cdfc5d6503abe1bda9 "xelatex"
   (generated)
   "temp/notes.pdf"
   (rewritten before read)
-["xelatex"] 1776151716.65646 "/Users/quentinwang/Documents/notes/notes.tex" "temp/notes.xdv" "notes" 1776151718.6844 0
-  "/Users/quentinwang/Documents/notes/notes.tex" 1776151713.37886 97939 7cf61cb667d3e103dc6875327eb424d8 ""
+["xelatex"] 1777444194.99595 "/Users/quentinwang/Documents/notes/notes.tex" "temp/notes.xdv" "notes" 1777444197.34003 0
+  "/Users/quentinwang/Documents/notes/notes.tex" 1777444188.00402 128228 291045a8062ca4c24d8284dd0ca3c938 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/tfm/adobe/zapfding/pzdr.tfm" 1136768653 1528 f853c4d1b4e0550255e02831fdc8496f ""
   "/usr/local/texlive/2025/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
@@ -27,9 +27,11 @@
   "/usr/local/texlive/2025/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm5.tfm" 1246382020 940 75ac932a52f80982a9f8ea75d03a34cf ""
   "/usr/local/texlive/2025/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm7.tfm" 1246382020 940 228d6584342e91276bf566bcf9716b83 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmex10.tfm" 1136768653 992 662f679a0b3d2d53c1b94050fdaa3f50 ""
+  "/usr/local/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmmi10.tfm" 1136768653 1528 abec98dbc43e172678c11b3b9031252a ""
   "/usr/local/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmmi12.tfm" 1136768653 1524 4414a8315f39513458b80dfc63bff03a ""
   "/usr/local/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmmi6.tfm" 1136768653 1512 f21f83efb36853c0b70002322c1ab3ad ""
   "/usr/local/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmmi8.tfm" 1136768653 1520 eccf95517727cb11801f4f1aee3a21b4 ""
+  "/usr/local/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmr10.tfm" 1136768653 1296 45809c5a464d5f32c8f98ba97c1bb47f ""
   "/usr/local/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmr12.tfm" 1136768653 1288 655e228510b4c2a1abe905c368440826 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmr6.tfm" 1136768653 1300 b62933e007d01cfd073f79b963c01526 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmr8.tfm" 1136768653 1292 21c1c5bfeaebccffdb478fd231a0997d ""
@@ -134,7 +136,6 @@
   "/usr/local/texlive/2025/texmf-dist/tex/latex/base/atbegshi-ltx.sty" 1738182759 2963 d8ec5a1b4e0a106c5c737900202763e4 ""
   "/usr/local/texlive/2025/texmf-dist/tex/latex/base/atveryend-ltx.sty" 1738182759 2378 14b657ee5031da98cf91648f19642694 ""
   "/usr/local/texlive/2025/texmf-dist/tex/latex/base/ifthen.sty" 1738182759 5525 9dced5929f36b19fa837947f5175b331 ""
-  "/usr/local/texlive/2025/texmf-dist/tex/latex/base/textcomp.sty" 1738182759 2846 e26604d3d895e65d874c07f30c291f3f ""
   "/usr/local/texlive/2025/texmf-dist/tex/latex/biblatex/bbx/alphabetic.bbx" 1566680006 1731 ebd75bda3dd71a7cbd30fde6e3bb6391 ""
   "/usr/local/texlive/2025/texmf-dist/tex/latex/biblatex/bbx/standard.bbx" 1609451401 25680 409c3f3d570418bc545e8065bebd0688 ""
   "/usr/local/texlive/2025/texmf-dist/tex/latex/biblatex/biblatex.cfg" 1342308459 69 249fa6df04d948e51b6d5c67bea30c42 ""
@@ -219,14 +220,14 @@
   "1.png" 1750241432.04971 89392 4d0572a23f0156bd576fde2a005d3472 ""
   "2.png" 1750241432.05042 148561 994d27fe0e2fcfe3e0a2e1312d4e2253 ""
   "3.png" 1750241432.05125 178136 5e7177306695cb73828fb5d954bfa2df ""
+  "4.png" 1750241467.13353 104902 d8f1e4c151f59272f59ed173897cadd6 ""
   "Claude_Monet-NC.jpg" 1750241432.05307 511666 cda2211b81f06723c5b6da1d45369676 ""
-  "notes.tex" 1776151713.37886 97939 7cf61cb667d3e103dc6875327eb424d8 ""
-  "temp/notes.aux" 1776151718.13416 17929 a411d127a6b8be3861b0af2ec79658f5 "xelatex"
-  "temp/notes.bbl" 1776150804.88035 30994 fe042eba8147902aa851f191ad8668a7 "biber temp/notes"
-  "temp/notes.out" 1776151718.13523 3261 3904dc1dd0cee8ef20e9904c4607acc2 "xelatex"
-  "temp/notes.run.xml" 1776151718.1363 2353 b91752504450f361fbc5f4bdb4980327 "xelatex"
-  "temp/notes.toc" 1776151718.13634 3271 8b9ede419b60fd630e0772534db1834e "xelatex"
-  "屏幕截图 2024-12-17 180658.png" 1750241467.13353 104902 d8f1e4c151f59272f59ed173897cadd6 ""
+  "notes.tex" 1777444188.00402 128228 291045a8062ca4c24d8284dd0ca3c938 ""
+  "temp/notes.aux" 1777444196.75418 26780 2a2b90d8493c4db36ff20f591e2532ae "xelatex"
+  "temp/notes.bbl" 1777444191.38078 41517 49b27d7b5de3abddbc6deca0d601e1a8 "biber temp/notes"
+  "temp/notes.out" 1777444196.75557 12488 745175440e933d2d6b0e470065ebf20a "xelatex"
+  "temp/notes.run.xml" 1777444196.75672 2353 b91752504450f361fbc5f4bdb4980327 "xelatex"
+  "temp/notes.toc" 1777444196.75678 6014 627b99f77c7f3de035e9c5d89fa452d0 "xelatex"
   (generated)
   "temp/notes.aux"
   "temp/notes.bcf"

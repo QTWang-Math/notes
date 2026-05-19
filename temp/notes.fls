@@ -185,6 +185,12 @@ INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/environ/environ.sty
 INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/environ/environ.sty
 INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/trimspaces/trimspaces.sty
 INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/trimspaces/trimspaces.sty
+INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/tools/tabularx.sty
+INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/tools/tabularx.sty
+INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/tools/array.sty
+INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/tools/array.sty
+INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/booktabs/booktabs.sty
+INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/booktabs/booktabs.sty
 INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/tikz-cd/tikz-cd.sty
 INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/tikz-cd/tikz-cd.sty
 INPUT /usr/local/texlive/2025/texmf-dist/tex/generic/tikz-cd/tikzlibrarycd.code.tex

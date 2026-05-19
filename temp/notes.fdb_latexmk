@@ -1,18 +1,18 @@
 # Fdb version 4
-["biber temp/notes"] 1777444190.70903 "temp/notes.bcf" "temp/notes.bbl" "temp/notes" 1777444197.33998 0
+["biber temp/notes"] 1779088630.23369 "temp/notes.bcf" "temp/notes.bbl" "temp/notes" 1779182251.35797 0
   "references.bib" 1777441526.8365 12677 f2c58ab2f9049a569f25599c090a5037 ""
-  "temp/notes.bcf" 1777444196.75625 110503 758d0211c2e543e6ca04722ff277ba8f "xelatex"
+  "temp/notes.bcf" 1779182250.76774 110574 cb674a559a77ef198d1c3b2b6ea5bfbe "xelatex"
   (generated)
   "temp/notes.bbl"
   "temp/notes.blg"
   (rewritten before read)
-["xdvipdfmx"] 1777444196.8023 "temp/notes.xdv" "temp/notes.pdf" "temp/notes" 1777444197.34132 0
-  "temp/notes.xdv" 1777444196.75686 912132 12e67a0d547f68cdfc5d6503abe1bda9 "xelatex"
+["xdvipdfmx"] 1779182250.81511 "temp/notes.xdv" "temp/notes.pdf" "temp/notes" 1779182251.35946 0
+  "temp/notes.xdv" 1779182250.76835 1029596 3d3f4d23273a9f55fc15eddad9b0e342 "xelatex"
   (generated)
   "temp/notes.pdf"
   (rewritten before read)
-["xelatex"] 1777444194.99595 "/Users/quentinwang/Documents/notes/notes.tex" "temp/notes.xdv" "notes" 1777444197.34003 0
-  "/Users/quentinwang/Documents/notes/notes.tex" 1777444188.00402 128228 291045a8062ca4c24d8284dd0ca3c938 ""
+["xelatex"] 1779182248.85359 "/Users/quentinwang/Documents/notes/notes.tex" "temp/notes.xdv" "notes" 1779182251.35801 0
+  "/Users/quentinwang/Documents/notes/notes.tex" 1779182248.68119 144607 c34a9f4cbc364c0857819df3389ada8e ""
   "/usr/local/texlive/2025/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/tfm/adobe/zapfding/pzdr.tfm" 1136768653 1528 f853c4d1b4e0550255e02831fdc8496f ""
   "/usr/local/texlive/2025/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
@@ -147,6 +147,7 @@
   "/usr/local/texlive/2025/texmf-dist/tex/latex/biblatex/blx-unicode.def" 1609451401 3786 1f89d14780f0ad89ab94652b37f4e9b8 ""
   "/usr/local/texlive/2025/texmf-dist/tex/latex/biblatex/cbx/alphabetic.cbx" 1678141846 4312 24e682e8d56177ec752e5121836ce56e ""
   "/usr/local/texlive/2025/texmf-dist/tex/latex/biblatex/lbx/english.lbx" 1711143581 40021 daa5a82ed0967f3ac4b77cb8384cac55 ""
+  "/usr/local/texlive/2025/texmf-dist/tex/latex/booktabs/booktabs.sty" 1579038678 6078 f1cb470c9199e7110a27851508ed7a5c ""
   "/usr/local/texlive/2025/texmf-dist/tex/latex/environ/environ.sty" 1399239813 4378 f429f0da968c278653359293040a8f52 ""
   "/usr/local/texlive/2025/texmf-dist/tex/latex/etoolbox/etoolbox.sty" 1739306980 46850 d87daedc2abdc653769a6f1067849fe0 ""
   "/usr/local/texlive/2025/texmf-dist/tex/latex/float/float.sty" 1137110151 6749 16d2656a1984957e674b149555f1ea1d ""
@@ -209,6 +210,8 @@
   "/usr/local/texlive/2025/texmf-dist/tex/latex/thmtools/thm-restate.sty" 1683232183 8051 10018eb9c2d166333bfceb517a425f4d ""
   "/usr/local/texlive/2025/texmf-dist/tex/latex/thmtools/thmtools.sty" 1683232183 1913 873bc7fbf18d7dd934dc3a6cc156472e ""
   "/usr/local/texlive/2025/texmf-dist/tex/latex/tikz-cd/tikz-cd.sty" 1620507957 823 2375f30bf77af9357d3b4834b054bf52 ""
+  "/usr/local/texlive/2025/texmf-dist/tex/latex/tools/array.sty" 1730496337 14552 27664839421e418b87f56fa4c6f66b1a ""
+  "/usr/local/texlive/2025/texmf-dist/tex/latex/tools/tabularx.sty" 1717359999 7243 e5dac1240636811edb77568b81818372 ""
   "/usr/local/texlive/2025/texmf-dist/tex/latex/tools/verbatim.sty" 1717359999 7532 d2e1111e17bfebb1607d8ffa779705ec ""
   "/usr/local/texlive/2025/texmf-dist/tex/latex/trimspaces/trimspaces.sty" 1253232110 1380 971a51b00a14503ddf754cab24c3f209 ""
   "/usr/local/texlive/2025/texmf-dist/tex/latex/url/url.sty" 1388531844 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
@@ -222,12 +225,12 @@
   "3.png" 1750241432.05125 178136 5e7177306695cb73828fb5d954bfa2df ""
   "4.png" 1750241467.13353 104902 d8f1e4c151f59272f59ed173897cadd6 ""
   "Claude_Monet-NC.jpg" 1750241432.05307 511666 cda2211b81f06723c5b6da1d45369676 ""
-  "notes.tex" 1777444188.00402 128228 291045a8062ca4c24d8284dd0ca3c938 ""
-  "temp/notes.aux" 1777444196.75418 26780 2a2b90d8493c4db36ff20f591e2532ae "xelatex"
-  "temp/notes.bbl" 1777444191.38078 41517 49b27d7b5de3abddbc6deca0d601e1a8 "biber temp/notes"
-  "temp/notes.out" 1777444196.75557 12488 745175440e933d2d6b0e470065ebf20a "xelatex"
-  "temp/notes.run.xml" 1777444196.75672 2353 b91752504450f361fbc5f4bdb4980327 "xelatex"
-  "temp/notes.toc" 1777444196.75678 6014 627b99f77c7f3de035e9c5d89fa452d0 "xelatex"
+  "notes.tex" 1779182248.68119 144607 c34a9f4cbc364c0857819df3389ada8e ""
+  "temp/notes.aux" 1779182250.76544 32997 248a2523d88fa2e0620567ae37a8f9e5 "xelatex"
+  "temp/notes.bbl" 1779088630.93113 41517 49b27d7b5de3abddbc6deca0d601e1a8 "biber temp/notes"
+  "temp/notes.out" 1779182250.76705 14022 51c67554bdcc8dbe60168b085b4bf7c0 "xelatex"
+  "temp/notes.run.xml" 1779182250.76824 2353 b91752504450f361fbc5f4bdb4980327 "xelatex"
+  "temp/notes.toc" 1779182250.76829 7358 50d25b6611ec6259e20a2091c09d3d85 "xelatex"
   (generated)
   "temp/notes.aux"
   "temp/notes.bcf"

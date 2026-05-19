@@ -47,4 +47,16 @@
 \contentsline {subsection}{\tocsubsection {}{34.1}{A fundamental fact I often forget}}{42}{subsection.34.1}%
 \contentsline {subsection}{\tocsubsection {}{34.2}{Richardson orbits}}{43}{subsection.34.2}%
 \contentsline {section}{\tocsection {}{35}{2026.4.29 Equivariant structure on structure sheaf}}{43}{section.35}%
-\contentsline {section}{\tocsection {}{}{References}}{44}{section*.2}%
+\contentsline {section}{\tocsection {}{36}{2026.4.30 A construction of principle nilpotent elements}}{44}{section.36}%
+\contentsline {section}{\tocsection {}{37}{2026.5.15 Facts on Conical Symplectic Singularities}}{45}{section.37}%
+\contentsline {subsection}{\tocsubsection {}{37.1}{Conical symplectic singularity}}{45}{thmt@dummyctr.dummy.88}%
+\contentsline {subsection}{\tocsubsection {}{37.2}{Partial Poisson resolution, ${\mathbb {Q}}$-factorial terminalization}}{46}{thmt@dummyctr.dummy.92}%
+\contentsline {subsection}{\tocsubsection {}{37.3}{Poisson deformation}}{46}{thmt@dummyctr.dummy.99}%
+\contentsline {subsection}{\tocsubsection {}{37.4}{Summarize}}{47}{table.1}%
+\contentsline {section}{\tocsection {}{38}{2026.5.16 Zariski's Main Theorem}}{48}{section.38}%
+\contentsline {section}{\tocsection {}{39}{2026.5.17 Twisted Differential Operator}}{48}{section.39}%
+\contentsline {section}{\tocsection {}{40}{2026.5.18 Quantization of (nonaffine) Varieties}}{49}{section.40}%
+\contentsline {subsection}{\tocsubsection {}{40.1}{Deformattion and Quantization of nonaffine schemes}}{49}{subsection.40.1}%
+\contentsline {subsection}{\tocsubsection {}{40.2}{A very important example of Hamiltonian reduction.}}{49}{subsection.40.2}%
+\contentsline {subsection}{\tocsubsection {}{40.3}{Quantization of nilpotent covers}}{50}{subsection.40.3}%
+\contentsline {section}{\tocsection {}{}{References}}{51}{section*.2}%

@@ -14,7 +14,8 @@
 \usepackage{ytableau}              % Young tableaux
 \usepackage[dvipsnames]{xcolor}    % Color support (load early to prevent conflicts)
 \usepackage{tcolorbox}             % Colored text boxes
-
+\usepackage{tabularx}
+\usepackage{booktabs}
 
 % ==========================================
 % 2. Graphics & TikZ
@@ -206,10 +207,9 @@
 \newcommand{\Rep}{{\mathrm{Rep}}} \newcommand{\Tr}{{\mathrm{Tr}}} 
 \newcommand{\gr}{{\mathrm{gr}}}   \newcommand{\Sym}{{\mathrm{Sym}}} 
 \newcommand{\diag}{\mathrm{diag}} \newcommand{\dd}{\mathrm{d}}
-
-\newcommand{\ten}{\otimes}
-\newcommand{\proten}{\hat{\otimes}}
-%\newcommand{\Mell}[1]{\mathcal{M}#1}
+\newcommand{\Spec}{\mathrm{Spec}}
+\newcommand{\codim}{\mathrm{codim}}
+\newcommand{\protimes}{\hat{\otimes}}
 \newcommand{\Gal}[1]{\Gamma_{#1}}
 
 % Auxiliary Links
@@ -255,7 +255,37 @@
     \end{equation*}
 }
 
-\newcommand{\aiblock}[1]{{\color{gray}\sffamily\small #1}}
+\newcommand{\aiblock}[1]{
+  \begin{quote} 
+  {\color{CadetBlue}\sffamily\small #1}
+  \end{quote}
+}
+
+% ====== colors that can be used ======
+
+% ====== Blue ======
+% Apricot, Aquamarine, Bittersweet, Blue, BlueGreen, BlueViolet, CadetBlue,       CornflowerBlue, Cyan, DarkOrchid, MidnightBlue, NavyBlue, ProcessBlue, RoyalBlue,   SkyBlue, Turquoise
+
+% ====== Red ======
+% BrickRed, CarnationPink, Fuchsia, Magenta, Mahogany, Maroon, Melon, OrangeRed, Peach, Red, RedOrange, RedViolet, Rhodamine, Salmon, RubineRed, WildStrawberry
+
+% ====== Green ======
+% Emerald, ForestGreen, Green, GreenYellow, JungleGreen, LimeGreen, OliveGreen, PineGreen, SpringGreen, TealBlue, YellowGreen
+
+% ====== Yellow ======
+% BurntOrange, Dandelion, Goldenrod, IndianRed, Orange, Orchid, RawSienna, Sepia, Tan, Thistle, Yellow
+
+% ====== Purples ======
+% Lavender, Mulberry, Periwinkle, Plum, Purple, RoyalPurple, Violet, VioletRed
+
+% ====== Neutrals & Grays ======
+% Black, Brown, Gray, LightGray, White
+
+
+
+
+
+
 
 
 \author{Wang Qiutong}
@@ -313,7 +343,7 @@ There are identifications
 Under these identifications we have
 
 \begin{align*}
-  \check{P} &= \bigset{\check{\lambda} \in \fh}{\bil{\alpha}{\check{\lambda}} \in \BZ, \textrm{for all $\alpha \in Q$}}\\
+  P_* &= \bigset{\check{\lambda} \in \fh}{\bil{\alpha}{\check{\lambda}} \in \BZ, \textrm{for all $\alpha \in Q$}}\\
   & = \bigset{\check{\lambda} \in \fh}{\exp(2\pi\sqrt{-1}\bil{\alpha}{\check{\lambda}}) = 1, \textrm{for all $\alpha \in Q$}}\\
   & = \bigset{\check{\lambda} \in \fh}{\alpha(\exp(2\pi\sqrt{-1}\check{\lambda})) = 1, \textrm{for all $\alpha \in Q$}}\\
   & = \bigset{\check{\lambda} \in \fh}{\exp(2\pi\sqrt{-1}\check{\lambda}) \in Z(G)}.
@@ -327,9 +357,24 @@ And
 \end{align*} 
 
 Similarly
-$$P = \bigset{\lambda \in \fh^*}{\exp(2 \pi \sqrt{-1} \lambda) \in Z(\check{G})}. $$
+$$P^* = \bigset{\lambda \in \fh^*}{\exp(2 \pi \sqrt{-1} \lambda) \in Z(\check{G})}. $$
 
 $$X^*(H) = \bigset{\lambda \in \fh^*}{\exp(2 \ pi \sqrt{-1} \lambda ) = 1}.$$
+
+
+Define $e: \fh \to H$ by $e(X) = \exp(2\pi\sqrt{-1}X)$, then $\ker(e) = X_*(H)$.
+
+\[
+\begin{tikzcd}
+  \fh \arrow[r,"e"] & H \\
+  P_* \arrow[r, "e"] \arrow[u,hook ] & Z(G) \arrow[u,hook]
+\end{tikzcd}
+\]
+
+$Z(G) \simeq P_*/X_*(H)$.
+
+
+
 
 \subsection{Pinnings of algebraic groups}
 
@@ -1791,7 +1836,7 @@ $K = \BC^*$ action has three orbits on $\BP^1(\BC)$: two closed orbits $\{0\}$ a
 \begin{tikzpicture}[scale=2]
 
 % Shade the open orbit C^*
-\fill[blue!10] (0,0) circle (1);
+\fill[CornflowerBlue] (0,0) circle (1);
 
 % Draw sphere outline
 \draw (0,0) circle (1);
@@ -1832,7 +1877,7 @@ only need to determine the coefficients $c(S,S') (= \sum_i (-1)^i H^i_c(J \cap S
 \begin{tikzpicture}[scale=2]
 
 % Draw punctured disc (light fill)
-\fill[blue!10] (0,0) circle (1);
+\fill[CornflowerBlue] (0,0) circle (1);
 \fill[white] (0,0) circle (0.05); % puncture at the origin
 
 % Draw the boundary circle
@@ -1843,8 +1888,8 @@ only need to determine the coefficients $c(S,S') (= \sum_i (-1)^i H^i_c(J \cap S
 \node[below right] at (0,0) {$0$};
 
 % Draw the lower half-cycle (closed subset K)
-\draw[red, thick] (1,0) arc (0:-180:1); % lower semicircle
-\node[red, below] at (0,-1) {$K$};
+\draw[BurntOrange, thick] (1,0) arc (0:-180:1); % lower semicircle
+\node[BurntOrange, below] at (0,-1) {$K$};
 
 % Label the punctured disc
 \node at (0,0.7) {$J$};
@@ -1890,7 +1935,7 @@ $j_!\CL$ has no quotient supported on $\{0\}$, $j_*$ has no subobject supported 
 
 
 \begin{rk}
-  Actually when $j: S \hookrightarrow  X$ is \colorbox{yellow!50}{affine locally closed embedding} , $j_!$ and $j_*$ are $t$-exact for the perverse $t$-structure, so $j_!\CL[\dim S]$ and $j_*\CL[\dim S]$ are perverse sheaves on $X$.
+  Actually when $j: S \hookrightarrow  X$ is \colorbox{CornflowerBlue}{affine locally closed embedding} , $j_!$ and $j_*$ are $t$-exact for the perverse $t$-structure, so $j_!\CL[\dim S]$ and $j_*\CL[\dim S]$ are perverse sheaves on $X$.
 \end{rk}
   
 
@@ -2478,7 +2523,8 @@ Let $\Gamma$ be a discrete group acting on a complex algebraic variety $X$, we w
     & f_{\delta \gamma}((\delta \gamma)^{-1}(\cdot))f((\delta \gamma)^{-1}(\cdot))
 \end{tikzcd}
 \end{center}
- 
+
+
 
 This means that $f_{\delta \gamma} = f_{\delta} \cdot (\delta \cdot f_{\gamma})$, so $f_{\gamma}$ is a 1-cocycle of $\Gamma$ with coefficients in $\CO^{*}_X(X)$.
 
@@ -2497,6 +2543,8 @@ Since the automorphism $\psi$ is given by multiplication by some invertible func
 
 \end{cor}
 
+
+
 \begin{proof}
   \[
     \mathfrak{X}(\Gamma) = \mathrm{Hom}(\Gamma, \BC^{*}) \cong H^1(\Gamma, \CO^{*}_X(X)).
@@ -2504,9 +2552,369 @@ Since the automorphism $\psi$ is given by multiplication by some invertible func
 \end{proof}
 
 
+\section{2026.4.30 A construction of principle nilpotent elements}
+
+Let $\fg$ be a complex reductive Lie algebra, fix a Borel $\fb$ and a Cartan $\fh \subseteq \fb$, we have the root space decomposition $\fg = \fh \oplus \bigoplus_{\alpha \in \Phi} \fg_{\alpha}$, where $\Phi$ is the set of roots. $\Pi \subseteq \Phi^{+}$ be the set of simple roots, for each $\alpha \in \Pi$, we can choose a nonzero root vector $X_{\alpha} \in \fg_{\alpha}$, then
+\[
+  X = \sum_{\alpha \in \Pi} X_{\alpha}
+\]
+lies in the principle nilpotent orbits $\BO_{prin}$.
+
+Let $h = \sum_{\alpha \in \Phi^+} \check{\alpha}$
+
+\begin{lem}
+  $[h, X] = 2X$
+\end{lem}
+
+
+\begin{proof}
+  For each $\alpha \in \Pi$, we have $\alpha(h) = 2$, since $s_{\alpha}(h) = h - 2\check{\alpha}$.
+\end{proof}
+
+
+Suppose that $h = \sum_{\alpha \in \Pi} r_{\alpha} \check{\alpha}$. For each $\alpha \in \Pi$ we can find $Y_{\alpha} \in \fg_{-\alpha}$ such that $[X_{\alpha}, Y_{\alpha}] = r_{\alpha}\check{\alpha}$. Set 
+\[
+  Y = \sum_{\alpha \in \Pi} Y_{\alpha},
+\] 
+then we have $[h, Y] = -2Y$ and $[X, Y] = h$, so $\{X, h, Y\}$ is an $\mathfrak{sl}_2$-triple.
+
+We have a weight decomposition $\fg = \bigoplus_{i \in \BZ} \fg_i$, where $\fg_i = \set{x \in \fg}{[h, x] = ix}$.
+
+\begin{lem}
+  $\fg_0 = \fh$, $\fg_{\geq 2} = \fn$.
+\end{lem}
+
+Suppose $\BO = G\cdot X$. Then the Jacobson-Morosov resolution of $\bar{\BO}$ is just the Springer resolution $T^*\CB \to \bar{\BO}_{prin} = \CN$, so $\BO$ is the principle nilpotent orbit.
 
 
 
+
+\section{2026.5.15 Facts on Conical Symplectic Singularities}
+
+We summarize some facts about conical symplectic singularities and their partial Poisson resolutions, with emphasis on the case of nilpotent covers of complex semisimple Lie algebras. The reference is \cite{Losev2022Topics}.
+
+All the things are on the classical side, we will discuss the quantum side later.
+
+\subsection{Conical symplectic singularity}
+
+\begin{defn}
+  For normal irreducible Poisson variety $X$, we say that $X$ has symplectic singularity if the following conditions are satisfied:
+  \begin{itemize}
+    \item The Poisson structure on $X^{reg}$ is nondegenerate denoted by $\omega^{reg}$;
+    \item There is a resolution of singularity $\pi: Y \to X $ such that $\pi^{*}(\omega^{reg}) \in \Gamma(\pi^{-1}(X^{reg});\Omega_Y)$ extends to a 2-form in $\Gamma(Y;\Omega_Y)$. (possibly degenerate) 
+  \end{itemize}
+\end{defn}
+
+\begin{defn}
+  A conical symplectic singularity is a normal irreducible Poisson variety with symplectic singularity which is also a conic variety.
+\end{defn}
+
+\aiblock{
+\begin{prop}
+  For a nilpotent orbit $\BO$, $\Spec(\BC[\BO])$ is a conic symplectic singularity.
+\end{prop}
+
+\begin{proof}
+  $X^{reg}$ is symplectic since the boundry has codimsion at least $2$.
+  Use the Jacobson-Morosov resolution, we can construct the extension of symplectic form explicitly.
+\end{proof}
+
+\begin{prop}
+  For a nilpotent cover $\tilde{\BO}$, $\Spec(\BC[\tilde{\BO}])^{reg}$ is a conic symplectic singularity.
+\end{prop}
+
+\begin{proof}
+  For this, we need the previous proposition and some deep results by Namikawa on characterisation of symplectic singularity. 
+\end{proof}
+
+
+
+}
+
+
+\subsection{Partial Poisson resolution, $\BQ$-factorial terminalization}
+
+
+\begin{defn}
+  Let $X$ be a normal Poisson variety. A morphism $\pi: Y \to X$ is called partial Poisson resolution if:
+  \begin{itemize}
+    \item It's proper and birational;
+    \item It's Poisson.
+  \end{itemize} 
+\end{defn}
+
+\begin{prop}
+  If $X$ has simplectic singularity then so does $Y$.
+\end{prop}
+
+\begin{prop}
+  Let $X$ be a conical symplectic singularity, $\pi: Y \to X$ is a partial Poisson resolution with $\mathrm{codim}_Y(Y^{sing}) \geq 4$. Then $\BC[Y^{reg}] \simeq \BC[Y] \simeq \BC[X]$ and $H^1(Y^{reg};\CO_Y) = H^2(Y^{reg};\CO_Y) = 0$.
+\end{prop}
+
+\begin{proof}
+  The first assertion is due to symplectic singularities have rational singularities, and Hartogs theorem.
+
+  The second assertion due to the short exact sequence:
+  \[
+     R\Gamma_{Y^{sing}} \to \id \to R\iota_{*}\iota^* \xrightarrow{+1} ,
+  \]
+  where $\iota: Y^{reg} \to Y$.
+  And the fact that symplectic singularity is Cohen-Macaulay.
+\end{proof}
+
+\begin{thm}
+  Let $X$ be a conical symplectic singularity. For a partial Poisson resolution $\pi: Y \to X$ the following are equivalent:
+  \begin{itemize}
+    \item $\pi$ is maxiaml Poisson resolution;
+    \item $Y$ is $\BQ$-factorial and terminal.
+  \end{itemize}
+\end{thm}
+
+In this case, $Y$ is called a $\BQ$-factorial terminalization of $X$.
+
+\aiblock{
+
+For a nilpotent cover $\tilde{\BO}$, suppose that there exists a nilpotent cover $\tilde{\BO}_L$ of a Levi subalgebra such that $\mathrm{Bind}_{L}^{G}(\tilde{\BO}_L) = \tilde{\BO}$. Set $X = \Spec(\BC[\BO])$, $X_L = \Spec(\BC[\tilde{\BO}_L])$, and $Y = G \times^{P} \set{(\alpha,x) \in \fn^{\perp} \times X_L }{\alpha|_{\fl} = \mu(x) }$.
+
+\begin{prop}
+  The moment map $\mu: Y \to \fg^*$ factor through $X \to \fg^*$, and $\mu: Y \to X$ is a partial Poisson resolution.
+\end{prop}
+
+\begin{prop}
+  $Y$ is $\BQ$-factorial and terminal, if and only if $X_L$ is.
+\end{prop}
+
+\begin{thm}
+  $X_L$ is $\BQ$-factorial and terminal if and only if $\tilde{\BO}_L$ is birationally rigid.
+\end{thm}
+}
+
+\subsection{Poisson deformation}
+
+\begin{defn}
+  Let $X$ be a conical symplectic singularity and $B$ is a finitely generated positively graded algebra. A graded Poisson deformation of $X$ over $\Spec(B)$ is a Poisson scheme $X_{\Spec(B)}$ over $\Spec(B)$ and a Poisson isomorphism $X_0 \xrightarrow{\sim} X$ such that:
+  \begin{itemize}
+    \item $X_{\Spec(B)}$ is flat over $\Spec(B)$;
+    \item $X_{\Spec(B)}$ is graded ($\exists \quad \BC^{\times} \circlearrowleft X_{\Spec(B)}$), such that $\{ , \}$ has degree $-d$ (which is the same as $X$).
+  \end{itemize}
+\end{defn}
+
+\begin{rk}
+  $B$ lies in the Poisson center of $X_{\Spec(B)}$, but I don't know if it is contained in the definition.
+\end{rk}
+
+\aiblock{
+
+In the case of nilpotent cover, we can construct a graded Poisson deformation of $Y$:
+\[
+  Y_{\fz} := G \times^P \set{(\alpha,x) \in \fn^{\perp} \times X_L }{ \alpha|_{\fl} - \mu(x) \in \fz }.
+\]
+Here $\fz = (\fl/[\fl,\fl])^*$
+
+\begin{prop}
+  For any $\lambda \in \fz$, the image of $\mu: Y_{\lambda} \to \fg^*$ is the closure of a coadjoint orbit $\BO_{\lambda}$, and 
+  \[
+    \mu: Y_{\lambda} \to \Spec(\BC[\tilde{\BO_{\lambda}}])
+  \] 
+  is a partial Poisson resolution.
+\end{prop}
+
+}
+
+\begin{thm}[Universal Poisson deformation][Namikawa's theorem]
+  Set $\fh_X := H^2(Y^{reg};\BC)$ for a $\BQ$-factorial terminalization of $X$, then there exist a reflection group $W_X  \subseteq \GL(\fh_X)$ and a graded Poisson deformation $X_{\fh_X / W_X}$ with the following universal property:
+  
+  For any graded Poisson deformation $X_{\Spec(B)}$ of $X$ there exist a unique graded algebra homomorphism $\BC[\fh_X]^{W_X} \to B$ such that there is an isomorphism of graded Poisson deformations
+  \[
+    \Spec(B) \times_{\fh_X / W_X} X_{\fh_X / W_X} \xrightarrow{\sim} X_{\Spec(B)}.
+  \] 
+\end{thm}
+
+\begin{center}
+  \begin{tikzcd}
+    \Spec(B) \times_{\fh_X / W_X} X_{\fh_X / W_X} \arrow[r, ] \arrow[d] & X_{\fh_X / W_X} \arrow[d] \\
+    \Spec(B) \arrow[r, "\exists  !"] & \fh_X / W_X
+  \end{tikzcd}
+\end{center}
+
+\aiblock{
+
+In the case of nilpotent cover $X = \Spec(\BC[\tilde{\BO}])$, take birationally rigid nilpotent cover $\tilde{\BO}_L$ such that $\mathrm{Bind}_L^G(\tilde{\BO}_L) = \tilde{\BO}$, we have a Poisson deformation $Y_{\fz}$ of $Y = G \times^{P} \set{(\alpha,x) \in \fn^{\perp} \times X_L }{\alpha|_{\fl} = \mu(x) } $ then $X_{\fz} = \Spec(\BC[Y_{\fz}])$ is a graded deformation of $X$, by Namikawa's theorem, there is a unique morphism $\fz \to \fh_X/W_X$ 
+
+the universal Poisson deformation of $X$ can be constructed as $\Spec(\BC[Y_{\fz}])/W_X = X_{\fz}/W_X$.
+
+\begin{center}
+  \begin{tikzcd}[ampersand replacement=\&, row sep=large, column sep=large]
+    Y \arrow[r,hook] \arrow[dd] \& Y_{\fz} \arrow[d] \\
+    ~ \& X_{\fz} \arrow[d] \\
+    X \arrow[r,hook] \& X_{\fz}/W_X
+  \end{tikzcd}
+\end{center}
+
+}
+
+\subsection{Summarize}
+
+\begin{table}[htbp]
+  \centering
+  \caption{Conical Symplectic Singularities: General Theory vs. Nilpotent Covers}
+  \begin{tabularx}{\textwidth}{@{}l >{\raggedright\arraybackslash}X >{\raggedright\arraybackslash}X @{} }
+    \toprule
+     & \textbf{General Theory} & \textbf{Nilpotent Cover Example} \\
+    \midrule
+    \textbf{Singularity} & Normal irreducible Poisson variety $X$ with symplectic singularities & $X = \operatorname{Spec}(\mathbb{C}[\tilde{\mathbb{O}}])$ for a nilpotent cover $\tilde{\mathbb{O}}$. \\
+    \cmidrule(lr){1-3}
+    \textbf{Partial Resolution} & Proper birational Poisson morphism $\pi: Y \to X$. & Generalized Springer map $\mu: Y \to X$ with $Y = G \times^{P} (X_L \times \fp^{\perp})$. \\
+    \cmidrule(lr){1-3}
+    \textbf{Terminalization} & $\mathbb{Q}$-factorial terminalization $\iff$ maximal partial Poisson resolution. & $Y$ is $\BQ$-factorial and terminal $\iff$ $\tilde{\mathbb{O}}_L$ is birationally rigid. \\
+    \cmidrule(lr){1-3}
+    \textbf{Graded Deformation} & Poisson scheme $X_{\operatorname{Spec}(B)}$ flat over a graded algebra $B$. & Deformation $Y_{\mathfrak{z}}$ constructed via the center $\mathfrak{z} = (\mathfrak{l}/[\mathfrak{l}, \mathfrak{l}])^*$. \\
+    \cmidrule(lr){1-3}
+    \textbf{Universal Deformation} & Base space $\mathfrak{h}_X / W_X$ where $\mathfrak{h}_X := H^2(Y^{reg}; \mathbb{C})$. & Universal deformation constructed as $X_{\mathfrak{z}}/W_X = \operatorname{Spec}(\mathbb{C}[Y_{\mathfrak{z}}])/W_X$. \\
+    \bottomrule
+  \end{tabularx}
+\end{table}
+
+\newpage
+
+\section{2026.5.16 Zariski's Main Theorem}
+
+\begin{thm}[Zariski' Main Theorem]
+  Let $f: X \to Y$ be a quasi-finite, separated morphism of schemes, where $Y$ is quasi-compact and quasi-separated. Then there exists a factorization:$$X \xrightarrow{\ j\ } X' \xrightarrow{\ g\ } Y$$where $j$ is an open immersion and $g$ is a finite morphism.
+\end{thm}
+
+\begin{proof}
+  $f_*\CO_X$ is a quasi-coherent sheaf of $\CO_Y$-algebras. Let $\CA$ be the integral closure of $\CO_X$ in $f_*\CO_Y$, then take $X' = \underline{\Spec}_Y(\CA)$.
+\end{proof}
+
+The intuition is that quasi-finite morphisms have finite fibers, but the fibers can drop abruptly, the theorem tells us that we can appropriately extend the scheme $Y$ to avoid this bad phenomena.
+
+\begin{examp}
+  $\BC^{\times} \to \BC$ can extend to $\BC^{\times} \hookrightarrow \BC \xrightarrow{\sim} \BC$. 
+\end{examp}
+
+\begin{examp}
+  For nilpotent cover, the morphism $\tilde{\BO} \to \bar{\BO}$ can extend to 
+  $$\tilde{\BO} \hookrightarrow \Spec(\BC[\tilde{\BO}]) \to \bar{\BO}.$$
+\end{examp}
+
+
+\section{2026.5.17 Twisted Differential Operator}
+
+$X$ be a smooth variety, $\CL$ be a line bundle on $X$. Choose a locally trivialization for $\CL$ by affine open sunsets: 
+\[
+  X = \bigcup_{i} X_i, \quad \phi_i: \CL|_{X_i} \xrightarrow{\sim} \CO_{X_i}. 
+\] 
+Suppose that $\phi_j \circ \phi_i^{-1} : \CO_{X_{ij}} \xrightarrow{\sim} \CO_{X_{ij}}$ is given by $f_{ji} \in \CO^{\times}(X_{ij})$.
+
+We can define a sheaf of twisted differential operators $\mathcal{D}_{\CL}$ via the locally trivialization:
+\[
+  \psi_i: \mathcal{D}_{\CL} \xrightarrow{\sim} \mathcal{D}_X|_{X_i}, 
+\]
+such that $\psi_j \circ \psi_i^{-1}: \mathcal{D}_{X_{ij}} \xrightarrow{\sim} \mathcal{D}_{X_{ij}}$ is given by $f \mapsto f$ and $\xi \mapsto \xi - \frac{\xi(f_{ji})}{f_{ji}}$.
+
+\begin{thm}
+  $\mathcal{D}_{\CL}$ acts on $\CL$.
+\end{thm}
+
+\begin{proof}
+  For each locally trivilization $X_i$ and $X \in \mathcal{D}_{\CL}(X_i)$, $s \in \CL(X_i)$,  define 
+  \[X \cdot s = \phi_i^{-1}(\psi_i(X) \cdot \phi_i(s)).\] 
+
+  We check it is well defined on the overlap of $X_i$ and $X_j$, i.e. 
+  \[
+    \phi_j \circ \phi_i^{-1} (\psi_i(X) \cdot \phi_i(s))  = \psi_j(X) \cdot \phi_j(s). 
+  \]
+  If $\psi_i(X) = f \in \CO(X_{ij})$, the verification is easy.
+  
+  If $\psi(X) = \xi \in \mathrm{Vect}(X_{ij})$ is a vector field, then left hand side is
+  \[
+    f_{ji} \xi \cdot \phi_i(s).
+  \]
+  Right hand side is
+  \[
+    (\xi - \frac{\xi(f_{ji})}{f_{ji}}) \cdot (f_{ji} \cdot \phi_i(s)) = \xi(f_{ji})\phi_i(s) + f_{ji} \xi(\phi_i(s)) - \xi(f_{ji})\phi_i(s) = f_{ji}\xi \cdot \phi_i(s).  
+  \]
+  
+\end{proof}
+
+
+
+
+\section{2026.5.18 Quantization of (nonaffine) Varieties}
+
+
+\subsection{Deformattion and Quantization of nonaffine schemes}
+
+Let $X$ be a graded normal quasi-projective Possion variety, the Poisson bracket has degree $-d$. According to Sumihiro's Theorem, any normal variety $X$ with a $\mathbb{G}_m$-action can be covered by $\mathbb{G}_m$-invariant affine open subvarieties $U_i$.
+
+\begin{defn}
+  A filtered quantization of $\CO_X$ is a pair $(\mathcal{D},\theta)$ where
+  \begin{itemize}
+    \item $\mathcal{D}$ is a filtered sheaf of algebra $\mathcal{D}$ in the conical topology of $X$ such that $[\mathcal{D}_{\leq i}, \mathcal{D}_{\leq j}] \subseteq \mathcal{D}_{\leq i+j - d}$;
+    \item $\theta: \gr(\mathcal{D}) \xrightarrow{\sim} \CO_X$ is a graded Poisson isomorphism.
+  \end{itemize}
+\end{defn}
+
+
+\begin{rk}[A very important situation]
+  When $X = \underline{\Spec}_{Y}(\CA)$ for a variety $Y$ and a quasi-coherent graded ring of Poisson algebra $\CA$ on $Y$, we can focus on the variety $Y$: the filtered quantization of $\CO_X$ on $X$ is the same as filtered quantization of $\CA$ on $Y$.
+\end{rk}
+
+Similarly, we can define filtered Poisson deformation of $X$.
+
+\subsection{A very important example of Hamiltonian reduction.}
+
+
+
+$Y$ be an algebraic variety, $H$ is an algebraic group. $\pi: \tilde{Y} \to Y$ is a principle $H$-bundle. Then we have the following reduction:
+
+\begin{thm}
+  $T^*(\tilde{Y}) \mathbin{/\!/\!/}_0 H \xrightarrow{\sim} T^*Y$.
+\end{thm}
+
+\begin{proof}
+  The moment map $\mu: T^*\tilde{Y} \to \fh^*$ is given by $\langle \mu(\alpha), X \rangle = X^{\sharp}_{\tilde{Y}}(\alpha)$, so $\mu^{-1}(0)$ consists of the cotangent vector fields which vanish on the vertical tangent spaces:
+  \[
+    \mu^{-1}(0) = \tilde{Y} \times_{Y} T^*Y.
+  \]
+\end{proof}
+
+\begin{thm}
+  $\mathcal{D}_{\tilde{Y}} \mathbin{/\!/\!/}_{\lambda} H \xrightarrow{\sim} \mathcal{D}^{\lambda}_{Y}$.
+
+  Here $\mathcal{D}^{\lambda}_{Y}$ is the twisted differential operators on $\mathcal{L}^{\lambda} = \tilde{Y} \times^{H} \BC_{\lambda}$.
+\end{thm}
+
+These theorems verify the quantization commutes with reduction principle.
+
+
+\subsection{Quantization of nilpotent covers}
+
+
+\aiblock{
+Suppose $\mathrm{Bind}_{L}^{G}(\tilde{\BO}_L) = \tilde{\BO}$, where $\tilde{\BO}_L$ is birationally rigid.
+
+$Y = G \times^{P} \set{(\alpha,x) \in \fn^{\perp} \times X_L }{\alpha|_{\fl} = \mu(x) } $ is a $\BQ$-factorial terminalization of $X = \Spec(\BC[\tilde{\BO}])$.
+
+$Y$ is affine over $G/P$ satisfies the situation of the previous remark.
+
+$G/U \to G/P$ is an $L$-principle bundle, $T^*(G/U) \times X_L \to G/U$ is affine.
+
+We can consider all of these quantizations, Hamiltonian reductions as sheaves over the smooth variety $G/P$.
+
+There is a sheaf of $\fz$-algebra $\mathcal{D}_{\fz}$ over $G/P$ as the universal quantization of $Y$. This is also the quantization of $Y_{\fz} \to Y$.
+}
+
+
+
+
+
+
+
+
+
+\newpage
 \printbibliography
 
 \end{document}

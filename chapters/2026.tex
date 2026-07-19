@@ -812,7 +812,7 @@ All the things are on the classical side, we will discuss the quantum side later
   For normal irreducible Poisson variety $X$, we say that $X$ has symplectic singularity if the following conditions are satisfied:
   \begin{itemize}
     \item The Poisson structure on $X^{reg}$ is nondegenerate denoted by $\omega^{reg}$;
-    \item There is a resolution of singularity $\pi: Y \to X $ such that $\pi^{*}(\omega^{reg}) \in \Gamma(\pi^{-1}(X^{reg});\Omega_Y)$ extends to a 2-form $\tilde{\omega}$ in $\Gamma(Y;\Omega_Y)$. ($\tilde{\omega}$ is a closed $2$-form, but possibly degenerate) 
+    \item There is a resolution of singularity $\pi: Y \to X $ such that $\pi^{*}(\omega^{reg}) \in \Gamma(\pi^{-1}(X^{reg});\Omega_Y^2)$ extends to a 2-form $\tilde{\omega}$ in $\Gamma(Y;\Omega_Y^2)$. ($\tilde{\omega}$ is a closed $2$-form, but possibly degenerate) 
   \end{itemize}
 \end{defn}
 
@@ -831,7 +831,7 @@ All the things are on the classical side, we will discuss the quantum side later
 \end{proof}
 
 \begin{prop}
-  For a nilpotent cover $\tilde{\BO}$, $\Spec(\BC[\tilde{\BO}])^{reg}$ is a conic symplectic singularity.
+  For a nilpotent cover $\tilde{\BO}$, $\Spec(\BC[\tilde{\BO}])$ is a conic symplectic singularity.
 \end{prop}
 
 \begin{proof}
@@ -1151,4 +1151,89 @@ such that
 \end{proof}
 
 
+
+\section{2026.6.29 Connection on principle bundle}
+
+
+$X$ be a smooth manifold, $\CV$ a vector bundle on $X$, it's associated frame bundle is the principle bundle $\CM$. Note that $\CV = \CM \times^{\GL_n} \BC^n$.
+
+A connection on $\CV$ is a map $\nabla: \Gamma(X, TX) \to \Gamma(X, \mathfrak{gl}(\CV))$. While a connection on $\CM$ is a $\GL$-equivariant bundle map $\theta: \CE_M \to \mathfrak{gl}(V)_M$, split the Atiyah sequence:  
+\[
+  0 \to \mathfrak{gl}(V)_M \to \CE_M \to TX \to 0.
+\]
+Restriction of $\theta$ to $TX$ gives a connection on $\CV$, this is a bijection.
+
+
+\vspace{2mm}
+\hrule 
+\vspace{3mm}
+
+Here we compute some Picard groups of simplectic singularities, and their Poisson resolutions.
+
+$\tilde{\BO}$ be a nilpotent cover of a complex semisimple Lie group $G$, $\tilde{\BO_L}$ be a nilpotent cover of a Levi subgroup $L$. And there is a Poisson resolution
+\[
+  \pi: Y = G \times^{P} (X_L \times \fp^{\perp}) \to X.
+\] 
+
+\begin{prop}
+  \begin{itemize}
+    \item $\mathrm{Pic}(X) = 0$;
+    \item $\mathrm{Pic}(X^{reg}) = X^*(\tilde{H})$, where $\tilde{H}$ is the stabilizer in $\tilde{G}$ of a point in $\tilde{\BO}$. 
+  \end{itemize}
+\end{prop}
+
+\begin{proof}
+  First assertion is due to $X$ is conical.
+
+  For the second assertion, since $\tilde{\BO} \subseteq X^{reg} \subseteq X$ and $\codim_{X}(X \backslash \tilde{\BO}) \geq 2$, we have 
+  $$\mathrm{Pic}(X^{reg}) = \mathrm{Pic}(\tilde{\BO}).$$ 
+  Since $\tilde{\BO}$ is a homogeneous space of $\tilde{G}$, $\tilde{\BO} \simeq \tilde{G} / \tilde{H}$ ($\tilde{G}$ is the simply-connected cover of $G$), 
+  \[
+    \mathrm{Pic}(\tilde{\BO}) = \mathrm{Pic}(\tilde{G}/\tilde{H}) = \mathrm{Pic}^{\tilde{G}}(\tilde{G}/\tilde{H}) = X^*(\tilde{H}).
+  \]
+  The second equility is due to the fact that $\tilde{G}$ is simply-connected, so any line bundle on $\tilde{G}/\tilde{H}$ admits a $\tilde{G}$-equivariant structure. And $\CO_X$ has only one $\tilde{G}$-equivariant structure, since $H^1(G;\CO^*_X(X)) = 0$.
+\end{proof}
+
+\begin{prop}
+  There is a short exact sequence
+  \[
+     0 \to \mathrm{Pic}(Y) \to \mathrm{Pic}(Y^{reg}) \to \mathrm{Pic}(X_L^{reg}) \to 0.
+  \] 
+\end{prop}
+
+\begin{proof}
+  Take the open Bruhat cell $U^- \subseteq G/P$. 
+
+  Then
+  \[
+      \pi^{-1}(U^-) \simeq U^- \times (X_L \times \fp^{\perp}).
+  \]
+
+  $U^-$ and $\fp^{\perp}$ are affine spaces, so $\mathrm{Cl}(\pi^{-1}(U^-)) = \mathrm{Cl}(X_L) = \mathrm{Pic}(X_L^{reg})$.
+
+  The map $\mathrm{Pic}(Y^{reg}) \to \mathrm{Pic}(X_L^{reg})$ is just the restriction map $\mathrm{Cl}(Y) \to \mathrm{Cl}(\pi^{-1}(U^-))$, and the kernel is $\mathrm{Cl}(Y \backslash \pi^{-1}(U^-))$.
+  \[
+    \mathrm{Pic}(Y) \xrightarrow{div} \mathrm{Cl}(Y) \xrightarrow{res} \mathrm{Cl}(\pi^{-1}(U^-)),  
+  \]
+  the composition can also realized as
+  \[
+    \mathrm{Pic}(Y) \xrightarrow{res} \mathrm{Pic}(\pi^{-1}(U^-)) \xrightarrow{div} \mathrm{Cl}(\pi^{-1}(U^-)),
+  \]
+  while $\mathrm{Pic}(\pi^{-1}(U^-)) = 0$ the composition is zero.
+
+  On the other hand, if a divisor $D$ on $Y$ is mapped to zero in $\mathrm{Cl}(\pi^{-1}(U^-))$, then $D$ is linearly equivalent to a divisor supported on $Y \backslash \pi^{-1}(U^-)$, it is linearly equivalent to $\sum_i n_i \pi^{-1}(D_i)$ (suppose that $(G/P) \backslash U^- = \cup_i D_i$, where $D_i$ are divisors.), and $\pi^{-1}(D_i) = \mathrm{div}(\pi^*(\CO(D_i)))$ they are Cartier divisors, so $D$ is Cartier. This shows that the kernel of $\mathrm{Cl}(Y) \to \mathrm{Cl}(\pi^{-1}(U^-))$ is $\mathrm{Pic}(Y)$. 
+\end{proof}
+
+\begin{prop}
+  $\mathrm{Pic}(Y) = \mathrm{Pic}(G/P) = X^*(\tilde{L})$.
+\end{prop}
+
+\begin{proof}
+  Then $\pi^*: \mathrm{Pic}(G/P) \to \mathrm{Pic}(Y)$ is injective, since $\pi$ has a section $G/P \hookrightarrow Y$.
+  For any line bundle $\CL$ on $Y$ the proof of previous proposition shows that $\CL$ is isomorphic to some $\CO(\sum_i \pi^{-1}(D_i)) = \pi^*(\CO(\sum_i D_i))$.
+\end{proof}
+
+\begin{thm}
+  If $\tilde{\BO_L}$ is birationally rigid, then $H^2(Y^{reg},\BC) = \mathrm{Pic}(Y) \otimes_{\BZ} \BC = \fz(\fl)$.
+\end{thm}
 

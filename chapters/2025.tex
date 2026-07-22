@@ -1,10 +1,10 @@
 \section{\texorpdfstring{2025.8.14 Tianyuan Problems \protect\footnote{This section is organized by Ryan Ang and Qiutong Wang at Tianyuan Mathematics Research Centre.}}{2025.8.14 }}
 
 
-Let $G$ be a finite central extension of an open subgroup of $\mathbb{R}$-points of a connected reductive algebraic group (reductive Nash group \cite{Sun15}) with Lie algebra $\mathfrak{g}$. Fix an invariant nondegenerate bilinear form $B(-,-)$ on $\mathfrak{g}$. 
+Let $G$ be a finite central extension of an open subgroup of $\mathbb{R}$-points of a connected reductive algebraic group (reductive Nash group \cite{Sun15}) with Lie algebra $\mathfrak{g}$. Fix an invariant nondegenerate bilinear form $B(-,-)$ on $\mathfrak{g}$.
 
 
-For an irreducible Casselman-Wallach representation $\pi$ of $G$, let $\mathrm{Wh}_\mathcal{O}(\pi)$ be the space of generalized Whittaker models of $\pi$ associated to the nilpotent orbit $\mathcal{O}$. Let 
+For an irreducible Casselman-Wallach representation $\pi$ of $G$, let $\mathrm{Wh}_\mathcal{O}(\pi)$ be the space of generalized Whittaker models of $\pi$ associated to the nilpotent orbit $\mathcal{O}$. Let
 \[\mathrm{WO}(\pi):= \set{\mathcal{O}}{\textrm{$\mathcal{O}$ is a nilpotent orbit such that $\mathrm{Wh_{\mathcal{O}}(\pi) \neq 0}$}},\]
 and the \textit{Whittaker support} $\mathrm{WS}(\pi)$ of $\pi$ be the set of all maximal orbits in $\mathrm{WO}(\pi)$ with respect to closure inclusion:
 \[\mathrm{WS}(\pi) := \set{\mathcal{O}}{\textrm{$\mathcal{O}$ is a maximal orbit in $\mathrm{WO}(\pi)$} }.\]
@@ -15,19 +15,19 @@ and the \textit{Whittaker support} $\mathrm{WS}(\pi)$ of $\pi$ be the set of all
 Another nilpotent invariant is the wavefront cycle:
 \[\mathcal{WF}(\pi) = \sum_{i}m_i [\mathcal{O}_i].\]
 With the corresponding wavefront set :
-\[\mathrm{WF}(\pi) = \bigcup\limits_{m_i \neq 0} \bar{\mathcal{O}_i}. \]
+\[\mathrm{WF}(\pi) = \bigcup\limits_{m_i \neq 0} \overline{\mathcal{O}_i}. \]
 
 
 
 M{\oe}glin-Waldspurger \cite{MW87} proved that $\mathrm{WF}(\pi)=\mathrm{WS}(\pi)$ when $F$ is a $p$-adic field. We want to test this conjecture for arbitrary reductive almost linear Nash groups.
-\begin{conj}[Main conjecture] For any reductive almost linear Nash group $G$ and any irreducible Casselman-Wallach representation $\pi$: 
-      \[\mathrm{WF}(\pi)=\mathrm{WS}(\pi).\]  
+\begin{conj}[Main conjecture] For any reductive almost linear Nash group $G$ and any irreducible Casselman-Wallach representation $\pi$:
+      \[\mathrm{WF}(\pi)=\mathrm{WS}(\pi).\]
 \end{conj}
 
 Take a nilpotent orbit $\mathcal{O} \subseteq \mathfrak{g}$ (or $\mathfrak{sl_2}$-triple $\gamma = \{Y,H,X\}$ in $\mathfrak{g}$). $\mathfrak{g}/\mathfrak{g}^{Y}$ is a symplectic space with symplectic form $\left \langle -,- \right \rangle := B(Y,[-,-])$. Set $G^{Y} := \mathrm{Stab}_{G}(Y)$, there is a natural homomorphism $G^{Y} \to \mathrm{Sp}(\mathfrak{g}/\mathfrak{g}^{Y},\left\langle -,- \right\rangle)$. Let $\widetilde{G^{Y}}$ be the double cover of $G^{Y}$ induced by the metaplectic double cover of $\mathrm{Sp}(\mathfrak{g}/\mathfrak{g}^{Y},\left\langle -,- \right\rangle)$.
 \begin{defn}
    The nilpotent $\mathcal{O}$ is called admissible if the double cover $\widetilde{G^Y}$ is split over the identity component of $(G^Y)_0$. It is called quasi-admissible if $\widetilde{G^Y}$ has a finite-dimensional genuine representation.
-\end{defn} 
+\end{defn}
 
 Result of \cite{GGS21} says that $\mathrm{WS}(\pi)$ consists of quasi-admissible orbits. But they do not know whether the non-admissible quasi-admissible orbits appear in Whittaker supports of representations. We may ask the same question for the wavefront set:
 
@@ -53,7 +53,7 @@ Noting that $(G,G')=(\GL_n(F),\GL_m(F))$ is a (reductive) dual pair for any $n,m
     \[\mathrm{WS}\left(\Theta(\pi)\right)=\mathrm{WS}(\pi^\vee).\]
 \end{conj}
 
-On the other hand, Barbash-Vogan \cite{BV80} proved that under coherent continuation, the multiplicity of wavefront cycle changes in the form of a Goldie rank polynomial, i.e. 
+On the other hand, Barbash-Vogan \cite{BV80} proved that under coherent continuation, the multiplicity of wavefront cycle changes in the form of a Goldie rank polynomial, i.e.
 \[
     \mathcal{WF}(\pi(\lambda)) = p(\lambda) \cdot (\sum\limits_{i} c_i [\mathcal{O}_i]),
 \]
@@ -73,12 +73,12 @@ Let $G$ be a connected, simply connected nilpotent Lie group with Lie algebra $\
 
 We have fourier transform:
 \[
-    \mathcal{F} : \mathcal{S}(\fg)\dd X \to \mathcal{S}(\sqrt{-1}\fg^*), \quad f\dd X \mapsto \hat{f\dd X}, \quad \hat{f\dd X}(l) = \int_{\fg} f(X) e^{\langle l,X\rangle} \dd X. 
+    \mathcal{F} : \mathcal{S}(\fg)\dd X \to \mathcal{S}(\sqrt{-1}\fg^*), \quad f\dd X \mapsto \widehat{f\dd X}, \quad \widehat{f\dd X}(l) = \int_{\fg} f(X) e^{\langle l,X\rangle} \dd X.
 \]
 
 Take its dual:
 \[
-    \mathcal{S}'(\sqrt{-1}\fg^*) \to (\mathcal{S}(\fg)\dd X)', \quad T \mapsto \check{T}, \quad \langle \check{T}, f\dd X \rangle = \langle T, \hat{f\dd X} \rangle.
+    \mathcal{S}'(\sqrt{-1}\fg^*) \to (\mathcal{S}(\fg)\dd X)', \quad T \mapsto \check{T}, \quad \langle \check{T}, f\dd X \rangle = \langle T, \widehat{f\dd X} \rangle.
 \]
 
 For any irreducible unitary representation $\pi$ of $G$, we have its character $\Theta_\pi \in C^{-\infty}(G)$ defined by
@@ -91,7 +91,7 @@ By the work of Howe, Kirillov, and others, we have the following theorem:
     There exists a unique coadjoint orbit $\mathcal{O} \subseteq \sqrt{-1}\fg^*$ such that $\check{\theta}_\pi = \mu_{\mathcal{O}}$, where $\mu_{\mathcal{O}}$ is the canonical measure on $\mathcal{O}$.
 \end{thm}
 
-This defines a bijection between $\hat{G}$ (the unitary dual of $G$) and the set of coadjoint orbits in $\sqrt{-1}\fg^*$.
+This defines a bijection between $\widehat{G}$ (the unitary dual of $G$) and the set of coadjoint orbits in $\sqrt{-1}\fg^*$.
 
 Conversely, for any coadjoint orbit $\mathcal{O} \subseteq \sqrt{-1}\fg^*$, we can construct an irreducible unitary representation $\pi_{\mathcal{O}}$ of $G$ such that $\check{\theta}_{\pi_{\mathcal{O}}} = \mu_{\mathcal{O}}$. This is the more interesting part, use the method of geometric quantization.
 
@@ -99,7 +99,7 @@ Take any element $\lambda \in \mathcal{O}$, we have an identification $\mathcal{
 
 Then we can define the Hilbert space of square integrable sections of $\mathcal{L}_{\lambda}$, but this space is too large. We need to choose a polarization $\mathfrak{h} \subseteq \fg_{\BC}$ (maximal isotropic subalgebra with respect to the bilinear form $(X,Y) \mapsto \langle \lambda, [X,Y] \rangle$) and consider the space of square integrable holomorphic sections of $\mathcal{L}_{\lambda}$ which are covariant constant along $\mathfrak{h}$.
 
-In fact the polarization $\mathfrak{h}$ corresponds to a $G$-invariant integrable distribution on $\mathcal{O}$, its a subbundle $P$ of $T\mathcal{O}$ each fiber is a lagrangian subspace. 
+In fact the polarization $\mathfrak{h}$ corresponds to a $G$-invariant integrable distribution on $\mathcal{O}$, its a subbundle $P$ of $T\mathcal{O}$ each fiber is a lagrangian subspace.
 Then we can define the space of polarized sections:
 \[\Gamma_P(\mathcal{O},\mathcal{L}_{\lambda}) = \set{s \in \Gamma^{\infty}(\mathcal{O},\mathcal{L}_{\lambda} \otimes \abs{\omega_{\mathcal{O/P}}}^{\frac{1}{2}})}{\nabla_X s = 0, \forall X \in P}.\]
 
@@ -122,7 +122,7 @@ By the work of Rossmann, we have the following theorem:
 \begin{thm}
     If $\pi$ is tempered, then
     \[
-        \theta_{\pi}|_{\textrm{nbhd of 0}} = \sum_{i} c_i \hat{\mu_{\mathcal{O}_i}}|_{\textrm{nbhd of 0}}.
+        \theta_{\pi}|_{\textrm{nbhd of 0}} = \sum_{i} c_i \widehat{\mu_{\mathcal{O}_i}}|_{\textrm{nbhd of 0}}.
     \]
     Here $\mu_{\CO_i} \in \mathcal{S}(\sqrt{-1}\fg_0^*)$, is the orbital integral along $\CO_i$.
 \end{thm}
@@ -130,12 +130,12 @@ By the work of Rossmann, we have the following theorem:
 For an arbitrary generalized function $\Theta \in C^{-\infty}(M)$, we can define its wavefront set $\mathrm{WF}(\Theta) \subseteq \sqrt{-1}T^*M$ as follows:
 \begin{defn}
     For any $(x,\xi) \in \sqrt{-1}T^*M$, $(x,\xi) \notin \mathrm{WF}(\Theta)$ if there exists a compactly supported smooth function $\varphi$ on $M$ such that $\varphi(x) \neq 0$, and an open conic neighborhood $\Gamma$ of $\xi$ such that for any $N \in \BN$, there exists a constant $C_N > 0$ such that
-    \[\abs{\hat{\varphi \Theta}(t\eta)} \leq C_N t^{-N}, \quad \forall t > 0, \eta \in \Gamma.\]
+    \[\abs{\widehat{\varphi \Theta}(t\eta)} \leq C_N t^{-N}, \quad \forall t > 0, \eta \in \Gamma.\]
 \end{defn}
 $\mathrm{WF}(\Theta)$ is a closed conic subset of $\sqrt{-1}T^*M$ (singular direction of $\Theta$).
 
 In particular, we can define the wavefront set $\mathrm{WF}(\pi)$ of an irreducible Casselman-Wallach representation $\pi$ of $G$ as $\mathrm{WF}(\Theta_{\pi}) \cap (\sqrt{-1}T^*_1(G))$, it is a closed conic $G$-invariant subset of $\sqrt{-1}\fg_0^*$. The GK-dimension of $\pi$ is defined as
-\[\mathrm{Dim}(\pi) = \frac{1}{2}\mathrm{dim}(\mathrm{WF}(\pi)).\] 
+\[\mathrm{Dim}(\pi) = \frac{1}{2}\mathrm{dim}(\mathrm{WF}(\pi)).\]
 
 $\theta_{\pi}$ is a real analytical function on $\fg_0^{\mathrm{rs}}$, and
 \[ \theta^{*}_{\pi}(X) :=  \lim_{t \to 0}t^{\mathrm{Dim}(\pi)}\theta_{\pi}(tX)\]
@@ -144,12 +144,12 @@ is still a real analytical function on $\fg_0^{\mathrm{rs}}$, where $\mathcal{B}
 \begin{thm}(Barbasch-Vogan)
      The asymptotic of $\theta_{\pi}$ defined above is a non-negative linear combination of Fourier transforms of nilpotent orbital integrals:
       \[
-          \theta^*_{\pi} = \sum_{i} c_i \hat{\mu_{\mathcal{O}_i}}.
+          \theta^*_{\pi} = \sum_{i} c_i \widehat{\mu_{\mathcal{O}_i}}.
       \]
       Here $\mu_{\CO_i} \in \mathcal{S}(\sqrt{-1}\fg_0^*)$, is the orbital integral along $\CO_i$.
 \end{thm}
 
-$\mathrm{WF}(\pi) = \bigcup_{c_i \neq 0} \bar{\CO_i}$.
+$\mathrm{WF}(\pi) = \bigcup_{c_i \neq 0} \overline{\CO_i}$.
 
 
 
@@ -158,18 +158,18 @@ $\mathrm{WF}(\pi) = \bigcup_{c_i \neq 0} \bar{\CO_i}$.
 
 \subsection{Conormal bundle of singular subvariety}
 
-Let $\mathcal{B}$ be the flag variety of $G$. $\bar{\CB_y} \subsetneq \bar{\CB_w}$ two schubert varieties, what is the relation between their conormal bundles $T^*_{\CB_y}\CB$ and $T^*_{\CB_w}\CB$?
+Let $\mathcal{B}$ be the flag variety of $G$. $\overline{\CB_y} \subsetneq \overline{\CB_w}$ two schubert varieties, what is the relation between their conormal bundles $T^*_{\CB_y}\CB$ and $T^*_{\CB_w}\CB$?
 
 Let $X$ be a smooth algebraic variety over $\BC$, $Z \subseteq X$ be a closed subvariety, define the conormal bundle $T^*_Z X$ of $Z$ in $X$ as follows:
-\[T^*_Z X = \bar{T^*_{Z^{\mathrm{reg}}}X} .\]
+\[T^*_Z X = \overline{T^*_{Z^{\mathrm{reg}}}X} .\]
 For a singular point $z \in Z$ what is the fiber of $T^*_Z X$ at $z$?
 
 Here is a simple example:
-\begin{examp}Let \(X = \mathbb{C}^2\) and 
+\begin{examp}Let \(X = \mathbb{C}^2\) and
 \[
 Z = \{ xy = 0 \} \subset X
-\] 
-be the union of the coordinate axes. 
+\]
+be the union of the coordinate axes.
 
 \begin{itemize}
     \item The regular locus is
@@ -186,13 +186,13 @@ Now, the fibre of the conormal bundle at the origin is
 \[
 (T^*_Z X)_0 = \operatorname{Ann}(T_{x\text{-axis}}) \cup \operatorname{Ann}(T_{y\text{-axis}}) = \langle dy \rangle \cup \langle dx \rangle,
 \]
-which is a union of two lines in \(T^*_0 \mathbb{C}^2\). 
+which is a union of two lines in \(T^*_0 \mathbb{C}^2\).
 
 On the other hand,
 \[
 (T^*_{S} X)_0 = (T^*_{\{0\}} X)_0 = T^*_0 X,
 \]
-the entire cotangent plane. 
+the entire cotangent plane.
 
 Thus,
 \[
@@ -223,18 +223,18 @@ We also have the moment map:
 By taking characteristic cycles, we get a map from the (complex) Grothendieck group of $G$-equivariant holonomic $D$-modules on $\mathcal{B} \times \mathcal{B}$ to the top Borel-Moore homology of $Z$:
 \[\mathrm{CC} : K_0(\mathrm{Mod}^{\mathrm{Coh}}_{\Delta G}(\mathcal{D}_{\mathcal{B} \times \mathcal{B}})) \to H_{\mathrm{top}}^{\mathrm{BM}}(Z,\BC).\]
 We also have isomorphisms:
-\[ 
+\[
   h: K_0(\mathrm{Mod}^{\mathrm{Coh}}_{\Delta G}(\mathcal{D}_{\mathcal{B} \times \mathcal{B}})) \to \BC[W], \quad \CM_w \mapsto w, \quad \CL_w \mapsto a(w)
 \]
 
-By Kazhdan-Lusztig, we have: 
+By Kazhdan-Lusztig, we have:
 \[
   a(w) = \sum_{y \leq w} (-1)^{l(y)+l(w)}P_{y,w}(1) y.
 \]
 
 There is a convolution product on $K_0(\mathrm{Mod}^{\mathrm{Coh}}_{\Delta G}(\mathcal{D}_{\mathcal{B} \times \mathcal{B}}))$ which makes $h$ an isomorphism of algebras.
 
-On $$H_{\mathrm{top}}^{\mathrm{BM}}(Z,\BC) \simeq \bigoplus_{w \in W} H_{\mathrm{top}}^{\mathrm{BM}}(\bar{T^*_{\mathcal{Y}_w}(\mathcal{B} \times \mathcal{B})},\BC) \simeq \bigoplus_{w \in W} \BC[\bar{T^*_{\mathcal{Y}_w}(\mathcal{B} \times \mathcal{B})}],$$
+On $$H_{\mathrm{top}}^{\mathrm{BM}}(Z,\BC) \simeq \bigoplus_{w \in W} H_{\mathrm{top}}^{\mathrm{BM}}(\overline{T^*_{\mathcal{Y}_w}(\mathcal{B} \times \mathcal{B})},\BC) \simeq \bigoplus_{w \in W} \BC[\overline{T^*_{\mathcal{Y}_w}(\mathcal{B} \times \mathcal{B})}],$$
 In the paper of Kazhdan-Lusztig \cite{KL80}, they use topological method to construct a $W \times W$ action on $H_{\mathrm{top}}^{\mathrm{BM}}(Z,\BC)$.
 
 Moreover there is a $W \times W$ module decomposition:
@@ -257,12 +257,12 @@ Combine the above together, we finally have the following decomposition:
   H^{\mathrm{BM}}_{\mathrm{top}}(Z_{\CO},\BC) \simeq \bigoplus_{\rho \in \widehat{A_G(x)}} \tau(x,\rho) \otimes \tau(x,\rho), \quad H_{\mathrm{top}}^{\mathrm{BM}}(Z,\BC) \simeq \bigoplus_{\CO} H^{\mathrm{BM}}_{\mathrm{top}}(Z_{\CO},\BC).
 \]
 
-For any $w \in W$, there is a unique nilpotent orbit $\mathrm{St}(w)$ such that $\mu(\bar{T^*_{\mathcal{Y}_w}(\mathcal{B} \times \mathcal{B})}) = \bar{\mathrm{St}(w)}$. The map $w \mapsto \mathrm{St}(w)$ defines a \textcolor{red}{surjective(?)} map from $W$ to the set of nilpotent orbits in $\fg^*$ (this map can be computed via Robinson-Schensted algorithm).
+For any $w \in W$, there is a unique nilpotent orbit $\mathrm{St}(w)$ such that $\mu(\overline{T^*_{\mathcal{Y}_w}(\mathcal{B} \times \mathcal{B})}) = \overline{\mathrm{St}(w)}$. The map $w \mapsto \mathrm{St}(w)$ defines a \textcolor{red}{surjective(?)} map from $W$ to the set of nilpotent orbits in $\fg^*$ (this map can be computed via Robinson-Schensted algorithm).
 
 \begin{cor}
   For any nilpotent orbit $\CO$, there is an isomorphism of $W \times W$-modules:
   \[
-    \bigoplus\limits_{w \in W, \mathrm{St}(w) = \CO} \BC[\bar{T^*_{\mathcal{Y}_w}(\mathcal{B} \times \mathcal{B})}] \simeq \bigoplus\limits_{\rho \in \widehat{A_G(\CO)}} \tau(\CO,\rho) \otimes \tau(\CO,\rho).
+    \bigoplus\limits_{w \in W, \mathrm{St}(w) = \CO} \BC[\overline{T^*_{\mathcal{Y}_w}(\mathcal{B} \times \mathcal{B})}] \simeq \bigoplus\limits_{\rho \in \widehat{A_G(\CO)}} \tau(\CO,\rho) \otimes \tau(\CO,\rho).
   \]
 \end{cor}
 
@@ -276,15 +276,15 @@ is an isomorphism and $W \times W$-equivariant.
 
 
 
-Define $b(w) = h \circ \mathrm{CC}^{-1}([\bar{T^*_{\CY_w}\CB \times \CB}])$.
+Define $b(w) = h \circ \mathrm{CC}^{-1}([\overline{T^*_{\CY_w}\CB \times \CB}])$.
 Now we have three basis of $\BC[W]$:
-\[\{w\}_{w \in W}, \quad \{a(w)\}_{w \in W}, \quad \{b(w)\}_{w \in W}.\]  
+\[\{w\}_{w \in W}, \quad \{a(w)\}_{w \in W}, \quad \{b(w)\}_{w \in W}.\]
 It was conjectured by Kashiwara and Tanisaki that: $a(w) = b(w)$ when $G = \SL_n(\BC)$ which means the characteristic cycle of $\CL_w$ is irreducible, but unfortunately it is not true. Conterexample exists when $G = \SL_8(\BC)$, where Kashwara-Saito singularities appears in some Schubert varieties.
 
 
 
 
-\section{2025.10.5 Springer representation and characteristic cycles of K-equivariant holonomic systems on a flag manifold} 
+\section{2025.10.5 Springer representation and characteristic cycles of K-equivariant holonomic systems on a flag manifold}
 
 \textbf{The Springer representation}
 
@@ -294,23 +294,23 @@ Recall that we have the following diagram:
 
 \[
 \begin{tikzcd}
-  \tilde{\CN} \arrow[d,two heads,"p_{\CN}"] \arrow[r,hook] & \tilde{\fg} \arrow[d,two heads,"p"] & \tilde{\fg^{\mathrm{rs}}} \arrow[l,hook'] \arrow[d,two heads,"p_{\mathrm{rs}}"] \\
+  \widetilde{\CN} \arrow[d,two heads,"p_{\CN}"] \arrow[r,hook] & \widetilde{\fg} \arrow[d,two heads,"p"] & \widetilde{\fg^{\mathrm{rs}}} \arrow[l,hook'] \arrow[d,two heads,"p_{\mathrm{rs}}"] \\
   \CN \arrow[r,hook] & \fg & \fg^{\mathrm{rs}} \arrow[l,hook']
 \end{tikzcd}
 \]
 
-In this diagram $p_{\mathrm{rs}}$ is a $W$-torsor. So we have a natural $W$-action on $p_{\mathrm{rs},*}\underline{\BQ}_{\tilde{\fg^{\mathrm{rs}}}}$ and hence on $\mathrm{IC}(\fg^{\mathrm{rs}},\CL)$, where $\CL = (p_{\mathrm{rs}})_*\underline{\BQ}_{\tilde{\fg^{\mathrm{rs}}}}$. There is a canonical isomorphism of perverse sheaves $\mathrm{IC}(\fg^{\mathrm{rs}},\CL) \simeq \BR p_{*}\underline{\BQ}_{\tilde{\fg}}[\dim(\fg)]$, so there is a natural $W$-action on $\BR p_{*}\underline{\BQ}_{\tilde{\fg}}$. By proper base change, we have
+In this diagram $p_{\mathrm{rs}}$ is a $W$-torsor. So we have a natural $W$-action on $p_{\mathrm{rs},*}\underline{\BQ}_{\widetilde{\fg^{\mathrm{rs}}}}$ and hence on $\mathrm{IC}(\fg^{\mathrm{rs}},\CL)$, where $\CL = (p_{\mathrm{rs}})_*\underline{\BQ}_{\widetilde{\fg^{\mathrm{rs}}}}$. There is a canonical isomorphism of perverse sheaves $\mathrm{IC}(\fg^{\mathrm{rs}},\CL) \simeq \BR p_{*}\underline{\BQ}_{\widetilde{\fg}}[\dim(\fg)]$, so there is a natural $W$-action on $\BR p_{*}\underline{\BQ}_{\widetilde{\fg}}$. By proper base change, we have
 \[
-  \BR p_{\CN,*}\underline{\BQ}_{\tilde{\CN}} \simeq \BR p_{*}\underline{\BQ}_{\tilde{\fg}})|_{\CN}. \quad  \textcolor{red}{(\mathrm{Spr} = \BR p_{\CN,*}\underline{\BQ}_{\tilde{\CN}}[\dim \CN] \ called \ The \ Springer \ sheaf)}
+  \BR p_{\CN,*}\underline{\BQ}_{\widetilde{\CN}} \simeq \BR p_{*}\underline{\BQ}_{\widetilde{\fg}})|_{\CN}. \quad  \textcolor{red}{(\mathrm{Spr} = \BR p_{\CN,*}\underline{\BQ}_{\widetilde{\CN}}[\dim \CN] \ called \ The \ Springer \ sheaf)}
 \]
-So there is a natural $W$-action on $\BR p_{\CN,*}\underline{\BQ}_{\tilde{\CN}}$ (actually $\End_{\mathrm{Perv(\CN)}}(\mathrm{Spr}) = \BQ[W]$) and hence on $H^{\bullet}_c(T^*\CB,\BQ) \simeq \BR \Gamma_c(\CN,\BR p_{\CN,*}\underline{\BQ}_{\tilde{\CN}})$ and $H^{\bullet}_c(\CB_x,\BQ) \simeq \BR \Gamma_c(\{ x \}, \BR p_{\CN,*}\underline{\BQ}_{\tilde{\CN}})$. (action on Springer fiber)
+So there is a natural $W$-action on $\BR p_{\CN,*}\underline{\BQ}_{\widetilde{\CN}}$ (actually $\End_{\mathrm{Perv(\CN)}}(\mathrm{Spr}) = \BQ[W]$) and hence on $H^{\bullet}_c(T^*\CB,\BQ) \simeq \BR \Gamma_c(\CN,\BR p_{\CN,*}\underline{\BQ}_{\widetilde{\CN}})$ and $H^{\bullet}_c(\CB_x,\BQ) \simeq \BR \Gamma_c(\{ x \}, \BR p_{\CN,*}\underline{\BQ}_{\widetilde{\CN}})$. (action on Springer fiber)
 
-Since $T^*_{K}\CB = p_{\CN}^{-1}(\fp)$, we also have a natural $W$-action on 
+Since $T^*_{K}\CB = p_{\CN}^{-1}(\fp)$, we also have a natural $W$-action on
 \[
-H^{\bullet}_c(T^*_{K}\CB,\BQ) \simeq \BR \Gamma_c(\fp \cap \CN,(\BR p_{\CN,*}\underline{\BQ}_{\tilde{\CN}})|_{\fp \cap \CN}).
+H^{\bullet}_c(T^*_{K}\CB,\BQ) \simeq \BR \Gamma_c(\fp \cap \CN,(\BR p_{\CN,*}\underline{\BQ}_{\widetilde{\CN}})|_{\fp \cap \CN}).
 \]
 
-Finally, there is a $W$-action on $(H^{2d}_c(T^*_{K}\CB,\BQ))^* = \bigoplus_{\CO \in K \backslash \CB} \BQ[\bar{T^*_{\CO}\CB}]$.
+Finally, there is a $W$-action on $(H^{2d}_c(T^*_{K}\CB,\BQ))^* = \bigoplus_{\CO \in K \backslash \CB} \BQ[\overline{T^*_{\CO}\CB}]$.
 
 
 \begin{thm}[Tanisaki]
@@ -327,13 +327,13 @@ Finally, there is a $W$-action on $(H^{2d}_c(T^*_{K}\CB,\BQ))^* = \bigoplus_{\CO
 \section{2025.10.9 Characteristic cycles of holonomic systems on a smooth affine variety}
 
 
-$X = \mathrm{Spec}(R)$ smooth affine with coordinate $x_1,\ldots,x_n$, $M$ a finitely generated $\mathcal{D}_X$-module. 
+$X = \mathrm{Spec}(R)$ smooth affine with coordinate $x_1,\ldots,x_n$, $M$ a finitely generated $\mathcal{D}_X$-module.
 \begin{defn}
   $M$ is called holonomic if $\mathrm{dim}(\mathrm{Ch}(M)) = n$.
 \end{defn}
 
 \begin{cor}
-  If $M$ is holonomic, then $\mathrm{Ch}(M)$ is lagrangian in $T^*X$, and $\mathrm{CC}(M) = \sum_{E_i \subseteq X,  \textrm{irr}} n_i [\bar{T^*_{E_i}X}]$.
+  If $M$ is holonomic, then $\mathrm{Ch}(M)$ is lagrangian in $T^*X$, and $\mathrm{CC}(M) = \sum_{E_i \subseteq X,  \textrm{irr}} n_i [\overline{T^*_{E_i}X}]$.
 \end{cor}
 
 The de-Rham complex and  analytification:
@@ -342,7 +342,7 @@ The de-Rham complex and  analytification:
   \CK(M;\partial_1)
   &= [\, M \xrightarrow{\;\partial_1\;} M \,], \\[4pt]
   \CK(M;\partial_1,\partial_2)
-  &= [\, 
+  &= [\,
       M
       \xrightarrow{\,(\partial_1,\partial_2)\,}
       M \oplus M
@@ -354,8 +354,8 @@ The de-Rham complex and  analytification:
 We can define $\CK(M;\partial_1,\ldots,\partial_n)$ inductively.
 
 There is another way to define the de-Rham complex, independent of the choice of coordinates:
-\[\mathrm{DR}(M) = [M \xrightarrow{\;\nabla\;} \Omega^1_X \otimes M \xrightarrow{\;\nabla\;} \cdots \xrightarrow{\;\nabla\;} \Omega^n_X \otimes M].\] 
-  
+\[\mathrm{DR}(M) = [M \xrightarrow{\;\nabla\;} \Omega^1_X \otimes M \xrightarrow{\;\nabla\;} \cdots \xrightarrow{\;\nabla\;} \Omega^n_X \otimes M].\]
+
 
 
 \begin{examp}
@@ -423,44 +423,44 @@ It is exact, this is bad. To fix this, we need to analytify $M_{\alpha}$:
 
 \section{2025.10.13 Double covers of Lie groups and their representations}
 \begin{lem}
-  Let $G$ be a connected Lie group, $\tilde{G}$ is a double cover. Then the following are equivalent:
+  Let $G$ be a connected Lie group, $\widetilde{G}$ is a double cover. Then the following are equivalent:
   \begin{itemize}
-    \item $\tilde{G}$ split;
-    \item $\tilde{G}$ is disconnected;
-    \item there exists a genuine representation of $\tilde{G}$ which is trivial on the identity component $\tilde{G}_0$.
+    \item $\widetilde{G}$ split;
+    \item $\widetilde{G}$ is disconnected;
+    \item there exists a genuine representation of $\widetilde{G}$ which is trivial on the identity component $\widetilde{G}_0$.
   \end{itemize}
 \end{lem}
 
 \begin{proof}
-  Only need to notice that $\tilde{G}_{0} \to G$ is a covering map of degree $1$ or $2$.
+  Only need to notice that $\widetilde{G}_{0} \to G$ is a covering map of degree $1$ or $2$.
 \end{proof}
 
 There is a same statement for p-adic groups in \cite{Nev99}.
 
 
 \begin{lem}
-  Let $G$ be an arbitrary Lie group, $\pi : \tilde{G} \to G$ a double cover. Then the following are equivalent:
+  Let $G$ be an arbitrary Lie group, $\pi : \widetilde{G} \to G$ a double cover. Then the following are equivalent:
   \begin{itemize}
-    \item there exists a genuine finite dimensional representation of $\tilde{G}$ which is trivial on the identity component $\tilde{G}_0$;
-    \item $z \notin \tilde{G}_0$;
+    \item there exists a genuine finite dimensional representation of $\widetilde{G}$ which is trivial on the identity component $\widetilde{G}_0$;
+    \item $z \notin \widetilde{G}_0$;
     \item $z \notin (\pi^{-1}(G_0))_0$;
     \item there exist a genuine finite dimensional representation of $\pi^{-1}(G_0)$ which is trivial on the identity component $(\pi^{-1}(G_0))_0$;
     \item $\pi^{-1}(G_0)$ is disconnected;
-    \item $\pi^{-1}(G_0)$ is split.  
+    \item $\pi^{-1}(G_0)$ is split.
   \end{itemize}
   Here $z$ is the nontrivial element in $\ker(\pi)$.
-  
-  If in addition the double cover $\tilde{G}$ is induced by a square root of a character $\gamma : G \to \BC^{\times}$, i.e. $\tilde{G} = \set{(g,\epsilon) \in G \times \BC^{\times}}{\epsilon^2 = \gamma(g)}$, these are also equivalent to:
+
+  If in addition the double cover $\widetilde{G}$ is induced by a square root of a character $\gamma : G \to \BC^{\times}$, i.e. $\widetilde{G} = \set{(g,\epsilon) \in G \times \BC^{\times}}{\epsilon^2 = \gamma(g)}$, these are also equivalent to:
   \begin{itemize}
     \item $\gamma$ has a square root.
   \end{itemize}
 \end{lem}
 
 \begin{proof}
-  Only need to notice that $(\pi^{-1}(G_0))_0 = \tilde{G}_0$, together with results in \cite{Sch87}.
+  Only need to notice that $(\pi^{-1}(G_0))_0 = \widetilde{G}_0$, together with results in \cite{Sch87}.
 \end{proof}
 
- 
+
 
 
 
@@ -470,7 +470,7 @@ There is a same statement for p-adic groups in \cite{Nev99}.
 
 \section{2025.10.14 Integrable connections and local systems}
 
-$X = \mathrm{Spec}(R)$ smooth affine with coordinate $x_1,\ldots,x_n$, $M$ is an integrable connection. 
+$X = \mathrm{Spec}(R)$ smooth affine with coordinate $x_1,\ldots,x_n$, $M$ is an integrable connection.
 
 \begin{thm}
   $M^{an} = L \otimes_{\BC} \CO_{X^{an}}$ for some local system $L$ on $X^{an}$.
@@ -479,7 +479,7 @@ $X = \mathrm{Spec}(R)$ smooth affine with coordinate $x_1,\ldots,x_n$, $M$ is an
 \begin{proof}
   We know that $M$ is locally free, suppose $M|_{U}$ is freely generated by $m_1,\cdots,m_n$, suppose $\partial_n \underline{m} = \chi \underline{m}$ where $\chi$ is a matrix of holomorphic functions on $U$. Locally we can expand $\chi$ with respect to $x_n$:
   \[\chi = \sum_{i=0}^{\infty} \chi_i(x_1,\ldots,x_{n-1}) x_n^i.\]
-  
+
   Take $\Psi = \sum_{i=1}^{\infty} \frac{1}{i+1}\chi_i(x_1,\ldots,x_{n-1}) x_n^i$, so $\partial_n \Psi = \chi$. Take $\Phi = \exp(-\Psi)$ which is invertible, and set $\underline{s} = \Phi \underline{m}$.
 
   So \[\partial_n s = \partial_n(\Phi) \cdot \underline{m} + \Phi \cdot  (\partial_n \underline{m}) = 0.\]
@@ -491,8 +491,8 @@ $X = \mathrm{Spec}(R)$ smooth affine with coordinate $x_1,\ldots,x_n$, $M$ is an
     & = \bigset{\sum_{i=1}^{r} f_i s_i \in M^{an}|_{V}}{\partial_n f_i = 0, \forall i}\\
     & = \bigoplus_{i=1}^{r} \CO_{V_1} s_i, \quad V_1 = V \cap \{x_n = 0\}.
   \end{align*}
-  
-  Continue this process, we can finally get a subsheaf 
+
+  Continue this process, we can finally get a subsheaf
   \[M_n|_V = \bigoplus_{i=1}^n \BC s_i.\] of $M^{an}$, where $s_i$ are horizontal sections. So $M^{an} = L \otimes_{\BC} \CO_{X^{an}}$ where $L$ is the local system generated by $s_i$.
 
 \end{proof}
@@ -534,7 +534,7 @@ $Y$ smooth affine $/ \BC$  with coordinate $x_1,\cdots,x_n,y_1,\cdots,y_l$, $X =
 \end{thm}
 
 \begin{proof}
-  There is a proof in \cite{HTT08}, I don't want to repeat it here.  
+  There is a proof in \cite{HTT08}, I don't want to repeat it here.
 \end{proof}
 
 \begin{rk}
@@ -568,7 +568,7 @@ $Y$ smooth affine $/ \BC$  with coordinate $x_1,\cdots,x_n,y_1,\cdots,y_l$, $X =
 \section{2025.10.19 Nilpotent orbits and degenerate Whittaker models}
 \textbf{Degenerate Whittaker model}
 
-$G$ be a finite extension of a reductive algebraic group defined over local field $F$, $\fg$ be its Lie algebra, fix a nontrivial character $\chi: F \to \BC^1$. 
+$G$ be a finite extension of a reductive algebraic group defined over local field $F$, $\fg$ be its Lie algebra, fix a nontrivial character $\chi: F \to \BC^1$.
 
 A Whittaker pair is a pair $(S,\varphi)$ where $S \in \fg$ is a rational semi-simple element, $\varphi \in \fg^*$ such that $\ad^*(S)(\varphi) = -2\varphi$. Given such a Whittaker pair, we can define a degenerate Whittaker model $\mathcal{W}_{S,\varphi}$ as follows:
 Let $\fg = \bigoplus_{r \in \BQ} \fg^S_r$ be the eigenspace decomposition with respect to $\ad(S)$, define
@@ -584,7 +584,7 @@ Define the degenerate Whittaker model:
 If $\varphi = 0$, define $\mathcal{W}_{S,0} = \mathrm{Ind}_U^G(1_U)$.
 
 \begin{rk}
-  In the special case when $(S,\varphi)$ comes from an $\mathfrak{sl}_2$-triple $(e,h,f)$ with $S = h$ and $\varphi$ corresponding to $f$ via the Killing form, we can see that $\fn = \fg_{\geq 2}$. 
+  In the special case when $(S,\varphi)$ comes from an $\mathfrak{sl}_2$-triple $(e,h,f)$ with $S = h$ and $\varphi$ corresponding to $f$ via the Killing form, we can see that $\fn = \fg_{\geq 2}$.
   Then $\mathcal{W}_f = \mathcal{W}_{S,\varphi}$ is called a generalized Whittaker model associated to the nilpotent orbit of $f$.
 \end{rk}
 
@@ -614,14 +614,14 @@ For any triple $(i,j,k)$, define:
   \item $B^i_j(k) := d(F^{i-1}_{j+k-1}) \cap F^i_j$;
   \item $E^i_j(k) := \frac{Z^i_j(k) + F^i_{j-1}}{B^i_j(k) + F^i_{j-1}}$.
 \end{itemize}
-So $d(Z^i_j(k)) \subseteq Z^{i+1}_{j-k}(k)$, which induces a differential $d_k : E^i_j(k) \to E^{i+1}_{j-k}(k)$. 
+So $d(Z^i_j(k)) \subseteq Z^{i+1}_{j-k}(k)$, which induces a differential $d_k : E^i_j(k) \to E^{i+1}_{j-k}(k)$.
 
 We also define $E^{p,q}_k := E_{-p}^{p+q}(k).$
 
 \begin{examp}
-  
-  $E^i_j(0) = \frac{F^i_j}{F^i_{j-1}}$, so $E^{p,q}_0 = \mathrm{Gr}_{-p} F^{p+q}$. 
-  
+
+  $E^i_j(0) = \frac{F^i_j}{F^i_{j-1}}$, so $E^{p,q}_0 = \mathrm{Gr}_{-p} F^{p+q}$.
+
   $E^i_j(1) = H^i(\mathrm{Gr}_j F^{\bullet})$ , so $E^{p,q}_1 = H^{p+q}(\mathrm{Gr}_{-p} F^{\bullet})$.
   The first page of the spectral sequence is just the cohomology of the associated graded complex.
 \end{examp}
@@ -632,8 +632,8 @@ We also define $E^{p,q}_k := E_{-p}^{p+q}(k).$
 \end{lem}
 
 \begin{defn}
-  The spectral sequence associated to the filtered complex $(F^{\bullet},d)$ is defined to be the collection of complexes $\{(E^{\bullet}_{\bullet}(k),d_k)\}_{k \geq 0}$. 
-  
+  The spectral sequence associated to the filtered complex $(F^{\bullet},d)$ is defined to be the collection of complexes $\{(E^{\bullet}_{\bullet}(k),d_k)\}_{k \geq 0}$.
+
   They convergent to the cohomology of the original complex:
   $E^{p,q}_{\infty} \simeq \mathrm{Gr}_{-p} H^{p+q}(F^{\bullet})$, if for any $i,j$, there exist $k \gg  0$ such that $E^i_j(k) = \mathrm{Gr}_j H^i(F^{\bullet})$.
 
@@ -654,7 +654,7 @@ We also define $E^{p,q}_k := E_{-p}^{p+q}(k).$
   \[E^{p,q}_2 =\BR^{p+q} F(K^{q}) \Rightarrow \BR^{p+q} F(K^{\bullet}).\]
   (maybe:
   \[E^{p,q}_1 = \BR^{p} F(K^{q}) \Rightarrow \BR^{p+q} F(K^{\bullet})?\])
-  
+
   Because we can use the Cartan-Eilenberg resolution to resolve $K^{\bullet}$, which is given by:
   \[
   \begin{tikzcd}
@@ -707,7 +707,7 @@ We also define $E^{p,q}_k := E_{-p}^{p+q}(k).$
 
 
 
-\section{2025.10.29 Unipotent Arthur packets and special unipotent representation \cite{ABV92}}
+\section{2025.10.29 Unipotent Arthur packets and special unipotent representation \texorpdfstring{\cite{ABV92}}{[ABV92]}}
 
 
 Let $G$ be a connected reductive algebraic group over $\BR$, fix a weak $E$-group $\check{G}^{\Gamma}$. Which is an extension:
@@ -719,13 +719,13 @@ such that the composition $W_{\BR} \to {^{L}\check{G}} \to \mathrm{Gal}(\BC/\BR)
 
 Given an $L$-parameter $\phi$, we can attach the following data:
 \begin{itemize}
-  \item two semisimple elements $\lambda,  \mu \in \check{G}$, defined by $\phi(e^t) = \exp(\lambda t + \mu \bar{t})$;
+  \item two semisimple elements $\lambda,  \mu \in \check{G}$, defined by $\phi(e^t) = \exp(\lambda t + \mu \overline{t})$;
   \item $y = \exp(\pi i \lambda)\phi(j) \in \check{G}^{\Gamma} - \check{G}$.
 \end{itemize}
 
 The $L$-parameter $\phi$ is called \emph{tempered} if the closure of $\phi(W_{\BR})$ in the complex analytic topology is compact. This is equivalent to say that $\lambda + \Ad(y)\lambda$ is an elliptic element of $\check{\fg}$.
 
-Fix a geometric parameter $(y, \Lambda)$, it lies in a variety $X_y(\CO,\check{G}^{\Gamma}) \simeq \check{G} \times^{K(y)}(\check{G}(\Lambda)_0/P(\Lambda))$. The $\check{G}$-equivariant microlocal geometry on $X_y(\CO,\check{G}^{\Gamma})$ is in some sense equivalent to the $K(y)$-equivariant microlocal geometry on $\check{G}(\lambda)_0/P(\Lambda)$. 
+Fix a geometric parameter $(y, \Lambda)$, it lies in a variety $X_y(\CO,\check{G}^{\Gamma}) \simeq \check{G} \times^{K(y)}(\check{G}(\Lambda)_0/P(\Lambda))$. The $\check{G}$-equivariant microlocal geometry on $X_y(\CO,\check{G}^{\Gamma})$ is in some sense equivalent to the $K(y)$-equivariant microlocal geometry on $\check{G}(\lambda)_0/P(\Lambda)$.
 
 
 Roughly speaking, there is a bijection between:
@@ -749,11 +749,11 @@ For an arthur parameter $\psi$, we can define an $L$-parameter $\phi_{\psi}$ by:
 
 Let $y_1 = \psi_1\begin{pmatrix} i & 0 \\ 0 & -i  \end{pmatrix} \in \check{G}$, and $\lambda_1  = d\psi_1 \begin{pmatrix}\frac{1}{2} & 0 \\ 0 & -\frac{1}{2} \end{pmatrix} \in \check{\fg}$, $(y_0,\lambda_0)$ is the parameter defined by the restriction of $\psi$ to $W_{\BR}$.
 
-Then we have $y = y_0 y_1, \lambda = \lambda_0 + \lambda_1$, since $\phi_{\psi}(e^t) = \exp(\lambda_0 t + \mu_0 \bar{t})\psi_1\begin{pmatrix} |e^{t}| & 0 \\ 0 & |e^{-t}| \end{pmatrix}$, and 
+Then we have $y = y_0 y_1, \lambda = \lambda_0 + \lambda_1$, since $\phi_{\psi}(e^t) = \exp(\lambda_0 t + \mu_0 \overline{t})\psi_1\begin{pmatrix} |e^{t}| & 0 \\ 0 & |e^{-t}| \end{pmatrix}$, and
 \[
-\psi_1\begin{pmatrix} |e^{t}| & 0 \\ 0 & |e^{-t}| \end{pmatrix} = \exp\left( t \cdot d\psi_1 \begin{pmatrix}\frac{1}{2} & 0 \\ 0 & -\frac{1}{2} \end{pmatrix} + \bar{t} \cdot d\psi_1 \begin{pmatrix}\frac{1}{2} & 0 \\ 0 & -\frac{1}{2} \end{pmatrix} \right) = \exp(\lambda_1 t + \lambda_1 \bar{t}).
+\psi_1\begin{pmatrix} |e^{t}| & 0 \\ 0 & |e^{-t}| \end{pmatrix} = \exp\left( t \cdot d\psi_1 \begin{pmatrix}\frac{1}{2} & 0 \\ 0 & -\frac{1}{2} \end{pmatrix} + \overline{t} \cdot d\psi_1 \begin{pmatrix}\frac{1}{2} & 0 \\ 0 & -\frac{1}{2} \end{pmatrix} \right) = \exp(\lambda_1 t + \lambda_1 \overline{t}).
 \]
-So $\phi_{\psi}(e^t) = \exp((\lambda_0 + \lambda_1)t + (\mu_0 + \lambda_1)\bar{t})$, hence $\lambda = \lambda_0 + \lambda_1$.
+So $\phi_{\psi}(e^t) = \exp((\lambda_0 + \lambda_1)t + (\mu_0 + \lambda_1)\overline{t})$, hence $\lambda = \lambda_0 + \lambda_1$.
 
 And \[y = \exp(\pi i \lambda)\phi_{\psi}(j) = \exp(\pi i \lambda_0) \exp(\pi i d\psi_1 \begin{pmatrix} \frac{1}{2} & 0 \\ 0 & -\frac{1}{2} \end{pmatrix})\psi_0(j) = \exp(\pi i \lambda_0) \psi_1 \begin{pmatrix}
   i & 0 \\ 0 & -i
@@ -785,7 +785,7 @@ So we can view $E_{\psi}$ as an element in the conormal space $T^*_{K(y),eP(\Lam
 
 
 \begin{defn}
-  An Arthur parameter $\psi$ is called \emph{unipotent} if the restriction to $\BC^* \subseteq W_{\BR}$ is trivial. 
+  An Arthur parameter $\psi$ is called \emph{unipotent} if the restriction to $\BC^* \subseteq W_{\BR}$ is trivial.
 \end{defn}
 
 \begin{rk}
@@ -817,9 +817,9 @@ $E_{\psi} \in \mathcal{N}_{\CP(\Lambda)} \cap \fs(y)$ is a regular element (belo
 
 
 \begin{thm}
-  Fix an algebraic morphism $\psi : \SL_2(\BC) \to \check{G}^{\Gamma}$, let $\lambda = d\psi \begin{pmatrix} \frac{1}{2} & 0 \\ 0 & -\frac{1}{2} \end{pmatrix}$, $\CO = \check{G} \cdot \lambda \subseteq \check{\fg}$ the corresponding semisimple orbits. 
-  Consider the open and closed subvariety of the geometric parameter space $X_y(\CO,\check{G}^{\Gamma}) \simeq \check{G} \times^{K(y)} (\check{G}(\Lambda)_0/P(\Lambda))$. 
-  
+  Fix an algebraic morphism $\psi : \SL_2(\BC) \to \check{G}^{\Gamma}$, let $\lambda = d\psi \begin{pmatrix} \frac{1}{2} & 0 \\ 0 & -\frac{1}{2} \end{pmatrix}$, $\CO = \check{G} \cdot \lambda \subseteq \check{\fg}$ the corresponding semisimple orbits.
+  Consider the open and closed subvariety of the geometric parameter space $X_y(\CO,\check{G}^{\Gamma}) \simeq \check{G} \times^{K(y)} (\check{G}(\Lambda)_0/P(\Lambda))$.
+
   Then there are bijections between:
   \begin{itemize}
     \item equivalence classes of unipotent Arthur parameters supported on $X_y(\CO,\check{G}^{\Gamma})$;
@@ -861,13 +861,13 @@ $E_{\psi} \in \mathcal{N}_{\CP(\Lambda)} \cap \fs(y)$ is a regular element (belo
     \item irreducible $\check{G}$-equivariant $\mathcal{D}$-modules $\mathcal{N}$ on $X_y(\CO,\check{G}^{\Gamma})$ with $T^*_{S}(X_y(\CO,\check{G}^{\Gamma})) \subseteq \mathrm{Ch}(\mathcal{N})$;
     \item Arthur packets $\Pi_{\psi}^{Art}(G/\BR)$ associated to $\psi$.
   \end{itemize}
-\end{thm}  
+\end{thm}
 
 
 
 \begin{cor}
   Fix a nilpotent orbit $\check{\CO} \subseteq \check{\fg}$, attached to it is a semisimple orbit $\check{\CO}_{ss} \subseteq \check{\fg}$ then
-  \[   
+  \[
     \mathrm{Unip}_{\check{\CO}}(G/\BR) = \bigcup_{\psi \textrm{ unipotent}, \CO_{\psi} = \check{\CO}_{ss}} \Pi_{\psi}^{Art}(G/\BR).
   \]
 \end{cor}
@@ -903,7 +903,7 @@ We can define a $G$-equivariant vector bundle $\CL_{\lambda}$ over $\CB$ for any
 
 \[
 \begin{tikzcd}
-  \boxed{\text{Weight lattice $\Lambda \subseteq {^{a}h^*}$}} \arrow[r,leftrightarrow,"1-1"] & \boxed{\text{$G$-equivariant line bundles on $\CB$}} 
+  \boxed{\text{Weight lattice $\Lambda \subseteq {^{a}h^*}$}} \arrow[r,leftrightarrow,"1-1"] & \boxed{\text{$G$-equivariant line bundles on $\CB$}}
 \end{tikzcd}
 \]
 
@@ -917,14 +917,14 @@ Under this correspondence, $\CL_{\lambda}$ is ample if and only if $\lambda$ is 
 \[
   \begin{tikzcd}
     \boxed{\mathrm{Prim}_{\nu}(\mathrm{U}(\fg))} \arrow[r,leftrightarrow,"1-1"] & \boxed{\text{left cells in $\mathrm{Coh}_{\nu}(\fg,\fb)$} } \arrow[r,rightarrow] & \boxed{\text{double cells in $\mathrm{Coh}_{\nu}(\fg,\fb)$}} \\
-    I \in \mathrm{Prim}(\mathrm{U}(\fg)) \arrow[r,mapsto] & \mathcal{C}^L_{\nu,I} \arrow[r,mapsto] & \mathcal{C}^{LR}_{\nu,I} 
+    I \in \mathrm{Prim}(\mathrm{U}(\fg)) \arrow[r,mapsto] & \mathcal{C}^L_{\nu,I} \arrow[r,mapsto] & \mathcal{C}^{LR}_{\nu,I}
   \end{tikzcd}
 \]
 
 $\mathrm{span}(\CC^{LR}_{\nu,I})$ is a representation of the integral Weyl group $W(\nu)$, all irreducible constituents of $\mathrm{span}(\CC^{LR}_{\nu,I})$ lies in a single double cell, and contains a unique special representation of $W(\nu)$ $$\sigma_{\nu,I}.$$
 Then by results of Joseph, we have:
 $$\mathrm{AV}(I) = \CO(j_{W(\nu)}^W(\sigma_{\nu,I})).$$
-Which means that to compute the annihilator variety of $\mathrm{L}(w\nu)$, we only need to compute the corresponding cell representation. 
+Which means that to compute the annihilator variety of $\mathrm{L}(w\nu)$, we only need to compute the corresponding cell representation.
 
 In the case of $(\fg,K)$-modules, the method is the same:
 \[
@@ -992,7 +992,6 @@ For each element $w \in W$, there are two processes to get a nilpotent orbit $\C
 The question is: are these two nilpotent orbits the same? i.e. $\CO(\sigma_{\mathcal{C}^{LR}_w}) = \CO_{P(w),s}$?
 
 \textcolor{red}{answer: Yes!} \cite{BV82}
-
 
 
 

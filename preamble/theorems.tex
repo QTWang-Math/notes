@@ -1,0 +1,47 @@
+\declaretheoremstyle[
+  headfont=\bfseries,
+  bodyfont=\itshape,
+  headpunct={.},
+  postheadspace={0.5em},
+  spaceabove=8pt,
+  spacebelow=8pt
+]{thmstyle}
+
+\declaretheoremstyle[
+  headfont=\bfseries,
+  bodyfont=\normalfont,
+  headpunct={.},
+  postheadspace={0.5em},
+  spaceabove=8pt,
+  spacebelow=8pt
+]{defstyle}
+
+\declaretheorem[style=thmstyle, name=Theorem, numberwithin=section]{thm}
+\declaretheorem[style=thmstyle, name=Corollary, sibling=thm]{cor}
+\declaretheorem[style=thmstyle, name=Proposition, sibling=thm]{prop}
+\declaretheorem[style=thmstyle, name=Lemma, sibling=thm]{lem}
+\declaretheorem[style=thmstyle, name=Conjecture, sibling=thm]{conj}
+\declaretheorem[style=thmstyle, name=Assumption, sibling=thm]{assump}
+
+\declaretheorem[style=defstyle, name=Definition, sibling=thm]{defn}
+\declaretheorem[style=defstyle, name=Remark, sibling=thm]{rk}
+\declaretheorem[style=defstyle, name=Question, sibling=thm]{question}
+\declaretheorem[style=defstyle, name=Construction, sibling=thm]{con}
+\declaretheorem[style=defstyle, name=Example, sibling=thm]{examp}
+\declaretheorem[style=defstyle, name=Notation, sibling=thm]{notn}
+\declaretheorem[style=defstyle, name=Exercise, sibling=thm]{exer}
+
+% The counter resets by section, so PDF destinations need the section number too.
+\renewcommand*{\theHthm}{\thesection.\arabic{thm}}
+\renewcommand*{\theHcor}{\thesection.\arabic{thm}}
+\renewcommand*{\theHprop}{\thesection.\arabic{thm}}
+\renewcommand*{\theHlem}{\thesection.\arabic{thm}}
+\renewcommand*{\theHconj}{\thesection.\arabic{thm}}
+\renewcommand*{\theHassump}{\thesection.\arabic{thm}}
+\renewcommand*{\theHdefn}{\thesection.\arabic{thm}}
+\renewcommand*{\theHrk}{\thesection.\arabic{thm}}
+\renewcommand*{\theHquestion}{\thesection.\arabic{thm}}
+\renewcommand*{\theHcon}{\thesection.\arabic{thm}}
+\renewcommand*{\theHexamp}{\thesection.\arabic{thm}}
+\renewcommand*{\theHnotn}{\thesection.\arabic{thm}}
+\renewcommand*{\theHexer}{\thesection.\arabic{thm}}

@@ -21,7 +21,12 @@ The notes currently cover themes including:
 
 ```text
 .
-|-- main.tex            Main document, macros, and theorem environments
+|-- main.tex            Document entry point and chapter selection
+|-- preamble/
+|   |-- packages.tex    Package imports
+|   |-- bibliography.tex Bibliography configuration
+|   |-- theorems.tex    Theorem styles and environments
+|   `-- macros.tex      Project notation and helper commands
 |-- chapters/
 |   |-- 2023.tex        Notes written in 2023
 |   |-- 2024.tex        Notes written in 2024
@@ -50,17 +55,10 @@ To remove generated files:
 latexmk -C -outdir=temp main.tex
 ```
 
-## Conventions
-
-- Theorem-like environments and most notation macros are defined in `main.tex`.
-- Bibliographic entries belong in `references.bib`.
-- New notes should be added to the chapter corresponding to the current year.
-- `TooYoung.sty` provides project-specific commands for Young diagrams and tableaux.
-
 ## Status
 
 This repository is maintained as a personal, continuously updated notebook. Statements may be incomplete, provisional, or recorded without full proofs. Corrections and clarifications are added as the material develops.
 
 ## Author
 
-Wang Qiutong
+Qiutong Wang

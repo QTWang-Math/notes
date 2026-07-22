@@ -1,0 +1,39 @@
+\usepackage[
+  backend=biber,
+  style=alphabetic,
+  sorting=anyt,
+  maxalphanames=4,
+  maxnames=99,
+  doi=true,
+  url=false,
+  isbn=false,
+  backref=true
+]{biblatex}
+
+\addbibresource{references.bib}
+
+% Treat MathSciNet numbers as MR eprints.
+\DeclareSourcemap{
+  \maps[datatype=bibtex]{
+    \map{
+      \step[fieldsource=mrnumber, fieldtarget=eprint]
+      \step[fieldset=eprinttype, fieldvalue=mr]
+    }
+  }
+}
+
+\DeclareFieldFormat{eprint:mr}{%
+  MR\href{https://mathscinet.ams.org/mathscinet-getitem?mr=#1}{#1}%
+}
+
+% Preserve the existing bibliography output: MR number followed by DOI.
+\renewbibmacro*{doi+eprint+url}{
+  \usebibmacro{eprint}
+  \newunit\newblock
+  \printfield{doi}
+}
+
+\DefineBibliographyStrings{english}{
+  backrefpage  = {$\uparrow$},
+  backrefpages = {$\uparrow$}
+}

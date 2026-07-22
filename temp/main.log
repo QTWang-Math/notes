@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.3.8)  22 JUL 2026 19:06
+This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.3.8)  22 JUL 2026 19:23
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -829,11 +829,7 @@ Package hyperref Info: Option `colorlinks' set `true' on input line 16.
 ) (./preamble/macros.tex)
 \@quotelevel=\count458
 \@quotereset=\count459
- (temp/main.aux (temp/chapters/2023.aux
-
-LaTeX Warning: Label `night City' multiply defined.
-
-) (temp/chapters/2024.aux) (temp/chapters/2025.aux) (temp/chapters/2026.aux))
+ (temp/main.aux (temp/chapters/2023.aux) (temp/chapters/2024.aux) (temp/chapters/2025.aux) (temp/chapters/2026.aux))
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 38.
@@ -1058,10 +1054,6 @@ Package microtype Info: Loading generic protrusion settings for font family
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
  ***********
-
-
-LaTeX Warning: There were multiply-defined labels.
-
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: 141823A85B95443C0CB8F6D4E99BFE80;6080.
 Package logreq Info: Writing requests to 'main.run.xml'.
@@ -1069,10 +1061,10 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 33579 strings out of 473832
- 655760 string characters out of 5729482
- 1494745 words of memory out of 5000000
- 55916 multiletter control sequences out of 15000+600000
+ 33587 strings out of 473832
+ 655908 string characters out of 5729482
+ 1494706 words of memory out of 5000000
+ 55924 multiletter control sequences out of 15000+600000
  570430 words of font info for 100 fonts, out of 8000000 for 9000
  1509 hyphenation exceptions out of 8191
  86i,17n,100p,1240b,4848s stack positions out of 10000i,1000n,20000p,200000b,200000s

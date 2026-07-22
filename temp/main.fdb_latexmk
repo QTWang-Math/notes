@@ -1,18 +1,18 @@
 # Fdb version 4
-["biber temp/main"] 1784718343.42654 "temp/main.bcf" "temp/main.bbl" "temp/main" 1784718371.94706 0
+["biber temp/main"] 1784719423.40341 "temp/main.bcf" "temp/main.bbl" "temp/main" 1784719428.13824 0
   "references.bib" 1777441526.8365 12677 f2c58ab2f9049a569f25599c090a5037 ""
-  "temp/main.bcf" 1784718371.65074 109363 c2f3765a6db6ce37266628b3020f63c6 "xelatex"
+  "temp/main.bcf" 1784719427.83558 109363 c2f3765a6db6ce37266628b3020f63c6 "xelatex"
   (generated)
   "temp/main.bbl"
   "temp/main.blg"
   (rewritten before read)
-["xdvipdfmx"] 1784718371.69264 "temp/main.xdv" "temp/main.pdf" "temp/main" 1784718371.94858 0
-  "temp/main.xdv" 1784718371.65126 473872 a264cdd11728c9d4737456b22bdb46e6 "xelatex"
+["xdvipdfmx"] 1784719427.8767 "temp/main.xdv" "temp/main.pdf" "temp/main" 1784719428.13969 0
+  "temp/main.xdv" 1784719427.83616 473872 e6a3341aede84a746470ce28cd86cfec "xelatex"
   (generated)
   "temp/main.pdf"
   (rewritten before read)
-["xelatex"] 1784718370.4503 "/Users/quentinwang/Documents/texfile/notes/main.tex" "temp/main.xdv" "main" 1784718371.94712 0
-  "/Users/quentinwang/Documents/texfile/notes/main.tex" 1784718370.25178 1368 53bfb2bd06cec302248a6db908517937 ""
+["xelatex"] 1784719426.67021 "/Users/quentinwang/Documents/texfile/notes/main.tex" "temp/main.xdv" "main" 1784719428.13828 0
+  "/Users/quentinwang/Documents/texfile/notes/main.tex" 1784719422.03546 1370 7dca82ca6de7223a45619e6409a9f1e2 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/tfm/adobe/zapfding/pzdr.tfm" 1136768653 1528 f853c4d1b4e0550255e02831fdc8496f ""
   "/usr/local/texlive/2025/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
@@ -207,24 +207,24 @@
   "/usr/local/texlive/2025/texmf-var/web2c/xetex/xelatex.fmt" 1741450550 5639796 b6822fbf027c6598cec2e241e0925725 ""
   "/usr/local/texlive/2025/texmf.cnf" 1741450484 577 418a7058ec8e006d8704f60ecd22c938 ""
   "Claude_Monet-NC.jpg" 1750241432.05307 511666 cda2211b81f06723c5b6da1d45369676 ""
-  "chapters/2023.tex" 1784718318.65044 10706 9314b8f05465250f289e2abdedea8f9b ""
-  "chapters/2024.tex" 1782290296.87346 9569 eeaf63bd0076667297e39c4992893531 ""
-  "chapters/2025.tex" 1784717060.90932 56067 6a8da259956cd18133857cf05a7f2fb7 ""
-  "chapters/2026.tex" 1784716833.76824 61663 b48d35c4bea0e5b52aa464dbaf1be8f1 ""
-  "main.tex" 1784718370.25178 1368 53bfb2bd06cec302248a6db908517937 ""
+  "chapters/2023.tex" 1784719129.34927 10729 028b4b3635dc3a76f154330bf8bbdbf4 ""
+  "chapters/2024.tex" 1784719129.34966 9618 d93afd91bb1926171efdb55d190a1567 ""
+  "chapters/2025.tex" 1784719129.35035 56143 fbeccedd0216c8d24ddab3c60ef77f30 ""
+  "chapters/2026.tex" 1784719129.35111 61663 4ad61b1de900c302fe153b581229e74b ""
+  "main.tex" 1784719422.03546 1370 7dca82ca6de7223a45619e6409a9f1e2 ""
   "preamble/bibliography.tex" 1784716477.41803 786 8c9080fb94c6865e8daf347b552204a2 ""
-  "preamble/macros.tex" 1784716785.08619 5400 cc5b8e19ccc36ccfb31e17d78df63fad ""
-  "preamble/packages.tex" 1784717178.2575 438 c7678fae2ce793586b2ef1f4a3776554 ""
+  "preamble/macros.tex" 1784719129.34845 5398 18e9191e77cdd15c8df04002b627540d ""
+  "preamble/packages.tex" 1784719129.34742 790 adafeb41859a053af938f9fae7fc0513 ""
   "preamble/theorems.tex" 1784716912.03191 1949 5dc16ed460b83e59bda23c1b5e234540 ""
-  "temp/chapters/2023.aux" 1784717379.82898 6547 887b20d8560fbb93169e4db801d51df2 ""
-  "temp/chapters/2024.aux" 1784717379.86448 5421 4f848651f2ef52134e7fa8e8f627ec92 ""
-  "temp/chapters/2025.aux" 1784717380.49815 14744 7763686faef850dad4e608a260b771b7 ""
-  "temp/chapters/2026.aux" 1784718371.62818 19312 b678eef55bb5b899ac050a48b4c68dc2 "xelatex"
-  "temp/main.aux" 1784718371.64774 2078 856d77bb15374f6eac4461701c010a29 "xelatex"
-  "temp/main.bbl" 1784718344.32866 8410 55d1f91024241199b7e687e6bca13d2a "biber temp/main"
-  "temp/main.out" 1784718371.65012 6080 141823a85b95443c0cb8f6d4e99bfe80 "xelatex"
-  "temp/main.run.xml" 1784718371.65117 2346 a92eb0f297ccf74f51e282d944c30a10 "xelatex"
-  "temp/main.toc" 1784718371.65122 7571 b0937ffd2662bbde07273bb7bb5d2555 "xelatex"
+  "temp/chapters/2023.aux" 1784719409.04189 6325 6e654934049fc78ef1c9c82c891b8ee5 ""
+  "temp/chapters/2024.aux" 1784719409.08024 5421 4f848651f2ef52134e7fa8e8f627ec92 ""
+  "temp/chapters/2025.aux" 1784719409.62866 14744 7763686faef850dad4e608a260b771b7 ""
+  "temp/chapters/2026.aux" 1784719427.81269 19312 b678eef55bb5b899ac050a48b4c68dc2 "xelatex"
+  "temp/main.aux" 1784719427.83273 2078 856d77bb15374f6eac4461701c010a29 "xelatex"
+  "temp/main.bbl" 1784719424.24203 8410 55d1f91024241199b7e687e6bca13d2a "biber temp/main"
+  "temp/main.out" 1784719427.83491 6080 141823a85b95443c0cb8f6d4e99bfe80 "xelatex"
+  "temp/main.run.xml" 1784719427.83607 2346 a92eb0f297ccf74f51e282d944c30a10 "xelatex"
+  "temp/main.toc" 1784719427.83612 7571 221911f6975bf01a2e426f7167a0208e "xelatex"
   (generated)
   "temp/chapters/2026.aux"
   "temp/main.aux"

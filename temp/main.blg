@@ -1,17 +1,17 @@
 [0] Config.pm:308> INFO - This is Biber 2.20
 [0] Config.pm:311> INFO - Logfile is 'temp/main.blg'
-[25] biber-darwin:340> INFO - === Wed Jul 22, 2026, 19:05:44
+[25] biber-darwin:340> INFO - === Wed Jul 22, 2026, 19:23:44
 [31] Biber.pm:420> INFO - Reading 'temp/main.bcf'
-[58] Biber.pm:994> INFO - Found 5 citekeys in bib section 0
-[63] Biber.pm:4463> INFO - Processing section 0
-[67] Biber.pm:4654> INFO - Looking for bibtex file 'references.bib' for section 0
-[68] bibtex.pm:1713> INFO - LaTeX decoding ...
-[80] bibtex.pm:1519> INFO - Found BibTeX data source 'references.bib'
+[57] Biber.pm:994> INFO - Found 5 citekeys in bib section 0
+[62] Biber.pm:4463> INFO - Processing section 0
+[66] Biber.pm:4654> INFO - Looking for bibtex file 'references.bib' for section 0
+[67] bibtex.pm:1713> INFO - LaTeX decoding ...
+[79] bibtex.pm:1519> INFO - Found BibTeX data source 'references.bib'
+[107] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
 [107] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[108] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[108] Biber.pm:4283> INFO - Sorting list 'anyt/global//global/global/global' of type 'entry' with template 'anyt' and locale 'en-US'
-[108] Biber.pm:4289> INFO - No sort tailoring available for locale 'en-US'
-[112] bbl.pm:676> INFO - Writing 'temp/main.bbl' with encoding 'UTF-8'
-[113] bbl.pm:779> INFO - Output to temp/main.bbl
-[113] Biber.pm:131> WARN - legacy year field '[2021] ©2021' in entry 'Achar21' is not an integer - this will probably not sort properly.
-[113] Biber.pm:133> INFO - WARNINGS: 1
+[107] Biber.pm:4283> INFO - Sorting list 'anyt/global//global/global/global' of type 'entry' with template 'anyt' and locale 'en-US'
+[107] Biber.pm:4289> INFO - No sort tailoring available for locale 'en-US'
+[111] bbl.pm:676> INFO - Writing 'temp/main.bbl' with encoding 'UTF-8'
+[112] bbl.pm:779> INFO - Output to temp/main.bbl
+[112] Biber.pm:131> WARN - legacy year field '[2021] ©2021' in entry 'Achar21' is not an integer - this will probably not sort properly.
+[112] Biber.pm:133> INFO - WARNINGS: 1

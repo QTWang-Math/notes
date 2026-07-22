@@ -1,0 +1,8 @@
+.DS_Store
+
+# Keep the generated PDF for GitHub, but ignore all other LaTeX build files.
+temp/*
+!temp/main.pdf
+!temp/chapters/
+temp/chapters/*
+!temp/chapters/.gitkeep

@@ -68,6 +68,18 @@
 
 \providecommand{\cprime}{\textquotesingle}
 
+% Keep note dates visually separate from section titles and out of the contents.
+\makeatletter
+\newcommand{\notesection}[2]{%
+  \section{#2}%
+  \par\nobreak
+  \vspace{-0.65\baselineskip}%
+  \noindent\hfill{\small\sffamily\color{NoteColor}#1}\par\nobreak
+  \vspace{0.2\baselineskip}%
+  \@afterheading
+}
+\makeatother
+
 % Delimiters and frequently used structures
 \newcommand{\norm}[1]{\lVert#1\rVert}
 \newcommand{\abs}[1]{\lvert#1\rvert}

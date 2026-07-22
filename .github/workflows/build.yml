@@ -1,0 +1,64 @@
+name: Build notes
+
+on:
+  push:
+    branches:
+      - main
+    paths-ignore:
+      - temp/main.pdf
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: notes-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Compile complete notes
+        uses: xu-cheng/latex-action@v4
+        with:
+          root_file: main.tex
+          latexmk_use_xelatex: true
+          args: -file-line-error -halt-on-error -interaction=nonstopmode -outdir=temp
+
+      - name: Upload PDF
+        uses: actions/upload-artifact@v4
+        with:
+          name: notes-pdf
+          path: temp/main.pdf
+
+  publish:
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Download PDF
+        uses: actions/download-artifact@v4
+        with:
+          name: notes-pdf
+          path: temp
+
+      - name: Commit updated PDF
+        run: |
+          if git diff --quiet -- temp/main.pdf; then
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add temp/main.pdf
+          git commit -m "Update compiled PDF"
+          git push

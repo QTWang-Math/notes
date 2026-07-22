@@ -28,15 +28,11 @@
 
 
 
-% Draft mode: comment this line out to build every year and the front matter.
-\includeonly{chapters/2026}
-
-
-
-
-
-
-
+% current.tex defines this flag for a fast build of the active year.
+% Compiling main.tex directly always produces the complete public document.
+\ifdefined\CurrentYearOnly
+  \includeonly{chapters/2026}
+\fi
 \title[Notes]{Notes}
 \author{Qiutong Wang}
 
@@ -64,7 +60,7 @@
 
   \vspace{3em}
 
-  \includegraphics[width=0.88\textwidth]{Claude_Monet-NC.jpg}\par
+  \includegraphics[width=0.88\textwidth]{figures/cover-night-city.jpg}\par
 
   \vfill
 

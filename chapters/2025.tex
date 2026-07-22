@@ -257,7 +257,7 @@ Combine the above together, we finally have the following decomposition:
   H^{\mathrm{BM}}_{\mathrm{top}}(Z_{\CO},\BC) \simeq \bigoplus_{\rho \in \widehat{A_G(x)}} \tau(x,\rho) \otimes \tau(x,\rho), \quad H_{\mathrm{top}}^{\mathrm{BM}}(Z,\BC) \simeq \bigoplus_{\CO} H^{\mathrm{BM}}_{\mathrm{top}}(Z_{\CO},\BC).
 \]
 
-For any $w \in W$, there is a unique nilpotent orbit $\mathrm{St}(w)$ such that $\mu(\overline{T^*_{\mathcal{Y}_w}(\mathcal{B} \times \mathcal{B})}) = \overline{\mathrm{St}(w)}$. The map $w \mapsto \mathrm{St}(w)$ defines a \textcolor{AttentionColor}{surjective(?)} map from $W$ to the set of nilpotent orbits in $\fg^*$ (this map can be computed via Robinson-Schensted algorithm).
+For any $w \in W$, there is a unique nilpotent orbit $\mathrm{St}(w)$ such that $\mu(\overline{T^*_{\mathcal{Y}_w}(\mathcal{B} \times \mathcal{B})}) = \overline{\mathrm{St}(w)}$. The map $w \mapsto \mathrm{St}(w)$ defines a \uncertain{surjective(?)} map from $W$ to the set of nilpotent orbits in $\fg^*$ (this map can be computed via Robinson-Schensted algorithm).
 
 \begin{cor}
   For any nilpotent orbit $\CO$, there is an isomorphism of $W \times W$-modules:
@@ -301,7 +301,7 @@ Recall that we have the following diagram:
 
 In this diagram $p_{\mathrm{rs}}$ is a $W$-torsor. So we have a natural $W$-action on $p_{\mathrm{rs},*}\underline{\BQ}_{\widetilde{\fg^{\mathrm{rs}}}}$ and hence on $\mathrm{IC}(\fg^{\mathrm{rs}},\CL)$, where $\CL = (p_{\mathrm{rs}})_*\underline{\BQ}_{\widetilde{\fg^{\mathrm{rs}}}}$. There is a canonical isomorphism of perverse sheaves $\mathrm{IC}(\fg^{\mathrm{rs}},\CL) \simeq \BR p_{*}\underline{\BQ}_{\widetilde{\fg}}[\dim(\fg)]$, so there is a natural $W$-action on $\BR p_{*}\underline{\BQ}_{\widetilde{\fg}}$. By proper base change, we have
 \[
-  \BR p_{\CN,*}\underline{\BQ}_{\widetilde{\CN}} \simeq \BR p_{*}\underline{\BQ}_{\widetilde{\fg}})|_{\CN}. \quad  \textcolor{AttentionColor}{(\mathrm{Spr} = \BR p_{\CN,*}\underline{\BQ}_{\widetilde{\CN}}[\dim \CN] \ called \ The \ Springer \ sheaf)}
+  \BR p_{\CN,*}\underline{\BQ}_{\widetilde{\CN}} \simeq \BR p_{*}\underline{\BQ}_{\widetilde{\fg}})|_{\CN}. \quad  \statusnote{(\mathrm{Spr} = \BR p_{\CN,*}\underline{\BQ}_{\widetilde{\CN}}[\dim \CN] \ called \ The \ Springer \ sheaf)}
 \]
 So there is a natural $W$-action on $\BR p_{\CN,*}\underline{\BQ}_{\widetilde{\CN}}$ (actually $\End_{\mathrm{Perv(\CN)}}(\mathrm{Spr}) = \BQ[W]$) and hence on $H^{\bullet}_c(T^*\CB,\BQ) \simeq \BR \Gamma_c(\CN,\BR p_{\CN,*}\underline{\BQ}_{\widetilde{\CN}})$ and $H^{\bullet}_c(\CB_x,\BQ) \simeq \BR \Gamma_c(\{ x \}, \BR p_{\CN,*}\underline{\BQ}_{\widetilde{\CN}})$. (action on Springer fiber)
 
@@ -755,9 +755,19 @@ Then we have $y = y_0 y_1, \lambda = \lambda_0 + \lambda_1$, since $\phi_{\psi}(
 \]
 So $\phi_{\psi}(e^t) = \exp((\lambda_0 + \lambda_1)t + (\mu_0 + \lambda_1)\overline{t})$, hence $\lambda = \lambda_0 + \lambda_1$.
 
-And \[y = \exp(\pi i \lambda)\phi_{\psi}(j) = \exp(\pi i \lambda_0) \exp(\pi i d\psi_1 \begin{pmatrix} \frac{1}{2} & 0 \\ 0 & -\frac{1}{2} \end{pmatrix})\psi_0(j) = \exp(\pi i \lambda_0) \psi_1 \begin{pmatrix}
-  i & 0 \\ 0 & -i
-\end{pmatrix} \psi_0(j) = y_0 y_1 .\]
+And
+\begin{align*}
+  y
+    &= \exp(\pi i \lambda)\phi_{\psi}(j) \\
+    &= \exp(\pi i \lambda_0)
+       \exp\left(\pi i d\psi_1
+         \begin{pmatrix} \frac{1}{2} & 0 \\ 0 & -\frac{1}{2} \end{pmatrix}\right)
+       \psi_0(j) \\
+    &= \exp(\pi i \lambda_0)
+       \psi_1\begin{pmatrix} i & 0 \\ 0 & -i \end{pmatrix}
+       \psi_0(j) \\
+    &= y_0y_1.
+\end{align*}
 
 In addition of the two semisimple elements $\lambda, \mu$ and $y$ defined as above, we can also define a nilpotent element $E_{\psi} \in \check{\fg}$ by:
 \[E_{\psi} = d\psi_{1}\begin{pmatrix}0 & 1 \\ 0 & 0\end{pmatrix} \in \check{\fg}.\]
@@ -842,12 +852,14 @@ $E_{\psi} \in \mathcal{N}_{\CP(\Lambda)} \cap \fs(y)$ is a regular element (belo
 
 \begin{rk}
   In other words, this theorem tell us the following diagram:
-  \[
-  \begin{tikzcd}
-    \boxed{\text{$\check{G}$-orbits in $\check{G} \times^{K(y)} (\check{G}(\Lambda)_0/P(\Lambda))$}} \arrow[r,leftrightarrow,"1-1"] & \boxed{\text{$K(y)$-orbits in $\check{G}(\Lambda)_0/P(\Lambda)$}}  \\
-    \boxed{\text{unipotent A-parameters supported on $X_y(\CO,\check{G}^{\Gamma})$}} \arrow[u,hookrightarrow] \arrow[r,leftrightarrow,"1-1"] & \boxed{\text{regular $K(y)$-orbits in $\check{G}(\Lambda)_0/P(\Lambda)$}} \arrow[u,hookrightarrow]
+  \begin{center}
+  \resizebox{\textwidth}{!}{%
+  \begin{tikzcd}[ampersand replacement=\&]
+    \boxed{\text{$\check{G}$-orbits in $\check{G} \times^{K(y)} (\check{G}(\Lambda)_0/P(\Lambda))$}} \arrow[r,leftrightarrow,"1-1"] \& \boxed{\text{$K(y)$-orbits in $\check{G}(\Lambda)_0/P(\Lambda)$}}  \\
+    \boxed{\text{unipotent A-parameters supported on $X_y(\CO,\check{G}^{\Gamma})$}} \arrow[u,hookrightarrow] \arrow[r,leftrightarrow,"1-1"] \& \boxed{\text{regular $K(y)$-orbits in $\check{G}(\Lambda)_0/P(\Lambda)$}} \arrow[u,hookrightarrow]
   \end{tikzcd}
-  \]
+  }
+  \end{center}
 \end{rk}
 
 
@@ -856,9 +868,18 @@ $E_{\psi} \in \mathcal{N}_{\CP(\Lambda)} \cap \fs(y)$ is a regular element (belo
 
   Then there are bijections between:
   \begin{itemize}
-    \item irrducible $(\check{\fg}(\Lambda),K(y)^{alg})$-modules $M$ annihilated by $I_{\CP(\Lambda)}$ with $\overline{\mathcal{O}_K} \subseteq \mathrm{AV}(M)$;
-    \item irreducible $K(y)^{alg}$-equivariant $\mathcal{D}$-modules $\mathcal{M}$ on $\check{G}(\Lambda)_0/P(\Lambda)$ with $T^*_{S_K}(\check{G}(\Lambda)_0/P(\Lambda)) \subseteq \mathrm{Ch}(\mathcal{M})$;
-    \item irreducible $\check{G}$-equivariant $\mathcal{D}$-modules $\mathcal{N}$ on $X_y(\CO,\check{G}^{\Gamma})$ with $T^*_{S}(X_y(\CO,\check{G}^{\Gamma})) \subseteq \mathrm{Ch}(\mathcal{N})$;
+    \item irrducible $(\check{\fg}(\Lambda),K(y)^{alg})$-modules $M$ annihilated by $I_{\CP(\Lambda)}$ such that
+      \[
+        \overline{\mathcal{O}_K} \subseteq \mathrm{AV}(M);
+      \]
+    \item irreducible $K(y)^{alg}$-equivariant $\mathcal{D}$-modules $\mathcal{M}$ on $\check{G}(\Lambda)_0/P(\Lambda)$ such that
+      \[
+        T^*_{S_K}(\check{G}(\Lambda)_0/P(\Lambda)) \subseteq \mathrm{Ch}(\mathcal{M});
+      \]
+    \item irreducible $\check{G}$-equivariant $\mathcal{D}$-modules $\mathcal{N}$ on $X_y(\CO,\check{G}^{\Gamma})$ such that
+      \[
+        T^*_{S}(X_y(\CO,\check{G}^{\Gamma})) \subseteq \mathrm{Ch}(\mathcal{N});
+      \]
     \item Arthur packets $\Pi_{\psi}^{Art}(G/\BR)$ associated to $\psi$.
   \end{itemize}
 \end{thm}
@@ -954,8 +975,8 @@ For example, in the case of $G = \mathrm{Sp}_{2n}(\BR)$, we have:
 We need to show that the $j$-induction of any special repn appears in $\mathrm{Coh}_{\Lambda_b}(\mathrm{SO}(n_b,n_b))$ and any special repn appears in $\mathrm{Coh}_{\Lambda_g}(\mathrm{Sp}_{2n_g}(\BR))$ gives a special repn in $\mathrm{Coh}_{\Lambda}(\mathrm{Sp_{2n}}(\BR))$.
 
 \begin{itemize}
-  \item \textcolor{AttentionColor}{Problem: How to compute the $j$-induction explicitly?}
-  \item \textcolor{AttentionColor}{Problem: the special repn of each cell always appears?}
+  \item \openquestion{Problem: How to compute the $j$-induction explicitly?}
+  \item \openquestion{Problem: the special repn of each cell always appears?}
 \end{itemize}
 
 
@@ -966,8 +987,8 @@ We need to show that the $j$-induction of any special repn appears in $\mathrm{C
 \begin{itemize}
   \item Use counting methods to prove that all annihilator variety of irreducible $(\fg,K)$-modules of orthogonal or special groups are special.
   \item Use counting methods to prove that all annihilator variety of irreducible genuine $(\fg,K)$-modules of metaplectic groups are metaplectic special.
-  \item By computation, prove that in the case of metaplectic groups, metaplectic quasi-admissible equivalent to metaplectic special. \textcolor{AttentionColor}{solved! Yes}
-  \item Prove that for metaplectic groups, whittaker support of irreducible genuine $(\fg,K)$-modules are metaplectic quasi-admissible. \textcolor{AttentionColor}{Use arguments of Gomez-Gourevitch-Sahi}
+  \item By computation, prove that in the case of metaplectic groups, metaplectic quasi-admissible equivalent to metaplectic special. \statusnote{solved! Yes}
+  \item Prove that for metaplectic groups, whittaker support of irreducible genuine $(\fg,K)$-modules are metaplectic quasi-admissible. \statusnote{Use arguments of Gomez-Gourevitch-Sahi}
   \item Prove associated cycles coincides with whittaker cycles for irreducible $(\fg,K)$-modules of real classical groups and metaplectic groups.
 \end{itemize}
 
@@ -991,7 +1012,4 @@ For each element $w \in W$, there are two processes to get a nilpotent orbit $\C
 
 The question is: are these two nilpotent orbits the same? i.e. $\CO(\sigma_{\mathcal{C}^{LR}_w}) = \CO_{P(w),s}$?
 
-\textcolor{AttentionColor}{answer: Yes!} \cite{BV82}
-
-
-
+\statusnote{answer: Yes!} \cite{BV82}

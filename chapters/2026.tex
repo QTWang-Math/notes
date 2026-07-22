@@ -1,3 +1,5 @@
+% !TEX root = ../current.tex
+
 \notesection{2026-03-03}{Linear Double Covers and Genuine Representations}
 
 $G$ is a linear real reductive group, $\widetilde{G}$ is a double cover of $G$.
@@ -400,7 +402,19 @@ Now let $A = \mathbb{C}[[x_1, \dots, x_{2n}]]$ so that there is a unique maximal
 \begin{proof}
   Choose lift of $y_i$ in $\CA_{\hbar}$, denoted by $\widehat{y_i}^{(1)}$. Then $\frac{1}{\hbar}\left[\widehat{y_i}^{(1)}, \widehat{y_j}^{(1)}\right] \equiv \{y_i, y_j\} = \omega_{ij} \mod \hbar$, so we can write $\frac{1}{\hbar}\left[\widehat{y_i}^{(1)}, \widehat{y_j}^{(1)}\right] = \omega_{ij} + \hbar R_{ij}^{(1)}$ for some $R_{ij}^{(1)} \in \CA_{\hbar}$ and $\omega_{ij} \in \BC$.
 
-  Again, use induction, suppose that we have found $\widehat{y}_i^{(n)}$ lift $y_i$ such that $\frac{1}{\hbar}\left[\widehat{y}_i^{(n)}, \widehat{y}_j^{(n)}\right] = \omega_{ij} + \hbar^{n} R_{ij}^{(n)}$ for some $R_{ij}^{(n)} \in \CA_{\hbar}$, we want to find $\delta_i^{(n)} \in \hbar^{n+1} \CA_{\hbar}$ such that $\frac{1}{\hbar}\left[\widehat{y}_i^{(n)} + \delta_i^{(n)}, \widehat{y}_j^{(n)} + \delta_j^{(n)}\right] = \omega_{ij} + \hbar^{n+1} R_{ij}^{(n+1)}$.
+  Again, use induction. Suppose that we have found a lift $\widehat{y}_i^{(n)}$ of $y_i$ such that
+  \[
+    \frac{1}{\hbar}\left[\widehat{y}_i^{(n)}, \widehat{y}_j^{(n)}\right]
+      = \omega_{ij} + \hbar^{n} R_{ij}^{(n)}
+  \]
+  for some $R_{ij}^{(n)} \in \CA_{\hbar}$. We want to find
+  $\delta_i^{(n)} \in \hbar^{n+1} \CA_{\hbar}$ such that
+  \[
+    \frac{1}{\hbar}
+    \left[\widehat{y}_i^{(n)} + \delta_i^{(n)},
+          \widehat{y}_j^{(n)} + \delta_j^{(n)}\right]
+      = \omega_{ij} + \hbar^{n+1} R_{ij}^{(n+1)}.
+  \]
 
   This is equivalent to solving the following equation for $\delta_i^{(n)}$:
   \[\frac{1}{\hbar}\left[\widehat{y}_i^{(n)}, \delta_j^{(n)}\right] - \frac{1}{\hbar}\left[\widehat{y}_j^{(n)}, \delta_i^{(n)}\right] = -\hbar^{n} R_{ij}^{(n)} \mod \hbar^{n+1}.\]
@@ -835,7 +849,7 @@ All the things are on the classical side, we will discuss the quantum side later
 \end{prop}
 
 \begin{proof}
-  For this, we need the previous proposition and some deep results by Namikawa on characterisation of symplectic singularity.
+  This follows from the previous proposition and Namikawa's results on symplectic singularities.
 \end{proof}
 
 
@@ -932,7 +946,7 @@ Here $\fz = (\fl/[\fl,\fl])^*$
 
 }
 
-\begin{thm}[Universal Poisson deformation][Namikawa's theorem]
+\begin{thm}[Namikawa: Universal Poisson Deformation]
   Set $\fh_X := H^2(Y^{reg};\BC)$ for a $\BQ$-factorial terminalization of $X$, then there exist a reflection group $W_X  \subseteq \GL(\fh_X)$ and a graded Poisson deformation $X_{\fh_X / W_X}$ with the following universal property:
 
   For any graded Poisson deformation $X_{\Spec(B)}$ of $X$ there exist a unique graded algebra homomorphism $\BC[\fh_X]^{W_X} \to B$ such that there is an isomorphism of graded Poisson deformations

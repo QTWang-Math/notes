@@ -21,17 +21,18 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Check out repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
       - name: Compile complete notes
         uses: xu-cheng/latex-action@v4
         with:
           root_file: main.tex
+          texlive_version: 2025
           latexmk_use_xelatex: true
           args: -file-line-error -halt-on-error -interaction=nonstopmode -outdir=temp
 
       - name: Upload PDF
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v6
         with:
           name: notes-pdf
           path: temp/main.pdf
@@ -44,10 +45,10 @@ jobs:
       contents: write
     steps:
       - name: Check out repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
       - name: Download PDF
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v6
         with:
           name: notes-pdf
           path: temp

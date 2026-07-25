@@ -25,5 +25,7 @@
     "latex-workshop.latex.outDir": "%DIR%/temp",
     "latex-workshop.latex.recipe.default": "XeLaTeX",
     "latex-workshop.latex.autoBuild.run": "onFileChange",
-    "latex-workshop.synctex.afterBuild.enabled": true
+    "latex-workshop.synctex.afterBuild.enabled": true,
+    // Fall back to LaTeX Workshop's parser, which can locate nearby typeset lines.
+    "latex-workshop.synctex.path": "/usr/bin/false"
 }

@@ -1250,3 +1250,48 @@ $\widetilde{\BO}$ be a nilpotent cover of a complex semisimple Lie group $G$, $\
 \begin{thm}
   If $\widetilde{\BO_L}$ is birationally rigid, then $H^2(Y^{reg},\BC) = \mathrm{Pic}(Y) \otimes_{\BZ} \BC = \fz(\fl)$.
 \end{thm}
+
+
+\notesection{2026-07-25}{Formal quantization and Star product}
+
+For a Poisson variety $X$ a formal quantization of $X$ is a pair $(\mathcal{D}_{\hbar},\theta)$ where $\mathcal{D}_{\hbar}$ is sheaf of $\BC[[h]]$-algebra flat over $\BC[[\hbar]]$ and complete in $\hbar$-adic topology, and $\theta: \mathcal{D}_{\hbar}/(\hbar) \xrightarrow{\sim} \CO_X$ is a Poisson isomorphism. Isomorphism classes of formal quantizations of $X$ is denoted by $Quant(X)$
+
+When $X = \Spec(A)$ is affine, use micro-localzation, we can identify the formal quantization of $X$ with a formal quantization of $A$.
+
+A star product on $A$ is a $\BC[[\hbar]]$ bi-linear map
+\[
+  \star: A[[\hbar]] \times A[[\hbar]] \to A[[\hbar]], \quad f \star g = \sum_{i=0}^{\infty} D_i(f,g) \hbar^i,
+\]  
+where $D_i: A \times A \to A$ are bi-differential operators, such that
+\begin{itemize}
+  \item $D_0(f,g) = fg$;
+  \item $D_1(f,g) - D_1(g,f) = \{f,g\}$;
+  \item $\star$ is associative, $1$ is the unit.
+\end{itemize}
+
+Two star products $\star$ and $\star'$ are called equivalent if there is a $\BC[[\hbar]]$-linear automorphism $T: A[[\hbar]] \to A[[\hbar]]$,
+\[
+  T = \id + \sum_{i=0}^{\infty} T_i \hbar^i, \quad T_i: A \to A,
+\]
+such that $T(f \star g) = T(f) \star' T(g)$.
+
+\begin{thm}
+  There is a bijection:
+  \[
+    Quant(X) \xrightarrow{\sim} \{\text{Star products on } A\}/\text{equivalence}.
+  \]
+\end{thm}
+
+The proof is split into several steps.
+
+\begin{proof}
+  \begin{itemize}
+    \item[Step 1:] For any formal quantization $A_{\hbar}$ of $A$, there exist a $\BC[[\hbar]]$-linear map $\Phi: A[[\hbar]] \xrightarrow{\sim} A_{\hbar} $.\\
+    By definition of formal quantization, we have an isomorphism $\theta: A_{\hbar}/(\hbar) \simeq A$. We can choose a $\BC$-linear section $s: A \to A_{\hbar}$ of $\theta$, then extend it to a $\BC[[\hbar]]$-linear map $\Phi: A[[\hbar]] \to A_{\hbar}, \quad \sum a_i \hbar^i \mapsto \sum s(a_i) \hbar^i$. This map is surjective, for any $a \in A_{\hbar}$, let $a_0 = \theta(a) \in A $, then $a - s(a_0) \in \hbar A_{\hbar}$, continue this process, we can find $a_i$ for each $i \in \BN$ such that $a = \sum s(a_i)\hbar^i$. This map is injective, if $\sum s(a_i) \hbar^i = 0$, then $s(a_0) \in \hbar A_{\hbar}$, so $a_0 = \theta \circ s(a_0) = 0$, continue this process, we can find $a_i = 0$ for each $i \in \BN$.\\
+    So we can transport the product on $A_{\hbar}$ to $A[[\hbar]]$, which satisfies the conditions of star product without the bi-differential condition. 
+    The choice of $\Phi$ is not unique, if we choose another $\Phi'$, then $\Phi' \circ \Phi^{-1}$ is a $\BC[[\hbar]]$-linear automorphism of $A[[\hbar]]$, which is of the form $T = \id + \sum_{i=0}^{\infty} T_i \hbar^i$, and $T$ gives an equivalence between the two transported products.
+
+    \item[Step 2:]  There exist a choice of $\Phi$ such that the transported product on $A[[\hbar]]$ satisfies the bi-differential condition.\\
+    We need the fact that $HH^i(A) \simeq HH^i_{\mathrm{diff}}(A)$.
+  \end{itemize}
+\end{proof}

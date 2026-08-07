@@ -29,9 +29,9 @@ And
 \end{align*} 
 
 Similarly
-$$P^* = \bigset{\lambda \in \fh^*}{\exp(2 \pi \sqrt{-1} \lambda) \in Z(\check{G})}. $$
+\[P^* = \bigset{\lambda \in \fh^*}{\exp(2 \pi \sqrt{-1} \lambda) \in Z(\check{G})}. \]
 
-$$X^*(H) = \bigset{\lambda \in \fh^*}{\exp(2 \ pi \sqrt{-1} \lambda ) = 1}.$$
+\[X^*(H) = \bigset{\lambda \in \fh^*}{\exp(2 \pi \sqrt{-1} \lambda ) = 1}.\]
 
 
 Define $e: \fh \to H$ by $e(X) = \exp(2\pi\sqrt{-1}X)$, then $\ker(e) = X_*(H)$.
@@ -51,15 +51,15 @@ $Z(G) \simeq P_*/X_*(H)$.
 \subsection{Pinnings of algebraic groups}
 
 \begin{thm}[see \cite{AdC09}]
-  Inner automorphism group $\mathrm{Inn(G)}$ of $G$ is equal to $\mathrm{G/Z(G)}$,
-  $\mathrm{Inn(G)}$ acts freely and transitively on the set of pinnings.
+  Inner automorphism group $\Inn(G)$ of $G$ is equal to $\mathrm{G/Z(G)}$,
+  $\Inn(G)$ acts freely and transitively on the set of pinnings.
 \end{thm}
 
 
 I know that there is an analogy in compact connected groups, and it has been proved.
 
 \begin{thm}
-  If $\RG$ is a compact connected group, then its inner automorphism group $\mathrm{Inn(G)} = \mathrm{G/Z(G)}$
+  If $\RG$ is a compact connected group, then its inner automorphism group $\Inn(G) = \mathrm{G/Z(G)}$
   acts freely and transitively on the set of pinnings.
   (where pinnings for it is a bit different from the complex case, that $(T, B_\BC,\mathcal{X})$
   is a pinning if $T$ is a maximal torus, $B_\BC$ a Borel of $G_\BC$ containing $T$, $\mathcal{X}$
@@ -67,7 +67,7 @@ I know that there is an analogy in compact connected groups, and it has been pro
 \end{thm}
 
 \begin{proof}
-  Here's proof from mathoverflow \href{https://mathoverflow.net/questions/377981/classification-of-not-necessarily-connected-compact-lie-groups/378141#378141}{Lspise's answer}:
+  Here's proof from mathoverflow \href{https://mathoverflow.net/questions/377981/classification-of-not-necessarily-connected-compact-lie-groups/378141#378141}{LSpice's answer}:
   \begin{figure}[H]
     \centering
     \includegraphics[width=1.0\linewidth]{figures/pinnings-structure-theory.png}
@@ -102,23 +102,23 @@ for me to do calculations in the case of real classical groups.
 
 
 Fix a connected reductive complex Lie group $G_\BC$, together with a Lie group homomorphism
-$\iota: G \to  G_\BC$ such that its differential $\mathrm{d\iota} : \mathrm{Lie(G)} \to \mathrm{Lie(G_\BC)}$
+$\iota: G \to  G_\BC$ such that its differential $\mathrm{d\iota} : \Lie(G) \to \Lie(G_\BC)$
 has the following two properties:
 \begin{enumerate}
-  \item the kernel of $\mathrm{d\iota}$ is contained in the center of $\mathrm{Lie(G)}$;
-  \item the image of $\mathrm{d\iota}$ is a real form of $\mathrm{Lie(G)}$.
+  \item the kernel of $\mathrm{d\iota}$ is contained in the center of $\Lie(G)$;
+  \item the image of $\mathrm{d\iota}$ is a real form of $\Lie(G)$.
 \end{enumerate}
 
 The analytical weight lattice of $\mathrm{G_\BC}$ is identified with a subgroup of $^{a}\fh^*$ via $\mathrm{d\iota}$.
 We write $Q_\iota \subset \  ^{a}\fh^*$ for this subgroup. Denote root lattice by $Q_\fg$,
-weight lattice by $Q^\fg$, then $$Q_\fg \subset Q_\iota \subset Q^\fg.$$
+weight lattice by $Q^\fg$, then \[Q_\fg \subset Q_\iota \subset Q^\fg.\]
 They are all $W$ stable subgroups.
 And we have some categories:
 \begin{enumerate}
-  \item $\mathrm{Rep}(\fg,Q_\iota)$ the category of all finite-dimensional representations of $\fg$ whose weight are contained in $Q_\fg$, \uncertain{it can be identified with $\mathrm{Rep(Lie(G_\BC),Q_\iota)}$ and hence $\mathrm{Rep_{finite}(G_\BC)}$};
-  \item $\mathrm{Rep(G)}$ the category of all Casselman-Wallach representations of $G$, and its full subcategories $\mathrm{Rep_\mu(G)}$, $\mathrm{Rep_S(G)}$.
+  \item $\Rep(\fg,Q_\iota)$ the category of all finite-dimensional representations of $\fg$ whose weight are contained in $Q_\fg$, \uncertain{it can be identified with $\Rep(Lie(G_\BC),Q_\iota)$ and hence $\Rep_{finite}(G_\BC)$};
+  \item $\Rep(G)$ the category of all Casselman-Wallach representations of $G$, and its full subcategories $\Rep_\mu(G)$, $\Rep_S(G)$.
 \end{enumerate}
-To denote their Grothendieck groups, we replace $\mathrm{Rep}$ by $\mathcal{K}$.
+To denote their Grothendieck groups, we replace $\Rep$ by $\mathcal{K}$.
 
 
 Fix a $Q_\iota$-coset $\Lambda = \lambda + Q_\iota \subset \  ^{a}\fh^*$.
@@ -126,19 +126,19 @@ Fix a $Q_\iota$-coset $\Lambda = \lambda + Q_\iota \subset \  ^{a}\fh^*$.
 
 \begin{defn}[coherent family]
   A $\mathcal{K}(G)$-valued $\Lambda$ coherent family is a map
-  $$\varPhi : \Lambda \to \mathcal{K}(G)$$
+  \[\varPhi : \Lambda \to \mathcal{K}(G)\]
   satisfies the following two conditions:
   \begin{enumerate}
     \item for all $\nu \in \Lambda$, $\varPhi(\nu) \in \mathcal{K}_{\nu}(G)$;
     \item for all representations $F \mathrm{ \in Rep}(\fg,Q_\iota)$ and all $\nu \in \Lambda$,
-          $$F \cdot (\varPhi(\nu)) = \sum\limits_{\mu} \varPhi(\nu + \mu),$$
+          \[F \cdot (\varPhi(\nu)) = \sum\limits_{\mu} \varPhi(\nu + \mu),\]
           where $\mu$ runs over all weights of $\mathrm{F}$, counted with multiplicities.
   \end{enumerate}
-  The set of coherent families is denoted by $\mathrm{Coh}_\Lambda(\mathcal{K}(G))$
+  The set of coherent families is denoted by $\Coh_\Lambda(\mathcal{K}(G))$
 \end{defn}
 We have the integral Weyl group $W_{\Lambda} = \set{w \in W}{w\lambda - \lambda \in Q_\iota}$
-there is a representation of $W_\Lambda$ on $\mathrm{Coh}_\Lambda(\mathcal{K}(G))$ by
-$$(w \cdot \varPhi)(\nu) = \varPhi (w^{-1}\nu).$$
+there is a representation of $W_\Lambda$ on $\Coh_\Lambda(\mathcal{K}(G))$ by
+\[(w \cdot \varPhi)(\nu) = \varPhi (w^{-1}\nu).\]
 This is called a coherent continuation representation.
 
 
@@ -149,7 +149,7 @@ This is called a coherent continuation representation.
 \subsection{Review of regular parameter}
 
 Following yesterday's discussion of coherent continuation representations, we define two basis
-for it, use Langland classification, follow \cite{BMSZ22}.
+for it, use Langlands classification, follow \cite{BMSZ22}.
 
 Suppose $H$ is a Cartan subgroup of $G$, by which we mean a subgroup that is the centralizer of
 a Cartan subalgebra of $\Lie(G)$ \clarification{(In the case of linear groups, it's just a
@@ -165,23 +165,23 @@ called compact if $\fg_{\alpha}$ and $\fg_{-\alpha}$ is contained in the complex
 There are two important facts about the representation theory of $H$:
 \begin{enumerate}
   \item Every Casselman-Wallach representation of $H$ is finite-dimensional, it follows directly from that $H$ is an extension of an abelian group and a finite group;
-  \item For every $\Gamma \in \mathrm{Irr(H)}$ differential of $\Gamma$ is a direct sum of one-dimensional representations attached to a unique $\mathrm{d\Gamma \in \fh^*}$.
+  \item For every $\Gamma \in \Irr(H)$ differential of $\Gamma$ is a direct sum of one-dimensional representations attached to a unique $\mathrm{d\Gamma \in \fh^*}$.
         (it is true because $H$ is in Harish-Chandra's class).
 \end{enumerate}
 
 
 For every Borel subalgebra $\fb$ of $\fg$ containing $\fh$, write 
-$$\xi_{\fb}: \fh \to \ ^{a}\fh,$$
+\[\xi_{\fb}: \fh \to \ ^{a}\fh,\]
 for the linear isomorphism attached to $\fb$ defined by 
-$$\fh \hookrightarrow  \fb \to \fb / \sqbra{\fb,\fb} = \ {^{a}\fh}.$$
+\[\fh \hookrightarrow  \fb \to \fb / \sqbra{\fb,\fb} = \ {^{a}\fh}.\]
 The transpose inverse of this map is still denoted by $\xi_{\fb}: \ ^{a}\fh^* \to \fh^*$.\\
 
 
-Write $$W\bra{^{a}\fh^*,\fh^*} :=  \set{\xi_{\fb}: \ ^{a}\fh^* \to \fh^*}{\fb \ \textrm{is a Borel subalgebra containing} \ \fh}.$$
+Write \[W\bra{^{a}\fh^*,\fh^*} :=  \set{\xi_{\fb}: \ ^{a}\fh^* \to \fh^*}{\fb \ \textrm{is a Borel subalgebra containing} \ \fh}.\]
 
 \begin{defn}
   For every element $\xi \in W\bra{^{a}\fh^*,\fh^*}$, put
-  $$\delta(\xi) := \frac{1}{2} \cdot \sum\limits_{\alpha  \ \textrm{is an imaginary root in} \ \xi\Delta^+}\alpha - \sum\limits_{\beta \ \textrm{is an compact imaginary root in} \ \xi\Delta^+}\beta \in \fh^* .$$
+  \[\delta(\xi) := \frac{1}{2} \cdot \sum\limits_{\alpha  \ \textrm{is an imaginary root in} \ \xi\Delta^+}\alpha - \sum\limits_{\beta \ \textrm{is an compact imaginary root in} \ \xi\Delta^+}\beta \in \fh^* .\]
   Write $\mathcal{P} _{\Lambda}(G)$ for the set of all triples $\gamma = (H,\xi,\Gamma)$, where
   $H$ is a Cartan subgroup of $G$, $\xi \in W\bra{^{a}\fh^*,\fh^*}$, and
   \defmap{\Gamma}{\Lambda}{\Irr(H)}{\nu}{\Gamma_{\nu}}
@@ -198,16 +198,16 @@ Write $$W\bra{^{a}\fh^*,\fh^*} :=  \set{\xi_{\fb}: \ ^{a}\fh^* \to \fh^*}{\fb \ 
 
 \subsection{Outer automorphism of algebraic groups}
 
-\begin{lem}[a simple discover of abstract algebra]
+\begin{lem}[a simple discovery of abstract algebra]
   $G$ an abstract group, $H$ a normal subgroup of $G$, if $G$ acts
   transitively on a set $X$ such that the restriction of this action
   to $H$ is free and transitive, then the short exact sequence of groups
-  $$\shortexact{1}{H}{G}{G/H}{1}$$
+  \[\shortexact{1}{H}{G}{G/H}{1}\]
 \end{lem}
 
 \begin{proof}
   Actually choose an element $x \in X$, we have
-  $$ G \simeq \mathrm{Stab}_{G}(x) \ltimes H.$$
+  \[ G \simeq \Stab_{G}(x) \ltimes H.\]
 \end{proof}
 
 
@@ -215,12 +215,12 @@ Using this lemma, we can see that for a complex connected reductive
 algebraic group $G$, $\Aut(G)$ acts on the set of pinnings transitively,
 with its normal subgroup the $\Inn(G)$ acts freely and transitively,
 so every pinning gives us a split of the short exact sequence
-$$\shortexact{1}{\Inn(G)}{\Aut(G)}{\Out(G)}{1}.$$
+\[\shortexact{1}{\Inn(G)}{\Aut(G)}{\Out(G)}{1}.\]
 
 
 Some facts about split connected reductive algebraic groups over arbitrary field $k$:
 \begin{enumerate}
-  \item $\{ \textrm{split connected reductive algebraic groups} \}/_\backsim \ = \{ \textrm{root datums}\} /_\backsim $;
+  \item $\{ \textrm{split connected reductive algebraic groups} \}/_\backsim \ = \{ \textrm{root data}\} /_\backsim $;
   \item For any two automorphisms of $G$, if they induce the same automorphism of root datum, then they differ by an inner automorphism;
   \item Fix a pinning, we get an isomorphism $\Out(G) \simeq \Aut(D_b)$.
 \end{enumerate}

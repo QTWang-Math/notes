@@ -24,7 +24,7 @@ M{\oe}glin-Waldspurger \cite{MW87} proved that $\mathrm{WF}(\pi)=\mathrm{WS}(\pi
       \[\mathrm{WF}(\pi)=\mathrm{WS}(\pi).\]
 \end{conj}
 
-Take a nilpotent orbit $\mathcal{O} \subseteq \mathfrak{g}$ (or $\mathfrak{sl_2}$-triple $\gamma = \{Y,H,X\}$ in $\mathfrak{g}$). $\mathfrak{g}/\mathfrak{g}^{Y}$ is a symplectic space with symplectic form $\left \langle -,- \right \rangle := B(Y,[-,-])$. Set $G^{Y} := \mathrm{Stab}_{G}(Y)$, there is a natural homomorphism $G^{Y} \to \mathrm{Sp}(\mathfrak{g}/\mathfrak{g}^{Y},\left\langle -,- \right\rangle)$. Let $\widetilde{G^{Y}}$ be the double cover of $G^{Y}$ induced by the metaplectic double cover of $\mathrm{Sp}(\mathfrak{g}/\mathfrak{g}^{Y},\left\langle -,- \right\rangle)$.
+Take a nilpotent orbit $\mathcal{O} \subseteq \mathfrak{g}$ (or $\mathfrak{sl_2}$-triple $\gamma = \{Y,H,X\}$ in $\mathfrak{g}$). $\mathfrak{g}/\mathfrak{g}^{Y}$ is a symplectic space with symplectic form $\left \langle -,- \right \rangle := B(Y,[-,-])$. Set $G^{Y} := \Stab_{G}(Y)$, there is a natural homomorphism $G^{Y} \to \Sp(\mathfrak{g}/\mathfrak{g}^{Y},\left\langle -,- \right\rangle)$. Let $\widetilde{G^{Y}}$ be the double cover of $G^{Y}$ induced by the metaplectic double cover of $\Sp(\mathfrak{g}/\mathfrak{g}^{Y},\left\langle -,- \right\rangle)$.
 \begin{defn}
    The nilpotent $\mathcal{O}$ is called admissible if the double cover $\widetilde{G^Y}$ is split over the identity component of $(G^Y)_0$. It is called quasi-admissible if $\widetilde{G^Y}$ has a finite-dimensional genuine representation.
 \end{defn}
@@ -59,7 +59,7 @@ On the other hand, Barbash-Vogan \cite{BV80} proved that under coherent continua
 \]
 where $p(\lambda)$ is the goldie rank polynomial, $\lambda$ is dominant. We expect some similar result for the multiplicity of the generalized Whittaker model.
 
-\textbf{Problem 3}: For a fixed nilpotent orbit $\mathcal{O}$, does there exist a constant $c_{\mathcal{O}}$ such that $\mathrm{dim} \mathrm{Wh}_{\mathcal{O}}(\pi(\lambda)) = c_{\mathcal{O}} \cdot p(\lambda)$?
+\textbf{Problem 3}: For a fixed nilpotent orbit $\mathcal{O}$, does there exist a constant $c_{\mathcal{O}}$ such that $\dim \mathrm{Wh}_{\mathcal{O}}(\pi(\lambda)) = c_{\mathcal{O}} \cdot p(\lambda)$?
 
 
 
@@ -71,7 +71,7 @@ Orbit method for nilpotent Lie groups.
 
 Let $G$ be a connected, simply connected nilpotent Lie group with Lie algebra $\fg$. Let $\fg^*$ be the dual space of $\fg$.
 
-We have fourier transform:
+We have Fourier transform:
 \[
     \mathcal{F} : \mathcal{S}(\fg)\dd X \to \mathcal{S}(\sqrt{-1}\fg^*), \quad f\dd X \mapsto \widehat{f\dd X}, \quad \widehat{f\dd X}(l) = \int_{\fg} f(X) e^{\langle l,X\rangle} \dd X.
 \]
@@ -109,7 +109,7 @@ Kirillov's philosophy works well for nilpotent Lie groups, but for more general 
 
 
 Now assume $G$ is a real reductive group, with Lie algebra $\fg_0$. For any irreducible Casselman-Wallach representation $\pi$ of $G$, we still have its generalized function character $\Theta_\pi \in C^{-\infty}(G)$, and hence a tempered generalized function $\theta_\pi$ on $\fg$. Here $\theta_{\pi} \in C^{-\infty}(\fg_0)$ is defined as follows:
-\[\theta_\pi(f\mathrm{dX}) = \Theta_\pi(\mathrm{exp}_{*}(\sqrt{\mathrm{det(exp)}}f\mathrm{dX})), \quad f\mathrm{dX} \in C_{c}^{\infty}(\fg_0)\mathrm{dX}.\]
+\[\theta_\pi(f\mathrm{dX}) = \Theta_\pi(\exp_{*}(\sqrt{\mathrm{det(exp)}}f\mathrm{dX})), \quad f\mathrm{dX} \in C_{c}^{\infty}(\fg_0)\mathrm{dX}.\]
 
 The generalized function $\Theta_{\pi}$ has the following properties:
 \begin{itemize}
@@ -135,7 +135,7 @@ For an arbitrary generalized function $\Theta \in C^{-\infty}(M)$, we can define
 $\mathrm{WF}(\Theta)$ is a closed conic subset of $\sqrt{-1}T^*M$ (singular direction of $\Theta$).
 
 In particular, we can define the wavefront set $\mathrm{WF}(\pi)$ of an irreducible Casselman-Wallach representation $\pi$ of $G$ as $\mathrm{WF}(\Theta_{\pi}) \cap (\sqrt{-1}T^*_1(G))$, it is a closed conic $G$-invariant subset of $\sqrt{-1}\fg_0^*$. The GK-dimension of $\pi$ is defined as
-\[\mathrm{Dim}(\pi) = \frac{1}{2}\mathrm{dim}(\mathrm{WF}(\pi)).\]
+\[\mathrm{Dim}(\pi) = \frac{1}{2}\dim(\mathrm{WF}(\pi)).\]
 
 $\theta_{\pi}$ is a real analytical function on $\fg_0^{\mathrm{rs}}$, and
 \[ \theta^{*}_{\pi}(X) :=  \lim_{t \to 0}t^{\mathrm{Dim}(\pi)}\theta_{\pi}(tX)\]
@@ -208,7 +208,7 @@ Thus,
 Let $G$ be a semisimple simply connected complex algebraic group. Define Steinberg variety:
 
 \[
-    Z = \set{(x,B',B'') \in \mathcal{N} \times \mathcal{B} \times \mathcal{B}}{x \in \mathrm{Lie}(B') \cap \mathrm{Lie}(B'')} (= \set{(x,B',B'') \in \mathcal{N} \times \mathcal{B} \times \mathcal{B}}{}).
+    Z = \set{(x,B',B'') \in \mathcal{N} \times \mathcal{B} \times \mathcal{B}}{x \in \Lie(B') \cap \Lie(B'')} (= \set{(x,B',B'') \in \mathcal{N} \times \mathcal{B} \times \mathcal{B}}{}).
 \]
 ($= \set{(x,B',B'') \in \mathcal{N} \times \mathcal{B} \times \mathcal{B}}{x \in \fn'^{\perp} \cap \fn''^{\perp}}$ more naturally.)
 
@@ -221,10 +221,10 @@ We also have the moment map:
 \[\mu : Z \to \CN, \quad (x,B',B'') \mapsto x.\]
 
 By taking characteristic cycles, we get a map from the (complex) Grothendieck group of $G$-equivariant holonomic $D$-modules on $\mathcal{B} \times \mathcal{B}$ to the top Borel-Moore homology of $Z$:
-\[\mathrm{CC} : K_0(\mathrm{Mod}^{\mathrm{Coh}}_{\Delta G}(\mathcal{D}_{\mathcal{B} \times \mathcal{B}})) \to H_{\mathrm{top}}^{\mathrm{BM}}(Z,\BC).\]
+\[\mathrm{CC} : K_0(\mathrm{Mod}^{\Coh}_{\Delta G}(\mathcal{D}_{\mathcal{B} \times \mathcal{B}})) \to H_{\mathrm{top}}^{\mathrm{BM}}(Z,\BC).\]
 We also have isomorphisms:
 \[
-  h: K_0(\mathrm{Mod}^{\mathrm{Coh}}_{\Delta G}(\mathcal{D}_{\mathcal{B} \times \mathcal{B}})) \to \BC[W], \quad \CM_w \mapsto w, \quad \CL_w \mapsto a(w)
+  h: K_0(\mathrm{Mod}^{\Coh}_{\Delta G}(\mathcal{D}_{\mathcal{B} \times \mathcal{B}})) \to \BC[W], \quad \CM_w \mapsto w, \quad \CL_w \mapsto a(w)
 \]
 
 By Kazhdan-Lusztig, we have:
@@ -232,9 +232,9 @@ By Kazhdan-Lusztig, we have:
   a(w) = \sum_{y \leq w} (-1)^{l(y)+l(w)}P_{y,w}(1) y.
 \]
 
-There is a convolution product on $K_0(\mathrm{Mod}^{\mathrm{Coh}}_{\Delta G}(\mathcal{D}_{\mathcal{B} \times \mathcal{B}}))$ which makes $h$ an isomorphism of algebras.
+There is a convolution product on $K_0(\mathrm{Mod}^{\Coh}_{\Delta G}(\mathcal{D}_{\mathcal{B} \times \mathcal{B}}))$ which makes $h$ an isomorphism of algebras.
 
-On $$H_{\mathrm{top}}^{\mathrm{BM}}(Z,\BC) \simeq \bigoplus_{w \in W} H_{\mathrm{top}}^{\mathrm{BM}}(\overline{T^*_{\mathcal{Y}_w}(\mathcal{B} \times \mathcal{B})},\BC) \simeq \bigoplus_{w \in W} \BC[\overline{T^*_{\mathcal{Y}_w}(\mathcal{B} \times \mathcal{B})}],$$
+On \[H_{\mathrm{top}}^{\mathrm{BM}}(Z,\BC) \simeq \bigoplus_{w \in W} H_{\mathrm{top}}^{\mathrm{BM}}(\overline{T^*_{\mathcal{Y}_w}(\mathcal{B} \times \mathcal{B})},\BC) \simeq \bigoplus_{w \in W} \BC[\overline{T^*_{\mathcal{Y}_w}(\mathcal{B} \times \mathcal{B})}],\]
 In the paper of Kazhdan-Lusztig \cite{KL80}, they use topological method to construct a $W \times W$ action on $H_{\mathrm{top}}^{\mathrm{BM}}(Z,\BC)$.
 
 Moreover there is a $W \times W$ module decomposition:
@@ -243,7 +243,7 @@ where $\CO$ runs over all nilpotent orbits in $\fg^*$, $Z_{\CO} = \mu^{-1}(\CO)$
 There is also an isomorphism of $W \times W$-modules:
 \[
 H^{\mathrm{BM}}_{\mathrm{top}}(Z_{\CO},\BC) \simeq (H^{\mathrm{BM}}_{\mathrm{top}}(\mathcal{B}_x,\BC) \otimes H^{\mathrm{BM}}_{\mathrm{top}}(\mathcal{B}_x,\BC))_{A_G(x)},\]
-($A_G(x)$ coinvariants) where $x \in \CO$, $\mathcal{B}_x = \set{B' \in \mathcal{B}}{x \in \mathrm{Lie}(B')}$ (the Springer fiber), $A_G(x) = \mathrm{Stab}_G(x)/\mathrm{Stab}_G(x)^0$.
+($A_G(x)$ coinvariants) where $x \in \CO$, $\mathcal{B}_x = \set{B' \in \mathcal{B}}{x \in \Lie(B')}$ (the Springer fiber), $A_G(x) = \Stab_G(x)/\Stab_G(x)^0$.
 
 By classical Springer theory, $H^{\mathrm{BM}}_{\mathrm{top}}(\mathcal{B}_x,\BC)$ is a representation of $W \times A_G(x)$, and we have the following decomposition:
 \[H^{\mathrm{BM}}_{\mathrm{top}}(\mathcal{B}_x,\BC) \simeq \bigoplus_{\rho \in \widehat{A_G(x)}} \tau(x,\rho) \otimes \rho.\]
@@ -268,7 +268,7 @@ For any $w \in W$, there is a unique nilpotent orbit $\mathrm{St}(w)$ such that 
 
 \begin{thm}(Main theorem of \cite{KT84}) The map
 \[
-\mathrm{CC} : K_0(\mathrm{Mod}^{\mathrm{Coh}}_{\Delta G}(\mathcal{D}_{\mathcal{B} \times \mathcal{B}})) \to H_{\mathrm{top}}^{\mathrm{BM}}(Z,\BC),
+\mathrm{CC} : K_0(\mathrm{Mod}^{\Coh}_{\Delta G}(\mathcal{D}_{\mathcal{B} \times \mathcal{B}})) \to H_{\mathrm{top}}^{\mathrm{BM}}(Z,\BC),
 \]
 is an isomorphism and $W \times W$-equivariant.
 \end{thm}
@@ -279,7 +279,7 @@ is an isomorphism and $W \times W$-equivariant.
 Define $b(w) = h \circ \mathrm{CC}^{-1}([\overline{T^*_{\CY_w}\CB \times \CB}])$.
 Now we have three basis of $\BC[W]$:
 \[\{w\}_{w \in W}, \quad \{a(w)\}_{w \in W}, \quad \{b(w)\}_{w \in W}.\]
-It was conjectured by Kashiwara and Tanisaki that: $a(w) = b(w)$ when $G = \SL_n(\BC)$ which means the characteristic cycle of $\CL_w$ is irreducible, but unfortunately it is not true. Conterexample exists when $G = \SL_8(\BC)$, where Kashwara-Saito singularities appears in some Schubert varieties.
+It was conjectured by Kashiwara and Tanisaki that: $a(w) = b(w)$ when $G = \SL_n(\BC)$ which means the characteristic cycle of $\CL_w$ is irreducible, but unfortunately it is not true. Counterexample exists when $G = \SL_8(\BC)$, where Kashiwara-Saito singularities appears in some Schubert varieties.
 
 
 
@@ -301,7 +301,7 @@ Recall that we have the following diagram:
 
 In this diagram $p_{\mathrm{rs}}$ is a $W$-torsor. So we have a natural $W$-action on $p_{\mathrm{rs},*}\underline{\BQ}_{\widetilde{\fg^{\mathrm{rs}}}}$ and hence on $\mathrm{IC}(\fg^{\mathrm{rs}},\CL)$, where $\CL = (p_{\mathrm{rs}})_*\underline{\BQ}_{\widetilde{\fg^{\mathrm{rs}}}}$. There is a canonical isomorphism of perverse sheaves $\mathrm{IC}(\fg^{\mathrm{rs}},\CL) \simeq \BR p_{*}\underline{\BQ}_{\widetilde{\fg}}[\dim(\fg)]$, so there is a natural $W$-action on $\BR p_{*}\underline{\BQ}_{\widetilde{\fg}}$. By proper base change, we have
 \[
-  \BR p_{\CN,*}\underline{\BQ}_{\widetilde{\CN}} \simeq \BR p_{*}\underline{\BQ}_{\widetilde{\fg}})|_{\CN}. \quad  \statusnote{(\mathrm{Spr} = \BR p_{\CN,*}\underline{\BQ}_{\widetilde{\CN}}[\dim \CN] \ called \ The \ Springer \ sheaf)}
+  \BR p_{\CN,*}\underline{\BQ}_{\widetilde{\CN}} \simeq \BR p_{*}\underline{\BQ}_{\widetilde{\fg}})|_{\CN}. \quad  \statusnote{(\mathrm{Spr} = \BR p_{\CN,*}\underline{\BQ}_{\widetilde{\CN}}[\dim \CN]  \text{called the Springer sheaf})}
 \]
 So there is a natural $W$-action on $\BR p_{\CN,*}\underline{\BQ}_{\widetilde{\CN}}$ (actually $\End_{\mathrm{Perv(\CN)}}(\mathrm{Spr}) = \BQ[W]$) and hence on $H^{\bullet}_c(T^*\CB,\BQ) \simeq \BR \Gamma_c(\CN,\BR p_{\CN,*}\underline{\BQ}_{\widetilde{\CN}})$ and $H^{\bullet}_c(\CB_x,\BQ) \simeq \BR \Gamma_c(\{ x \}, \BR p_{\CN,*}\underline{\BQ}_{\widetilde{\CN}})$. (action on Springer fiber)
 
@@ -316,7 +316,7 @@ Finally, there is a $W$-action on $(H^{2d}_c(T^*_{K}\CB,\BQ))^* = \bigoplus_{\CO
 \begin{thm}[Tanisaki]
   The map:
   \[
-    \mathrm{CC}: K_0(\mathrm{Mod}^{\mathrm{Coh}}_{K}(\mathcal{D}_{\mathcal{B}})) \to (H^{2d}_c(T^*_{K}\CB,\BQ))^* = H^{\mathrm{BM}}_{2d}(T^*_{K}\CB,\BQ),
+    \mathrm{CC}: K_0(\mathrm{Mod}^{\Coh}_{K}(\mathcal{D}_{\mathcal{B}})) \to (H^{2d}_c(T^*_{K}\CB,\BQ))^* = H^{\mathrm{BM}}_{2d}(T^*_{K}\CB,\BQ),
   \]
   is surjective and $W$-equivariant.
 \end{thm}
@@ -327,9 +327,9 @@ Finally, there is a $W$-action on $(H^{2d}_c(T^*_{K}\CB,\BQ))^* = \bigoplus_{\CO
 \notesection{2025-10-09}{Holonomic Systems and Characteristic Cycles}
 
 
-$X = \mathrm{Spec}(R)$ smooth affine with coordinate $x_1,\ldots,x_n$, $M$ a finitely generated $\mathcal{D}_X$-module.
+$X = \Spec(R)$ smooth affine with coordinate $x_1,\ldots,x_n$, $M$ a finitely generated $\mathcal{D}_X$-module.
 \begin{defn}
-  $M$ is called holonomic if $\mathrm{dim}(\mathrm{Ch}(M)) = n$.
+  $M$ is called holonomic if $\dim(\mathrm{Ch}(M)) = n$.
 \end{defn}
 
 \begin{cor}
@@ -470,7 +470,7 @@ There is a same statement for p-adic groups in \cite{Nev99}.
 
 \notesection{2025-10-14}{Integrable connections and local systems}
 
-$X = \mathrm{Spec}(R)$ smooth affine with coordinate $x_1,\ldots,x_n$, $M$ is an integrable connection.
+$X = \Spec(R)$ smooth affine with coordinate $x_1,\ldots,x_n$, $M$ is an integrable connection.
 
 \begin{thm}
   $M^{an} = L \otimes_{\BC} \CO_{X^{an}}$ for some local system $L$ on $X^{an}$.
@@ -538,7 +538,7 @@ $Y$ smooth affine $/ \BC$  with coordinate $x_1,\cdots,x_n,y_1,\cdots,y_l$, $X =
 \end{proof}
 
 \begin{rk}
-  In the case of quasi-coherent sheaves, the equivalence does not hold. For example, Let $Y = \mathrm{Spec}(R)$, $X = \mathrm{Spec}(R/I) \subseteq Y$ a closed subscheme defined by ideal $I$. Then the functor:
+  In the case of quasi-coherent sheaves, the equivalence does not hold. For example, Let $Y = \Spec(R)$, $X = \Spec(R/I) \subseteq Y$ a closed subscheme defined by ideal $I$. Then the functor:
   \[i^* : \mathrm{Mod}^X_{qc}(\mathcal{O}_Y) \to \mathrm{Mod}_{qc}(\mathcal{O}_X), \quad N \mapsto R/I \otimes_R N.\]
   is not an equivalence of categories. Since if $M$ is an $R$-module, then $M/I^2M$ is supported on $X$, but it does not defined over $R/I$.
 \end{rk}
@@ -579,9 +579,9 @@ Let $\fn$ be the kernel of $\omega_{\varphi}$, and $\fn' = \fn \cap \ker(\varphi
 \[U = \exp(\fu), \quad N = \exp(\fn), \quad N' = \exp(\fn').\]
 If $\varphi \neq 0$, there is a unique irreducible representation $(\rho_{\varphi},\mathcal{S}_{\varphi})$ of $U/N'$ with central character $\chi_{\varphi} : N/N' \to \BC^{\times}$ defined by \[\chi_{\varphi}(\exp(X)) = \chi(\varphi(X)), \quad X \in \fn.\]
 Define the degenerate Whittaker model:
-\[\mathcal{W}_{S,\varphi} = \mathrm{Ind}_U^G(\rho_{\varphi}).\]
+\[\mathcal{W}_{S,\varphi} = \Ind_U^G(\rho_{\varphi}).\]
 
-If $\varphi = 0$, define $\mathcal{W}_{S,0} = \mathrm{Ind}_U^G(1_U)$.
+If $\varphi = 0$, define $\mathcal{W}_{S,0} = \Ind_U^G(1_U)$.
 
 \begin{rk}
   In the special case when $(S,\varphi)$ comes from an $\mathfrak{sl}_2$-triple $(e,h,f)$ with $S = h$ and $\varphi$ corresponding to $f$ via the Killing form, we can see that $\fn = \fg_{\geq 2}$.
@@ -599,7 +599,7 @@ Its Lie algebra is $\fp_2(\BR) = \BR \times \BR$ with bracket:
 
 \notesection{2025-10-21}{Spectral Sequences of Filtered Complexes}
 
-\textbf{Spectral Sequences of Filtrated Complexes}
+\textbf{Spectral Sequences of Filtered Complexes}
 
 $(F^{\bullet},d)$ be a filtered complex, i.e. a complex $F^{\bullet}$ with an increasing filtration of subcomplexes:
 \[\cdots \subseteq F_j^{\bullet} \subseteq F^{\bullet}_{j+1} \subseteq \cdots \subseteq F^{\bullet}.\]
@@ -685,7 +685,7 @@ We also define $E^{p,q}_k := E_{-p}^{p+q}(k).$
 
 \begin{lem}
   Let $H$ be a Lie group acting freely and properly on a smooth manifold $M$, then for any smooth manifold $T$, there is a natural isomorphism:
-  \[\mathrm{Hom}_{sm}(T,M/H) \simeq \frac{\{( P \to^\pi T,f: P \to M)|\textrm{$\pi$ a principle $H$-bundle, $f$ is $H$-equivariant}\}}{\textrm{equivalence}}.\]
+  \[\Hom_{sm}(T,M/H) \simeq \frac{\{( P \to^\pi T,f: P \to M)|\textrm{$\pi$ a principle $H$-bundle, $f$ is $H$-equivariant}\}}{\textrm{equivalence}}.\]
 \end{lem}
 
 \begin{proof}
@@ -702,7 +702,7 @@ We also define $E^{p,q}_k := E_{-p}^{p+q}(k).$
 \end{proof}
 
 \begin{rk}
-  Algebraic geometers use this to define the quotient stack $[M/H]$ even if the action is not free or proper, but $\mathrm{Hom}(T,[M/H])$ need to be a groupoid, not just a set of equivalence classes.
+  Algebraic geometers use this to define the quotient stack $[M/H]$ even if the action is not free or proper, but $\Hom(T,[M/H])$ need to be a groupoid, not just a set of equivalence classes.
 \end{rk}
 
 
@@ -864,11 +864,11 @@ $E_{\psi} \in \mathcal{N}_{\CP(\Lambda)} \cap \fs(y)$ is a regular element (belo
 
 
 \begin{thm}
-  Under the above setting, fix a unipotent Arthur parameter $\psi$ supported on $X_y(\CO,\check{G}^{\Gamma})$, let $S$ be the corresopnding $\check{G}$-orbit in $X_y(\CO,\check{G}^{\Gamma})$, $S_K$ be the corresponding $K(y)$-orbit in $\check{G}(\Lambda)_0/P(\Lambda)$, and $\mathcal{O}_K$ be the corresponding $K(y)$-orbit in $\fs(y) \cap \mathcal{N}_{\CP(\Lambda)}$.
+  Under the above setting, fix a unipotent Arthur parameter $\psi$ supported on $X_y(\CO,\check{G}^{\Gamma})$, let $S$ be the corresponding $\check{G}$-orbit in $X_y(\CO,\check{G}^{\Gamma})$, $S_K$ be the corresponding $K(y)$-orbit in $\check{G}(\Lambda)_0/P(\Lambda)$, and $\mathcal{O}_K$ be the corresponding $K(y)$-orbit in $\fs(y) \cap \mathcal{N}_{\CP(\Lambda)}$.
 
   Then there are bijections between:
   \begin{itemize}
-    \item irrducible $(\check{\fg}(\Lambda),K(y)^{alg})$-modules $M$ annihilated by $I_{\CP(\Lambda)}$ such that
+    \item irreducible $(\check{\fg}(\Lambda),K(y)^{alg})$-modules $M$ annihilated by $I_{\CP(\Lambda)}$ such that
       \[
         \overline{\mathcal{O}_K} \subseteq \mathrm{AV}(M);
       \]
@@ -894,7 +894,7 @@ $E_{\psi} \in \mathcal{N}_{\CP(\Lambda)} \cap \fs(y)$ is a regular element (belo
 \end{cor}
 
 \begin{rk}
-  \[\mathrm{Unip}_{\check{\CO}}(G/\BR) = \{ \text{irreducible representations in $\mathrm{Irr}_{\check{\CO}_{ss}}( G/\BR)$ with minimal GK-dim} \}\]
+  \[\mathrm{Unip}_{\check{\CO}}(G/\BR) = \{ \text{irreducible representations in $\Irr_{\check{\CO}_{ss}}( G/\BR)$ with minimal GK-dim} \}\]
 \end{rk}
 
 \begin{examp}
@@ -915,7 +915,7 @@ $E_{\psi} \in \mathcal{N}_{\CP(\Lambda)} \cap \fs(y)$ is a regular element (belo
 \end{itemize}
 
 
-Let $G$ be a connected reductive group over $\BC$, $\CB$ the variety of all Borel subalgebras of $\fg$, $^{a}\fh$ is the universial Cartan subalgebra. For any Borel subalgebra $\fb \in \CB$, we have a canonical isomorphism:
+Let $G$ be a connected reductive group over $\BC$, $\CB$ the variety of all Borel subalgebras of $\fg$, $^{a}\fh$ is the universal Cartan subalgebra. For any Borel subalgebra $\fb \in \CB$, we have a canonical isomorphism:
 \[\phi_{\fb} : {^{a}\fh} \simeq \fh,\]
 such that negative roots in $^{a}\fh^*$ correspond to roots in $\Delta(\fh,\fn)$.
 
@@ -937,14 +937,14 @@ Under this correspondence, $\CL_{\lambda}$ is ample if and only if $\lambda$ is 
 \subsection{compute annihilator variety}
 \[
   \begin{tikzcd}
-    \boxed{\mathrm{Prim}_{\nu}(\mathrm{U}(\fg))} \arrow[r,leftrightarrow,"1-1"] & \boxed{\text{left cells in $\mathrm{Coh}_{\nu}(\fg,\fb)$} } \arrow[r,rightarrow] & \boxed{\text{double cells in $\mathrm{Coh}_{\nu}(\fg,\fb)$}} \\
+    \boxed{\mathrm{Prim}_{\nu}(\mathrm{U}(\fg))} \arrow[r,leftrightarrow,"1-1"] & \boxed{\text{left cells in $\Coh_{\nu}(\fg,\fb)$} } \arrow[r,rightarrow] & \boxed{\text{double cells in $\Coh_{\nu}(\fg,\fb)$}} \\
     I \in \mathrm{Prim}(\mathrm{U}(\fg)) \arrow[r,mapsto] & \mathcal{C}^L_{\nu,I} \arrow[r,mapsto] & \mathcal{C}^{LR}_{\nu,I}
   \end{tikzcd}
 \]
 
-$\mathrm{span}(\CC^{LR}_{\nu,I})$ is a representation of the integral Weyl group $W(\nu)$, all irreducible constituents of $\mathrm{span}(\CC^{LR}_{\nu,I})$ lies in a single double cell, and contains a unique special representation of $W(\nu)$ $$\sigma_{\nu,I}.$$
+$\mathrm{span}(\CC^{LR}_{\nu,I})$ is a representation of the integral Weyl group $W(\nu)$, all irreducible constituents of $\mathrm{span}(\CC^{LR}_{\nu,I})$ lies in a single double cell, and contains a unique special representation of $W(\nu)$ \[\sigma_{\nu,I}.\]
 Then by results of Joseph, we have:
-$$\mathrm{AV}(I) = \CO(j_{W(\nu)}^W(\sigma_{\nu,I})).$$
+\[\mathrm{AV}(I) = \CO(j_{W(\nu)}^W(\sigma_{\nu,I})).\]
 Which means that to compute the annihilator variety of $\mathrm{L}(w\nu)$, we only need to compute the corresponding cell representation.
 
 In the case of $(\fg,K)$-modules, the method is the same:
@@ -966,13 +966,13 @@ In the case of $(\fg,K)$-modules, the method is the same:
 
 $j$-induction of parabolic subgroups preserves special representations.
 
-To proove that the annihilator variety of irreducible $(\fg,K)$-module is closure of a single special nilpotent orbit, only need to check the case when infinitesimal character has good pariety and bad pariety.
+To prove that the annihilator variety of irreducible $(\fg,K)$-module is closure of a single special nilpotent orbit, only need to check the case when infinitesimal character has good parity and bad parity.
 
-For example, in the case of $G = \mathrm{Sp}_{2n}(\BR)$, we have:
+For example, in the case of $G = \Sp_{2n}(\BR)$, we have:
 
-\[\mathrm{Coh}_{\Lambda_b}(\mathrm{SO}(n_b,n_b)) \otimes \mathrm{Coh}_{\Lambda_g}(\mathrm{Sp}_{2n_g}(\BR)) \simeq \mathrm{Coh}_{\Lambda}(\mathrm{Sp_{2n}}(\BR)).\]
+\[\Coh_{\Lambda_b}(\SO(n_b,n_b)) \otimes \Coh_{\Lambda_g}(\Sp_{2n_g}(\BR)) \simeq \Coh_{\Lambda}(\Sp_{2n}(\BR)).\]
 
-We need to show that the $j$-induction of any special repn appears in $\mathrm{Coh}_{\Lambda_b}(\mathrm{SO}(n_b,n_b))$ and any special repn appears in $\mathrm{Coh}_{\Lambda_g}(\mathrm{Sp}_{2n_g}(\BR))$ gives a special repn in $\mathrm{Coh}_{\Lambda}(\mathrm{Sp_{2n}}(\BR))$.
+We need to show that the $j$-induction of any special repn appears in $\Coh_{\Lambda_b}(\SO(n_b,n_b))$ and any special repn appears in $\Coh_{\Lambda_g}(\Sp_{2n_g}(\BR))$ gives a special repn in $\Coh_{\Lambda}(\Sp_{2n}(\BR))$.
 
 \begin{itemize}
   \item \openquestion{Problem: How to compute the $j$-induction explicitly?}

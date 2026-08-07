@@ -109,14 +109,14 @@ a = \vcenter{\hbox{\begin{ytableau}
 
 For a compact connected Lie group $G$, choose a maximal torus $T$, there is a canonical 1-1 correspondence:
 
-$$X^*(T)/W \longleftrightarrow (X^*(T)+\rho)/W \longleftrightarrow \mathrm{Irr}(G)$$
+\[X^*(T)/W \longleftrightarrow (X^*(T)+\rho)/W \longleftrightarrow \Irr(G)\]
 
 Moreover, if we choose a positive system $\Psi^+$, and then $\rho_{\Psi^+}$, the above sets also canonically isomorphic to the set of dominant analytically integral weights:
-$$\set{\lambda \in X^*(T)}{ \langle\lambda, \alpha \rangle \geq 0, \text{for all} \ \alpha \in \Psi^+ }$$
+\[\set{\lambda \in X^*(T)}{ \langle\lambda, \alpha \rangle \geq 0, \text{for all} \ \alpha \in \Psi^+ }\]
 
 This can be generalized to parameter of discrete series representations for connected semisimple Lie groups $G$ with compact Cartan subgroup $T$ :
 
-$$ (X^*(T) + \rho)^{reg}/W_c$$
+\[ (X^*(T) + \rho)^{reg}/W_c\]
 
 If a discrete series representation $V$ has minimal $K$ type which has maximal weight $\nu$, then it's parameter is $\lambda = \nu -\rho + 2\rho_c $.\uncertain{(not sure)}
 
@@ -137,7 +137,7 @@ Some facts about continuous complex characters of some common abelian topologica
   \hline
   $(\BS^1,\times)$          &  $\BZ$               & $n \mapsto (z \mapsto z^n)$                                              \\
   \hline
-  $(\BQ_p,+)$          & $\BQ_p$                 &  $\xi \mapsto (x \mapsto \mathrm{exp}(2\pi i \xi \{ x \}_p))$                                             \\
+  $(\BQ_p,+)$          & $\BQ_p$                 &  $\xi \mapsto (x \mapsto \exp(2\pi i \xi \{ x \}_p))$                                             \\
   \hline
 \end{tabular}
 
@@ -154,7 +154,7 @@ Some facts about continuous complex characters of some common abelian topologica
 \end{lem}
 
 \begin{proof}
-  By the work of Borho, Brylinski \cite{BB82}, and Joseph \cite{Jos85}, the associated variety of any primitive ideal (annihilator of an irreducible $\fg$-module) is the closure of a single nilpotent orbit. So we only need to prove that $\mathrm{gr}(\mathrm{Ann_{\CU(\fg)}(V)})$ is a primitive ideal.
+  By the work of Borho, Brylinski \cite{BB82}, and Joseph \cite{Jos85}, the associated variety of any primitive ideal (annihilator of an irreducible $\fg$-module) is the closure of a single nilpotent orbit. So we only need to prove that $\gr(\Ann_{\CU(\fg)}(V))$ is a primitive ideal.
 
   Since the $K$-finite part $V_K$ is dense in $V$, $\Ann_{\CU(\fg)}(V) = \Ann_{\CU(\fg)}(V_K)$, we only need to consider the annihilator of the irreducible $(\fg,K)$-module $V_K$.
 
@@ -184,10 +184,10 @@ Classification of split reductive group is the same over arbitrary non-empty sch
 
 Let $X$ be a smooth manifold. There are natural maps
 \[
-    \mathrm{Pic}(X) \longrightarrow  \mathrm{H}^{2}_{\text{dR}}(X;\BR) \simeq  \mathrm{H}^{2}_{\text{\v{C}ech}}(X;\BR).
+    \Pic(X) \longrightarrow  \mathrm{H}^{2}_{\text{dR}}(X;\BR) \simeq  \mathrm{H}^{2}_{\text{\v{C}ech}}(X;\BR).
 \]
 Construction of the first map:
-For a (complex) line bundle $\BL \in \mathrm{Pic}^{h}(X)$, let $\langle , \rangle$ be a Hermitian metric on it and $\nabla$ be a unitary connection. (Every line bundle $\BL \in \mathrm{Pic}(X)$ has a Hermitian metric and a unitary connection on it.) 
+For a (complex) line bundle $\BL \in \Pic^{h}(X)$, let $\langle , \rangle$ be a Hermitian metric on it and $\nabla$ be a unitary connection. (Every line bundle $\BL \in \Pic(X)$ has a Hermitian metric and a unitary connection on it.) 
 \begin{itemize}
   \item choose a locally trivialization $\{U_{\alpha}\}$ of $\BL$, such that all $U_{\alpha}$ and $U_{\alpha} \cap U_{\beta}$ are contractible;
   \item choose Unitary local frames $\{s_{\alpha}\}$ for $\BL$ on each $U_{\alpha}$, then $s \leftrightarrow (f_\alpha)$ and $\nabla \leftrightarrow (\theta_\alpha)$ (unitary implies that $\theta_\alpha$ are pure imaginary);
@@ -207,7 +207,7 @@ Construction of the second map (classical de-Rham isomorphism), choose a 2-form 
 If $\omega$ come from the first map, we can choose $c_{\alpha,\beta} = \frac{1}{2\pi i}\mathrm{log}g_{\alpha,\beta}$, and hence $c_{\alpha,\beta,\gamma} = \frac{1}{2\pi i}(\mathrm{log}g_{\alpha,\beta} +\mathrm{log}g_{\beta,\gamma} +\mathrm{log}g_{\gamma,\alpha} ) \in \BZ$. So the morphism is in fact
 
 \[
-    \mathrm{Pic}(X) \longrightarrow  \mathrm{H}^{2}_{dR}(X;\BZ) \simeq  \mathrm{H}^{2}_{\text{\v{C}ech}}(X;\BZ).
+    \Pic(X) \longrightarrow  \mathrm{H}^{2}_{dR}(X;\BZ) \simeq  \mathrm{H}^{2}_{\text{\v{C}ech}}(X;\BZ).
 \]
 
 In fact the first map is also an isomorphism. (cf. \href{http://staff.ustc.edu.cn/~wangzuoq/Courses/15S-Symp/SympGeom.html}{prequantization})
@@ -217,7 +217,7 @@ For a 2-form $\omega$, choose $\theta_\alpha$ and $c_{\alpha,\beta}$ as above, l
   Assume that $G$ is a connected Lie group. The following are equivalent:
   \begin{itemize}
     \item $\Omega \subseteq \fg^*$ is integral ($[\sigma_{\Omega}] \in \mathrm{H}^2(X;\BZ)$);
-    \item there exists a $G$-equivariant complex line bundle over $\Omega$ with a $G$-invariant Hermitian connection $\nabla$ such that $$\frac{1}{2\pi i}\mathrm{curv}\bra{\nabla} = \sigma_{\Omega}.$$
+    \item there exists a $G$-equivariant complex line bundle over $\Omega$ with a $G$-invariant Hermitian connection $\nabla$ such that \[\frac{1}{2\pi i}\mathrm{curv}\bra{\nabla} = \sigma_{\Omega}.\]
   \end{itemize}
 \end{cor}
 

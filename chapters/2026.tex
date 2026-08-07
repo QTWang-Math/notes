@@ -29,16 +29,16 @@ $G$ is a linear real reductive group, $\widetilde{G}$ is a double cover of $G$.
 
 
 \begin{rk}
-  After I have a sleep, I find that $\widetilde{G}_0$ can be repleced by $\widetilde{G}$ in this theorem, and the proof is even easier.
+  After I have a sleep, I find that $\widetilde{G}_0$ can be replaced by $\widetilde{G}$ in this theorem, and the proof is even easier.
 \end{rk}
 
 
 
 
 
-\notesection{2026-03-21}{Geometry of the flag variety of \texorpdfstring{$\mathrm{SL}_2(\BC)$}{SL2(C)}}
+\notesection{2026-03-21}{Geometry of the flag variety of \texorpdfstring{$\SL_2(\BC)$}{SL2(C)}}
 
-In this section, we illustrate the geometry of the flag variety of $\mathrm{SL}_2(\BC)$, which serve as a simple example for understanding more general phenomena.
+In this section, we illustrate the geometry of the flag variety of $\SL_2(\BC)$, which serve as a simple example for understanding more general phenomena.
 
 
 $K = \BC^*$ action has three orbits on $\BP^1(\BC)$: two closed orbits $\{0\}$ and $\{\infty\}$, and one open orbit $\BC^*$. The conormal bundle of the open orbit is the zero section, while the conormal bundle of the closed orbits are the cotangent fiber at $0$ and $\infty$ respectively. So we have three conormal bundles, which are all Lagrangian subvarieties in $T^*\BP^1(\BC)$.
@@ -125,7 +125,7 @@ So we have
 
 \notesection{2026-03-22}{Perverse sheaves on \texorpdfstring{$\BC$}{C}}
 
-Construuctible sheaves on $\BC = \BC^* \sqcup \{0\}$. Some calculations comes from the lecture notes by Geordie Williamson \cite{Wil15}.
+Constructible sheaves on $\BC = \BC^* \sqcup \{0\}$. Some calculations comes from the lecture notes by Geordie Williamson \cite{Wil15}.
 
 Denote $j: \BC^* \hookrightarrow \BC$ the open inclusion, $i: \{0\} \hookrightarrow \BC$ the closed inclusion. Then we have the following six functors:
 \[
@@ -148,7 +148,7 @@ $j_!\CL$ has no quotient supported on $\{0\}$, $j_*$ has no subobject supported 
 
 
 \begin{rk}
-  Actually when $j: S \hookrightarrow  X$ is \colorbox{HighlightColor}{affine locally closed embedding} , $j_!$ and $j_*$ are $t$-exact for the perverse $t$-structure, so $j_!\CL[\dim S]$ and $j_*\CL[\dim S]$ are perverse sheaves on $X$.
+  Actually when $j: S \hookrightarrow  X$ is \colorbox{HighlightColor}{affine locally closed embedding}, $j_!$ and $j_*$ are $t$-exact for the perverse $t$-structure, so $j_!\CL[\dim S]$ and $j_*\CL[\dim S]$ are perverse sheaves on $X$.
 \end{rk}
 
 
@@ -193,14 +193,14 @@ Attached to ${^{a}\fh}$ is a root system $\Delta$, and the Weyl group $W$. Altho
 
 Where $\Sigma$ is the set of simple roots. Note that this choice of positive root system is opposite to the one usually used in representation theory, but it is more natural in geometry since dominant implies positive line bundle in this way.
 
-The enhanced flag variety $\widetilde{\CB}$ is defined as the variety of pairs $(\fb, \{x_{\alpha}\}_{\alpha \in \Sigma})$ where $\fb$ is a Borel subalgebra of $\fg$, and $\xi$ is a nonzero element in $(\fn/[\fn,\fn])^*_{\alpha}$. There is a natural projection map $\pi : \widetilde{\CB} \to \CB$ which forgets the second component, and is an $H$ principle bundle.
+The enhanced flag variety $\widetilde{\CB}$ is defined as the variety of pairs $(\fb, \{x_{\alpha}\}_{\alpha \in \Sigma})$ where $\fb$ is a Borel subalgebra of $\fg$, and $\xi$ is a nonzero element in $(\fn/[\fn,\fn])^*_{\alpha}$. There is a natural projection map $\pi : \widetilde{\CB} \to \CB$ which forgets the second component, and is an $H$ principal bundle.
 
 There is a $G$ action on $\widetilde{\CB}$ defined by $g \cdot (\fb, \{x_{\alpha}\}_{\alpha \in \Sigma}) = (\Ad(g)\fb, \{\Ad^*(g)x_{\alpha}\}_{\alpha \in \Sigma})$. There is also an $H$ action on $\widetilde{\CB}$ defined by $h \cdot (\fb, \{x_{\alpha}\}_{\alpha \in \Sigma}) = (\fb, \{\alpha(h)x_{\alpha}\}_{\alpha \in \Sigma})$. These two actions is compatible in the following way:
 \[
   g \cdot h \cdot (\fb, \{x_{\alpha}\}_{\alpha \in \Sigma}) = \kappa_{g}(h) \cdot g \cdot (\fb, \{x_{\alpha}\}_{\alpha \in \Sigma}),
 \]
 
-where $\kappa: G \to \mathrm{Aut}(H)$ is the action as outer automorphisms of $H$.
+where $\kappa: G \to \Aut(H)$ is the action as outer automorphisms of $H$.
 
 The adjoint group $G_0$ acts transitively on $\widetilde{\CB}$, and the stabilizer of a base point $(\fb, \{x_{\alpha}\}_{\alpha \in \Sigma})$ is $N$. So we have an isomorphism $\widetilde{\CB} \simeq G_0/N$. Under this identification, the $G$ action on $\widetilde{\CB}$ is given by $g \cdot (g_0N) = gg_0(N)$, and the $H$ action on $\widetilde{\CB}$ is given by $h \cdot (g_0N) = g_0 hN$.
 
@@ -217,7 +217,7 @@ The adjoint group $G_0$ acts transitively on $\widetilde{\CB}$, and the stabiliz
 Now $G$ is a connected reductive group.
 
 \begin{lem}
-  Let $G \to \GL(V)$ be a finite-dimensional representation of $G$, $k \cdot v \subseteq V$ be a one-dimensional subspace, $P = \mathrm{Stab}_G(k \cdot v)$. Suppose that $k_{\lambda}$ be the one-dimensional representation of $P$ defined by the action of $P$ on $k \cdot v$, then $i^*(\CO_{\BP(V)}(1)) = \CO_{G/P}(\lambda)$.
+  Let $G \to \GL(V)$ be a finite-dimensional representation of $G$, $k \cdot v \subseteq V$ be a one-dimensional subspace, $P = \Stab_G(k \cdot v)$. Suppose that $k_{\lambda}$ be the one-dimensional representation of $P$ defined by the action of $P$ on $k \cdot v$, then $i^*(\CO_{\BP(V)}(1)) = \CO_{G/P}(\lambda)$.
 \end{lem}
 
 \begin{proof}
@@ -239,7 +239,7 @@ Now $G$ is a connected reductive group.
 
 
 \notesection{2026-04-05}{Tangent Maps for Associated Bundles}
-$G$ is a compex algebraic group, $P$ is a closed subgroup of $G$ with a finite dimensional rational representation $V$. suppose that $\fg = \fu \oplus \fp$.
+$G$ is a complex algebraic group, $P$ is a closed subgroup of $G$ with a finite dimensional rational representation $V$. suppose that $\fg = \fu \oplus \fp$.
 
 \[
   \begin{tikzcd}
@@ -305,7 +305,7 @@ It is easy to check that $\mathrm{Rad}(\omega_{Y}) = \fg_{-1} \oplus 0$, so this
 
 
 
-Now, we cansider the simplest example of Hamiltonian $G$-space.
+Now, we consider the simplest example of Hamiltonian $G$-space.
 
 Let $(V,\omega)$ be a complex symplectic space, and $G = \Sp(V,\omega)$
 
@@ -346,12 +346,12 @@ Let $(V,\omega)$ be a complex symplectic space, and $G = \Sp(V,\omega)$
 \end{proof}
 
 \begin{rk}
-  $\BO_{min} = \sqbra{2,1, \cdots,1}$ and $\pi_{1}^{G}(\BO_{\min}) = \BZ/2\BZ$, the cover above is the universial cover of $\BO_{min}$.
+  $\BO_{min} = \sqbra{2,1, \cdots,1}$ and $\pi_{1}^{G}(\BO_{\min}) = \BZ/2\BZ$, the cover above is the universal cover of $\BO_{min}$.
 \end{rk}
 
 
 
-\subsection{Classical and Quantum Fromal Darboux Theorems}
+\subsection{Classical and Quantum Formal Darboux Theorems}
 
 The classical Darboux theorem states that every point in a symplectic manifold has a neighborhood that is symplectomorphic to an open subset of the standard symplectic vector space. Here we investigate a formal algebraic analog of this theorem and its extension to quantization.
 
@@ -385,7 +385,7 @@ Now let $A = \mathbb{C}[[x_1, \dots, x_{2n}]]$ so that there is a unique maximal
   \[\Bra{x_i^{(n)}, \delta_j^{(n)}} - \Bra{ x_j^{(n)}, \delta_i^{(n)}} = -R_{ij}^{(n)} \mod \fm^{n+1}.\]
 
   Note that $\Bra{x_i^{(n)}, \delta_j^{(n)}} - \Bra{ x_j^{(n)}, \delta_i^{(n)}} = \omega_{ik}x_k^{(n)}\frac{\partial \delta_j^{(n)}}{\partial x_k} - \omega_{jk}x_k^{(n)}\frac{\partial \delta_i^{(n)}}{\partial x_k}$, we can solve the above equation by setting
-  $$\delta_i^{(n)} = -\frac{1}{n+1} \sum_{k,l} \omega^{kl} x_k^{(n)} R_{li}^{(n)}.$$
+  \[\delta_i^{(n)} = -\frac{1}{n+1} \sum_{k,l} \omega^{kl} x_k^{(n)} R_{li}^{(n)}.\]
 
   Set $x_i^{(n+1)} = x_i^{(n)} + \delta_i^{(n)}$, then $y_i = \lim_{n \to \infty} x_i^{(n)}$ satisfies $\{y_i, y_j\} \in \BC$.
 \end{proof}
@@ -419,7 +419,7 @@ Now let $A = \mathbb{C}[[x_1, \dots, x_{2n}]]$ so that there is a unique maximal
   This is equivalent to solving the following equation for $\delta_i^{(n)}$:
   \[\frac{1}{\hbar}\left[\widehat{y}_i^{(n)}, \delta_j^{(n)}\right] - \frac{1}{\hbar}\left[\widehat{y}_j^{(n)}, \delta_i^{(n)}\right] = -\hbar^{n} R_{ij}^{(n)} \mod \hbar^{n+1}.\]
   Note that $\frac{1}{\hbar}\left[\widehat{y}_i^{(n)}, \delta_j^{(n)}\right] - \frac{1}{\hbar}\left[\widehat{y}_j^{(n)}, \delta_i^{(n)}\right] = \omega_{ik} \widehat{y}_k^{(n)}\frac{\partial \delta_j^{(n)}}{\partial \widehat{y}_k} - \omega_{jk} \widehat{y}_k^{(n)}\frac{\partial \delta_i^{(n)}}{\partial \widehat{y}_k}$, we can solve the above equation by setting
-$$\delta_i^{(n)} = -\frac{1}{n+1} \sum_{k,l} \omega^{kl} \widehat{y}_k^{(n)} R_{li}^{(n)}.$$
+\[\delta_i^{(n)} = -\frac{1}{n+1} \sum_{k,l} \omega^{kl} \widehat{y}_k^{(n)} R_{li}^{(n)}.\]
 
   Set $\widehat{y}_i^{(n+1)} = \widehat{y}_i^{(n)} + \delta_i^{(n)}$, then $\widehat{y}_i = \lim_{n \to \infty} \widehat{y}_i^{(n)}$ satisfies $\frac{1}{\hbar}\left[\widehat{y}_i, \widehat{y}_j\right] = \omega_{ij} \in \BC$.
 \end{proof}
@@ -430,10 +430,10 @@ $$\delta_i^{(n)} = -\frac{1}{n+1} \sum_{k,l} \omega^{kl} \widehat{y}_k^{(n)} R_{
 \aiblock{
   Any differential operator on $A$ can extend to localizations and completions.
   \begin{itemize}
-    \item Extension to the Localization $S^{-1}A$. Let $A$ be a commutative algebra over a field $k$. A $k$-linear map $L: A \to A$ is a differential operator of order $\le k$ if for any $a_0, \dots, a_k \in A$, the iterated commutator vanishes:$$[\dots[[L, a_0], a_1], \dots, a_k] = 0$$where $[L, a](b) = L(ab) - aL(b)$. We denote the space of such operators as $\text{Diff}^k(A)$.The General Extension FormulaFor any $L \in \text{Diff}^k(A)$, the unique extension $\widetilde{L} \in \text{Diff}^k(S^{-1}A)$ is determined by its action on the reciprocal of an element $s \in S$. The formula uses the iterated adjoint action $\text{ad}_s(L) = [L, s]$:$$\widetilde{L}\left(\frac{1}{s}\right) = \sum_{j=0}^{k} (-1)^j s^{-(j+1)} \text{ad}_s^j(L)(1)$$Applying this to a general fraction $\frac{a}{s}$ via the Leibniz-like property for higher-order operators, we get:$$\widetilde{L}\left(\frac{a}{s}\right) = \sum_{j=0}^{k} (-1)^j s^{-(j+1)} \text{ad}_s^j(L)(a).$$
-    \item Specific Cases for Low OrderOrder 0 (Multiplication by $f \in A$):$$\widetilde{L}\left(\frac{a}{s}\right) = s^{-1}(f \cdot a) = \frac{fa}{s}$$Order 1 (Derivations, where $L(1)=0$):Using the general formula for $j=0, 1$:$$\widetilde{L}\left(\frac{a}{s}\right) = s^{-1}L(a) - s^{-2}[L, s](a) = \frac{L(a)}{s} - \frac{L(sa) - sL(a)}{s^2} = \frac{sL(a) - aL(s)}{s^2}$$Order 2 (e.g., a Laplacian $\Delta$):$$\widetilde{L}\left(\frac{a}{s}\right) = \frac{\Delta(a)}{s} - \frac{\Delta(sa)-s\Delta(a)}{s^2} + \frac{\Delta(s^2 a) - 2s\Delta(sa) + s^2\Delta(a)}{s^3}.$$
-    \item Extension to the Completion $\widehat{A}$. Let $I \subset A$ be an ideal. The completion is the inverse limit $\widehat{A} = \varprojlim A/I^n$.The Continuity PrecisionA differential operator $L$ of order $k$ is stricly continuous with respect to the $I$-adic topology because it satisfies:$$L(I^n) \subseteq I^{n-k} \quad \text{for all } n \ge k$$This filtration ensures that for any Cauchy sequence $(a_n)$ in $A$, the sequence $(L(a_n))$ is also Cauchy in the $I$-adic sense. The extension $\widehat{L}: \widehat{A} \to \widehat{A}$ is defined by taking the limit of the action on the truncated sequences:$$\widehat{L}\left( \lim_{n \to \infty} a_n \right) = \lim_{n \to \infty} L(a_n)$$Because $L$ is a polynomial-type operator (it "sees" only a finite neighborhood of any point algebraically), this limit is always well-defined and unique.
-    \item The Poisson Bracket CaseA Poisson bracket $\{ \cdot, \cdot \}$ is a bilinear map that is a derivation (order 1 operator) in each slot.On $S^{-1}A$: Since $L_f = \{f, \cdot\}$ is a derivation, the extension is forced by the first-order formula derived above. For $a/s, b/t \in S^{-1}A$:$$\left\{ \frac{a}{s}, \frac{b}{t} \right\} = \frac{1}{s^2 t^2} \left( st\{a, b\} - at\{s, b\} - bs\{a, t\} + ab\{s, t\} \right)$$On $\widehat{A}$: Since the bracket is a derivation in each variable, it is continuous in each variable. By the universal property of completions of bilinear maps, it extends uniquely:$$\{ \widehat{a}, \widehat{b} \}_{\widehat{A}} = \lim_{n \to \infty} \{ a_n, b_n \}_A$$This ensures that $\widehat{A}$ inherits the Poisson algebra structure from $A$ without any ambiguity.
+    \item Extension to the Localization $S^{-1}A$. Let $A$ be a commutative algebra over a field $k$. A $k$-linear map $L: A \to A$ is a differential operator of order $\le k$ if for any $a_0, \dots, a_k \in A$, the iterated commutator vanishes:\[[\dots[[L, a_0], a_1], \dots, a_k] = 0\]where $[L, a](b) = L(ab) - aL(b)$. We denote the space of such operators as $\text{Diff}^k(A)$.The General Extension FormulaFor any $L \in \text{Diff}^k(A)$, the unique extension $\widetilde{L} \in \text{Diff}^k(S^{-1}A)$ is determined by its action on the reciprocal of an element $s \in S$. The formula uses the iterated adjoint action $\text{ad}_s(L) = [L, s]$:\[\widetilde{L}\left(\frac{1}{s}\right) = \sum_{j=0}^{k} (-1)^j s^{-(j+1)} \text{ad}_s^j(L)(1)\]Applying this to a general fraction $\frac{a}{s}$ via the Leibniz-like property for higher-order operators, we get:\[\widetilde{L}\left(\frac{a}{s}\right) = \sum_{j=0}^{k} (-1)^j s^{-(j+1)} \text{ad}_s^j(L)(a).\]
+    \item Specific Cases for Low OrderOrder 0 (Multiplication by $f \in A$):\[\widetilde{L}\left(\frac{a}{s}\right) = s^{-1}(f \cdot a) = \frac{fa}{s}\]Order 1 (Derivations, where $L(1)=0$):Using the general formula for $j=0, 1$:\[\widetilde{L}\left(\frac{a}{s}\right) = s^{-1}L(a) - s^{-2}[L, s](a) = \frac{L(a)}{s} - \frac{L(sa) - sL(a)}{s^2} = \frac{sL(a) - aL(s)}{s^2}\]Order 2 (e.g., a Laplacian $\Delta$):\[\widetilde{L}\left(\frac{a}{s}\right) = \frac{\Delta(a)}{s} - \frac{\Delta(sa)-s\Delta(a)}{s^2} + \frac{\Delta(s^2 a) - 2s\Delta(sa) + s^2\Delta(a)}{s^3}.\]
+    \item Extension to the Completion $\widehat{A}$. Let $I \subset A$ be an ideal. The completion is the inverse limit $\widehat{A} = \varprojlim A/I^n$.The Continuity PrecisionA differential operator $L$ of order $k$ is strictly continuous with respect to the $I$-adic topology because it satisfies:\[L(I^n) \subseteq I^{n-k} \quad \text{for all } n \ge k\]This filtration ensures that for any Cauchy sequence $(a_n)$ in $A$, the sequence $(L(a_n))$ is also Cauchy in the $I$-adic sense. The extension $\widehat{L}: \widehat{A} \to \widehat{A}$ is defined by taking the limit of the action on the truncated sequences:\[\widehat{L}\left( \lim_{n \to \infty} a_n \right) = \lim_{n \to \infty} L(a_n)\]Because $L$ is a polynomial-type operator (it "sees" only a finite neighborhood of any point algebraically), this limit is always well-defined and unique.
+    \item The Poisson Bracket CaseA Poisson bracket $\{ \cdot, \cdot \}$ is a bilinear map that is a derivation (order 1 operator) in each slot.On $S^{-1}A$: Since $L_f = \{f, \cdot\}$ is a derivation, the extension is forced by the first-order formula derived above. For $a/s, b/t \in S^{-1}A$:\[\left\{ \frac{a}{s}, \frac{b}{t} \right\} = \frac{1}{s^2 t^2} \left( st\{a, b\} - at\{s, b\} - bs\{a, t\} + ab\{s, t\} \right)\]On $\widehat{A}$: Since the bracket is a derivation in each variable, it is continuous in each variable. By the universal property of completions of bilinear maps, it extends uniquely:\[\{ \widehat{a}, \widehat{b} \}_{\widehat{A}} = \lim_{n \to \infty} \{ a_n, b_n \}_A\]This ensures that $\widehat{A}$ inherits the Poisson algebra structure from $A$ without any ambiguity.
   \end{itemize}
   }
 
@@ -446,7 +446,7 @@ $$\delta_i^{(n)} = -\frac{1}{n+1} \sum_{k,l} \omega^{kl} \widehat{y}_k^{(n)} R_{
 \textbf{Normality of Closure of Nilpotent Orbits}
 
 \begin{thm}[Main theorem]
-  For a nilpotent otbit $\BO$ in a complex semisimple Lie algebra $\fg$, its closure $\overline{\BO}$ is normal if and only if $\BC[\BO] = \BC[\overline{\BO}]$.
+  For a nilpotent orbit $\BO$ in a complex semisimple Lie algebra $\fg$, its closure $\overline{\BO}$ is normal if and only if $\BC[\BO] = \BC[\overline{\BO}]$.
 \end{thm}
 
 \begin{lem}[Serre's criterion for normality]
@@ -458,7 +458,7 @@ $$\delta_i^{(n)} = -\frac{1}{n+1} \sum_{k,l} \omega^{kl} \widehat{y}_k^{(n)} R_{
 \end{lem}
 
 \begin{proof}[Proof of Main Theorem]
-  ($\Rightarrow$) If $\overline{\BO}$ is normal, then by Serre's criterion, we get infromation about the depth inequality, and then we can apply the algebraic Hartogs theorem \cite[Chapter III, Exercise 3.5]{Har77} to conclude that $\BC[\BO] = \BC[\overline{\BO}]$.
+  ($\Rightarrow$) If $\overline{\BO}$ is normal, then by Serre's criterion, we get information about the depth inequality, and then we can apply the algebraic Hartogs theorem \cite[Chapter III, Exercise 3.5]{Har77} to conclude that $\BC[\BO] = \BC[\overline{\BO}]$.
 
   ($\Leftarrow$) If $\BC[\BO] = \BC[\overline{\BO}]$, then $\BC[\overline{\BO}]$ is a domain and integrally closed in its field of fractions, Since $\BC[\BO]$ is smooth. Hence $\BC[\overline{\BO}]$ is normal.
 \end{proof}
@@ -576,15 +576,15 @@ Some phenomena of separation of variables:
 
 Some relations between Picard groups, Cartier divisors, and Weil divisors.
 
-$\mathrm{Pic}$ is the group of isomorphism classes of line bundles. $\mathrm{Cl}$ is the group of Weil divisors modulo linear equivalence. $\mathrm{CaCl}$ is the group of Cartier divisors modulo linear equivalence.
+$\Pic$ is the group of isomorphism classes of line bundles. $\mathrm{Cl}$ is the group of Weil divisors modulo linear equivalence. $\mathrm{CaCl}$ is the group of Cartier divisors modulo linear equivalence.
 
 \begin{itemize}
-  \item If $X$ is integral, then $\mathrm{Pic}(X) \cong \mathrm{CaCl}(X)$.
-  \item If $X$ is integral and normal, then $\mathrm{Pic}(X) \hookrightarrow  \mathrm{Cl}(X)$.
-  \item If $X$ is integral and locally factorial/Smooth, then $\mathrm{Pic}(X) \cong \mathrm{Cl}(X)$.
+  \item If $X$ is integral, then $\Pic(X) \cong \mathrm{CaCl}(X)$.
+  \item If $X$ is integral and normal, then $\Pic(X) \hookrightarrow  \mathrm{Cl}(X)$.
+  \item If $X$ is integral and locally factorial/Smooth, then $\Pic(X) \cong \mathrm{Cl}(X)$.
 \end{itemize}
 
-If $X$ is integral and normal, by Serre's criterion for normality, the singular locus of $X$ has codimension at least 2, hence $\mathrm{Cl}(X) \cong \mathrm{Cl}(X^{reg}) \cong \mathrm{Pic}(X^{reg})$.
+If $X$ is integral and normal, by Serre's criterion for normality, the singular locus of $X$ has codimension at least 2, hence $\mathrm{Cl}(X) \cong \mathrm{Cl}(X^{reg}) \cong \Pic(X^{reg})$.
 
 \notesection{2026-04-27}{Symplectic Leaves of Nilpotent Orbits}
 
@@ -600,13 +600,13 @@ We prove that for a nilpotent orbit $\BO$ in a complex semisimple Lie algebra $\
 \end{lem}
 
 \begin{proof}
-  Since $\overline{\BO}$ is Poisson, it has a Poisson bivector field $\pi \in \Gamma(\overline{\BO}, \wedge^2 T_{\overline{\BO}})$, and $\pi$ is non-degenerate on $\BO$, and we know that the zero locus of a section of a line bundle on the smooth variety $\overline{\BO}^{reg}$ has codimension at most 1, but $\mathrm{codim}_{\overline{\BO}^{reg}}(\{ \pi = 0 \}) \geq 2$, so $\pi$ is non-vanishing on $\overline{\BO}^{reg}$.
+  Since $\overline{\BO}$ is Poisson, it has a Poisson bivector field $\pi \in \Gamma(\overline{\BO}, \wedge^2 T_{\overline{\BO}})$, and $\pi$ is non-degenerate on $\BO$, and we know that the zero locus of a section of a line bundle on the smooth variety $\overline{\BO}^{reg}$ has codimension at most 1, but $\codim_{\overline{\BO}^{reg}}(\{ \pi = 0 \}) \geq 2$, so $\pi$ is non-vanishing on $\overline{\BO}^{reg}$.
 \end{proof}
 
 Let $X$ be a Poisson variety, and $X_1 = X \backslash X^{reg}$, $X_{k+1} = X_k \backslash X_k^{reg}$. We say that $X$ has finitely many symplectic leaves if each $X_k^{reg}$ is symplectic. For a symplectic leaf, we mean an irreducible (connected) component of $X_k^{reg}$ for some $k$.
 
 \begin{lem}
-  Symplectic leaves are one one correspondence with prime Poisson ideals of $\BC[X]$.
+  Symplectic leaves are in one-to-one correspondence with prime Poisson ideals of $\BC[X]$.
 \end{lem}
 
 \begin{lem}
@@ -623,7 +623,7 @@ Let $X$ be a Poisson variety, and $X_1 = X \backslash X^{reg}$, $X_{k+1} = X_k \
 
 \begin{proof}
   Suppose $X$ is a smooth symplectic variety, and let $x \in X$ be a point.
-  $$T_x X \xrightarrow{\pi_x} T_x^* X$$
+  \[T_x X \xrightarrow{\pi_x} T_x^* X\]
   is an isomorphism.
 
   Under this isomorphism $H_f$ corresponds to $\dd f$, so we can see that $\mathrm{span}\set{H_f}{f \in \BC[X]} = T_x X$, but Poisson subvariety must tangent to all Hamiltonian vector fields, so it must be the whole $X$.
@@ -645,11 +645,11 @@ Let $X$ be a Poisson variety, and $X_1 = X \backslash X^{reg}$, $X_{k+1} = X_k \
 \begin{rk}
   For a nilpotent orbit cover $\widetilde{\BO}$, we have a finite surjective morphism
   \[
-    \pi: \mathrm{Spec}(\BC[\widetilde{\BO}]) \to \overline{\BO},
+    \pi: \Spec(\BC[\widetilde{\BO}]) \to \overline{\BO},
   \]
-  $\mathrm{Spec}(\BC[\widetilde{\BO}])$ has finitely many symplectic leaves, and we also know that $\mathrm{Spec}(\BC[\widetilde{\BO}])^{reg}$ is symplectic, it has no proper Poisson subvarieties, hence it is a symplectic leaf. By in this situation, symplectic leaves are not in one one correspondence with $G$-orbits any more, so $\widetilde{\BO}$ may properly contained in $\mathrm{Spec}(\BC[\widetilde{\BO}])^{reg}$.
+  $\Spec(\BC[\widetilde{\BO}])$ has finitely many symplectic leaves, and we also know that $\Spec(\BC[\widetilde{\BO}])^{reg}$ is symplectic, it has no proper Poisson subvarieties, hence it is a symplectic leaf. By in this situation, symplectic leaves are not in one-to-one correspondence with $G$-orbits any more, so $\widetilde{\BO}$ may properly contained in $\Spec(\BC[\widetilde{\BO}])^{reg}$.
 
-  Actually in the case of exceptional Lie algebras, there exist some nilpotent orbits $\BO$ such that $\mathrm{codim}_{\overline{\BO}}(\overline{\BO} \backslash \BO) = 2$ but $\mathrm{codim}_{X}(X \backslash X^{reg}) \geq 4$, where $X = \mathrm{Spec}(\BC[\BO])$.
+  Actually in the case of exceptional Lie algebras, there exist some nilpotent orbits $\BO$ such that $\codim_{\overline{\BO}}(\overline{\BO} \backslash \BO) = 2$ but $\codim_{X}(X \backslash X^{reg}) \geq 4$, where $X = \Spec(\BC[\BO])$.
 \end{rk}
 
 
@@ -680,7 +680,7 @@ For a symmetric subgroup $K$ of $G$, we have:
   T^*_{K} \CB = \set{(b, \xi)}{b \in \CB, \quad \xi \in b^{\perp} \cap \fk^{\perp}}.
 \]
 
-We have the following Cartersian diagram:
+We have the following Cartesian diagram:
 \[
   \begin{tikzcd}
     T^*_{K} \CB \arrow[r, hook] \arrow[d] & T^* \CB \arrow[d] \\
@@ -720,7 +720,7 @@ Let $\Gamma$ be a discrete group acting on a complex algebraic variety $X$, we w
 \end{lem}
 
 \begin{thm}
-  The isomorphism classes of $\Gamma$-equivariant structures on $\CO_X$ are in one one correspondence with $H^1(\Gamma, \CO^{*}_X(X))$.
+  The isomorphism classes of $\Gamma$-equivariant structures on $\CO_X$ are in one-to-one correspondence with $H^1(\Gamma, \CO^{*}_X(X))$.
 \end{thm}
 
 \begin{proof}
@@ -772,7 +772,7 @@ Since the automorphism $\psi$ is given by multiplication by some invertible func
 
 \begin{proof}
   \[
-    \mathfrak{X}(\Gamma) = \mathrm{Hom}(\Gamma, \BC^{*}) \cong H^1(\Gamma, \CO^{*}_X(X)).
+    \mathfrak{X}(\Gamma) = \Hom(\Gamma, \BC^{*}) \cong H^1(\Gamma, \CO^{*}_X(X)).
   \]
 \end{proof}
 
@@ -783,7 +783,7 @@ Let $\fg$ be a complex reductive Lie algebra, fix a Borel $\fb$ and a Cartan $\f
 \[
   X = \sum_{\alpha \in \Pi} X_{\alpha}
 \]
-lies in the principle nilpotent orbits $\BO_{prin}$.
+lies in the principal nilpotent orbits $\BO_{prin}$.
 
 Let $h = \sum_{\alpha \in \Phi^+} \check{\alpha}$
 
@@ -809,7 +809,7 @@ We have a weight decomposition $\fg = \bigoplus_{i \in \BZ} \fg_i$, where $\fg_i
   $\fg_0 = \fh$, $\fg_{\geq 2} = \fn$.
 \end{lem}
 
-Suppose $\BO = G\cdot X$. Then the Jacobson-Morosov resolution of $\overline{\BO}$ is just the Springer resolution $T^*\CB \to \overline{\BO}_{prin} = \CN$, so $\BO$ is the principle nilpotent orbit.
+Suppose $\BO = G\cdot X$. Then the Jacobson-Morozov resolution of $\overline{\BO}$ is just the Springer resolution $T^*\CB \to \overline{\BO}_{prin} = \CN$, so $\BO$ is the principal nilpotent orbit.
 
 
 
@@ -840,8 +840,8 @@ All the things are on the classical side, we will discuss the quantum side later
 \end{prop}
 
 \begin{proof}
-  $X^{reg}$ is symplectic since the boundry has codimsion at least $2$.
-  Use the Jacobson-Morosov resolution, we can construct the extension of symplectic form explicitly.
+  $X^{reg}$ is symplectic since the boundary has codimension at least $2$.
+  Use the Jacobson-Morozov resolution, we can construct the extension of symplectic form explicitly.
 \end{proof}
 
 \begin{prop}
@@ -869,11 +869,11 @@ All the things are on the classical side, we will discuss the quantum side later
 \end{defn}
 
 \begin{prop}
-  If $X$ has simplectic singularity then so does $Y$.
+  If $X$ has symplectic singularity then so does $Y$.
 \end{prop}
 
 \begin{prop}
-  Let $X$ be a conical symplectic singularity, $\pi: Y \to X$ is a partial Poisson resolution with $\mathrm{codim}_Y(Y^{sing}) \geq 4$. Then $\BC[Y^{reg}] \simeq \BC[Y] \simeq \BC[X]$ and $H^1(Y^{reg};\CO_Y) = H^2(Y^{reg};\CO_Y) = 0$.
+  Let $X$ be a conical symplectic singularity, $\pi: Y \to X$ is a partial Poisson resolution with $\codim_Y(Y^{sing}) \geq 4$. Then $\BC[Y^{reg}] \simeq \BC[Y] \simeq \BC[X]$ and $H^1(Y^{reg};\CO_Y) = H^2(Y^{reg};\CO_Y) = 0$.
 \end{prop}
 
 \begin{proof}
@@ -890,7 +890,7 @@ All the things are on the classical side, we will discuss the quantum side later
 \begin{thm}
   Let $X$ be a conical symplectic singularity. For a partial Poisson resolution $\pi: Y \to X$ the following are equivalent:
   \begin{itemize}
-    \item $\pi$ is maxiaml Poisson resolution;
+    \item $\pi$ is maximal Poisson resolution;
     \item $Y$ is $\BQ$-factorial and terminal.
   \end{itemize}
 \end{thm}
@@ -1004,15 +1004,15 @@ the universal Poisson deformation of $X$ can be constructed as $\Spec(\BC[Y_{\fz
 
 \notesection{2026-05-16}{Zariski's Main Theorem}
 
-\begin{thm}[Zariski' Main Theorem]
-  Let $f: X \to Y$ be a quasi-finite, separated morphism of schemes, where $Y$ is quasi-compact and quasi-separated. Then there exists a factorization:$$X \xrightarrow{\ j\ } X' \xrightarrow{\ g\ } Y$$where $j$ is an open immersion and $g$ is a finite morphism.
+\begin{thm}[Zariski's Main Theorem]
+  Let $f: X \to Y$ be a quasi-finite, separated morphism of schemes, where $Y$ is quasi-compact and quasi-separated. Then there exists a factorization:\[X \xrightarrow{\ j\ } X' \xrightarrow{\ g\ } Y\]where $j$ is an open immersion and $g$ is a finite morphism.
 \end{thm}
 
 \begin{proof}
   $f_*\CO_X$ is a quasi-coherent sheaf of $\CO_Y$-algebras. Let $\CA$ be the integral closure of $\CO_X$ in $f_*\CO_Y$, then take $X' = \underline{\Spec}_Y(\CA)$.
 \end{proof}
 
-The intuition is that quasi-finite morphisms have finite fibers, but the fibers can drop abruptly, the theorem tells us that we can appropriately extend the scheme $Y$ to avoid this bad phenomena.
+The intuition is that quasi-finite morphisms have finite fibers, but the fibers can drop abruptly, the theorem tells us that we can appropriately extend the scheme $Y$ to avoid this bad phenomenon.
 
 \begin{examp}
   $\BC^{\times} \to \BC$ can extend to $\BC^{\times} \hookrightarrow \BC \xrightarrow{\sim} \BC$.
@@ -1020,19 +1020,19 @@ The intuition is that quasi-finite morphisms have finite fibers, but the fibers 
 
 \begin{examp}
   For nilpotent cover, the morphism $\widetilde{\BO} \to \overline{\BO}$ can extend to
-  $$\widetilde{\BO} \hookrightarrow \Spec(\BC[\widetilde{\BO}]) \to \overline{\BO}.$$
+  \[\widetilde{\BO} \hookrightarrow \Spec(\BC[\widetilde{\BO}]) \to \overline{\BO}.\]
 \end{examp}
 
 
 \notesection{2026-05-17}{Twisted Differential Operators}
 
-$X$ be a smooth variety, $\CL$ be a line bundle on $X$. Choose a locally trivialization for $\CL$ by affine open sunsets:
+$X$ be a smooth variety, $\CL$ be a line bundle on $X$. Choose a local trivialization for $\CL$ by affine open subsets:
 \[
   X = \bigcup_{i} X_i, \quad \phi_i: \CL|_{X_i} \xrightarrow{\sim} \CO_{X_i}.
 \]
 Suppose that $\phi_j \circ \phi_i^{-1} : \CO_{X_{ij}} \xrightarrow{\sim} \CO_{X_{ij}}$ is given by $f_{ji} \in \CO^{\times}(X_{ij})$.
 
-We can define a sheaf of twisted differential operators $\mathcal{D}_{\CL}$ via the locally trivialization:
+We can define a sheaf of twisted differential operators $\mathcal{D}_{\CL}$ via the local trivialization:
 \[
   \psi_i: \mathcal{D}_{\CL} \xrightarrow{\sim} \mathcal{D}_X|_{X_i},
 \]
@@ -1043,7 +1043,7 @@ such that $\psi_j \circ \psi_i^{-1}: \mathcal{D}_{X_{ij}} \xrightarrow{\sim} \ma
 \end{thm}
 
 \begin{proof}
-  For each locally trivilization $X_i$ and $X \in \mathcal{D}_{\CL}(X_i)$, $s \in \CL(X_i)$,  define
+  For each local trivialization $X_i$ and $X \in \mathcal{D}_{\CL}(X_i)$, $s \in \CL(X_i)$,  define
   \[X \cdot s = \phi_i^{-1}(\psi_i(X) \cdot \phi_i(s)).\]
 
   We check it is well defined on the overlap of $X_i$ and $X_j$, i.e.
@@ -1069,9 +1069,9 @@ such that $\psi_j \circ \psi_i^{-1}: \mathcal{D}_{X_{ij}} \xrightarrow{\sim} \ma
 \notesection{2026-05-18}{Quantization of Nonaffine Varieties}
 
 
-\subsection{Deformattion and Quantization of nonaffine schemes}
+\subsection{Deformation and Quantization of nonaffine schemes}
 
-Let $X$ be a graded normal quasi-projective Possion variety, the Poisson bracket has degree $-d$. According to Sumihiro's Theorem, any normal variety $X$ with a $\mathbb{G}_m$-action can be covered by $\mathbb{G}_m$-invariant affine open subvarieties $U_i$.
+Let $X$ be a graded normal quasi-projective Poisson variety, the Poisson bracket has degree $-d$. According to Sumihiro's Theorem, any normal variety $X$ with a $\mathbb{G}_m$-action can be covered by $\mathbb{G}_m$-invariant affine open subvarieties $U_i$.
 
 \begin{defn}
   A filtered quantization of $\CO_X$ is a pair $(\mathcal{D},\theta)$ where
@@ -1092,7 +1092,7 @@ Similarly, we can define filtered Poisson deformation of $X$.
 
 
 
-$Y$ be an algebraic variety, $H$ is an algebraic group. $\pi: \widetilde{Y} \to Y$ is a principle $H$-bundle. Then we have the following reduction:
+$Y$ be an algebraic variety, $H$ is an algebraic group. $\pi: \widetilde{Y} \to Y$ is a principal $H$-bundle. Then we have the following reduction:
 
 \begin{thm}
   $T^*(\widetilde{Y}) \mathbin{/\!/\!/}_0 H \xrightarrow{\sim} T^*Y$.
@@ -1124,7 +1124,7 @@ $Y = G \times^{P} \set{(\alpha,x) \in \fn^{\perp} \times X_L }{\alpha|_{\fl} = \
 
 $Y$ is affine over $G/P$ satisfies the situation of the previous remark.
 
-$G/U \to G/P$ is an $L$-principle bundle, $T^*(G/U) \times X_L \to G/U$ is affine.
+$G/U \to G/P$ is an $L$-principal bundle, $T^*(G/U) \times X_L \to G/U$ is affine.
 
 We can consider all of these quantizations, Hamiltonian reductions as sheaves over the smooth variety $G/P$.
 
@@ -1169,7 +1169,7 @@ such that
 \notesection{2026-06-29}{Principal Connections and Picard Groups}
 
 
-$X$ be a smooth manifold, $\CV$ a vector bundle on $X$, it's associated frame bundle is the principle bundle $\CM$. Note that $\CV = \CM \times^{\GL_n} \BC^n$.
+$X$ be a smooth manifold, $\CV$ a vector bundle on $X$, it's associated frame bundle is the principal bundle $\CM$. Note that $\CV = \CM \times^{\GL_n} \BC^n$.
 
 A connection on $\CV$ is a map $\nabla: \Gamma(X, TX) \to \Gamma(X, \mathfrak{gl}(\CV))$. While a connection on $\CM$ is a $\GL$-equivariant bundle map $\theta: \CE_M \to \mathfrak{gl}(V)_M$, split the Atiyah sequence:
 \[
@@ -1182,7 +1182,7 @@ Restriction of $\theta$ to $TX$ gives a connection on $\CV$, this is a bijection
 \hrule
 \vspace{3mm}
 
-Here we compute some Picard groups of simplectic singularities, and their Poisson resolutions.
+Here we compute some Picard groups of symplectic singularities, and their Poisson resolutions.
 
 $\widetilde{\BO}$ be a nilpotent cover of a complex semisimple Lie group $G$, $\widetilde{\BO_L}$ be a nilpotent cover of a Levi subgroup $L$. And there is a Poisson resolution
 \[
@@ -1191,8 +1191,8 @@ $\widetilde{\BO}$ be a nilpotent cover of a complex semisimple Lie group $G$, $\
 
 \begin{prop}
   \begin{itemize}
-    \item $\mathrm{Pic}(X) = 0$;
-    \item $\mathrm{Pic}(X^{reg}) = X^*(\widetilde{H})$, where $\widetilde{H}$ is the stabilizer in $\widetilde{G}$ of a point in $\widetilde{\BO}$.
+    \item $\Pic(X) = 0$;
+    \item $\Pic(X^{reg}) = X^*(\widetilde{H})$, where $\widetilde{H}$ is the stabilizer in $\widetilde{G}$ of a point in $\widetilde{\BO}$.
   \end{itemize}
 \end{prop}
 
@@ -1200,18 +1200,18 @@ $\widetilde{\BO}$ be a nilpotent cover of a complex semisimple Lie group $G$, $\
   First assertion is due to $X$ is conical.
 
   For the second assertion, since $\widetilde{\BO} \subseteq X^{reg} \subseteq X$ and $\codim_{X}(X \backslash \widetilde{\BO}) \geq 2$, we have
-  $$\mathrm{Pic}(X^{reg}) = \mathrm{Pic}(\widetilde{\BO}).$$
+  \[\Pic(X^{reg}) = \Pic(\widetilde{\BO}).\]
   Since $\widetilde{\BO}$ is a homogeneous space of $\widetilde{G}$, $\widetilde{\BO} \simeq \widetilde{G} / \widetilde{H}$ ($\widetilde{G}$ is the simply-connected cover of $G$),
   \[
-    \mathrm{Pic}(\widetilde{\BO}) = \mathrm{Pic}(\widetilde{G}/\widetilde{H}) = \mathrm{Pic}^{\widetilde{G}}(\widetilde{G}/\widetilde{H}) = X^*(\widetilde{H}).
+    \Pic(\widetilde{\BO}) = \Pic(\widetilde{G}/\widetilde{H}) = \Pic^{\widetilde{G}}(\widetilde{G}/\widetilde{H}) = X^*(\widetilde{H}).
   \]
-  The second equility is due to the fact that $\widetilde{G}$ is simply-connected, so any line bundle on $\widetilde{G}/\widetilde{H}$ admits a $\widetilde{G}$-equivariant structure. And $\CO_X$ has only one $\widetilde{G}$-equivariant structure, since $H^1(G;\CO^*_X(X)) = 0$.
+  The second equality is due to the fact that $\widetilde{G}$ is simply-connected, so any line bundle on $\widetilde{G}/\widetilde{H}$ admits a $\widetilde{G}$-equivariant structure. And $\CO_X$ has only one $\widetilde{G}$-equivariant structure, since $H^1(G;\CO^*_X(X)) = 0$.
 \end{proof}
 
 \begin{prop}
   There is a short exact sequence
   \[
-     0 \to \mathrm{Pic}(Y) \to \mathrm{Pic}(Y^{reg}) \to \mathrm{Pic}(X_L^{reg}) \to 0.
+     0 \to \Pic(Y) \to \Pic(Y^{reg}) \to \Pic(X_L^{reg}) \to 0.
   \]
 \end{prop}
 
@@ -1223,32 +1223,32 @@ $\widetilde{\BO}$ be a nilpotent cover of a complex semisimple Lie group $G$, $\
       \pi^{-1}(U^-) \simeq U^- \times (X_L \times \fp^{\perp}).
   \]
 
-  $U^-$ and $\fp^{\perp}$ are affine spaces, so $\mathrm{Cl}(\pi^{-1}(U^-)) = \mathrm{Cl}(X_L) = \mathrm{Pic}(X_L^{reg})$.
+  $U^-$ and $\fp^{\perp}$ are affine spaces, so $\mathrm{Cl}(\pi^{-1}(U^-)) = \mathrm{Cl}(X_L) = \Pic(X_L^{reg})$.
 
-  The map $\mathrm{Pic}(Y^{reg}) \to \mathrm{Pic}(X_L^{reg})$ is just the restriction map $\mathrm{Cl}(Y) \to \mathrm{Cl}(\pi^{-1}(U^-))$, and the kernel is $\mathrm{Cl}(Y \backslash \pi^{-1}(U^-))$.
+  The map $\Pic(Y^{reg}) \to \Pic(X_L^{reg})$ is just the restriction map $\mathrm{Cl}(Y) \to \mathrm{Cl}(\pi^{-1}(U^-))$, and the kernel is $\mathrm{Cl}(Y \backslash \pi^{-1}(U^-))$.
   \[
-    \mathrm{Pic}(Y) \xrightarrow{div} \mathrm{Cl}(Y) \xrightarrow{res} \mathrm{Cl}(\pi^{-1}(U^-)),
+    \Pic(Y) \xrightarrow{div} \mathrm{Cl}(Y) \xrightarrow{res} \mathrm{Cl}(\pi^{-1}(U^-)),
   \]
   the composition can also realized as
   \[
-    \mathrm{Pic}(Y) \xrightarrow{res} \mathrm{Pic}(\pi^{-1}(U^-)) \xrightarrow{div} \mathrm{Cl}(\pi^{-1}(U^-)),
+    \Pic(Y) \xrightarrow{res} \Pic(\pi^{-1}(U^-)) \xrightarrow{div} \mathrm{Cl}(\pi^{-1}(U^-)),
   \]
-  while $\mathrm{Pic}(\pi^{-1}(U^-)) = 0$ the composition is zero.
+  while $\Pic(\pi^{-1}(U^-)) = 0$ the composition is zero.
 
-  On the other hand, if a divisor $D$ on $Y$ is mapped to zero in $\mathrm{Cl}(\pi^{-1}(U^-))$, then $D$ is linearly equivalent to a divisor supported on $Y \backslash \pi^{-1}(U^-)$, it is linearly equivalent to $\sum_i n_i \pi^{-1}(D_i)$ (suppose that $(G/P) \backslash U^- = \cup_i D_i$, where $D_i$ are divisors.), and $\pi^{-1}(D_i) = \mathrm{div}(\pi^*(\CO(D_i)))$ they are Cartier divisors, so $D$ is Cartier. This shows that the kernel of $\mathrm{Cl}(Y) \to \mathrm{Cl}(\pi^{-1}(U^-))$ is $\mathrm{Pic}(Y)$.
+  On the other hand, if a divisor $D$ on $Y$ is mapped to zero in $\mathrm{Cl}(\pi^{-1}(U^-))$, then $D$ is linearly equivalent to a divisor supported on $Y \backslash \pi^{-1}(U^-)$, it is linearly equivalent to $\sum_i n_i \pi^{-1}(D_i)$ (suppose that $(G/P) \backslash U^- = \cup_i D_i$, where $D_i$ are divisors.), and $\pi^{-1}(D_i) = \mathrm{div}(\pi^*(\CO(D_i)))$ they are Cartier divisors, so $D$ is Cartier. This shows that the kernel of $\mathrm{Cl}(Y) \to \mathrm{Cl}(\pi^{-1}(U^-))$ is $\Pic(Y)$.
 \end{proof}
 
 \begin{prop}
-  $\mathrm{Pic}(Y) = \mathrm{Pic}(G/P) = X^*(\widetilde{L})$.
+  $\Pic(Y) = \Pic(G/P) = X^*(\widetilde{L})$.
 \end{prop}
 
 \begin{proof}
-  Then $\pi^*: \mathrm{Pic}(G/P) \to \mathrm{Pic}(Y)$ is injective, since $\pi$ has a section $G/P \hookrightarrow Y$.
+  Then $\pi^*: \Pic(G/P) \to \Pic(Y)$ is injective, since $\pi$ has a section $G/P \hookrightarrow Y$.
   For any line bundle $\CL$ on $Y$ the proof of previous proposition shows that $\CL$ is isomorphic to some $\CO(\sum_i \pi^{-1}(D_i)) = \pi^*(\CO(\sum_i D_i))$.
 \end{proof}
 
 \begin{thm}
-  If $\widetilde{\BO_L}$ is birationally rigid, then $H^2(Y^{reg},\BC) = \mathrm{Pic}(Y) \otimes_{\BZ} \BC = \fz(\fl)$.
+  If $\widetilde{\BO_L}$ is birationally rigid, then $H^2(Y^{reg},\BC) = \Pic(Y) \otimes_{\BZ} \BC = \fz(\fl)$.
 \end{thm}
 
 
@@ -1256,7 +1256,7 @@ $\widetilde{\BO}$ be a nilpotent cover of a complex semisimple Lie group $G$, $\
 
 For a Poisson variety $X$ a formal quantization of $X$ is a pair $(\mathcal{D}_{\hbar},\theta)$ where $\mathcal{D}_{\hbar}$ is sheaf of $\BC[[h]]$-algebra flat over $\BC[[\hbar]]$ and complete in $\hbar$-adic topology, and $\theta: \mathcal{D}_{\hbar}/(\hbar) \xrightarrow{\sim} \CO_X$ is a Poisson isomorphism. Isomorphism classes of formal quantizations of $X$ is denoted by $Quant(X)$
 
-When $X = \Spec(A)$ is affine, use micro-localzation, we can identify the formal quantization of $X$ with a formal quantization of $A$.
+When $X = \Spec(A)$ is affine, use micro-localization, we can identify the formal quantization of $X$ with a formal quantization of $A$.
 
 A star product on $A$ is a $\BC[[\hbar]]$ bi-linear map
 \[
@@ -1281,8 +1281,6 @@ such that $T(f \star g) = T(f) \star' T(g)$.
     Quant(X) \xrightarrow{\sim} \{\text{Star products on } A\}/\text{equivalence}.
   \]
 \end{thm}
-
-The proof is split into several steps.
 
 \begin{proof}
   \begin{itemize}

@@ -1293,3 +1293,56 @@ such that $T(f \star g) = T(f) \star' T(g)$.
     We need the fact that $HH^i(A) \simeq HH^i_{\mathrm{diff}}(A)$.
   \end{itemize}
 \end{proof}
+
+
+\notesection{2026-08-31}{Filtered Quantization and Graded Quantization}
+
+$A$ be a positively graded commutative algebra with a Poisson bracket $\{,\}$ of degree $-d$.
+
+\subsection{Notes version}
+\cite{Losev2022Topics}
+
+\begin{itemize}
+  \item A filtered quantization of $A$ is a pair $(\CA,\theta)$ where $\CA$ is a filtered algebra with $[\CA_{\leq i},\CA_{\leq j}] \subseteq \CA_{\leq i+j-d}$, and $\theta: \gr(\CA) \xrightarrow{\sim} A$ is a graded Poisson isomorphism.
+  \item A graded quantization of $A$ is a pair $(\CA_{\hbar},\theta)$ where $\CA_{\hbar}$ is a graded $\BC[\hbar]$-algebra flat over $\BC[\hbar]$ such that $[\CA_{\hbar},\CA_{\hbar}] \subseteq \hbar^{d}\CA_{\hbar}$, and $\theta: \CA_{\hbar}/(\hbar) \xrightarrow{\sim} A$ is a Poisson isomorphism.
+  ($\deg \hbar = 1$)
+\end{itemize}
+
+The above two quantizations are equivalent. The equivalence is given by the Rees construction:
+\[\CA_{\hbar} = \bigoplus_{i=0}^{\infty} \CA_{\leq i} \hbar^i.\]
+
+\begin{examp}
+  For a complex Lie algebra $\fg$, $S(\fg)$ is a graded Poisson algebra with $\deg \fg = 2$. (We need the degree $2$ to deal with the case of nilpotent covers.) 
+
+  We have a natural filtered quantization of $S(\fg)$, which is the pair $(U(\fg), \iota)$, where $U(\fg)$ is equipped with the doubled PBW filtration.
+
+  By Rees construction, we can get a graded quantization:
+  \[
+    U_{\hbar}(\fg) = \bigoplus_{i=0}^{\infty} U_{\leq \lfloor \frac{i}{2} \rfloor }(\fg) \hbar^i = T(\fg)[\hbar]/(X \otimes Y - Y \otimes X - \hbar^2 [X,Y]).
+  \]
+\end{examp}
+
+\subsection{LY23 version}
+\cite[Section 2]{LY25}
+
+\begin{itemize}
+  \item A filtered quantization of $A$ is a triple $(\CA,\zeta,\iota)$, where $\CA$ is a filtered algebra with $[\CA_{\leq i},\CA_{\leq j}] \subseteq \CA_{\leq i+j-d}$, $\zeta: \mu_d \to \Aut_{fil}(\CA)$ such that $\zeta(t)\cdot \gr(\CA)_i = t^i \gr(\CA)_i$, and $\iota: \gr(\CA) \xrightarrow{\sim} A$ is a graded Poisson isomorphism.
+  \item A graded quantization of $A$ is a pair $(\CA_{\hbar}, \theta)$, where $\CA_{\hbar}$ is a graded $\BC[\hbar]$-algebra flat over $\BC[\hbar]$ such that $[\CA_{\hbar},\CA_{\hbar}] \subseteq \hbar\CA_{\hbar}$, and $\theta: \CA_{\hbar}/(\hbar) \xrightarrow{\sim} A$ is a Poisson isomorphism. ($\deg \hbar = d$)
+\end{itemize}
+
+The above two quantizations are equivalent too. The equivalence is given by the Rees construction:
+\[\CA_{\hbar} = \bigoplus_{i=0}^{\infty} (\CA_{\leq i} \cap \CA_{i + d \BZ} ) u^i.\]
+Here $u^d = \hbar$, $\CA_{i+d\BZ} = \set{a \in \CA}{\zeta(t) \cdot a = t^i a}$.
+
+This definition compatible well with the definition of formal quantization in many other papers, for example, \cite{BK04} and \cite{LY21}.
+
+\begin{examp}
+  For a complex Lie algebra $\fg$, $S(\fg)$ is a graded Poisson algebra with $\deg \fg = 2$. 
+  
+  There is a natural filtered quantization of $S(\fg)$, which is the triple $(U(\fg),\zeta = 1, \iota)$, where $U(\fg)$ is equipped with the doubled PBW filtration, and $\iota: \gr(U(\fg)) \xrightarrow{\sim} S(\fg)$ is the natural isomorphism.
+
+  By Rees construction, we can get a graded quantization:
+  \[
+    U_{\hbar}(\fg) = \bigoplus_{i=0}^{\infty} (U_{\leq \lfloor \frac{i}{2} \rfloor }(\fg) \cap U_{i+2\BZ}(\fg) ) u^i = \bigoplus_{i=0}^{\infty} U_{i}(\fg) \hbar^i = T(\fg)[\hbar]/(X \otimes Y - Y \otimes X - \hbar [X,Y]).
+  \]
+\end{examp}

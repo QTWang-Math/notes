@@ -1346,3 +1346,82 @@ This definition compatible well with the definition of formal quantization in ma
     U_{\hbar}(\fg) = \bigoplus_{i=0}^{\infty} (U_{\leq \lfloor \frac{i}{2} \rfloor }(\fg) \cap U_{i+2\BZ}(\fg) ) u^i = \bigoplus_{i=0}^{\infty} U_{i}(\fg) \hbar^i = T(\fg)[\hbar]/(X \otimes Y - Y \otimes X - \hbar [X,Y]).
   \]
 \end{examp}
+
+\notesection{2026-09-02}{Quantum Slices Theorem}
+
+$A$ be a graded Poisson algebra with a Poisson bracket of degree $-d$ over $\BC$. Let $(\CA,\zeta,\iota)$ be a filtered quantization of $A$, and $(\CA_{\hbar},\theta)$ be the corresponding graded quantization.
+
+For any smooth closed point $e \in \Spec(A)$, denote by $m$ the corresponding maximal ideal, $A^{\wedge} = \varprojlim A/m^n$ is the completion of $A$ with respect to $m$. $m_{\hbar}$ the corresponding maximal ideal in $\CA_{\hbar}$, and $\CA_{\hbar}^{\wedge} = \varprojlim \CA_{\hbar}/m_{\hbar}^n$ the completion of $\CA_{\hbar}$ at $m_{\hbar}$.
+
+There is a skew symmetric bilinear form $\omega$ on $T_e^* \Spec(A) = m/m^2$ defined by:
+\[
+  \omega(\xi + m^2,\eta + m^2) = \{\xi,\eta\} + m \in A/m = \BC.
+\]
+Choose a completion $V$ of the radical $\ker(\omega)$ in $T_e^* \Spec(A)$, then $V$ is a symplectic vector space. Denote by $\hat{\CW}_{\hbar}(V)$ the completed Weyl algebra of $V$ over $\BC[[\hbar]]$. 
+
+Consider the composition:
+\[
+  \pi: \hat{m}_{\hbar} \to \hat{m} \to m/m^2 \to V.
+\]
+
+\begin{thm}[Quantum Slice]
+  There exist a lift $\iota: V \to m_{\hbar}$ such that:
+  \begin{itemize}
+    \item $\pi \circ \iota = \id_V$;
+    \item $\frac{1}{\hbar}[\iota(u),\iota(v)] = \omega(u,v)$;
+    \item Let $\CA_{\hbar}'$ denote the centralizer of $\iota(V)$ in $\CA_{\hbar}^{\wedge}$, then the multiplication map gives an isomorphism:
+    \[
+      \hat{\CW}_{\hbar}(V) \widehat{\otimes}_{{\BC[[\hbar]]}} \CA_{\hbar}' \xrightarrow{\sim} \CA_{\hbar}^{\wedge}.
+    \]
+  \end{itemize}
+\end{thm}
+
+\begin{proof}
+  For any $x,y \in V$ such that $\omega(x,y) = 1$, for any lift $x_1,y_1$ we have $\frac{1}{\hbar}[x_0,y_0] - 1 \in \hat{m}_{\hbar}$. 
+  
+  We try to used induction to construct lifts $x_k,y_k \in \hat{m}_{\hbar}$ such that 
+  \[
+    \frac{1}{\hbar}[x_k,y_k] - 1 \in \hat{m}_{\hbar}^k, \quad x_k - x_{k-1}, y_k - y_{k-1} \in \hat{m}_{\hbar}^{k}.
+  \]
+
+  Note that we have a well defined linear morphism:
+
+  \[
+    T_k = \overline{\frac{1}{\hbar}[x_k, y_k \cdot (-)]}: \hat{m}_{\hbar}^{k}/\hat{m}_{\hbar}^{k+1} \to \hat{m}_{\hbar}^{k}/\hat{m}_{\hbar}^{k+1}.
+  \]
+
+  Suppose that $\frac{1}{\hbar}[x_k,y_k] = e_k \in \hat{m}_{\hbar}^k$, then $T_k = 1+ \bar{y_k} \cdot D$, where $D$ is a derivation of $\hat{m}_{\hbar}^{k}/\hat{m}_{\hbar}^{k+1}$. 
+\end{proof}
+
+
+\notesection{2026-09-04}{Symplectic Lie algebra and Weyl algebra}
+
+Let $(V,\omega)$ be a symplectic vector space over $\BC$.
+
+As representations of $\Sp(V)$, we have the isomorphism:
+\defmap{\Phi}{S^2(V)}{\mathfrak{sp}(V)}{u \odot  v}{(z \mapsto \omega(u,z)v + \omega(v,z)u).}
+
+Let $\CW(V) = T(V)/(u\otimes v - v\otimes u - \omega(u,v))$ be the Weyl algebra.
+
+There is an embedding:
+\defmap{\iota}{S^2(V)}{\CW(V)}{u \odot v}{\frac{1}{2}(u \otimes v + v \otimes u).}
+
+\begin{prop}
+  The composition $\eta = \iota \circ \Phi^{-1}: \mathfrak{sp}(V) \to \CW(V)$ is a Lie algebra homomorphism.
+\end{prop}
+
+\begin{proof}
+  For any $v \in V$ and $a \odot b \in S^2(V)$, we have:
+  \[
+    [\iota(a \odot b),v] = [\frac{1}{2}(a \otimes b + b \otimes a),v] = \omega(a,v)b + \omega(b,v)a = \Phi(a \odot b)(v).
+  \]
+  Since $\Phi$ is $\Sp(V)$ equivariant, we have
+  \[
+    [A, \Phi(u \odot v)] = \Phi(A \cdot (u \odot v)) = \Phi(Au \odot v + u \odot Av), \quad A \in \mathfrak{sp}(V), u,v \in V.
+  \]
+  The rest is a direct computation. 
+\end{proof}
+
+\begin{rk}
+  The first formula in the proof shows that the action of $\Sp(V)$ on $\CW(V)$ is Hamiltonian, the quantum comoment map is given by $\eta: \mathfrak{sp}(V) \to \CW(V)$.
+\end{rk}

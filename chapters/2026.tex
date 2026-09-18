@@ -1425,3 +1425,96 @@ There is an embedding:
 \begin{rk}
   The first formula in the proof shows that the action of $\Sp(V)$ on $\CW(V)$ is Hamiltonian, the quantum comoment map is given by $\eta: \mathfrak{sp}(V) \to \CW(V)$.
 \end{rk}
+
+
+\notesection{2026-09-17}{Koszul Duality Pattern in Category $\CO$}
+
+We summarize some general pictures of Koszul duality pattern in category $\CO$.
+
+\subsection{Soergel Functor}
+
+$\fg$ be a complex semisimple Lie algebra, $\check{\fg}$ be the Langlands dual Lie algebra of $\fg$. Fix Cartan subalgebras $\fh$ and $\fh^*$, and Borel subalgebras $\fb$ and $\check{\fb}$. Their Weyl groups are the same $W$. $\CO^{pr}$ and $\check{\CO}^{pr}$ be the principal blocks of the category $\CO$.
+
+\begin{thm}
+  There are canonical algebra isomorphisms:
+  \[
+    \End_{\CO^{pr}}(P(w_0 \cdot 0)) \simeq \mathrm{Ext}^*_{D^b(\check{\CO}^{pr})}(\check{L}(0),\check{L}(0)) \simeq C.
+  \]
+  Here $C = \BC[\fh^*]/\BC[\fh^*]^{W}_{+}$.
+\end{thm}
+
+We can define functors:
+
+\[
+  \BV: \CO^{pr} \to C-mod_{ugr}, \quad M \mapsto \Hom_{\CO^{pr}}(P(w_0 \cdot 0),M).
+\]
+
+\begin{thm}
+  \begin{itemize}
+    \item $\BV$ is a fully faithful functor on projective objects, and it induces an equivalence of categories:
+  \[
+    \CO^{pr}-\mathrm{Proj} \xrightarrow{\sim} \mathrm{SMod}_{ugr}.
+  \]
+  Here $\mathrm{SMod}$ is the additive subcategory of Soergel modules in $C-mod_{ugr}$;
+    \item $\BV(P(w \cdot 0)) = \bar{B}_w$.
+  \end{itemize}
+  
+\end{thm}
+
+On the Koszul dual side, we have the functor:
+\[
+  \check{\BV}_K: D^b(\check{\CO}^{pr}) \to C-mod_{gr}, \quad M \mapsto \bigoplus_{i \in \BZ} \Hom_{D^b}(\check{L}(0),M[i]).
+\]
+
+\begin{thm}
+  \begin{itemize}
+    \item $\check{\BV}_K$ is fully faithful on irreducible objects, and it induces an equivalence of categories:
+  \[
+    D^b(\check{\CO}^{pr})_{ss}  \xrightarrow{\sim} \mathrm{SMod}_{gr}.
+  \]
+  \item $\check{\BV}_K(\check{L}(w \cdot 0)) = \bar{B}_{w^{-1}w_0}[-l(w_0)]$
+  \end{itemize}
+  
+\end{thm}
+
+Combining the above two equivalences of categories, we get an isomorphism of algebras:
+
+\begin{thm}
+  \[
+    \End_{\CO^{pr}}( \bigoplus_{w \in W} P(w \cdot 0)) \simeq \mathrm{Ext}^*_{\check{\CO}^{pr}}(\bigoplus_{w \in W} \check{L}(w \cdot 0),\bigoplus_{w \in W} \check{L}(w \cdot 0)).
+  \]
+\end{thm}
+
+
+\subsection{Geometry of Dual Side}
+
+On the dual side, the functor $\check{\BV}_K$ has geometric interpretation. Let $\check{G}$ be the Langlands dual group of $G$, $\check{B}$ be the Borel subgroup of $\check{G}$, and $\check{\CB} = \check{G}/\check{B}$ be the flag variety. Then we have an equivalence of categories:
+
+\[
+  \check{\CO}^{pr} \xrightarrow{\sim} \mathrm{Mod}_{fg,\check{N}}(\mathcal{D}_{\check{G}/\check{B}}), \quad \check{L}(w^{-1}w_0 \cdot 0) \mapsto \mathrm{IC}(\check{B}w\check{B}/\check{B}, trivial).
+\]
+
+\[
+  D^b(\check{{\CO}}^{pr}) \xrightarrow{\sim} D^b(\mathrm{Mod}_{fg,\check{N}}(\mathcal{D}_{\check{G}/\check{B}})) \xrightarrow{\sim} D^b_{\check{N}}(\check{G}/\check{B}).
+\]
+
+Under these equivalences, the functor $\check{\BV}_K$ can be realized as:
+\[
+  \check{\BV}_K: D^b_{\check{N}}(\check{G}/\check{B}) \to C-mod_{gr}, \quad \CF \mapsto \bigoplus_{i \in \BZ} \Hom_{D^b_{\check{N}}(\check{G}/\check{B})}(\CO_{\check{G}/\check{B}},\CF[i]).
+\]
+
+\[
+\begin{tikzcd}[column sep=large, row sep=large]
+\check{\mathcal O}^{\mathrm{pr}}
+  \arrow[rr, "\sim"]
+  \arrow[dr, "\check{\mathbb V}_K"']
+&&
+\operatorname{Mod}_{\mathrm{fg},\,\check N}
+  \bigl(\mathcal D_{\check G/\check B}\bigr)
+  \arrow[dl]
+\\
+& \operatorname{SMod}_{\mathrm{gr}} &
+\end{tikzcd}
+\]
+
+Then we can see that $\check{\BV}_K(\check{L}(w^{-1}w_0 \cdot 0)) = \mathrm{IH}^*_N(BwB/B,trivial)[?]$, so $\mathrm{IH}^*_N(BwB/B,trivial)$ is indecomposible in $\mathrm{SMod}_{gr}$, and use BBDG decomposition theorem it is isomorphic to $\bar{B}_w$ up to a shift.

@@ -2164,3 +2164,122 @@ Springer-correspondence formulation to \cite{BarbaschVogan1983} is the
 standard one, but the precise statement in that paper has not been read in
 full.}
 
+
+
+\notesection{2026-09-28}{Atlas Parameter}
+
+An atlas parameter is a triple $p = (x, \lambda, \nu)$.
+
+Here 
+\begin{itemize}
+  \item $x \in K\backslash G / B$ is a $KGB$-element, it essentially encodes a Cartan $H = TA$ and a chosen positive system;
+  \item $\lambda \in (X^* + \rho)/(1-\theta_x)X^*$ encodes a genuine character of the
+$\rho$-double cover of $T$;
+  \item $\nu \in (X^* \otimes \BQ)^{-\theta_x}$ encodes a character of $A$.
+\end{itemize}
+
+The infinitesimal character of the atlas parameter is given by
+\[
+  \gamma = \frac{1+\theta_x}{2}\lambda + \nu \in X^* \otimes \BQ.
+\]
+
+
+For $G(\mathbb R)=SL_2(\mathbb R)$, identify $X^*=\mathbb Z$
+using the fundamental weight. Then the positive root is $2$,
+$\rho=1$, and the Weyl group acts by $s\mapsto -s$.
+
+
+There are three KGB elements:
+\[
+\begin{array}{c|c|c|c}
+x & H & T & \theta_x \\ \hline
+0,1 & SO(2) & SO(2) & +1 \\
+2 & \mathbb R^\times & \{\pm1\} & -1
+\end{array}
+\]
+
+\emph{Compact Cartan.}
+For $x=0,1$, we have $\theta_x=1$, so $\nu=0$ and
+\[
+\gamma=\frac{1+\theta_x}{2}\lambda+\nu=\lambda.
+\]
+For $n\geq 2$, the two discrete series representations are
+\[
+\begin{aligned}
+D_n^+ &: \quad p=(0,n-1,0),
+& K\text{-weights} &: \quad n,n+2,n+4,\ldots,\\
+D_n^- &: \quad p=(1,n-1,0),
+& K\text{-weights} &: \quad -n,-n-2,-n-4,\ldots.
+\end{aligned}
+\]
+Each $K$-type occurs with multiplicity one, and both representations
+have infinitesimal character $[n-1]\in\mathbb C/\{\pm1\}$.
+For $n=1$, these parameters give the two limits of discrete series.
+
+
+\emph{Split Cartan.}
+For $x=2$, we have $\theta_x=-1$ and
+\[
+H=\mathbb R^\times=\{\pm1\}\mathbb R_{>0}.
+\]
+Consequently,
+\[
+\lambda\in(\mathbb Z+1)/2\mathbb Z,
+\qquad
+\nu=s\in\mathbb Q,
+\qquad
+\gamma=s.
+\]
+Write
+\[
+I(\varepsilon,s)
+=
+\operatorname{Ind}_{B(\mathbb R)}^{SL_2(\mathbb R)}
+\bigl(\operatorname{sgn}(a)^\varepsilon|a|^s\bigr),
+\qquad \varepsilon\in\{0,1\},
+\]
+where induction is normalized and $a$ denotes the diagonal coordinate
+in $\operatorname{diag}(a,a^{-1})$.
+The relation with Atlas parameters is
+\[
+\varepsilon\equiv\lambda-1\pmod2,
+\qquad \nu=s.
+\]
+Thus convenient representatives are
+\[
+I(0,s):\quad (2,1,s),
+\qquad
+I(1,s):\quad (2,2,s).
+\]
+Their $K$-weights are respectively $2\mathbb Z$ and
+$2\mathbb Z+1$, each with multiplicity one.
+
+
+Some examples are:
+\[
+\begin{array}{c|c|c|c}
+\text{Atlas parameter}
+& \text{Standard module}
+& \text{Structure}
+& \text{Infinitesimal character}\\ \hline
+(0,1,0) & D_2^+ & \text{irreducible} & [1]\\
+(1,1,0) & D_2^- & \text{irreducible} & [1]\\
+(2,1,0) & I(0,0) & \text{irreducible} & [0]\\
+(2,2,0) & I(1,0) & D_1^+\oplus D_1^- & [0]\\
+(2,1,1) & I(0,1) & \text{reducible, quotient }\mathbf1 & [1]\\
+(2,2,1) & I(1,1) & \text{irreducible} & [1]
+\end{array}
+\]
+
+In particular, there is an exact sequence
+\[
+0\longrightarrow D_2^+\oplus D_2^-
+\longrightarrow I(0,1)
+\longrightarrow \mathbf1
+\longrightarrow 0.
+\]
+Thus the final Atlas parameter $(2,1,1)$ labels the trivial
+representation as its irreducible Langlands quotient, although its
+standard module is reducible. The parameter $(2,2,0)$ is non-final:
+its standard module is the direct sum of the two limits of discrete
+series.

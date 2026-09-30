@@ -2283,3 +2283,578 @@ representation as its irreducible Langlands quotient, although its
 standard module is reducible. The parameter $(2,2,0)$ is non-final:
 its standard module is the direct sum of the two limits of discrete
 series.
+
+
+\notesection{2026-09-29}{Important Rank-One Groups}
+
+Let $G$ be a connected complex reductive algebraic group, and fix a Borel
+subgroup
+\[
+B \supseteq T
+\]
+with maximal torus $T$. Let $\alpha$ be a simple root, and let $P_\alpha$
+be the corresponding minimal parabolic subgroup containing $B$.
+
+Write
+\[
+U_\alpha := R_u(P_\alpha)
+\]
+for the unipotent radical of $P_\alpha$, and define
+\[
+H_\alpha := (\ker \alpha)^0 \subset T.
+\]
+
+Then
+\[
+\widetilde G_\alpha
+:=
+P_\alpha/(U_\alpha H_\alpha)
+\]
+is a connected semisimple group of rank one. Hence it is isogenous to
+$SL_2(\BC)$. Its adjoint quotient is
+\[
+G_\alpha^{\mathrm{ad}}
+:=
+\widetilde G_\alpha/Z(\widetilde G_\alpha)
+\simeq PGL_2(\BC).
+\]
+
+It is this adjoint rank-one group that acts effectively on the rank-one
+fiber below.
+
+\subsection*{The rank-one fiber}
+
+Consider the natural projection
+\[
+\pi_\alpha:\CB=G/B\longrightarrow G/P_\alpha.
+\]
+This is a $\BP^1$-fibration, since
+\[
+P_\alpha/B\simeq \BP^1.
+\]
+
+Take
+\[
+x=B\in G/B,\qquad
+z=\pi_\alpha(x)=P_\alpha.
+\]
+Then
+\[
+\pi_\alpha^{-1}(z)
+=
+P_\alpha/B
+\simeq \BP^1.
+\]
+
+The action of $P_\alpha$ on this fiber factors through the rank-one
+quotient, and its effective action is
+\[
+G_\alpha^{\mathrm{ad}}
+\simeq PGL_2(\BC)
+\curvearrowright
+\BP^1.
+\]
+
+Thus every simple root $\alpha$ gives a canonical rank-one
+$PGL_2$-geometry inside the flag variety.
+
+\subsection*{Reduction of the $K$-orbit geometry}
+
+Let $K\subset G$ be a symmetric subgroup, and let
+\[
+\CO=K\cdot x
+\]
+be the $K$-orbit through $x$. Put
+\[
+K_z:=\operatorname{Stab}_K(z).
+\]
+Since $\pi_\alpha$ is $K$-equivariant,
+\[
+\CO\cap \pi_\alpha^{-1}(z)
+=
+K_z\cdot x.
+\]
+
+The action of $K_z$ on the fiber factors through its image
+\[
+\overline K_z
+\subset
+G_\alpha^{\mathrm{ad}}
+\simeq PGL_2(\BC).
+\]
+Hence
+\[
+\boxed{
+\CO\cap\pi_\alpha^{-1}(z)
+=
+\overline K_z\cdot x.
+}
+\]
+
+Therefore the local behavior of a $K$-orbit in the $\alpha$-direction
+is completely determined by the rank-one action
+\[
+\overline K_z\curvearrowright\BP^1.
+\]
+
+\textcolor{red}{
+The action of the simple Hecke generator $T_{s_\alpha}$ in the
+Lusztig--Vogan module is determined by this rank-one geometry,
+together with the behavior of the equivariant local system on the
+relevant $K$-orbits.
+}
+
+The singularities of the closures of these $K$-orbits, which control the
+local-system bookkeeping, are computed in \cite{LusztigVogan1983}; the
+duality between the $K$-orbit module and the character module on which the
+$T_{s_\alpha}$ act is the content of \cite{Vogan1982}.
+
+\subsection*{Computing the rank-one stabilizer $\bar K_z$}
+
+Assume that $K=G^\theta$ for an involution $\theta$, and choose the
+representative $x=B$ so that the Cartan $T\subset B$ is $\theta$-stable.
+Then
+\[
+z=\pi_\alpha(x)=P_\alpha,
+\qquad
+K_z=K\cap P_\alpha.
+\]
+
+Let
+\[
+\mathfrak q_\alpha
+:=
+\mathfrak p_\alpha/
+(\mathfrak u_\alpha+\mathfrak h_\alpha)
+\simeq \mathfrak{sl}_2.
+\]
+Choose the usual basis
+\[
+E=
+\begin{pmatrix}
+0&1\\
+0&0
+\end{pmatrix},
+\qquad
+F=
+\begin{pmatrix}
+0&0\\
+1&0
+\end{pmatrix},
+\qquad
+H=
+\begin{pmatrix}
+1&0\\
+0&-1
+\end{pmatrix}.
+\]
+The image of $B$ in the rank-one quotient is the standard Borel
+\[
+\mathfrak b_\alpha
+=
+\BC H\oplus \BC E.
+\]
+
+Thus the point $x=B$ corresponds to the standard point
+\[
+x=[1:0]\in \BP^1.
+\]
+
+The Lie algebra of the effective stabilizer is the image
+\[
+\bar{\mathfrak k}_z
+=
+\operatorname{Im}
+\left(
+\mathfrak k\cap\mathfrak p_\alpha
+\longrightarrow
+\mathfrak q_\alpha
+\right).
+\]
+
+The different root types can now be read off from this rank-one
+calculation.
+
+\subsubsection*{Compact imaginary root}
+
+Suppose
+\[
+\theta(\alpha)=\alpha
+\]
+and $\alpha$ is compact imaginary. Then, after normalizing the root
+vectors,
+\[
+\theta(E)=E,\qquad
+\theta(F)=F,\qquad
+\theta(H)=H.
+\]
+Hence
+\[
+\bar{\mathfrak k}_z
+=
+\mathfrak{sl}_2.
+\]
+Therefore
+\[
+\bar K_z=PGL_2(\BC),
+\]
+and its action on $\BP^1$ is transitive:
+\[
+\boxed{
+\bar K_z\cdot x=\BP^1.
+}
+\]
+
+Thus in the compact imaginary case,
+\[
+\CO\cap\pi_\alpha^{-1}(z)=\BP^1.
+\]
+
+\subsubsection*{Noncompact imaginary root}
+
+Suppose
+\[
+\theta(\alpha)=\alpha
+\]
+and $\alpha$ is noncompact imaginary. Then
+\[
+\theta(E)=-E,\qquad
+\theta(F)=-F,\qquad
+\theta(H)=H.
+\]
+Consequently
+\[
+\boxed{
+\bar{\mathfrak k}_z
+=
+\BC H.
+}
+\]
+
+Thus
+\[
+\bar K_z^0=T_\alpha
+\]
+is the standard maximal torus of $PGL_2$.
+
+In homogeneous coordinates,
+\[
+T_\alpha
+=
+\left\{
+\begin{bmatrix}
+t&0\\
+0&t^{-1}
+\end{bmatrix}
+\right\}
+\]
+acts by
+\[
+[u:v]\longmapsto [tu:t^{-1}v].
+\]
+Its orbit decomposition is
+\[
+\boxed{
+\BP^1
+=
+\{[1:0]\}
+\sqcup
+\{uv\neq0\}
+\sqcup
+\{[0:1]\}.
+}
+\]
+The middle orbit is isomorphic to $\BC^\times$.
+
+Since
+\[
+x=[1:0],
+\]
+the point $x$ is a torus-fixed point.
+
+Hence for the connected stabilizer,
+\[
+T_\alpha\cdot x=\{x\}.
+\]
+
+The full group $\bar K_z$ may contain the nontrivial Weyl element of
+\[
+N(T_\alpha)/T_\alpha\simeq \BZ/2\BZ.
+\]
+It exchanges the two fixed points
+\[
+[1:0]\longleftrightarrow[0:1].
+\]
+
+Thus schematically,
+\[
+\begin{array}{c|c}
+\bar K_z=T_\alpha
+&
+\{[1:0]\},\ \{[0:1]\}\text{ are separate orbits}
+\\
+\bar K_z=N(T_\alpha)
+&
+\{[1:0],[0:1]\}\text{ is one orbit}.
+\end{array}
+\]
+
+This is the geometric origin of the type I/type II distinction for
+noncompact imaginary roots.
+
+\subsubsection*{Real root}
+
+Now suppose
+\[
+\theta(\alpha)=-\alpha.
+\]
+After normalizing root vectors, we may take
+\[
+\theta(E)=F,\qquad
+\theta(F)=E,\qquad
+\theta(H)=-H.
+\]
+Therefore
+\[
+\boxed{
+\bar{\mathfrak k}_z
+=
+\BC(E+F).
+}
+\]
+
+Since
+\[
+E+F
+=
+\begin{pmatrix}
+0&1\\
+1&0
+\end{pmatrix}
+\]
+is semisimple, $\bar K_z^0$ is again a maximal torus:
+\[
+\bar K_z^0=S_\alpha\simeq\BC^\times.
+\]
+
+However this torus is different from the standard torus above. Indeed,
+\[
+E+F\notin\mathfrak b_\alpha,
+\]
+so $S_\alpha$ does not fix
+\[
+x=[1:0].
+\]
+
+The eigenlines of $E+F$ are
+\[
+p_+=[1:1],
+\qquad
+p_-=[1:-1].
+\]
+These are exactly the two fixed points of $S_\alpha$ on $\BP^1$.
+Hence
+\[
+\boxed{
+\BP^1
+=
+\{p_+\}
+\sqcup
+S_\alpha\cdot x
+\sqcup
+\{p_-\},
+}
+\]
+with
+\[
+S_\alpha\cdot x
+=
+\BP^1-\{p_+,p_-\}
+\simeq\BC^\times.
+\]
+
+Therefore
+\[
+\boxed{
+\CO\cap\pi_\alpha^{-1}(z)
+=
+\BP^1-\{p_+,p_-\}.
+}
+\]
+
+Again the full group may be either
+\[
+S_\alpha
+\qquad\text{or}\qquad
+N(S_\alpha).
+\]
+If it is $N(S_\alpha)$, the nontrivial Weyl element exchanges the two
+boundary points $p_+$ and $p_-$.
+
+Thus the type I/type II distinction records whether these two boundary
+points remain two different $K$-orbits or become one $K$-orbit.
+
+Notice that for real roots there is also an additional
+\emph{local-system condition}, namely Vogan's parity condition \cite{Vogan1981}.
+The orbit geometry itself is always the open-torus geometry above;
+the parity condition determines whether the relevant equivariant local
+system extends across the boundary and hence whether the inverse Cayley
+transform occurs.
+
+\subsubsection*{Complex root}
+
+Finally suppose that $\alpha$ is complex:
+\[
+\theta(\alpha)\neq\pm\alpha.
+\]
+
+First assume
+\[
+\theta(\alpha)>0.
+\]
+For
+\[
+X_\alpha\in\mathfrak g_\alpha,
+\]
+the vector
+\[
+X_\alpha+\theta(X_\alpha)
+\]
+belongs to $\mathfrak k\cap\mathfrak p_\alpha$.
+Modulo
+\[
+\mathfrak u_\alpha+\mathfrak h_\alpha,
+\]
+the $\theta(X_\alpha)$-term disappears, since
+\[
+\theta(\alpha)>0,
+\qquad
+\theta(\alpha)\neq\alpha.
+\]
+Thus its image is $E$.
+
+The Cartan direction $H$ also survives, whereas the $F$-direction does
+not. Consequently
+\[
+\boxed{
+\bar{\mathfrak k}_z
+=
+\BC H\oplus\BC E
+=
+\mathfrak b_\alpha.
+}
+\]
+Hence
+\[
+\bar K_z=B_\alpha.
+\]
+
+The Borel $B_\alpha$ acts on $\BP^1$ with two orbits:
+\[
+\boxed{
+\BP^1
+=
+\{[1:0]\}
+\sqcup
+\bigl(\BP^1-\{[1:0]\}\bigr).
+}
+\]
+The second orbit is $\BA^1$.
+
+Since $x=[1:0]$,
+\[
+\boxed{
+\bar K_z\cdot x=\{x\}.
+}
+\]
+
+If instead
+\[
+\theta(\alpha)<0,
+\]
+the same calculation gives the opposite Borel:
+\[
+\bar{\mathfrak k}_z
+=
+\BC H\oplus\BC F,
+\qquad
+\bar K_z=B_\alpha^-.
+\]
+Now $B_\alpha^-$ fixes the opposite point $[0:1]$, while
+\[
+x=[1:0]
+\]
+lies in its open orbit. Hence
+\[
+\boxed{
+\bar K_z\cdot x
+=
+\BP^1-\{[0:1]\}
+\simeq\BA^1.
+}
+\]
+
+\subsection*{Rank-one summary}
+
+The essential calculations are therefore
+
+\[
+\boxed{
+\begin{array}{c|c|c}
+\text{root type}
+&
+\bar{\mathfrak k}_z
+&
+\bar K_z^0\cdot x
+\\
+\hline
+\text{compact imaginary}
+&
+\mathfrak{sl}_2
+&
+\BP^1
+\\[1mm]
+\text{noncompact imaginary}
+&
+\BC H
+&
+\{x\}
+\\[1mm]
+\text{real}
+&
+\BC(E+F)
+&
+\BP^1-\{p_+,p_-\}\simeq\BC^\times
+\\[1mm]
+\text{complex},\ \theta\alpha>0
+&
+\BC H\oplus\BC E
+&
+\{x\}
+\\[1mm]
+\text{complex},\ \theta\alpha<0
+&
+\BC H\oplus\BC F
+&
+\BA^1.
+\end{array}
+}
+\]
+
+Thus the case-by-case Lusztig--Vogan formulas ultimately come from the
+very small list of subgroup actions
+\[
+PGL_2,\qquad
+T,\qquad
+N(T),\qquad
+B,\qquad
+B^-
+\]
+on
+\[
+\BP^1=PGL_2/B.
+\]
+
+The Hecke-module (Kazhdan--Lusztig) description of characters in which the
+operators $T_{s_\alpha}$ act is proved in the integral case in
+\cite{Vogan1983}.

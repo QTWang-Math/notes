@@ -1527,130 +1527,130 @@ Then we can see that $\check{\BV}_K(\check{L}(w^{-1}w_0 \cdot 0)) = \mathrm{IH}^
 
 Let \(G=\operatorname{Sp}_4(\mathbb C)\), and let \(\mathbb O\subset\mathfrak{sp}_4(\mathbb C)\) be the nilpotent orbit corresponding to the partition \([2,2]\). Let \(P_1\) be the stabilizer of a line in the standard representation, and let \(P_2\) be the stabilizer of a Lagrangian subspace. We will show that the moment maps
 
-$$
+\[
 \mu_1:T^*(G/P_1)\longrightarrow\overline{\mathbb O},
 \qquad
 \mu_2:T^*(G/P_2)\longrightarrow\overline{\mathbb O}
-$$
+\]
 
 have generic degrees \(2\) and \(1\), respectively.
 
 Write
 
-$$
+\[
 V=\operatorname{span}_{\mathbb C}\{p_1,p_2,q_1,q_2\},
-$$
+\]
 
 with symplectic form satisfying
 
-$$
+\[
 \omega(p_i,p_j)=\omega(q_i,q_j)=0,
 \qquad
 \omega(p_i,q_j)=\delta_{ij}.
-$$
+\]
 
 Choose \(e\in\mathbb O\) defined by
 
-$$
+\[
 e(p_i)=0,\qquad e(q_i)=p_i,\qquad i=1,2.
-$$
+\]
 
 In particular,
 
-$$
+\[
 \operatorname{im}(e)=\ker(e)=W,
 \qquad
 W:=\operatorname{span}\{p_1,p_2\}.
-$$
+\]
 
 Using an invariant nondegenerate bilinear form to identify \(\mathfrak g\) with \(\mathfrak g^*\), we have
 
-$$
+\[
 T^*(G/P_i)\cong G\times^{P_i}\mathfrak u_i,
 \qquad
 \mu_i([g,x])=\operatorname{Ad}(g)x,
-$$
+\]
 
 where \(\mathfrak u_i\) is the nilpotent radical of \(\mathfrak p_i\). Thus the fiber over \(e\) parametrizes the corresponding subspaces whose stabilizers have nilpotent radicals containing \(e\).
 
 \begin{itemize}
   \item The Lagrangian case. The variety \(G/P_2\) parametrizes Lagrangian subspaces \(M\subset V\). For such an \(M\),
 
-$$
+\[
 e\in\mathfrak u_M
 \quad\Longleftrightarrow\quad
 \operatorname{im}(e)\subseteq M\subseteq\ker(e).
-$$
+\]
 
 Since both the image and kernel of \(e\) equal \(W\), necessarily \(M=W\). Conversely, \(W\) is Lagrangian and satisfies these conditions. Therefore
 
-$$
+\[
 \mu_2^{-1}(e)=\{W\},
 \qquad
 \#\mu_2^{-1}(e)=1.
-$$
+\]
   \item The line case. Every line in \(V\) is isotropic, so \(G/P_1\cong\mathbb P(V)\). For a line \(\ell\subset V\), the nilpotent radical of its stabilizer consists of the endomorphisms in \(\mathfrak{sp}(V)\) that strictly lower the flag
 
-$$
+\[
 0\subset\ell\subset\ell^\perp\subset V.
-$$
+\]
 
 Consequently,
 
-$$
+\[
 e\in\mathfrak u_\ell
 \quad\Longleftrightarrow\quad
 e(\ell)=0,\qquad
 e(\ell^\perp)\subseteq\ell,\qquad
 e(V)\subseteq\ell^\perp.
-$$
+\]
 
 The first condition implies \(\ell\subset W\), so write
 
-$$
+\[
 \ell=\mathbb C(ap_1+bp_2),
 \qquad [a:b]\in\mathbb P^1.
-$$
+\]
 
 Then
 
-$$
+\[
 \ell^\perp
 =\operatorname{span}\{p_1,p_2,bq_1-aq_2\}.
-$$
+\]
 
 Since \(e(V)=W\subseteq\ell^\perp\), the third condition is automatic. The second condition is equivalent to
 
-$$
+\[
 bp_1-ap_2\in\mathbb C(ap_1+bp_2),
-$$
+\]
 
 or, equivalently,
 
-$$
+\[
 \det
 \begin{pmatrix}
 a&b\\
 b&-a
 \end{pmatrix}
 =0.
-$$
+\]
 
 Thus
 
-$$
+\[
 a^2+b^2=0.
-$$
+\]
 
 Over \(\mathbb C\), this equation has exactly two projective solutions,
 
-$$
+\[
 [a:b]=[1:i]\qquad\text{and}\qquad[a:b]=[1:-i].
-$$
+\]
 
 Hence
 
-$$
+\[
 \mu_1^{-1}(e)
 =
 \left\{
@@ -1659,20 +1659,20 @@ $$
 \right\},
 \qquad
 \#\mu_1^{-1}(e)=2.
-$$
+\]
 \end{itemize}
 
 Finally, these computations also justify the asserted images of the moment maps. Both maps are proper and \(G\)-equivariant, and their images contain \(e\), hence contain \(\overline{\mathbb O}\). Since
 
-$$
+\[
 \dim T^*(G/P_1)=\dim T^*(G/P_2)=6=\dim\mathbb O,
-$$
+\]
 
 their images are exactly \(\overline{\mathbb O}\). They are therefore generically finite. In characteristic zero, a generically finite dominant morphism is generically étale; equivariance then implies that the fibers over the open orbit \(\mathbb O\) are reduced. The above cardinalities consequently give
 
-$$
-\boxed{\deg\mu_1=2,\qquad\deg\mu_2=1.}
-$$
+\[
+\deg\mu_1=2,\qquad\deg\mu_2=1.
+\]
 
 \notesection{2026-09-23}{Oscillator Representations as Quantization}
 

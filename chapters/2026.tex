@@ -1113,6 +1113,17 @@ $Y$ be an algebraic variety, $H$ is an algebraic group. $\pi: \widetilde{Y} \to 
 
 These theorems verify the quantization commutes with reduction principle.
 
+\begin{examp}
+  $\pi: \tilde{Y} = G/U \to Y = G/P$ is a principle $L$-bundle. We can define
+  \[
+    \mathcal{D}^{\lambda}_{G/P} := \mathcal{D}_{G/U} \mathbin{/\!/\!/}_{\lambda - \rho_{G/P}} L.
+  \] 
+  Then
+  \[
+    \mathcal{D}^{\lambda}_{G/P} = \mathrm{Diff}(\CL^{\lambda - \rho_{G/P}},\CL^{\lambda - \rho_{G/P}}).
+  \]
+\end{examp}
+
 
 \subsection{Quantization of nilpotent covers}
 
@@ -1126,9 +1137,15 @@ $Y$ is affine over $G/P$ satisfies the situation of the previous remark.
 
 $G/U \to G/P$ is an $L$-principal bundle, $T^*(G/U) \times X_L \to G/U$ is affine.
 
-We can consider all of these quantizations, Hamiltonian reductions as sheaves over the smooth variety $G/P$.
+We can consider all of these quantizations, Hamiltonian reductions as sheaves over the smooth variety $G/P$:
 
-There is a sheaf of $\fz$-algebra $\mathcal{D}_{\fz}$ over $G/P$ as the universal quantization of $Y$. This is also the quantization of $Y_{\fz} \to Y$.
+We have a quantization $\mathcal{D}_{G/U} \otimes \CA_L$ of $T^*(G/U) \times X_L$ as a sheaf of algebras over $G/U$. For each $\lambda \in \fz$, we can consider the Hamiltonian reduction 
+\[
+\mathcal{D}^{\lambda}_{G/P} := \mathcal{D}_{G/U} \otimes \CA_L \mathbin{/\!/\!/}_{\lambda - \rho_{G/P}} L.
+\]
+As sheaves of algebras over $G/P$. They are all the quantizations of $Y$.
+
+There is also sheaf of $\fz$-algebra $\mathcal{D}_{\fz}$ over $G/P$ as the universal quantization of $Y$, such that $\BC_{\lambda - \rho_{G/P}} \otimes_{\fz} \mathcal{D}_{\fz} \cong \mathcal{D}^{\lambda}_{G/P}$. This is the quantization of $Y_{\fz} \to Y$.
 }
 
 
@@ -1247,8 +1264,21 @@ $\widetilde{\BO}$ be a nilpotent cover of a complex semisimple Lie group $G$, $\
   For any line bundle $\CL$ on $Y$ the proof of previous proposition shows that $\CL$ is isomorphic to some $\CO(\sum_i \pi^{-1}(D_i)) = \pi^*(\CO(\sum_i D_i))$.
 \end{proof}
 
+\begin{cor}
+  If $\widetilde{\BO_L}$ is birationally rigid, then we have a canonical isomorphism:
+  \[
+    c_1: (\fl/[\fl,\fl])^* = \Pic(Y) \otimes_{\BZ} \BC \xrightarrow{res} \Pic(Y^{reg}) \otimes_{\BZ} \BC \to H^2(Y^{reg},\BC).
+  \]
+\end{cor}
+
+
+The next theorem is the computation of the period map for the quantization of $Y$.
 \begin{thm}
-  If $\widetilde{\BO_L}$ is birationally rigid, then $H^2(Y^{reg},\BC) = \Pic(Y) \otimes_{\BZ} \BC = \fz(\fl)$.
+  Under the period map
+  \[
+    \mathrm{Per}: \mathrm{Quant}(Y) = \mathrm{Quant}(Y^{reg}) \to H^2(Y^{reg},\BC).
+  \]
+  $\mathcal{D}_{\lambda}$ maps to $c_1(\lambda)$.
 \end{thm}
 
 
@@ -2843,6 +2873,7 @@ The essential calculations are therefore
 
 Thus the case-by-case Lusztig--Vogan formulas ultimately come from the
 very small list of subgroup actions
+
 \[
 PGL_2,\qquad
 T,\qquad
@@ -2858,3 +2889,777 @@ on
 The Hecke-module (Kazhdan--Lusztig) description of characters in which the
 operators $T_{s_\alpha}$ act is proved in the integral case in
 \cite{Vogan1983}.
+
+
+
+
+\notesection{2026-10-13}{Hamiltonian Reduction of Differential Operators}
+
+$H$ be an algebraic group over $\BC$, and $\pi: \tilde{Y} \to Y$ is a principal $H$-bundle ($H$ acts on the right). 
+
+For any character $\chi \in X^*(H)$, we have the associated line bundle
+\[
+  \mathcal{L}_\chi := \tilde{Y} \times^H \BC_\chi \longrightarrow Y,
+\]
+where $H$ acts on $\tilde{Y} \times \BC_{\chi}$ by $h \cdot (y, z) = (yh^{-1}, \chi(h)z)$.x
+
+There is an identification of $\Gamma(Y,\CL_{\chi})$ with $\set{F \in \Gamma(\tilde{Y},\CO_{\tilde{Y}})}{F(yh) = \chi^{-1}(h)F(y)}$ by:
+\[
+  F \longmapsto (y \mapsto [y ; F(y)]) \in \Gamma(Y,\CL_{\chi}).
+\]
+
+\begin{examp}
+  $G = \SL_2(\BC)$, $H = \set{\mat{t}{0}{0}{t^{-1}}}{t \in \BC^*}$, $B = \set{\mat{t}{n}{0}{t^{-1}}}{t \in \BC^*, n \in \BC}$.
+  Let $\chi_n: B \to \BC^*, \quad \mat{t}{n}{0}{t^{-1}} \mapsto t^n$. Then we have the associated line bundle $\CL_{\chi_n} = G \times^B \BC_{\chi_n} \longrightarrow G/B$.
+  
+  If we identify $G/B \xrightarrow{\sim} \BP^1, \quad gB \mapsto [g \cdot \colvec{1}{0}]$.
+  Then we have identification of $\CL_n$ with $\CO_{\BP^1}(-n)$. Actually, we only need to check the case when $n=1$:
+  \defmap{\phi}{\CL_1}{\CO_{\BP^1}(-1)}{[g,z]}{([g\colvec{1}{0}],z g\colvec{1}{0})}
+  (Check that $\phi$ is well-defined and bijective.)
+\end{examp}
+
+
+
+Let $\mathcal{D}_{\tilde{Y}}$ be the sheaf of differential operators on $\tilde{Y}$. 
+
+We have a quantum comoment map $\Phi: \fh \to \mathcal{D}_{\tilde{Y}}$ defined by 
+\[
+  \Phi(\xi)(f) := \frac{d}{dt}\Big|_{t=0} f(y \cdot \exp(t\xi)), \qquad f \in \mathcal{O}_{\tilde{Y}}, \quad y \in \tilde{Y}, \quad \xi \in \fh.
+\]
+
+The Hamiltonian reduction of $\mathcal{D}_{\tilde{Y}}$ with respect to the $H$-action and homomorphism $\lambda \in (\fh/[\fh,\fh])^*$ is defined as follows:
+\[
+\mathcal{D}_{\tilde{Y}} \ssslash_{\lambda} H := \pi_* \left( \mathcal{D}_{\tilde{Y}} / \mathcal{D}_{\tilde{Y}} \cdot (\Phi - \lambda)(\fh) \right)^H,
+\]
+
+For any $F \in \Gamma(Y,\CL_{\chi})$, we have:
+\[
+  \Phi(\xi)(F) = \frac{d}{dt}\Big|_{t=0} F(y \cdot \exp(t\xi)) = \frac{d}{dt}\Big|_{t=0} \chi^{-1}(\exp(t\xi)) F(y) = -d\chi(\xi) F(y).
+\]
+
+So the action of $\mathcal{D}_{\tilde{Y}}$ on $\Gamma(Y,\CL_{\chi})$ factors through the Hamiltonian reduction $\mathcal{D}_{\tilde{Y}} \ssslash_{-d\chi} H$.
+
+\begin{rk}
+  Actually, we have an isomorphism of algebras:
+\[
+  \mathcal{D}_{\tilde{Y}} \ssslash_{-d\chi} H \simeq \mathcal{D}_{\CL_{\chi}},
+\]
+where $\mathcal{D}_{\CL_{\chi}}$ is the sheaf of differential operators on the line bundle $\CL_{\chi}$.
+\end{rk}
+
+
+\notesection{2026-10-17}{Orbits on Partial Flag Variety}
+
+We summarize some basic facts about the orbits of a symmetric subgroup $K$ on a partial flag variety $\CP \simeq G/P$, where $P$ is a parabolic subgroup of $G$.
+
+$G$ is connected complex reductive algebraic group. $\sigma$ is a real form on $G$, $\theta$ is the corresponding Cartan involution, and $K = G^\theta$ is the symmetric subgroup.
+
+\begin{prop}
+  If \(P_1,P_2\subset G\) are real parabolic subgroups, then: 
+    \[
+    \boxed{
+    P_1\sim_{G(\mathbb R)}P_2
+    \iff
+    P_1\sim_{K_{\mathbb R}}P_2
+    \iff
+    P_1\sim_K P_2 .
+    }
+    \]
+\end{prop}
+
+
+\begin{proof}
+  If $P_1\sim_{G(\mathbb R)}P_2$, since $G(\BR) = K_{\BR} \cdot P_1$, we can see that $P_1 \sim_{K_{\BR}} P_2$.
+
+  If $P_1 \sim_{K} P_2$, then
+  \[
+    P_2 = k P_1 k^{-1}, \quad k \in K.
+  \]
+  Because $P_i$ are real,
+  \[
+    P_2 = \sigma(P_2) = \sigma(k) \sigma(P_1) \sigma(k^{-1}) = \sigma(k) P_1 \sigma(k^{-1}).
+  \]
+  Hence
+  \[
+    \sigma(k)^{-1} k \in N_G(P_1) = P_1.
+  \]
+  Suppose $k = k_0 \exp(iX)$ for $k_0 \in K_{\BR}$ and $X \in \mathfrak{k}_{\BR}$. Then
+  \[
+    \sigma(k)^{-1} k = \exp(2iX) \in P_1.
+  \]
+  Since $P_1$ is the stabilizer of some flag in some faithful finite dimensional representation of $G$, $\exp(2iX)$ is positive semisimple, hence 
+  \[
+    \exp(iX) \in P_1.
+  \]
+  Therefore
+  \[
+    P_2 = k P_1 k^{-1} = k_0 \exp(iX) P_1 \exp(-iX) k_0^{-1} = k_0 P_1 k_0^{-1},
+  \]
+  which shows that $P_1 \sim_{K_{\BR}} P_2$.
+\end{proof}
+
+
+
+
+\begin{prop}
+  If \(P_1,P_2\subset G\) are $\theta$-stable parabolic subgroups, then: 
+    \[
+    \boxed{
+    P_1\sim_{G(\mathbb R)}P_2
+    \iff
+    P_1\sim_{K_{\mathbb R}}P_2
+    \iff
+    P_1\sim_K P_2 .
+    }
+    \]
+\end{prop}
+
+\begin{proof}
+  Very similar to the proof of the previous proposition.
+\end{proof}
+
+
+\begin{prop}
+  If $P$ is a real parabolic subgroup of $G$, then the $K$-orbit $K \cdot P$ is the unique open orbit $\CP$.
+\end{prop}
+
+\begin{proof}
+  If $P$ is a real parabolic subgroup in $\CP$, then
+  \[
+    T_P (K \cdot P) = (\fk + \fp)/\fp = \fg/\fp = T_P \CP.
+  \]
+\end{proof}
+
+
+\begin{prop}
+  If $P$ is a $\theta$-stable parabolic subgroup of $G$, then the $K$-orbit $K \cdot P$ is closed in $\CP$. Conversely, if there exist a $\theta$-stable parabolic subgroup in $\CP$, then any closed $K$-orbit in $\CP$ consists of $\theta$-stable parabolic subgroups.
+\end{prop}
+
+\begin{proof}
+  If $P$ is a $\theta$-stable parabolic subgroup in $\CP$, then $K \cap P$ is a parabolic subgroup of $K$. Hence $K/(K \cap P)$ is projective, which shows that the $K$-orbit $K \cdot P$ is closed in $\CP$.
+
+  Conversely, write $\CP=G\cdot P$, where $\theta(P)=P$, and
+suppose that $Q=K\cdot P_1$ is closed in $\CP$.
+Let $\mathcal B$ denote the full flag variety of $G$, and let
+\[
+  \pi:\mathcal B\longrightarrow\CP
+\]
+be the natural projection, sending a Borel subgroup to the unique
+parabolic subgroup in $\CP$ containing it.
+
+Since $Q$ is closed, $\pi^{-1}(Q)$ is a nonempty closed
+$K$-stable subvariety of $\mathcal B$. It therefore contains a
+closed $K$-orbit $\widetilde Q$. By $K$-equivariance,
+$\pi(\widetilde Q)=Q$. Thus we may choose a Borel subgroup
+$B\in\widetilde Q$ with $B\subset P_1$. By the closed-orbit
+criterion for the full flag variety, $\theta(B)=B$.
+
+Write $P_1=gPg^{-1}$. Since $\theta(P)=P$, we have
+\[
+  \theta(P_1)=\theta(g)P\theta(g)^{-1}\in\CP.
+\]
+Moreover,
+\[
+  B=\theta(B)\subset\theta(P_1).
+\]
+Hence $P_1$ and $\theta(P_1)$ are parabolic subgroups of the same
+type containing the same Borel subgroup $B$. By uniqueness of
+the parabolic subgroup of a fixed type containing $B$, they
+coincide. Thus $\theta(P_1)=P_1$.
+
+Finally, for every $k\in K$,
+\[
+  \theta(kP_1k^{-1})
+  =k\theta(P_1)k^{-1}
+  =kP_1k^{-1}.
+\]
+Therefore every parabolic subgroup in $Q$ is $\theta$-stable.
+\end{proof}
+
+
+
+\notesection{2026-10-19}{Geometric Explanation of \texorpdfstring{$\tau$}{tau}-Invariants}
+\label{s55:section}
+
+\subsection{Conventions and full-flag localization}
+
+Let $G$ be a connected complex reductive algebraic group, equipped with a
+real form $\sigma$ and a corresponding algebraic Cartan involution $\theta$.
+Put $K=G^\theta$ and $\fg=\operatorname{Lie}(G)$. We allow $K$ to be
+disconnected. Equivariance of a $\mathcal D$-module will always mean
+\emph{strong algebraic equivariance}: the differentiated group action agrees
+with the action coming from differential operators.
+
+Fix a Borel subgroup $B\subseteq G$ and a Cartan subgroup $H\subseteq B$.
+Let $\Phi^+$ be the positive roots occurring in $\mathfrak b$, let $\Pi$ be
+the simple roots, and put
+\[
+  \rho=\frac12\sum_{\beta\in\Phi^+}\beta.
+\]
+For $J\subseteq\Pi$, let $P_J\supseteq B$ be the standard parabolic subgroup
+with Levi simple roots $J$, and write
+\[
+  \CB=G/B,\qquad \CP_J=G/P_J,\qquad
+  \pi_J:\CB\longrightarrow\CP_J.
+\]
+Thus $\CP_\varnothing=\CB$ and $\CP_\Pi$ is a point. For a singleton, write
+$\CP_\alpha=\CP_{\{\alpha\}}$ and $\pi_\alpha=\pi_{\{\alpha\}}$.
+The fibers of $\pi_\alpha$ are $\mathbb P^1$. More generally, the fiber of
+$\pi_J$ is the full flag variety of the Levi subgroup $L_J$; in particular,
+it is connected and simply connected.
+
+All sheaves $\mathcal D_Y$ below are the \emph{ordinary untwisted} sheaves
+of algebraic differential operators, acting on the left. Define
+\[
+  A_J=\Gamma(\CP_J,\mathcal D_{\CP_J}),\qquad
+  I_J=\ker\bigl(U(\fg)\longrightarrow A_J\bigr).
+\]
+Before imposing a localization theorem, distinguish the image algebra
+\[
+ R_J=\operatorname{im}\bigl(U(\fg)\longrightarrow A_J\bigr)
+     \simeq U(\fg)/I_J
+\]
+from the full algebra $A_J$ of global differential operators. Their equality
+in the ordinary untwisted setting is proved in
+Proposition~\ref{s55:prop:partial}; it is not an assumption about arbitrary
+twisted differential operators.
+For $\CP=\CP_J$, the notation of the original setup is $J=S_{\fl}$, and we also write $I_{\CP}=I_J$. Set
+$I_{\CB}=I_\varnothing$, $I_\alpha=I_{\{\alpha\}}$, and
+$R=U(\fg)/I_{\CB}$. The ordinary central character is $\chi_\rho$, the
+infinitesimal character of the trivial representation. This is what
+``trivial infinitesimal character'' means here; it is not the singular
+parameter $\chi_0$.
+
+Write $\operatorname{HC}_\rho(\fg,K)$ for finitely generated
+Harish--Chandra modules on which the center acts by $\chi_\rho$, and
+$\operatorname{Coh}_K(\mathcal D_Y)$ for coherent strongly $K$-equivariant
+left $\mathcal D_Y$-modules.
+
+\begin{thm}[Beilinson--Bernstein localization: standard input]
+\label{s55:thm:BB}
+We have $R\simeq\Gamma(\CB,\mathcal D_{\CB})$, and
+\[
+ \operatorname{Loc}_{\CB}(X)
+   =\mathcal D_{\CB}\otimes_R X,
+ \qquad
+ \Gamma_{\CB}(\mathcal M)=\Gamma(\CB,\mathcal M)
+\]
+are mutually inverse exact equivalences. On equivariant finitely generated
+objects this gives
+\[
+ \operatorname{HC}(R,K)
+   \simeq \operatorname{Coh}_K(\mathcal D_{\CB}).
+\]
+There is also an equivalence between all $R$-modules and quasi-coherent
+left $\mathcal D_{\CB}$-modules, which we use in the proofs below.
+\end{thm}
+
+This is the localization theorem of \cite{BB81}. In particular,
+$\Gamma_{\CB}$ is exact and detects zero objects. The algebraic
+$\tau$-invariant theorem stated in Subsection~\ref{s55:subsec:algebraic} is the other substantial
+representation-theoretic input. The geometric descent results below are
+deduced from these inputs.
+
+\subsection{Untwisted localization on partial flag varieties}
+
+For a smooth morphism $f:X\to Y$, use the unshifted inverse image
+\[
+ f^\circ\mathcal N
+ =\mathcal D_{X\to Y}\otimes_{f^{-1}\mathcal D_Y}f^{-1}\mathcal N,
+ \qquad
+ \mathcal D_{X\to Y}
+ =\mathcal O_X\otimes_{f^{-1}\mathcal O_Y}f^{-1}\mathcal D_Y.
+\]
+Its underlying $\mathcal O_X$-module is $f^*\mathcal N$. For smooth $f$,
+this functor is exact. No cohomological shift is included in $f^\circ$.
+
+\begin{prop}[Partial-flag localization and compatibility]
+\label{s55:prop:partial}
+For ordinary untwisted differential operators,
+\[
+  A_J\simeq U(\fg)/I_J.
+\]
+The functors $\Gamma_{\CP_J}$ and
+$\operatorname{Loc}_{\CP_J}=\mathcal D_{\CP_J}\otimes_{A_J}(-)$
+are exact inverse equivalences, including on the corresponding coherent
+and equivariant categories. Moreover, for $I_JX=0$,
+\begin{equation}
+\label{s55:eq:compat}
+  \operatorname{Loc}_{\CB}(X)
+  \simeq \pi_J^\circ\operatorname{Loc}_{\CP_J}(X).
+\end{equation}
+The essential image of $\pi_J^\circ$ corresponds under full-flag
+localization precisely to $R$-modules annihilated by $I_J/I_{\CB}$.
+\end{prop}
+
+\begin{proof}
+Put $Y=\CP_J$, $\pi=\pi_J$, and
+$\mathcal E=\mathcal D_{\CB\to Y}$. The global section $1\otimes1$
+generates $\mathcal E$ as a left $\mathcal D_{\CB}$-module. Indeed, in
+smooth local coordinates, vector fields on the base have local lifts,
+and applying the lifted differential operators to $1\otimes1$ produces
+all base differential operators. Hence there is a surjection
+\begin{equation}
+\label{s55:eq:transfer}
+  \mathcal D_{\CB}\twoheadrightarrow\mathcal E,
+  \qquad
+  \ker=\mathcal D_{\CB}\,\mathcal T_{\CB/Y},
+\end{equation}
+where $\mathcal T_{\CB/Y}$ is the relative tangent sheaf and the product
+denotes the left ideal it generates. The kernel description is immediate
+in local product coordinates: quotienting kills the vertical derivatives.
+
+Since $\pi_*\mathcal O_{\CB}=\mathcal O_Y$, the projection formula gives
+\[
+  \Gamma(\CB,\mathcal E)=\Gamma(Y,\mathcal D_Y)=A_J.
+\]
+Apply the exact functor $\Gamma_{\CB}$ to \eqref{s55:eq:transfer}. This proves
+that $R\to A_J$ is surjective, hence $A_J=U(\fg)/I_J$.
+
+For any quasi-coherent left $\mathcal D_Y$-module $\mathcal N$, the same
+projection formula gives
+\begin{equation}
+\label{s55:eq:global-pullback}
+  \Gamma(\CB,\pi^\circ\mathcal N)
+  =\Gamma(Y,\mathcal N),
+\end{equation}
+compatibly with the $U(\fg)$-actions. Smooth surjective pullback is exact
+and faithful. Thus \eqref{s55:eq:global-pullback} and Theorem~\ref{s55:thm:BB}
+show that $\Gamma_Y$ is exact and detects zero objects.
+
+For completeness, this implies the claimed equivalence directly. If $V$
+is an $A_J$-module, take a presentation by free $A_J$-modules. Exactness
+of $\Gamma_Y$ and its commutation with direct sums give
+\[
+ \Gamma_Y(\mathcal D_Y\otimes_{A_J}V)\simeq V.
+\]
+For any $\mathcal N$, the evaluation map
+$\mathcal D_Y\otimes_{A_J}\Gamma_Y\mathcal N\to\mathcal N$ becomes an
+isomorphism after applying $\Gamma_Y$. Its kernel and cokernel therefore
+vanish. These constructions preserve equivariance and restrict to the
+finitely generated/coherent categories.
+
+Finally, both sides of \eqref{s55:eq:compat} have global sections $X$ as
+$R$-modules, so Theorem~\ref{s55:thm:BB} identifies them. Equivalently,
+\[
+ \operatorname{Loc}_{\CB}(A_J)\simeq\mathcal D_{\CB\to Y},
+\]
+and tensoring this identity with $X$ gives \eqref{s55:eq:compat}. The assertion
+about the essential image follows. In particular, this image is closed
+under subobjects and quotients, and pullback preserves simplicity here.
+\end{proof}
+
+\begin{rk}[Scope of the equivalence and a conflicting statement in the source]
+\label{s55:rem:localization-scope}
+Two assertions must be distinguished:
+\[
+ \operatorname{Mod}(A_J)
+   \simeq\operatorname{Mod}(\mathcal D_{\CP_J}),
+ \qquad
+ R_J=A_J.
+\]
+The first is $\mathcal D$-affinity. The second concerns the image of
+$U(\fg)$. If, for a twisted sheaf $\mathcal D^\lambda_{\CP_J}$, its image
+$R_J^\lambda$ is smaller than
+$A_J^\lambda=\Gamma(\mathcal D^\lambda_{\CP_J})$, extension of scalars from
+$R_J^\lambda$ cannot be identified with the localization equivalence over
+$A_J^\lambda$. Outside the appropriate localization range, global sections
+itself can also fail to be an equivalence.
+
+For the \emph{ordinary untwisted} sheaves used in this note, both assertions
+hold by Proposition~\ref{s55:prop:partial}. An independent published reference
+is \cite[Section 2.3.1, Definition 2.24, Proposition 2.30, and Lemma 4.1]{Yahiro17}:
+in that paper the ordinary sheaf is $\mathcal D^0$, and regularity and
+antidominance are tested on $\lambda-\rho$. Thus $\lambda=0$ is regular
+and antidominant. Lemma 4.1 gives $R_J=A_J$, and Proposition 2.30 gives
+the abelian localization equivalence. The cyclic-transfer proof above
+also appears in \cite[Chapter I, Proposition 5.6]{Bien90}.
+
+The paragraph preceding Proposition 3.12 in \cite{CNT08} states that
+$U(\fg)\to A_J$ need not be surjective, immediately after defining
+$\mathcal D_{\CP_J}$ as ordinary differential operators. Taken literally
+with that untwisted definition, this conflicts with the preceding proof
+and the published localization results just cited. It should therefore
+not be used as a general counterstatement to Proposition~\ref{s55:prop:partial}.
+The failure it describes does occur for more general twisted operators;
+this does not mean that the quoted paragraph itself specifies a twist.
+Also, algebraic surjectivity must be distinguished from surjectivity in
+each degree of the PBW/order filtrations.
+\end{rk}
+
+\subsection{Algebraic \texorpdfstring{$\tau$}{tau}-invariants and parabolic ideals}
+\label{s55:subsec:algebraic}
+
+For $w\in W$, let $L_w$ be the simple highest-weight module with
+\emph{unshifted} highest weight $-w\rho-\rho$, and put
+$\mathfrak I_w=\operatorname{Ann}_{U(\fg)}L_w$.
+Thus $\mathfrak I_e=I_{\CB}$ and $\mathfrak I_{w_0}$ is the augmentation
+ideal. These conventions use the antidominant shifted parameter $-\rho$.
+
+\begin{thm}[Algebraic characterization of \(\tau\): standard input]
+\label{s55:thm:tau-input}
+For primitive ideals with infinitesimal character $\rho$, the usual
+$\tau$-invariant has the following descriptions:
+\begin{align}
+ \tau(\mathfrak I_w)
+   &=\{\alpha\in\Pi:w\alpha\in\Phi^-\},
+   \label{s55:eq:tau-w}\\
+ \tau(I)
+   &=\{\alpha\in\Pi:\mathfrak I_{s_\alpha}\subseteq I\}.
+   \label{s55:eq:tau-ideal}
+\end{align}
+For an irreducible Harish--Chandra module $X$,
+$\tau(X)=\tau(\operatorname{Ann}X)$. Equivalently,
+$\alpha\in\tau(X)$ precisely when translation from $\rho$ to the
+adjacent $\alpha$-wall kills $X$.
+\end{thm}
+
+Formula \eqref{s55:eq:tau-w} is \cite[Section 3, (3.4)--(3.5)]{BV85}.
+The pen-minimal-ideal description \eqref{s55:eq:tau-ideal} and its agreement
+with module descent sets are recalled in
+\cite[Section 6.3, Definition 6.8 and Theorem 6.9]{Binegar08}.
+These are algebraic input, rather than definitions of geometric descent.
+
+\begin{prop}
+\label{s55:prop:parabolic-tau}
+For $\CP_J=G/P_J$,
+\[
+  I_J=\operatorname{Ann}M_{\mathfrak p_J}(-2\rho_{\mathfrak u_J})
+      =\mathfrak I_{w_J},
+  \qquad
+  \boxed{\tau(I_J)=J},
+\]
+where $w_J$ is the longest element of $W_J$ and
+$M_{\mathfrak p_J}(-2\rho_{\mathfrak u_J})$ is an irreducible scalar
+generalized Verma module. In particular,
+$I_\alpha=\mathfrak I_{s_\alpha}$ and $\tau(I_\alpha)=\{\alpha\}$.
+\end{prop}
+
+\begin{proof}
+Write $\mathfrak p_J=\fl_J+\mathfrak u_J$ and
+$\rho=\rho_{\fl_J}+\rho_{\mathfrak u_J}$.
+Let $y=eP_J\in\CP_J$, and consider the simple left $\mathcal D_{\CP_J}$-module
+$\delta_y$ of distributions supported at $y$. A local-coordinate
+calculation of the isotropy action on its generating delta distribution,
+followed by PBW, gives
+\[
+ \Gamma(\CP_J,\delta_y)
+   \simeq U(\fg)\otimes_{U(\mathfrak p_J)}
+                    \mathbb C_{-2\rho_{\mathfrak u_J}}
+   =M_{\mathfrak p_J}(-2\rho_{\mathfrak u_J}).
+\]
+The character $-2\rho_{\mathfrak u_J}$ is the isotropy character of the
+left delta generator. This is also
+\cite[Propositions 2.32--2.33]{Yahiro17}. By
+Proposition~\ref{s55:prop:partial}, this module is simple.
+
+Its annihilator is exactly $I_J$. One inclusion follows from the action
+through $A_J$. Conversely, a global differential operator that annihilates
+all distributions supported at $y$ has zero formal germ at $y$: distributions
+of all orders detect every Taylor coefficient of a differential operator.
+It is therefore zero on the smooth irreducible variety $\CP_J$.
+
+Since
+\[
+ w_J\rho=\rho-2\rho_{\fl_J},
+ \qquad
+ -2\rho_{\mathfrak u_J}=-w_J\rho-\rho,
+\]
+this simple highest-weight module is $L_{w_J}$. Apply
+\eqref{s55:eq:tau-w}. The longest Levi element sends exactly the simple roots
+in $J$ to negative roots, so $\tau(I_J)=J$.
+\end{proof}
+
+\begin{cor}[Order preservation]
+\label{s55:cor:monotone}
+At infinitesimal character $\rho$,
+\[
+  \boxed{I\subseteq I'\ \Longrightarrow\ \tau(I)\subseteq\tau(I').}
+\]
+In particular, $I_J\subseteq\operatorname{Ann}X$ implies
+$J\subseteq\tau(X)$.
+\end{cor}
+
+\begin{proof}
+Using $I_\alpha=\mathfrak I_{s_\alpha}$, formula
+\eqref{s55:eq:tau-ideal} becomes
+\[
+  \tau(I)=\{\alpha\in\Pi:I_\alpha\subseteq I\}.
+\]
+If $I_\alpha\subseteq I\subseteq I'$, then $I_\alpha\subseteq I'$.
+The final assertion follows from Proposition~\ref{s55:prop:parabolic-tau}.
+\end{proof}
+
+\subsection{Combining simple-root directions}
+
+There is a useful stronger statement: the parabolic ideal is generated
+by its simple-root ideals.
+
+\begin{prop}[Generation of the parabolic ideal]
+\label{s55:prop:sum}
+For every $J\subseteq\Pi$,
+\begin{equation}
+\label{s55:eq:ideal-sum}
+ \boxed{I_J=I_{\CB}+\sum_{\alpha\in J}I_\alpha.}
+\end{equation}
+Equivalently, in $R=U(\fg)/I_{\CB}$,
+\[
+ I_J/I_{\CB}=\sum_{\alpha\in J}(I_\alpha/I_{\CB}).
+\]
+The term $I_{\CB}$ is redundant when $J\ne\varnothing$ but is needed
+for the empty-set convention.
+\end{prop}
+
+\begin{proof}
+Set
+\[
+ \mathcal T_J=\mathcal T_{\CB/\CP_J},\qquad
+ \mathcal T_\alpha=\mathcal T_{\CB/\CP_\alpha},\qquad
+ \mathcal J_J=\mathcal D_{\CB}\mathcal T_J.
+\]
+We first prove an equality of left ideals:
+\begin{equation}
+\label{s55:eq:vertical-ideals}
+ \mathcal J_J
+   =\sum_{\alpha\in J}\mathcal D_{\CB}\mathcal T_\alpha.
+\end{equation}
+Each $\mathcal T_\alpha$ lies in $\mathcal T_J$, giving one inclusion.
+For the other, work on the opposite big cell $N^-\subseteq\CB$.
+For $f_\alpha\in\fg_{-\alpha}$, the curve
+\[
+  n\exp(t f_\alpha)B
+\]
+lies in the $\pi_\alpha$-fiber through $nB$. Thus $\mathcal T_\alpha$
+is generated there by the left-invariant field $f_\alpha$. The Lie algebra
+generated by the $f_\alpha$ for $\alpha\in J$ is
+$\mathfrak n^-\cap\fl_J$, whose left-invariant fields form a frame for
+$\mathcal T_J$ on this cell.
+
+A left ideal containing vector fields $V,W$ contains their bracket,
+because $[V,W]=VW-WV$. Consequently the right side of
+\eqref{s55:eq:vertical-ideals} contains every vertical field on the big cell.
+Translate the big cell by $G$ to cover $\CB$; all the distributions in
+question are $G$-invariant. This proves \eqref{s55:eq:vertical-ideals}.
+
+By \eqref{s55:eq:transfer} and exactness of $\Gamma_{\CB}$,
+\[
+ \Gamma(\CB,\mathcal J_J)=I_J/I_{\CB},\qquad
+ \Gamma(\CB,\mathcal J_\alpha)=I_\alpha/I_{\CB}.
+\]
+Apply the same exact functor to the surjection
+$\bigoplus_{\alpha\in J}\mathcal J_\alpha\twoheadrightarrow\mathcal J_J$.
+This gives the asserted sum. For $J=\varnothing$, both sides of the
+quotient identity are zero.
+\end{proof}
+
+\begin{thm}[Parabolic descent criterion]
+\label{s55:thm:descent}
+Let $X\in\operatorname{HC}_\rho(\fg,K)$ be irreducible and put
+$\mathcal M=\operatorname{Loc}_{\CB}(X)$. For $J\subseteq\Pi$, the following
+conditions are equivalent:
+\begin{enumerate}
+\renewcommand{\labelenumi}{\textup{(\roman{enumi})}}
+ \item $J\subseteq\tau(X)$;
+ \item $I_J\subseteq\operatorname{Ann}(X)$;
+ \item $\mathcal M\simeq\pi_J^\circ\mathcal N$ for a coherent strongly
+       $K$-equivariant $\mathcal D_{\CP_J}$-module $\mathcal N$.
+\end{enumerate}
+When these conditions hold, $\mathcal N$ is unique up to isomorphism,
+is irreducible, and equals $\operatorname{Loc}_{\CP_J}(X)$.
+\end{thm}
+
+\begin{proof}
+The equivalence of (i) and (ii) follows from
+\eqref{s55:eq:tau-ideal}, Proposition~\ref{s55:prop:parabolic-tau}, and
+\eqref{s55:eq:ideal-sum}. Proposition~\ref{s55:prop:partial} proves (ii)$\Rightarrow$(iii).
+Conversely, (iii) gives
+\[
+ X=\Gamma_{\CB}\mathcal M
+   =\Gamma_{\CP_J}\mathcal N
+\]
+as $U(\fg)$-modules, so $I_J$ annihilates $X$. The equivalences in
+Proposition~\ref{s55:prop:partial} prove uniqueness and irreducibility.
+\end{proof}
+
+\begin{cor}
+\label{s55:cor:coarsest}
+The coarsest standard partial flag variety to which $\mathcal M$ descends
+is $\CP_{\tau(X)}$. More precisely, it descends to $\CP_J$ exactly when
+$J\subseteq\tau(X)$.
+\end{cor}
+
+\begin{proof}
+Apply Theorem~\ref{s55:thm:descent}. Enlarging $J$ forgets more of a full flag.
+\end{proof}
+
+\subsection{What descent means for the orbit connection}
+
+A simple strongly $K$-equivariant $\mathcal D_{\CB}$-module is determined
+by a pair $(Q',\CL)$, where $Q'\subseteq\CB$ is a $K$-orbit and $\CL$ is
+an irreducible $K$-equivariant flat connection on $Q'$. It is the
+intermediate extension
+\[
+ \mathcal M=\operatorname{IC}_{\CB}(Q',\CL)=j'_{!*}\CL,
+ \qquad j':Q'\hookrightarrow\CB,
+\]
+and has support $\overline{Q'}$. The notation $j'_{!*}$ includes extension
+by zero from the orbit closure to the ambient variety. Flat connections
+can equivalently be discussed through their local systems of horizontal
+sections.
+
+\begin{prop}[Orbit formulation of descent]
+\label{s55:prop:orbit}
+Let $X$, $\mathcal M$, and $(Q',\CL)$ be as above. Put
+\[
+ Q=\pi_J(Q'),\qquad S=\pi_J^{-1}(Q),\qquad
+ \pi_Q=\pi_J|_S:S\longrightarrow Q.
+\]
+Then $J\subseteq\tau(X)$ if and only if both of the following hold:
+\begin{enumerate}
+\renewcommand{\labelenumi}{\textup{(\alph{enumi})}}
+ \item $Q'$ is the open dense $K$-orbit in $S$;
+ \item $\CL$ extends to a $K$-equivariant flat connection $\widehat{\CL}$ on all of $S$
+       of the form $\widehat{\CL}\simeq\pi_Q^*\mathcal E$, for an irreducible
+       $K$-equivariant flat connection $\mathcal E$ on $Q$.
+\end{enumerate}
+In (b), once the $K$-equivariant flat extension to $S$ exists, its descent to $Q$ is
+automatic and unique because the flag fibers are simply connected.
+\end{prop}
+
+\begin{proof}
+Suppose first that $J\subseteq\tau(X)$. By Theorem~\ref{s55:thm:descent},
+$\mathcal M=\pi_J^\circ\mathcal N$ for a simple equivariant module
+$\mathcal N=\operatorname{IC}_{\CP_J}(Q_0,\mathcal E)$.
+On $\pi_J^{-1}(Q_0)$, this is precisely the flat connection
+$\pi_{Q_0}^*\mathcal E$. The preimage of $Q_0$ has a unique open dense
+$K$-orbit: its connected components are irreducible, $K$ permutes them
+transitively, and there are finitely many $K$-orbits. This orbit is $Q'$,
+and $Q_0=Q$. This proves (a)--(b).
+
+Conversely, suppose (a)--(b) hold. Define
+$\mathcal N=\operatorname{IC}_{\CP_J}(Q,\mathcal E)$.
+Smooth pullback commutes with intermediate extension, and pullback
+preserves simplicity in the present setting by
+Proposition~\ref{s55:prop:partial}. Thus $\pi_J^\circ\mathcal N$ is the simple
+intermediate extension of its restriction $\CL$ to $Q'$. Uniqueness of
+that extension gives $\mathcal M=\pi_J^\circ\mathcal N$.
+Theorem~\ref{s55:thm:descent} now gives $J\subseteq\tau(X)$.
+
+Finally, on each connected component, the homotopy exact sequence of
+the locally trivial fibration $\pi_Q$, with connected simply connected
+fiber, gives
+\[
+ \pi_1(S)\simeq\pi_1(Q).
+\]
+Consequently every local system on $S$ is pulled back uniquely from
+$Q$. Applied to the horizontal sections of the equivariant flat
+extension, this constructs the descended local system, with equivariance
+descending by uniqueness. Equivariant local systems on the homogeneous
+space $Q$ arise from representations of the finite component group of
+a stabilizer, and give algebraic regular connections. Thus the
+descended object is an algebraic $K$-equivariant flat connection, as claimed.
+\end{proof}
+
+\begin{cor}[The simple-root statement]
+For an irreducible $X$, with orbit connection $(Q',\CL)$,
+\[
+ \boxed{\alpha\in\tau(X)
+ \quad\Longleftrightarrow\quad
+ \CL\text{ descends through }\pi_\alpha
+ \text{ in the sense of Proposition~\ref{s55:prop:orbit}.}}
+\]
+\end{cor}
+
+The familiar phrase ``$\CL$ fibers over a flat connection on $\CP_J$''
+means exactly this extension-and-pullback statement. If $q\in Q$ and
+$F_q=\pi_Q^{-1}(q)\simeq\mathcal B_{\fl_J}$, then
+\[
+ \widehat{\CL}|_{F_q}
+   \simeq (\mathcal O_{F_q},d)\otimes_{\mathbb C}\mathcal E_q.
+\]
+Thus the restriction is a trivial connection of rank
+$\dim_{\mathbb C}\mathcal E_q$. The flag variety $F_q$ is the fiber of
+the geometric projection; $\mathcal E_q$ is the vector-space fiber of
+the connection. These are two different uses of ``fiber.''
+
+The density and extension conditions cannot be replaced merely by
+$\CL\simeq(\pi_J|_{Q'})^*\mathcal E$. That identity on a smaller orbit
+does not control singularities on the remaining orbits in $S$.
+
+For $J=\{\alpha\}$, the extending dense-orbit cases in
+\cite[Lemma 3.5]{LusztigVogan1983} are (a), (b2), (c2), and (d2). The intersection with
+a fiber is respectively $\mathbb P^1$, $\mathbb A^1$, or
+$\mathbb C^\times$, and the connection extends across the missing points.
+Case (e) has a dense orbit but fails extension. This gives the explicit
+rank-one calculation behind the geometric interpretation.
+
+\subsection{Examples and consequences}
+
+\begin{examp}[Rank one: support alone does not determine \(\tau\)]
+Take $G=SL_2(\mathbb C)$ and $K\simeq SO_2(\mathbb C)\simeq\mathbb C^\times$.
+After choosing coordinates, its orbits on $\CB=\mathbb P^1$ are
+\[
+ \{0\},\qquad\{\infty\},\qquad\mathbb C^\times.
+\]
+There is one simple root $\alpha$, and $\CP_\alpha$ is a point.
+The trivial local system on the open orbit extends to the trivial
+connection $(\mathcal O_{\mathbb P^1},d)$. Its global sections form the
+trivial representation, and $\tau=\{\alpha\}$.
+
+The other irreducible equivariant local system on $\mathbb C^\times$
+has monodromy $-1$. It does not extend across $0$ and $\infty$, so its
+simple intermediate extension has $\tau=\varnothing$. Both modules have
+support all of $\mathbb P^1$, but different $\tau$-invariants.
+
+The delta-module at either closed orbit also has $\tau=\varnothing$.
+Although a connection on that point is tautologically pulled back from
+a point, its orbit is not dense in the full $\pi_\alpha$-fiber. This
+explains why the density qualification is indispensable.
+\end{examp}
+
+\begin{examp}[Flags in \(\mathbb C^3\)]
+For $G=SL_3(\mathbb C)$, a full flag is a line contained in a plane.
+With the standard numbering, $\pi_{\alpha_1}$ forgets the line and
+retains the plane. Its fiber is the $\mathbb P^1$ of lines in that plane.
+Thus $\alpha_1\in\tau(X)$ precisely when the orbit connection extends
+to the full inverse image of its orbit of planes and is constant along
+the choices of a line. The projection $\pi_{\alpha_2}$ has the analogous
+interpretation with the line retained and the plane forgotten.
+\end{examp}
+
+\begin{prop}[Extreme cases]
+For irreducible $X\in\operatorname{HC}_\rho(\fg,K)$:
+\begin{enumerate}
+\renewcommand{\labelenumi}{\textup{(\roman{enumi})}}
+ \item $\tau(X)=\varnothing$ if and only if
+       $\operatorname{Loc}_{\CB}(X)$ descends to no $\CP_J$ with
+       $J\ne\varnothing$.
+ \item $\tau(X)=\Pi$ if and only if $\fg$ acts trivially on $X$.
+       If $K$ is connected, this is the trivial $(\fg,K)$-module.
+       In general, $X$ is an irreducible representation of $K/K^\circ$
+       with trivial $\fg$-action.
+\end{enumerate}
+\end{prop}
+
+\begin{proof}
+Part (i) is Theorem~\ref{s55:thm:descent}. For (ii), use
+$\CP_\Pi=\mathrm{pt}$ and $I_\Pi=\ker(U(\fg)\to\mathbb C)$, the
+augmentation ideal. Compatibility of the two actions then makes
+$K^\circ$ act trivially as well.
+\end{proof}
+
+For arbitrary primitive ideals, inclusion of $\tau$-invariants does not
+recover inclusion of ideals. Theorem~\ref{s55:thm:descent} provides a useful
+special converse when the smaller ideal is parabolic:
+\[
+  \boxed{I_J\subseteq I\quad\Longleftrightarrow\quad J\subseteq\tau(I).}
+\]
+In particular, $I_J$ is the smallest primitive ideal at $\chi_\rho$ whose
+$\tau$-invariant contains $J$. This does not make the general map
+$I\mapsto\tau(I)$ an order embedding.
+
+All these statements have been made at the ordinary regular character
+$\chi_\rho$. Arbitrary twists and singular infinitesimal characters
+require the corresponding twisted localization and translation results;
+the untwisted formulas above should not be transferred to that setting
+without changing the hypotheses.

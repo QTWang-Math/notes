@@ -190,9 +190,20 @@
 \newcommand{\sqbra}[1]{\left[#1\right]}
 \newcommand{\Bra}[1]{\left\{#1\right\}}
 \newcommand{\lanbra}[1]{\left\langle#1\right\rangle}
+\newcommand{\ssslash}{\mathbin{/\mkern-6mu/\mkern-6mu/}}
 \newcommand{\set}[2]{\{#1\,|\,#2\}}
 \newcommand{\bigset}[2]{\Biggl\{#1\,\bigg\lvert\,#2\Biggr\}}
 \newcommand{\shortexact}[5]{#1\rightarrow #2\rightarrow #3\rightarrow #4\rightarrow #5}
+\newcommand{\colvec}[2]{%
+\begin{pmatrix}
+#1\\
+#2
+\end{pmatrix}}
+\newcommand{\mat}[4]{%
+\begin{pmatrix}
+#1 & #2\\
+#3 & #4
+\end{pmatrix}}
 
 \newcommand{\defmap}[5]{
   \begin{equation*}

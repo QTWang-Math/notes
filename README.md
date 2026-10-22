@@ -32,4 +32,4 @@ When editing `chapters/2026.tex`, LaTeX Workshop uses this faster entry point au
 
 ## Author
 
-Qiutong Wang
+Qiutong Wang and Codex

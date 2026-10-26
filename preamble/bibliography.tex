@@ -4,33 +4,35 @@
   sorting=anyt,
   maxalphanames=4,
   maxnames=99,
+  giveninits=true,
   doi=true,
-  url=false,
+  eprint=true,
+  url=true,
+  urldate=iso,
+  seconds=true,
   isbn=false,
   backref=true
 ]{biblatex}
 
 \addbibresource{references.bib}
 
-% Treat MathSciNet numbers as MR eprints.
-\DeclareSourcemap{
-  \maps[datatype=bibtex]{
-    \map{
-      \step[fieldsource=mrnumber, fieldtarget=eprint]
-      \step[fieldset=eprinttype, fieldvalue=mr]
-    }
-  }
+\DeclareFieldFormat[article]{eid}{Art\adddot\space#1}
+\DeclareFieldFormat{pagetotal}{#1\addspace pp\adddot}
+
+% Journal articles name the journal directly; chapters retain "In:".
+\renewbibmacro*{in:}{%
+  \ifentrytype{article}
+    {}
+    {\printtext{\bibstring{in}\intitlepunct}}%
 }
 
-\DeclareFieldFormat{eprint:mr}{%
-  MR\href{https://mathscinet.ams.org/mathscinet-getitem?mr=#1}{#1}%
-}
-
-% Preserve the existing bibliography output: MR number followed by DOI.
+% Give one access link: DOI, otherwise arXiv/eprint, otherwise the URL.
 \renewbibmacro*{doi+eprint+url}{
-  \usebibmacro{eprint}
-  \newunit\newblock
-  \printfield{doi}
+  \iffieldundef{doi}
+    {\iffieldundef{eprint}
+       {\usebibmacro{url+urldate}}
+       {\usebibmacro{eprint}}}
+    {\printfield{doi}}
 }
 
 \DefineBibliographyStrings{english}{
@@ -39,4 +41,4 @@
 }
 
 % Long titles and identifiers should wrap instead of entering the margin.
-\AtBeginBibliography{\sloppy}
+\AtBeginBibliography{\small\sloppy}

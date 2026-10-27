@@ -1705,6 +1705,7 @@ their images are exactly \(\overline{\mathbb O}\). They are therefore genericall
 \]
 
 \notesection{2026-09-23}{Oscillator Representations as Quantization}
+\label{sec:oscillator-quantization}
 
 Let $G_{\mathbb R}=\operatorname{Sp}_{2n}(\mathbb R)$, and let $V$ be its
 complexified standard representation. Throughout, assume $n\geq 2$.
@@ -5372,3 +5373,609 @@ their regular lifts. Distinct comparable singular cells consequently lift
 to distinct comparable regular cells with the same respective GK
 dimensions. The regular theorem proves strict drop at the singular
 character as well.
+
+
+\notesection{2026-10-26}{Special Annihilator Varieties for Linear Classical Groups}
+\label{sec:special-annihilator-classical}
+% Organized from the discussion at
+% https://chatgpt.com/share/6adfbafa-1578-83e9-8b7d-577a89a798e9
+
+The aim of this section is to explain why the complex annihilator variety
+of an irreducible representation of a linear real symplectic or special
+orthogonal group is the closure of a special nilpotent orbit. The main
+calculation replaces the bad-parity contribution by induction from a
+symmetric group. Transitivity then makes the final $j$-induction parabolic.
+
+Throughout, $G_{\BR}$ is one of
+\[
+  \Sp_{2n}(\BR),\qquad
+  \SO(p,q)\quad(p+q=2n+1\text{ or }2n),
+\]
+and $\fg$ is its complexified Lie algebra. For an irreducible
+Harish--Chandra module $X$, put
+\[
+  I_X=\Ann_{U(\fg)}X,\qquad
+  \operatorname{AV}_{\BC}(X)
+  :=\operatorname{AV}(I_X)
+  =\mathcal V(\gr I_X)\subseteq\fg^*.
+\]
+This is the annihilator variety, rather than the generally reducible
+$K_{\BC}$-associated variety of $X$. We normalize the Springer
+correspondence so that the regular orbit corresponds to the trivial
+representation; $\operatorname{Spr}(\CO)$ denotes the representation
+attached to $\CO$ with trivial local system.
+
+\begin{thm}\label{thm:special-annihilator-classical}
+For every irreducible Harish--Chandra module $X$ of one of these groups,
+there is a special complex nilpotent orbit $\CO_X$ such that
+\[
+  \operatorname{AV}_{\BC}(X)=\overline{\CO_X}.
+\]
+The infinitesimal character may be nonintegral or singular.
+\end{thm}
+
+We assemble the proof from the primitive-ideal theorem, coherent
+continuation, and classical Weyl group calculations. Joseph's theorem
+gives the annihilator orbit; its specialness follows from which Weyl
+group representations can occur for the specified global group.
+
+\subsection{From an irreducible module to a Weyl group representation}
+
+First suppose the Harish--Chandra parameter $\lambda\in\fh^*$ is regular.
+Thus $\lambda$ is the infinitesimal character of $L(\lambda-\rho)$.
+Define the integral roots and their reflection group by
+\[
+  \Delta_\lambda
+  =\{\alpha\in\Delta:\langle\lambda,\alpha^\vee\rangle\in\BZ\},
+  \qquad
+  W_\lambda=\langle s_\alpha:\alpha\in\Delta_\lambda\rangle.
+\]
+When coherent continuation uses the analytic weight lattice, we
+restrict its action to this reflection subgroup; the stabilizer of
+the lattice coset can be larger.
+
+For $I=I_X$, Joseph attaches a special irreducible $W_\lambda$-module
+$\sigma_I$ and gives
+\begin{equation}\label{eq:special-annihilator-joseph}
+  \operatorname{Spr}(\CO_X)=j_{W_\lambda}^{W}\sigma_I,
+  \qquad
+  \operatorname{AV}(I)=\overline{\CO_X}.
+\end{equation}
+See \cite[Thm.~3.10]{Jos85} and
+\cite[Props.~3.24 and 3.26]{BMSZ22}.
+
+We now give a representation-theoretic realization of the inducing
+representation $\sigma_I$ by reduction to an integral block. Write
+\[
+  E_X:=\BC[W_\lambda]p_I\cong\sigma_I,
+\]
+where $p_I$ is the Goldie-rank polynomial. For an irreducible
+$W_\lambda$-module $E$, set
+\[
+  b(E)=\min\{m:E\text{ occurs in }S^m(\fh)\}.
+\]
+Joseph's theory places $p_I$ in degree $b(E_X)$, with $E_X$ occurring
+with multiplicity one in that degree. Its full $W$-span is
+\begin{equation}\label{eq:special-annihilator-polynomial-span}
+  \BC[W]p_I
+  \cong j_{W_\lambda}^{W}E_X
+  \cong\operatorname{Spr}(\CO_X).
+\end{equation}
+See \cite[Props.~3.22, 3.24 and 3.26]{BMSZ22} and
+\cite[Prop.~3.2]{BMW2024}.
+
+\begin{lem}\label{lem:special-annihilator-cell-minimum}
+Let $C_X$ be the Harish--Chandra cell containing $X$, and let $V_{C_X}$
+be its cell representation. Then $E_X$ occurs in $V_{C_X}$ and is its
+unique irreducible isomorphism class of minimum $b$-value.
+\end{lem}
+
+\begin{proof}
+Theorem~\ref{thm:strict-gk-drop} establishes the strict-drop hypothesis
+used in Section~\ref{sec:structure-cell-representations}. Consequently,
+the fixed-degree character-polynomial map vanishes on the proper
+lower cone and descends to the cell quotient. Its value at $X$ is a
+nonzero multiple of $p_I$, so its image contains $E_X$. Semisimplicity
+therefore gives occurrence in $V_{C_X}$. This is the cell-level
+application of \cite[Thm.~14.10]{Vogan1982} and \cite{King1981}.
+
+For uniqueness, let $D$ be the highest-weight double cell attached to
+$C_X$. By \cite[Lem.~4.8 and Prop.~4.10]{BMSZ22}, the lower cone of
+$C_X$ embeds, as a $W_\lambda$-module, into a finite direct sum of
+copies of the highest-weight two-sided cone generated by $D$.
+Thus every constituent $E$ of $V_{C_X}$ occurs in that cone.
+Proposition~3.22(a) of \cite{BMSZ22} gives
+\[
+  E\cong E_X
+  \quad\text{or}\quad
+  b(E)>b(E_X).
+\]
+Here the least symmetric-power degree denoted by $b$ in these notes
+is denoted by $a$ in \cite[(3.14)]{BMSZ22}. This proves uniqueness.
+\end{proof}
+
+\begin{prop}[Compatibility with integral-block reduction]
+\label{prop:special-annihilator-integral-reduction}
+For the block containing $X$, choose Vogan's integral-block reduction.
+It gives a real linear group $G_{\lambda,\BR}$ with complexified Lie
+algebra $\fg_\lambda$ of root system $\Delta_\lambda$, an integral
+block for $G_{\lambda,\BR}$, and a corresponding irreducible module
+$X_\lambda$. Then
+\begin{equation}\label{eq:special-annihilator-integral-reduction}
+  E_X\cong\operatorname{Spr}_{\fg_\lambda}(\CO_{X_\lambda}),
+  \qquad
+  \operatorname{Spr}_{\fg}(\CO_X)
+  \cong j_{W_\lambda}^{W}
+        \operatorname{Spr}_{\fg_\lambda}(\CO_{X_\lambda}).
+\end{equation}
+The orbit $\CO_{X_\lambda}$ is defined by the annihilator of
+$X_\lambda$. The comparison group depends on the block and need not
+be a subgroup of $G_{\BR}$.
+\end{prop}
+
+\begin{proof}
+Apply \cite[Thm.~11.9]{Vogan1982} to the block of $X$. The resulting
+dual block is integral and has complex root system
+$\Delta_\lambda^\vee$. Applying the theorem again gives an integral
+block with root system
+$(\Delta_\lambda^\vee)^\vee=\Delta_\lambda$.
+This two-step construction is precisely
+\cite[Lem.~12.6]{Vogan1982}: the resulting parameter bijection
+preserves the Hecke-module operators.
+
+The Kazhdan--Lusztig character formula \cite{Vogan1983}, together with
+\cite[Lem.~14.5]{Vogan1982}, passes this identification to the
+irreducible-character bases, up to signs, and hence identifies the
+corresponding cell representations:
+\[
+  V_{C_X}\cong V_{C_{X_\lambda}}
+  \qquad\text{as }W_\lambda\text{-modules}.
+\]
+Equivalently, one duality replaces a cell representation by its
+contragredient tensored with sign
+\cite[Cor.~14.9]{Vogan1982}; after two applications,
+\[
+  (V_{C_X}^{*}\otimes\sgn)^{*}\otimes\sgn
+  \cong V_{C_X}.
+\]
+The reflection representations of the identified Weyl groups agree;
+additional central directions are trivial and do not change $b$.
+Lemma~\ref{lem:special-annihilator-cell-minimum}, applied on both
+sides, therefore identifies
+\[
+  E_X\cong E_{X_\lambda}.
+\]
+Because $X_\lambda$ has integral infinitesimal character, its integral
+Weyl group is the full Weyl group $W(\fg_\lambda)=W_\lambda$.
+Joseph's theorem then gives
+\[
+  E_{X_\lambda}
+  \cong\operatorname{Spr}_{\fg_\lambda}(\CO_{X_\lambda}).
+\]
+Combining this with
+\eqref{eq:special-annihilator-polynomial-span} proves the proposition.
+\end{proof}
+
+For singular $\lambda$, choose a regular dominant lift and carry out
+the construction there. The reduction matches integral simple
+reflections and $\tau$-invariants, so corresponding translation onto
+the wall has nonzero evaluation on both sides
+\cite[Lem.~12.6]{Vogan1982}, \cite[Lem.~4.7]{BMSZ22}.
+A nonzero translation of a simple module preserves its annihilator
+orbit, as recalled at the beginning of \cite[\S5]{BMSZ22}.
+An integral shift also preserves $\Delta_\lambda$ and $W_\lambda$.
+Thus \eqref{eq:special-annihilator-integral-reduction} holds for
+singular parameters as well, with $X_\lambda$ obtained by the
+corresponding translation.
+
+In particular, the reduction preserves the Goldie-rank
+$W_\lambda$-representation. In the classical cases we now combine
+this compatibility with the coordinate separation into good, bad,
+and type $A$ factors.
+
+Separate the coordinates of $\lambda$ by their classes modulo $\BZ$
+and sign. The integral and half-integral classes contribute classical
+factors; the other classes contribute symmetric groups. Write
+\[
+  n_b+n_g+\sum_{j=1}^s r_j=n,\qquad
+  \sigma_I=\sigma_b\boxtimes\sigma_g
+              \boxtimes\tau_1\boxtimes\cdots\boxtimes\tau_s.
+\]
+Each factor is special. The labels $n_b$ and $n_g$ refer to bad and good
+parity, respectively:
+\[
+\begin{array}{c|c|c|c}
+  \text{type}&\text{bad coordinates}&\text{good coordinates}&W_\lambda\\ \hline
+  B_n&\lambda_i\in\BZ&\lambda_i\in\frac12+\BZ
+       &W_{n_b}\times W_{n_g}\times\prod_j S_{r_j}\\
+  C_n&\lambda_i\in\frac12+\BZ&\lambda_i\in\BZ
+       &W_{n_b}'\times W_{n_g}\times\prod_j S_{r_j}\\
+  D_n&\lambda_i\in\frac12+\BZ&\lambda_i\in\BZ
+       &W_{n_b}'\times W_{n_g}'\times\prod_j S_{r_j}
+\end{array}
+\]
+Here $W_m$ is the signed permutation group, the Weyl group of either
+$B_m$ or $C_m$, and $W_m'=W(D_m)$ is its even-sign subgroup. Rank-zero
+factors are omitted and $W_1'$ is trivial. The table follows by testing
+the coroot pairings; see also \cite[\S2.3 and \S\S6--7]{BMW2024}.
+
+The coherent-continuation separation forces $\sigma_b$ to occur in
+the bad-factor representation for
+\[
+  \begin{cases}
+    \SO(n_b,n_b+1),\quad\Lambda_b=\BZ^{n_b},&B_n,\\
+    \SO(n_b,n_b),\quad\Lambda_b=(\frac12,\ldots,\frac12)+\BZ^{n_b},&C_n,\ D_n.
+  \end{cases}
+\]
+For the integral and half-integral coordinate classes, this is the
+separation of \cite[\S6, especially Cor.~6.15]{BMSZ22}; other classes
+give the displayed type $A$ factors. We use the resulting occurrence
+condition on the bad factor, whose module is made explicit below.
+
+\subsection{Special representations and the bad-factor calculation}
+
+Parametrize $\Irr(W_m)$ by ordered bipartitions $E_{\alpha,\beta}$, with
+\[
+  E_{(m),\varnothing}=\mathbf1,\qquad
+  E_{\varnothing,(1^m)}=\sgn.
+\]
+For $W_m'$, use $F_{\{\alpha,\beta\}}$ when $\alpha\ne\beta$.
+When $\alpha=\beta$, retain the two degenerate representations
+$F_{\{\alpha,\alpha\}}^+$ and $F_{\{\alpha,\alpha\}}^-$.
+Partitions are padded with zeros.
+
+The distinguished-symbol criteria are
+\begin{align}
+  E_{\alpha,\beta}\text{ special}
+  &\ \Longleftrightarrow\
+     \alpha_{i+1}\leq\beta_i\leq\alpha_i+1
+     \quad\text{for all }i, \label{eq:special-annihilator-BC}\\
+  F_{\{\alpha,\beta\}}\text{ special}
+  &\ \Longleftrightarrow\
+     \text{the pair can be ordered so that }
+     \alpha_i\geq\beta_i\geq\alpha_{i+1}-1
+     \quad\text{for all }i. \label{eq:special-annihilator-D}
+\end{align}
+Both degenerate representations are special. To check the shifts,
+take the type $B/C$ symbol rows to be
+\[
+  (\alpha_{r+1},\alpha_r+1,\ldots,\alpha_1+r),\qquad
+  (\beta_r,\beta_{r-1}+1,\ldots,\beta_1+r-1).
+\]
+Interlacing gives \eqref{eq:special-annihilator-BC}.
+For type $D$, use two rows of length $r$, each with shifts
+$0,1,\ldots,r-1$; interlacing gives
+\eqref{eq:special-annihilator-D}. See \cite[\S4.3]{BMW2024}.
+
+Write $\CC_b^B$ for the bad-factor coherent-continuation module in
+ambient type $B$, and $\CC_b^D$ for the one used in ambient types $C,D$.
+Their respective Weyl groups are
+\[
+  W_{\mathrm{bad}}=
+  \begin{cases}
+    W_{n_b},&B_n,\\
+    W_{n_b}',&C_n,\ D_n.
+  \end{cases}
+\]
+Expanding \cite[Prop.~8.1 and (8.16)]{BMSZ22} gives
+\begin{align}
+  \CC_b^B
+  &\cong
+    \bigoplus_{\substack{t,c,d\geq0\\2t+c+d=n_b}}
+    \ \bigoplus_{\zeta\vdash t}
+    \Ind_{W_{2t}\times W_c\times W_d}^{W_{n_b}}
+       (E_{\zeta,\zeta}\boxtimes\mathbf1\boxtimes\mathbf1),
+       \label{eq:special-annihilator-bad-B}\\
+  \CC_b^D
+  &\cong
+    \operatorname{Res}_{W_{n_b}'}^{W_{n_b}}
+    \bigoplus_{\substack{t,u,v\geq0\\2t+u+v=n_b}}
+    \ \bigoplus_{\zeta\vdash t}
+    \Ind_{W_{2t}\times W_{u+v}}^{W_{n_b}}
+       (E_{\zeta,\zeta}\boxtimes E_{(u),(v)}).
+       \label{eq:special-annihilator-bad-D}
+\end{align}
+Here $(0)=\varnothing$. In particular, $(u)$ and $(v)$ are single rows.
+
+\begin{lem}\label{lem:special-annihilator-interlacing}
+A special irreducible constituent of either bad-factor module has
+labels that can be ordered so that
+\begin{equation}\label{eq:special-annihilator-strong}
+  \alpha_i\geq\beta_i\geq\alpha_{i+1}\qquad\text{for every }i.
+\end{equation}
+In particular, if $\sigma_b$ is such a constituent, then
+$\nu=(\alpha_1,\beta_1,\alpha_2,\beta_2,\ldots)$ is a partition of
+$n_b$ and
+\begin{equation}\label{eq:special-annihilator-from-A}
+  \sigma_b=j_{S_{n_b}}^{W_{\mathrm{bad}}}S^\nu
+\end{equation}
+for a suitable embedding $S_{n_b}\subseteq W_{\mathrm{bad}}$,
+where $S^\nu$ is the Specht representation.
+\end{lem}
+
+\begin{proof}
+In \eqref{eq:special-annihilator-bad-B}, the Littlewood--Richardson rule
+forces $\beta=\zeta$, while $\alpha$ is obtained from $\zeta$ by adding
+horizontal strips of sizes $c$ and $d$. Thus $\alpha_i\geq\beta_i$.
+Specialness in \eqref{eq:special-annihilator-BC} supplies
+$\beta_i\geq\alpha_{i+1}$.
+
+For \eqref{eq:special-annihilator-bad-D}, the multiplicity of
+$E_{\alpha,\beta}$ in an induced summand is
+\[
+  c_{\zeta,(u)}^\alpha c_{\zeta,(v)}^\beta.
+\]
+If it is nonzero, Pieri's rule says that $\alpha/\zeta$ and
+$\beta/\zeta$ are horizontal strips, so
+\[
+  \alpha_i\geq\zeta_i\geq\alpha_{i+1},\qquad
+  \beta_i\geq\zeta_i\geq\beta_{i+1}.
+\]
+Hence $\beta_i\geq\alpha_{i+1}$ and $\alpha_i\geq\beta_{i+1}$.
+These conditions are symmetric in the labels and survive restriction
+to $W_{n_b}'$. Order the labels of a special constituent using
+\eqref{eq:special-annihilator-D}; this also gives
+$\alpha_i\geq\beta_i$. Both degenerate constituents are included.
+
+Finally, interlacing makes $\nu$ a partition whose odd-numbered and
+even-numbered rows recover $\alpha$ and $\beta$. In column notation,
+\[
+  \alpha'_k=\left\lceil\frac{\nu'_k}{2}\right\rceil,\qquad
+  \beta'_k=\left\lfloor\frac{\nu'_k}{2}\right\rfloor.
+\]
+The type $A$ $j$-induction formulas
+\cite[Lem.~3.4(3) and Prop.~3.6(4)]{BMW2024} therefore give
+\eqref{eq:special-annihilator-from-A}. In the degenerate type $D$
+case, choose the end-node embedding of $S_{n_b}$ giving the prescribed
+label of $\sigma_b$, as in \cite[(3.4)]{BMW2024}.
+\end{proof}
+
+We used the componentwise Littlewood--Richardson induction rule for
+signed permutation groups, together with its single-row case,
+Pieri's rule; see \cite[Ch.~I, \S\S5 and 9]{Macdonald1995}.
+
+\subsection{Reduction to parabolic \texorpdfstring{$j$}{j}-induction}
+
+Lemma~\ref{lem:special-annihilator-interlacing} expresses $\sigma_b$
+as $j_{S_{n_b}}^{W_{\mathrm{bad}}}S^\nu$ for a partition
+$\nu\vdash n_b$. Set
+\[
+  W_{\mathrm{good}}=
+  \begin{cases}
+    W_{n_g},&B_n,\ C_n,\\
+    W_{n_g}',&D_n.
+  \end{cases}
+\]
+Transitivity in \eqref{eq:special-annihilator-joseph} now gives
+\begin{equation}\label{eq:special-annihilator-parabolic}
+  \operatorname{Spr}(\CO_X)
+  =
+  j_{S_{n_b}\times W_{\mathrm{good}}\times\prod_j S_{r_j}}^W
+  \bigl(S^\nu\boxtimes\sigma_g
+        \boxtimes\tau_1\boxtimes\cdots\boxtimes\tau_s\bigr).
+\end{equation}
+The subgroup is parabolic: it is the Weyl group of a complex Levi
+\[
+  L_{\BC}\cong
+  \begin{cases}
+    \GL_{n_b}(\BC)\times\SO_{2n_g+1}(\BC)\times
+       \prod_j\GL_{r_j}(\BC),&B_n,\\
+    \GL_{n_b}(\BC)\times\Sp_{2n_g}(\BC)\times
+       \prod_j\GL_{r_j}(\BC),&C_n,\\
+    \GL_{n_b}(\BC)\times\SO_{2n_g}(\BC)\times
+       \prod_j\GL_{r_j}(\BC),&D_n.
+  \end{cases}
+\]
+Trivial factors are omitted; $\SO_2$ is a torus and has trivial Weyl
+group. In type $D$, the end-node choice specifies the Levi embedding.
+
+\begin{proof}[Proof of Theorem~\ref{thm:special-annihilator-classical}]
+At a regular parameter, every inducing representation in
+\eqref{eq:special-annihilator-parabolic} is special: $\sigma_g$ is
+special, and every irreducible symmetric-group representation is
+special. Parabolic $j$-induction preserves specialness
+\cite{Lusztig1979,Lusztig1984}. Thus $\operatorname{Spr}(\CO_X)$,
+and hence $\CO_X$, is special.
+
+For singular $\lambda$, choose a simple regular lift $\widetilde X$
+in the same analytic lattice coset whose translation onto the wall is
+$X$. By the translation principle, $X$ is a subquotient of
+$E\otimes\widetilde X$ and $\widetilde X$ is a subquotient of
+$F\otimes X$ for suitable finite-dimensional $E,F$
+\cite[\S7.3]{Vogan1981}. Tensoring preserves associated varieties,
+while taking subquotients can only decrease them. Applying this in
+both directions gives equality of the module associated varieties,
+and hence of their $G_{\BC}$-saturations:
+\[
+  \operatorname{AV}_{\BC}(X)
+  =\operatorname{AV}_{\BC}(\widetilde X).
+\]
+We use here the relation between the associated variety of a
+Harish--Chandra module and that of its annihilator; see
+\cite{Vogan1991Associated}. The regular case completes the proof.
+\end{proof}
+
+\subsection{Geometric meaning: admissibility and the global group}
+
+Let $\CO_{\BR}$ be a real nilpotent coadjoint orbit and $\CO_{\BC}$
+its complexification. The stabilizer $G_{\BR,e}$ acts symplectically
+on $T_e\CO_{\BR}$. Pulling back the metaplectic cover gives
+\[
+  1\longrightarrow\{\pm1\}
+  \longrightarrow\widetilde{G_{\BR,e}}
+  \longrightarrow G_{\BR,e}\longrightarrow1.
+\]
+The orbit is quasi-admissible if this covering group has a nonzero
+finite-dimensional genuine representation: the nonidentity element
+over $1$ acts by $-\Id$. For the linear groups considered here,
+\begin{equation}\label{eq:special-annihilator-admissibility}
+  \CO_{\BC}\text{ special}
+  \ \Longleftrightarrow\
+  \CO_{\BR}\text{ admissible}
+  \ \Longleftrightarrow\
+  \CO_{\BR}\text{ quasi-admissible}.
+\end{equation}
+See \cite[Defs.~2.21--2.22 and Prop.~1.2]{GGS21}; the classification
+input is \cite[Thm.~3]{Ohta1991}. For the $K_{\BC}$-orbit formulation,
+see also \cite[Prop.~4.4.1]{Yu2026OrbitMethod}.
+
+On the corresponding nilpotent $K_{\BC}$-orbit
+$Y=K_{\BC}\cdot x$ under Kostant--Sekiguchi, define
+\[
+  \gamma_x(k)=\det(k|T_x^*Y),\qquad k\in K_{\BC,x}.
+\]
+An admissible orbit datum is an irreducible algebraic representation
+$\tau$ of $K_{\BC,x}$ with
+\[
+  \dd\tau=\tfrac12\dd\gamma_x\,\Id.
+\]
+The half-canonical correction must therefore integrate to the
+stabilizer. Schwartz identifies these data with real admissible
+orbit data; see \cite[Def.~5.2 and Thm.~5.3]{Vogan2000OrbitMethod}
+and \cite{Sch87}.
+
+For a concrete obstruction, take $G_{\BR}=\Sp_{2n}(\BR)$ with $n\geq2$.
+The minimal complex orbit has partition $(2,1^{2n-2})$ and is
+nonspecial: its transpose $(2n-1,1)$ is not a symplectic partition.
+One corresponding $K_{\BC}=\GL_n(\BC)$-orbit is
+\[
+  Y=\{vv^t:0\ne v\in\BC^n\}\subseteq\Sym^2(\BC^n).
+\]
+At $x=e_1e_1^t$, the connected stabilizer consists of matrices
+\[
+  k=\begin{pmatrix}1&u\\0&A\end{pmatrix},
+  \qquad A\in\GL_{n-1}(\BC).
+\]
+Since
+\[
+  T_xY=\{e_1w^t+we_1^t:w\in\BC^n\},
+\]
+the tangent determinant is $\det A$, so
+$\gamma_x(k)=(\det A)^{-1}$. The required character would be
+$(\det A)^{-1/2}$, which is not algebraic. Passing to the metaplectic
+cover supplies the missing square root. The oscillator representations
+accordingly quantize the minimal orbits for
+$\operatorname{Mp}_{2n}(\BR)$, and their annihilator variety is the
+nonspecial minimal orbit closure
+\cite[Examp.~4.3.7]{Yu2026OrbitMethod}. Compare
+Section~\ref{sec:oscillator-quantization} for the explicit quantization.
+
+\begin{rk}
+Formula \eqref{eq:special-annihilator-admissibility} explains dependence
+on the global group. It does not by itself supply the
+representation-to-annihilator-variety step:
+\cite[Thm.~1.1]{GGS21} concerns maximal Whittaker-support orbits.
+Replacing \eqref{eq:special-annihilator-joseph} by that result would
+require an additional comparison with associated varieties in the real
+case.
+\end{rk}
+
+\subsection{The real Levi and special unipotent representations}
+
+In symplectic type the complex Levi in
+\eqref{eq:special-annihilator-parabolic} has the real form
+\[
+  L_{\BR}=\GL_{n_b}(\BR)\times\Sp_{2n_g}(\BR)
+                \times\prod_j\GL_{r_j}(\BR).
+\]
+Choose a real parabolic $P=L_{\BR}N$. Normalized parabolic induction
+is an exact functor
+\[
+  \ind_P^{G_{\BR}}:\HC_{\lambda_L}(L_{\BR})
+                   \longrightarrow\HC_\lambda(G_{\BR}),
+\]
+where the $W_L$-orbit $\lambda_L$ maps to the $W$-orbit $\lambda$.
+With Harish--Chandra parameters, this normalization requires no
+additional $\rho_N$ shift; see \cite[\S\S4.1 and 9.2]{BMSZ22}.
+The lift $\lambda_L$ must be chosen, and a category at a fixed
+infinitesimal character can contain several blocks.
+
+For special unipotent representations the relation is stronger.
+Omit the additional type $A$ factors and let $n=n_b+n_g$. Suppose the
+partition of $\check\CO\subseteq\fso_{2n+1}(\BC)$ is
+\[
+  \mathbf d_{\check\CO}
+  =\mathbf d_g\sqcup\mathbf d_b'\sqcup\mathbf d_b',
+\]
+with odd parts in $\mathbf d_g$ and even parts in $\mathbf d_b'$.
+Their sizes are $2n_g+1$ and $n_b$, respectively. Write
+$\check\CO_g$ and $\check\CO_b'$ for the corresponding dual orbits.
+Normalized induction gives a bijection
+\begin{equation}\label{eq:special-annihilator-unipotent}
+\begin{split}
+  \operatorname{Unip}_{\check\CO_b'}(\GL_{n_b}(\BR))
+  \times\operatorname{Unip}_{\check\CO_g}(\Sp_{2n_g}(\BR))
+  &\ \xrightarrow{\ \sim\ }\
+     \operatorname{Unip}_{\check\CO}(\Sp_{2n}(\BR)),\\
+  (\tau,\pi_g)&\ \longmapsto\
+     \ind_P^{G_{\BR}}(\tau\boxtimes\pi_g).
+\end{split}
+\end{equation}
+Every induction in this map is irreducible. This is
+\cite[Thm.~2.20 and Prop.~9.5]{BMSZ22}, with the parity decomposition
+of \cite[\S2.6]{BMSZ22}.
+
+There is also compatibility on Grothendieck groups. Put
+$G_b=\SO(n_b,n_b)$ and choose $P_b\subseteq G_b$ with Levi $\GL_{n_b}(\BR)$.
+At the parity-separated parameters of this construction, the
+comparison map $\Phi_\lambda$ satisfies
+\[
+  \Phi_\lambda\bigl([\ind_{P_b}^{G_b}\tau]\otimes[\pi_g]\bigr)
+  =[\ind_P^{G_{\BR}}(\tau\boxtimes\pi_g)].
+\]
+This is the evaluation of the coherent-family diagram in
+\cite[Lem.~9.4]{BMSZ22}. The comparison map sends pairs of irreducible
+classes to irreducible classes by \cite[Prop.~6.16]{BMSZ22}.
+These are relations among actual characters and composition
+multiplicities; they do not assert an equivalence of abelian
+categories for arbitrary blocks.
+
+\subsection{Why general parabolic induction need not preserve simplicity}
+
+The limitation already appears for the Siegel parabolic of
+$G_{\BR}=\Sp_4(\BR)$, with Levi $\GL_2(\BR)$. Use normalized
+induction and set
+\[
+  \tau=\ind_{B_2}^{\GL_2(\BR)}
+       \bigl(\sgn|\cdot|^{3/2}\boxtimes|\cdot|^{1/2}\bigr).
+\]
+Its infinitesimal character is $\lambda=(3/2,1/2)$.
+Its restriction to $\SL_2(\BR)$ is the non-spherical principal series with
+parameter $s=1$, which is irreducible. Hence $\tau$ is irreducible.
+The rank-one criterion is that the non-spherical principal series is
+irreducible exactly when $s\notin2\BZ$, and the spherical principal
+series exactly when $s\notin2\BZ+1$. At irreducible parameters,
+the series at $s$ and $-s$ are isomorphic
+\cite[\S9.1, especially (5)]{Etingof2023SL2}.
+
+Induction in stages identifies $\ind_P^{G_{\BR}}\tau$ with
+\[
+  \ind_B^{G_{\BR}}
+       \bigl(\sgn|\cdot|^{3/2}\boxtimes|\cdot|^{1/2}\bigr).
+\]
+The rank-one intertwining operator for $2e_2$ is invertible: the
+corresponding spherical principal series has parameter $1/2$,
+which is not an odd integer. Thus
+\[
+  \ind_P^{G_{\BR}}\tau\cong \ind_P^{G_{\BR}}\tau',\qquad
+  \tau'=\ind_{B_2}^{\GL_2(\BR)}
+       \bigl(\sgn|\cdot|^{3/2}\boxtimes|\cdot|^{-1/2}\bigr).
+\]
+But $\tau'$ restricts to the non-spherical principal series with parameter $2$,
+and has the two-dimensional algebraic representation of $\GL_2(\BR)$
+as a constituent. In particular, $\tau'$ is reducible. Exactness of
+parabolic induction, and the fact
+that it sends nonzero modules to nonzero modules, now imply that
+$\ind_P^{G_{\BR}}\tau$ is reducible.
+
+The integral roots display the issue:
+\[
+  \Delta_\lambda
+  =\{\pm(e_1-e_2),\,\pm(e_1+e_2)\},\qquad
+  \Delta_L=\{\pm(e_1-e_2)\}.
+\]
+The extra integral root $e_1+e_2$ lies outside the Levi. After the
+sign change in $e_2$, its reducibility condition becomes visible
+inside $\tau'$. Thus the $j$-induction factorization explains
+specialness of the annihilator orbit; a correspondence of arbitrary
+representation blocks requires further hypotheses.
